@@ -1,0 +1,215 @@
+# ============================================================================
+# Robot Framework Configuration - CIS Compliance Testing Framework
+# ============================================================================
+# This configuration file defines multiple profiles for different environments
+# and execution scenarios. Use: robot --profile <profile_name> tests/
+# ============================================================================
+
+[tool.robot]
+# Global Robot Framework settings
+pythonpath = [".", "library"]
+doc = "CIS Compliance Testing Framework - Automated benchmark validation"
+
+# ============================================================================
+# ENVIRONMENT PROFILES
+# ============================================================================
+
+# ----------------------------------------------------------------------------
+# LOCAL - Development Environment
+# ----------------------------------------------------------------------------
+[tool.robot.profiles.local]
+outputdir = "results/local"
+loglevel = "DEBUG"
+console = "verbose"
+include = ["smoke", "regression"]
+exclude = ["manual", "slow", "performance"]
+variablefile = ["config/variables/local.py"]
+metadata = ["Environment:Local", "Framework:CIS-Compliance"]
+randomize = "none"
+
+# ----------------------------------------------------------------------------
+# STAGING - Pre-Production Environment
+# ----------------------------------------------------------------------------
+[tool.robot.profiles.staging]
+outputdir = "results/staging"
+loglevel = "INFO"
+console = "dotted"
+include = ["smoke", "regression", "integration"]
+exclude = ["manual", "performance", "debug"]
+variablefile = ["config/variables/staging.py"]
+metadata = ["Environment:Staging", "Framework:CIS-Compliance", "Version:${VERSION}"]
+timestampoutputs = true
+
+# ----------------------------------------------------------------------------
+# PRODUCTION - Production Environment
+# ----------------------------------------------------------------------------
+[tool.robot.profiles.prod]
+outputdir = "results/prod"
+loglevel = "INFO"
+console = "quiet"
+include = ["smoke", "critical", "production"]
+exclude = ["manual", "debug", "performance", "development"]
+variablefile = ["config/variables/prod.py"]
+metadata = ["Environment:Production", "Framework:CIS-Compliance", "Version:${VERSION}"]
+timestampoutputs = true
+exitonfailure = false
+exitonerror = false
+
+# ----------------------------------------------------------------------------
+# PRODUCTION US REGION
+# ----------------------------------------------------------------------------
+[tool.robot.profiles.prod-us]
+outputdir = "results/prod-us"
+loglevel = "INFO"
+console = "quiet"
+include = ["smoke", "critical", "production", "us-region"]
+exclude = ["manual", "debug", "performance", "development", "eu-only"]
+variablefile = ["config/variables/prod_us.py"]
+metadata = ["Environment:Production-US", "Region:US-East-1", "Framework:CIS-Compliance"]
+timestampoutputs = true
+
+# ----------------------------------------------------------------------------
+# PRODUCTION EU REGION
+# ----------------------------------------------------------------------------
+[tool.robot.profiles.prod-eu]
+outputdir = "results/prod-eu"
+loglevel = "INFO"
+console = "quiet"
+include = ["smoke", "critical", "production", "eu-region"]
+exclude = ["manual", "debug", "performance", "development", "us-only"]
+variablefile = ["config/variables/prod_eu.py"]
+metadata = ["Environment:Production-EU", "Region:EU-West-1", "Framework:CIS-Compliance"]
+timestampoutputs = true
+
+# ============================================================================
+# SPECIALIZED PROFILES
+# ============================================================================
+
+# ----------------------------------------------------------------------------
+# SMOKE - Quick validation tests
+# ----------------------------------------------------------------------------
+[tool.robot.profiles.smoke]
+outputdir = "results/smoke"
+loglevel = "INFO"
+console = "verbose"
+include = ["smoke"]
+exclude = ["manual", "slow", "performance"]
+variablefile = ["config/variables/local.py"]
+metadata = ["TestType:Smoke", "Framework:CIS-Compliance"]
+
+# ----------------------------------------------------------------------------
+# REGRESSION - Full regression testing
+# ----------------------------------------------------------------------------
+[tool.robot.profiles.regression]
+outputdir = "results/regression"
+loglevel = "INFO"
+console = "dotted"
+include = ["regression"]
+exclude = ["manual", "performance"]
+variablefile = ["config/variables/staging.py"]
+metadata = ["TestType:Regression", "Framework:CIS-Compliance"]
+timestampoutputs = true
+
+# ----------------------------------------------------------------------------
+# PERFORMANCE - Performance testing profile
+# ----------------------------------------------------------------------------
+[tool.robot.profiles.performance]
+outputdir = "results/performance"
+loglevel = "WARN"
+console = "quiet"
+include = ["performance"]
+exclude = ["manual", "slow"]
+variablefile = ["config/variables/performance.py"]
+metadata = ["TestType:Performance", "Framework:CIS-Compliance"]
+timestampoutputs = true
+
+# ----------------------------------------------------------------------------
+# CI/CD - Continuous Integration profile
+# ----------------------------------------------------------------------------
+[tool.robot.profiles.ci]
+outputdir = "results/ci"
+loglevel = "INFO"
+console = "dotted"
+include = ["smoke", "ci"]
+exclude = ["manual", "slow", "performance", "flaky"]
+variablefile = ["config/variables/staging.py"]
+metadata = ["TestType:CI", "Pipeline:${CI_PIPELINE_ID}", "Framework:CIS-Compliance"]
+timestampoutputs = true
+exitonfailure = true
+
+# ----------------------------------------------------------------------------
+# DEBUG - Debugging profile with maximum verbosity
+# ----------------------------------------------------------------------------
+[tool.robot.profiles.debug]
+outputdir = "results/debug"
+loglevel = "TRACE"
+console = "verbose"
+include = ["debug"]
+exclude = ["manual"]
+variablefile = ["config/variables/local.py"]
+metadata = ["TestType:Debug", "Framework:CIS-Compliance"]
+dryrun = false
+
+# ----------------------------------------------------------------------------
+# DRYRUN - Syntax validation without execution
+# ----------------------------------------------------------------------------
+[tool.robot.profiles.dryrun]
+outputdir = "results/dryrun"
+loglevel = "INFO"
+console = "verbose"
+dryrun = true
+variablefile = ["config/variables/local.py"]
+metadata = ["TestType:DryRun", "Framework:CIS-Compliance"]
+
+# ============================================================================
+# BENCHMARK-SPECIFIC PROFILES
+# ============================================================================
+
+# ----------------------------------------------------------------------------
+# CIS Benchmarks Profile
+# ----------------------------------------------------------------------------
+[tool.robot.profiles.cis]
+outputdir = "results/cis"
+loglevel = "INFO"
+console = "dotted"
+include = ["cis", "benchmark", "compliance"]
+exclude = ["manual", "disa"]
+variablefile = ["config/variables/staging.py"]
+metadata = ["BenchmarkType:CIS", "Framework:CIS-Compliance"]
+timestampoutputs = true
+
+# ----------------------------------------------------------------------------
+# DISA STIG Benchmarks Profile
+# ----------------------------------------------------------------------------
+[tool.robot.profiles.disa]
+outputdir = "results/disa"
+loglevel = "INFO"
+console = "dotted"
+include = ["disa", "stig", "benchmark"]
+exclude = ["manual", "cis"]
+variablefile = ["config/variables/staging.py"]
+metadata = ["BenchmarkType:DISA-STIG", "Framework:CIS-Compliance"]
+timestampoutputs = true
+
+# ============================================================================
+# REBOT CONFIGURATION
+# ============================================================================
+[tool.robot.rebot]
+title = "CIS Compliance Test Results"
+doc = "Comprehensive CIS and DISA benchmark compliance testing results"
+critical = ["critical", "security", "compliance"]
+noncritical = ["informational", "advisory"]
+tagstatexclude = ["internal", "debug"]
+tagstatcombine = ["smoke&critical:Critical Smoke Tests", "regression&cis:CIS Regression"]
+
+# ============================================================================
+# DOCUMENTATION CONFIGURATION
+# ============================================================================
+[tool.robot.libdoc]
+format = "HTML"
+name = "CIS Compliance Testing Framework Libraries"
+version = "2.0.0"
+
+[tool.robot.testdoc]
+format = "HTML"
+title = "CIS Compliance Test Documentation"

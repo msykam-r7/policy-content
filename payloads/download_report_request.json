@@ -1,0 +1,10 @@
+{
+    "description": "Download report file request - GET request",
+    "endpoint": "/reports/{instance_id}/{report_filename}",
+    "example": "/reports/1/456_789_20251128101745.xml",
+    "parameters": {
+        "instance_id": "Instance ID (usually 1)",
+        "report_filename": "Report filename from report history response (report-URI attribute)"
+    },
+    "note": "Session ID must be passed in Cookie header"
+}

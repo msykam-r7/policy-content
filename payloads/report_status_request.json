@@ -1,0 +1,8 @@
+{
+    "description": "Report generation status request payload - XML format",
+    "xml_payload": "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<ReportHistoryRequest session-id=\"SESSION_ID_PLACEHOLDER\" reportcfg-id=\"REPORT_CONFIG_ID_PLACEHOLDER\"/>",
+    "parameters": {
+        "session-id": "Session ID from login",
+        "reportcfg-id": "Report configuration ID from create report response"
+    }
+}

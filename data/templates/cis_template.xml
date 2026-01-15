@@ -1,0 +1,1846 @@
+<ScanTemplate id="#NewScanTemplate#" configVersion="4">
+ <templateDescription lang="en_us" title="CIS Copy">Conducts CIS benchmark compliance testing and security auditing across both the operating system and application layers  on supported platforms. This scan requires administrative authentication. Vulnerability checks are not included and only default ports are scanned.</templateDescription>
+ <General disableVulnScan="1" disablePolicyScan="0" disableWebSpider="1" invulnerableStorage="off" enableAuthDisc="0" enableFingerprinting="1" enableWindowsPathResolver="0">
+  <scanThreads>10</scanThreads>
+  <hostThreads>10</hostThreads>
+  <watchdog enabled="0"/>
+ </General>
+ <Logging>
+  <aces level="default"/>
+  <debugLogging enabled="0"/>
+ </Logging>
+ <DeviceDiscovery>
+  <networkDiscovery enabled="0"/>
+  <CheckHosts>
+    <icmpHostCheck enabled="1"/>
+    <TCPHostCheck enabled="1">
+      <portList>22,23,135,139,445,1433,1521,3306,5432,5985,5986,50000</portList>
+    </TCPHostCheck>
+    <UDPHostCheck enabled="0">
+    </UDPHostCheck>
+    <ignoreTCPReset enabled="0"/>
+    <arpHostCheck enabled="1"/>
+  </CheckHosts>
+ </DeviceDiscovery>
+ <ServiceDiscovery>
+  <TCPPortScan mode="custom" method="syn">
+    <portList>22,23,135,139,445,1433,1521,3306,5432,5985,5986,50000</portList>
+  </TCPPortScan>
+  <ExcludedTCPPortScan>
+    <portList></portList>
+  </ExcludedTCPPortScan>
+  <UDPPortScan mode="default">
+    <portList></portList>
+  </UDPPortScan>
+  <ExcludedUDPPortScan>
+    <portList></portList>
+  </ExcludedUDPPortScan>
+  <protocolFingerprinting enabled="1">
+  </protocolFingerprinting>
+  <NmapScriptTimeout>180</NmapScriptTimeout>
+ </ServiceDiscovery>
+ <DiscoveryPerformance>
+  <MaxRetries maxretries="3"/>
+  <MinTimeout mintimeout="500"/>
+  <MaxTimeout maxtimeout="3000"/>
+  <InitTimeout inittimeout="500"/>
+  <MinScanDelay minscandelay="0"/>
+  <MaxScanDelay maxscandelay="0"/>
+  <DefeatRate enabled="1"/>
+  <MinRate minrate="2000"/>
+  <MaxRate maxrate="15000"/>
+  <MinParallelism minparallelism="0"/>
+  <MaxParallelism maxparallelism="0"/>
+ </DiscoveryPerformance>
+ <Credentials/>
+ <Policies>
+  <persistARFResults enabled="0"/>
+  <enableRecursiveFileSystemSearch enabled="0"/>
+  <Enabled>
+   <PolicyBenchmark scope="G" benchmarkID="cis_oracle_database_11g_benchmark" benchmarkVersion="1.0.1.11">
+      <Policy policyID="Level-I"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="cis_oracle_database_11g_benchmark" benchmarkVersion="1.0.1.11">
+      <Policy policyID="Level-II"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="cis_oracle_database_11g_benchmark" benchmarkVersion="1.0.1.11">
+      <Policy policyID="linux-profile-1"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="cis_oracle_database_11g_benchmark" benchmarkVersion="1.0.1.11">
+      <Policy policyID="linux-profile-2"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="cis_oracle_database_11g_benchmark" benchmarkVersion="1.0.1.11">
+      <Policy policyID="linux-profile-known-tests"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="cis_oracle_database_11g_benchmark" benchmarkVersion="1.0.1.11">
+      <Policy policyID="windows-profile-1"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="cis_oracle_database_11g_benchmark" benchmarkVersion="1.0.1.11">
+      <Policy policyID="windows-profile-2"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="cis_oracle_database_11g_benchmark" benchmarkVersion="1.0.1.11">
+      <Policy policyID="windows-profile-known-tests"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="cis_redhat_enterprise_linux_4_benchmark" benchmarkVersion="1.0.5.0">
+      <Policy policyID="rhel4-level-1-profile"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_org.cisecurity.benchmarks_benchmark_1.0.0.1_CIS_Apple_macOS_10.14_Benchmark" benchmarkVersion="1.0.0.1">
+      <Policy policyID="xccdf_org.cisecurity.benchmarks_profile_Level_1"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_org.cisecurity.benchmarks_benchmark_1.0.0.1_CIS_Apple_macOS_10.14_Benchmark" benchmarkVersion="1.0.0.1">
+      <Policy policyID="xccdf_org.cisecurity.benchmarks_profile_Level_2"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_org.cisecurity.benchmarks_benchmark_1.0.0.1_CIS_Debian_Linux_7_Benchmark" benchmarkVersion="1.0.0">
+      <Policy policyID="xccdf_org.cisecurity.benchmarks_profile_Level_1"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_org.cisecurity.benchmarks_benchmark_1.0.0.1_CIS_Debian_Linux_7_Benchmark" benchmarkVersion="1.0.0">
+      <Policy policyID="xccdf_org.cisecurity.benchmarks_profile_Level_2"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_org.cisecurity.benchmarks_benchmark_1.0.0.1_CIS_Mozilla_Firefox_24_ESR_Benchmark" benchmarkVersion="1.0.0.1">
+      <Policy policyID="xccdf_org.cisecurity.benchmarks_profile_Level_1"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_org.cisecurity.benchmarks_benchmark_1.0.0.1_CIS_Mozilla_Firefox_24_ESR_Benchmark" benchmarkVersion="1.0.0.1">
+      <Policy policyID="xccdf_org.cisecurity.benchmarks_profile_Level_2"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_org.cisecurity.benchmarks_benchmark_1.0.0.7_CIS_Apache_Tomcat_55_60_Benchmark" benchmarkVersion="1.0.0.7">
+      <Policy policyID="xccdf_org.cisecurity.benchmarks_profile_Level_1"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_org.cisecurity.benchmarks_benchmark_1.0.0.7_CIS_Apache_Tomcat_55_60_Benchmark" benchmarkVersion="1.0.0.7">
+      <Policy policyID="xccdf_org.cisecurity.benchmarks_profile_Level_2"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_org.cisecurity.benchmarks_benchmark_1.0.0_CIS_Amazon_Linux_2023_Benchmark" benchmarkVersion="1.0.0">
+      <Policy policyID="xccdf_org.cisecurity.benchmarks_profile_Level_1_-_Server"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_org.cisecurity.benchmarks_benchmark_1.0.0_CIS_Amazon_Linux_2023_Benchmark" benchmarkVersion="1.0.0">
+      <Policy policyID="xccdf_org.cisecurity.benchmarks_profile_Level_2_-_Server"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_org.cisecurity.benchmarks_benchmark_1.0.0_CIS_Apple_macOS_13.0_Ventura_Benchmark" benchmarkVersion="1.0.0">
+      <Policy policyID="xccdf_org.cisecurity.benchmarks_profile_Level_1"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_org.cisecurity.benchmarks_benchmark_1.0.0_CIS_Apple_macOS_13.0_Ventura_Benchmark" benchmarkVersion="1.0.0">
+      <Policy policyID="xccdf_org.cisecurity.benchmarks_profile_Level_2"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_org.cisecurity.benchmarks_benchmark_1.0.0_CIS_Apple_macOS_14.0_Sonoma_Benchmark" benchmarkVersion="1.0.0">
+      <Policy policyID="xccdf_org.cisecurity.benchmarks_profile_Level_1"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_org.cisecurity.benchmarks_benchmark_1.0.0_CIS_Apple_macOS_14.0_Sonoma_Benchmark" benchmarkVersion="1.0.0">
+      <Policy policyID="xccdf_org.cisecurity.benchmarks_profile_Level_2"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_org.cisecurity.benchmarks_benchmark_1.0.0_CIS_Apple_macOS_15.0_Sequoia_Benchmark" benchmarkVersion="1.0.0">
+      <Policy policyID="xccdf_org.cisecurity.benchmarks_profile_Level_1"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_org.cisecurity.benchmarks_benchmark_1.0.0_CIS_Apple_macOS_15.0_Sequoia_Benchmark" benchmarkVersion="1.0.0">
+      <Policy policyID="xccdf_org.cisecurity.benchmarks_profile_Level_2"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_org.cisecurity.benchmarks_benchmark_1.0.0_CIS_Apple_OSX_10.12_Benchmark" benchmarkVersion="1.0.0">
+      <Policy policyID="xccdf_org.cisecurity.benchmarks_profile_Level_1"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_org.cisecurity.benchmarks_benchmark_1.0.0_CIS_Apple_OSX_10.12_Benchmark" benchmarkVersion="1.0.0">
+      <Policy policyID="xccdf_org.cisecurity.benchmarks_profile_Level_2"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_org.cisecurity.benchmarks_benchmark_1.0.0_CIS_Cisco_NX-OS_Benchmark" benchmarkVersion="1.0.0">
+      <Policy policyID="xccdf_org.cisecurity.benchmarks_profile_Level_1"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_org.cisecurity.benchmarks_benchmark_1.0.0_CIS_Cisco_NX-OS_Benchmark" benchmarkVersion="1.0.0">
+      <Policy policyID="xccdf_org.cisecurity.benchmarks_profile_Level_2"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_org.cisecurity.benchmarks_benchmark_1.0.0_CIS_Debian_Linux_10_Benchmark" benchmarkVersion="1.0.0">
+      <Policy policyID="xccdf_org.cisecurity.benchmarks_profile_Level_1_-_Server"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_org.cisecurity.benchmarks_benchmark_1.0.0_CIS_Debian_Linux_10_Benchmark" benchmarkVersion="1.0.0">
+      <Policy policyID="xccdf_org.cisecurity.benchmarks_profile_Level_1_-_Workstation"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_org.cisecurity.benchmarks_benchmark_1.0.0_CIS_Debian_Linux_10_Benchmark" benchmarkVersion="1.0.0">
+      <Policy policyID="xccdf_org.cisecurity.benchmarks_profile_Level_2_-_Server"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_org.cisecurity.benchmarks_benchmark_1.0.0_CIS_Debian_Linux_10_Benchmark" benchmarkVersion="1.0.0">
+      <Policy policyID="xccdf_org.cisecurity.benchmarks_profile_Level_2_-_Workstation"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_org.cisecurity.benchmarks_benchmark_1.0.0_CIS_Docker_1.13_Benchmark" benchmarkVersion="1.0.0">
+      <Policy policyID="xccdf_org.cisecurity.benchmarks_profile_Level_1_-_Docker"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_org.cisecurity.benchmarks_benchmark_1.0.0_CIS_Docker_1.13_Benchmark" benchmarkVersion="1.0.0">
+      <Policy policyID="xccdf_org.cisecurity.benchmarks_profile_Level_1_-_Linux_Host_OS"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_org.cisecurity.benchmarks_benchmark_1.0.0_CIS_Docker_1.13_Benchmark" benchmarkVersion="1.0.0">
+      <Policy policyID="xccdf_org.cisecurity.benchmarks_profile_Level_2_-_Docker"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_org.cisecurity.benchmarks_benchmark_1.0.0_CIS_Docker_1.6_Benchmark" benchmarkVersion="1.0.0">
+      <Policy policyID="xccdf_org.cisecurity.benchmarks_profile_Level_1_-_Docker"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_org.cisecurity.benchmarks_benchmark_1.0.0_CIS_Docker_1.6_Benchmark" benchmarkVersion="1.0.0">
+      <Policy policyID="xccdf_org.cisecurity.benchmarks_profile_Level_1_-_Linux_Host"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_org.cisecurity.benchmarks_benchmark_1.0.0_CIS_Docker_1.6_Benchmark" benchmarkVersion="1.0.0">
+      <Policy policyID="xccdf_org.cisecurity.benchmarks_profile_Level_2_-_Docker"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_org.cisecurity.benchmarks_benchmark_1.0.0_CIS_Fedora_19_Family_Linux_Benchmark" benchmarkVersion="1.0.0">
+      <Policy policyID="xccdf_org.cisecurity.benchmarks_profile_Level_1_-_Server"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_org.cisecurity.benchmarks_benchmark_1.0.0_CIS_Fedora_19_Family_Linux_Benchmark" benchmarkVersion="1.0.0">
+      <Policy policyID="xccdf_org.cisecurity.benchmarks_profile_Level_1_-_Workstation"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_org.cisecurity.benchmarks_benchmark_1.0.0_CIS_Fedora_19_Family_Linux_Benchmark" benchmarkVersion="1.0.0">
+      <Policy policyID="xccdf_org.cisecurity.benchmarks_profile_Level_2_-_Server"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_org.cisecurity.benchmarks_benchmark_1.0.0_CIS_Fedora_19_Family_Linux_Benchmark" benchmarkVersion="1.0.0">
+      <Policy policyID="xccdf_org.cisecurity.benchmarks_profile_Level_2_-_Workstation"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_org.cisecurity.benchmarks_benchmark_1.0.0_CIS_Microsoft_Internet_Explorer_11_Benchmark" benchmarkVersion="1.0.0">
+      <Policy policyID="xccdf_org.cisecurity.benchmarks_profile_Level_1"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_org.cisecurity.benchmarks_benchmark_1.0.0_CIS_Microsoft_Internet_Explorer_9_Benchmark" benchmarkVersion="1.0.0">
+      <Policy policyID="xccdf_org.cisecurity.benchmarks_profile_Level_1"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_org.cisecurity.benchmarks_benchmark_1.0.0_CIS_Microsoft_Windows_8_Benchmark" benchmarkVersion="1.0.0">
+      <Policy policyID="xccdf_org.cisecurity.benchmarks_profile_Level_1"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_org.cisecurity.benchmarks_benchmark_1.0.0_CIS_Microsoft_Windows_8_Benchmark" benchmarkVersion="1.0.0">
+      <Policy policyID="xccdf_org.cisecurity.benchmarks_profile_Level_1__BitLocker"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_org.cisecurity.benchmarks_benchmark_1.0.0_CIS_Microsoft_Windows_Server_2022_Stand-alone_Benchmark" benchmarkVersion="1.0.0">
+      <Policy policyID="xccdf_org.cisecurity.benchmarks_profile_Level_1_-_Member_Server"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_org.cisecurity.benchmarks_benchmark_1.0.0_CIS_Microsoft_Windows_Server_2022_Stand-alone_Benchmark" benchmarkVersion="1.0.0">
+      <Policy policyID="xccdf_org.cisecurity.benchmarks_profile_Level_2_-_Member_Server"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_org.cisecurity.benchmarks_benchmark_1.0.0_CIS_Microsoft_Windows_Server_2022_Stand-alone_Benchmark" benchmarkVersion="1.0.0">
+      <Policy policyID="xccdf_org.cisecurity.benchmarks_profile_Next_Generation_Windows_Security_-_Member_Server"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_org.cisecurity.benchmarks_benchmark_1.0.0_CIS_Microsoft_Windows_Server_2025_Benchmark" benchmarkVersion="1.0.0">
+      <Policy policyID="xccdf_org.cisecurity.benchmarks_profile_Level_1_-_Domain_Controller"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_org.cisecurity.benchmarks_benchmark_1.0.0_CIS_Microsoft_Windows_Server_2025_Benchmark" benchmarkVersion="1.0.0">
+      <Policy policyID="xccdf_org.cisecurity.benchmarks_profile_Level_1_-_Member_Server"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_org.cisecurity.benchmarks_benchmark_1.0.0_CIS_Microsoft_Windows_Server_2025_Benchmark" benchmarkVersion="1.0.0">
+      <Policy policyID="xccdf_org.cisecurity.benchmarks_profile_Level_2_-_Domain_Controller"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_org.cisecurity.benchmarks_benchmark_1.0.0_CIS_Microsoft_Windows_Server_2025_Benchmark" benchmarkVersion="1.0.0">
+      <Policy policyID="xccdf_org.cisecurity.benchmarks_profile_Level_2_-_Member_Server"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_org.cisecurity.benchmarks_benchmark_1.0.0_CIS_Microsoft_Windows_Server_2025_Benchmark" benchmarkVersion="1.0.0">
+      <Policy policyID="xccdf_org.cisecurity.benchmarks_profile_Next_Generation_Windows_Security_-_Domain_Controller"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_org.cisecurity.benchmarks_benchmark_1.0.0_CIS_Microsoft_Windows_Server_2025_Benchmark" benchmarkVersion="1.0.0">
+      <Policy policyID="xccdf_org.cisecurity.benchmarks_profile_Next_Generation_Windows_Security_-_Member_Server"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_org.cisecurity.benchmarks_benchmark_1.0.0_CIS_MIT_Kerberos_1.10_Benchmark" benchmarkVersion="1.0.0">
+      <Policy policyID="xccdf_org.cisecurity.benchmarks_profile_KDC_with_DB2_Database"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_org.cisecurity.benchmarks_benchmark_1.0.0_CIS_MIT_Kerberos_1.10_Benchmark" benchmarkVersion="1.0.0">
+      <Policy policyID="xccdf_org.cisecurity.benchmarks_profile_KDC_with_LDAP_Database"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_org.cisecurity.benchmarks_benchmark_1.0.0_CIS_MongoDB_3.2_Benchmark" benchmarkVersion="1.0.0">
+      <Policy policyID="xccdf_org.cisecurity.benchmarks_profile_Level_1_-_MongoDB_on_Linux"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_org.cisecurity.benchmarks_benchmark_1.0.0_CIS_MongoDB_3.2_Benchmark" benchmarkVersion="1.0.0">
+      <Policy policyID="xccdf_org.cisecurity.benchmarks_profile_Level_2_-_MongoDB_on_Linux"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_org.cisecurity.benchmarks_benchmark_1.0.0_CIS_MongoDB_3.4_Benchmark" benchmarkVersion="1.0.0">
+      <Policy policyID="xccdf_org.cisecurity.benchmarks_profile_Level_1"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_org.cisecurity.benchmarks_benchmark_1.0.0_CIS_MongoDB_3.4_Benchmark" benchmarkVersion="1.0.0">
+      <Policy policyID="xccdf_org.cisecurity.benchmarks_profile_Level_2"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_org.cisecurity.benchmarks_benchmark_1.0.0_CIS_Mozilla_Firefox_38_ESR_Benchmark" benchmarkVersion="1.0.0">
+      <Policy policyID="xccdf_org.cisecurity.benchmarks_profile_Level_1"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_org.cisecurity.benchmarks_benchmark_1.0.0_CIS_Mozilla_Firefox_38_ESR_Benchmark" benchmarkVersion="1.0.0">
+      <Policy policyID="xccdf_org.cisecurity.benchmarks_profile_Level_2"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_org.cisecurity.benchmarks_benchmark_1.0.0_CIS_Oracle_Database_18c_Benchmark" benchmarkVersion="1.0.0">
+      <Policy policyID="xccdf_org.cisecurity.benchmarks_profile_Level_1_-_Linux_Host_OS_using_Traditional_Auditing"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_org.cisecurity.benchmarks_benchmark_1.0.0_CIS_Oracle_Database_18c_Benchmark" benchmarkVersion="1.0.0">
+      <Policy policyID="xccdf_org.cisecurity.benchmarks_profile_Level_1_-_Linux_Host_OS_using_Unified_Auditing"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_org.cisecurity.benchmarks_benchmark_1.0.0_CIS_Oracle_Database_18c_Benchmark" benchmarkVersion="1.0.0">
+      <Policy policyID="xccdf_org.cisecurity.benchmarks_profile_Level_1_-_RDBMS_using_Traditional_Auditing"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_org.cisecurity.benchmarks_benchmark_1.0.0_CIS_Oracle_Database_18c_Benchmark" benchmarkVersion="1.0.0">
+      <Policy policyID="xccdf_org.cisecurity.benchmarks_profile_Level_1_-_RDBMS_using_Unified_Auditing"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_org.cisecurity.benchmarks_benchmark_1.0.0_CIS_Oracle_Database_18c_Benchmark" benchmarkVersion="1.0.0">
+      <Policy policyID="xccdf_org.cisecurity.benchmarks_profile_Level_1_-_Windows_Server_Host_OS_using_Traditional_Auditing"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_org.cisecurity.benchmarks_benchmark_1.0.0_CIS_Oracle_Database_18c_Benchmark" benchmarkVersion="1.0.0">
+      <Policy policyID="xccdf_org.cisecurity.benchmarks_profile_Level_1_-_Windows_Server_Host_OS_using_Unified_Auditing"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_org.cisecurity.benchmarks_benchmark_1.0.0_CIS_Oracle_MySQL_Community_Server_5.7_Benchmark" benchmarkVersion="1.0.0">
+      <Policy policyID="xccdf_org.cisecurity.benchmarks_profile_Level_1_-_MySQL_RDBMS"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_org.cisecurity.benchmarks_benchmark_1.0.0_CIS_Oracle_MySQL_Community_Server_5.7_Benchmark" benchmarkVersion="1.0.0">
+      <Policy policyID="xccdf_org.cisecurity.benchmarks_profile_Level_1_-_MySQL_RDBMS_on_Linux"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_org.cisecurity.benchmarks_benchmark_1.0.0_CIS_Oracle_MySQL_Community_Server_5.7_Benchmark" benchmarkVersion="1.0.0">
+      <Policy policyID="xccdf_org.cisecurity.benchmarks_profile_Level_2_-_MySQL_RDBMS"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_org.cisecurity.benchmarks_benchmark_1.0.0_CIS_Oracle_MySQL_Community_Server_5.7_Benchmark" benchmarkVersion="1.0.0">
+      <Policy policyID="xccdf_org.cisecurity.benchmarks_profile_Level_2_-_MySQL_RDBMS_on_Linux"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_org.cisecurity.benchmarks_benchmark_1.0.0_CIS_Oracle_MySQL_Enterprise_Edition_5.7_Benchmark" benchmarkVersion="1.0.0">
+      <Policy policyID="xccdf_org.cisecurity.benchmarks_profile_Level_1_-_MySQL_RDBMS"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_org.cisecurity.benchmarks_benchmark_1.0.0_CIS_Oracle_MySQL_Enterprise_Edition_5.7_Benchmark" benchmarkVersion="1.0.0">
+      <Policy policyID="xccdf_org.cisecurity.benchmarks_profile_Level_1_-_MySQL_RDBMS_on_Linux"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_org.cisecurity.benchmarks_benchmark_1.0.0_CIS_Oracle_MySQL_Enterprise_Edition_5.7_Benchmark" benchmarkVersion="1.0.0">
+      <Policy policyID="xccdf_org.cisecurity.benchmarks_profile_Level_2_-_MySQL_RDBMS"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_org.cisecurity.benchmarks_benchmark_1.0.0_CIS_Oracle_MySQL_Enterprise_Edition_5.7_Benchmark" benchmarkVersion="1.0.0">
+      <Policy policyID="xccdf_org.cisecurity.benchmarks_profile_Level_2_-_MySQL_RDBMS_on_Linux"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_org.cisecurity.benchmarks_benchmark_1.0.0_CIS_Oracle_Solaris_11.4_Benchmark" benchmarkVersion="1.0.0">
+      <Policy policyID="xccdf_org.cisecurity.benchmarks_profile_Level_1"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_org.cisecurity.benchmarks_benchmark_1.0.0_CIS_Oracle_Solaris_11.4_Benchmark" benchmarkVersion="1.0.0">
+      <Policy policyID="xccdf_org.cisecurity.benchmarks_profile_Level_2"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_org.cisecurity.benchmarks_benchmark_1.0.0_CIS_Palo_Alto_Firewall_6_Benchmark" benchmarkVersion="1.0.0">
+      <Policy policyID="xccdf_org.cisecurity.benchmarks_profile_Level_1"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_org.cisecurity.benchmarks_benchmark_1.0.0_CIS_Palo_Alto_Firewall_6_Benchmark" benchmarkVersion="1.0.0">
+      <Policy policyID="xccdf_org.cisecurity.benchmarks_profile_Level_2"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_org.cisecurity.benchmarks_benchmark_1.0.0_CIS_Palo_Alto_Firewall_7_Benchmark" benchmarkVersion="1.0.0">
+      <Policy policyID="xccdf_org.cisecurity.benchmarks_profile_Level_1"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_org.cisecurity.benchmarks_benchmark_1.0.0_CIS_Palo_Alto_Firewall_7_Benchmark" benchmarkVersion="1.0.0">
+      <Policy policyID="xccdf_org.cisecurity.benchmarks_profile_Level_2"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_org.cisecurity.benchmarks_benchmark_1.0.0_CIS_Palo_Alto_Firewall_8_Benchmark" benchmarkVersion="1.0.0">
+      <Policy policyID="xccdf_org.cisecurity.benchmarks_profile_Level_1"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_org.cisecurity.benchmarks_benchmark_1.0.0_CIS_Palo_Alto_Firewall_8_Benchmark" benchmarkVersion="1.0.0">
+      <Policy policyID="xccdf_org.cisecurity.benchmarks_profile_Level_2"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_org.cisecurity.benchmarks_benchmark_1.0.0_CIS_PostgreSQL_10_Benchmark" benchmarkVersion="1.0.0">
+      <Policy policyID="xccdf_org.cisecurity.benchmarks_profile_Level_1_-_PostgreSQL"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_org.cisecurity.benchmarks_benchmark_1.0.0_CIS_PostgreSQL_10_Benchmark" benchmarkVersion="1.0.0">
+      <Policy policyID="xccdf_org.cisecurity.benchmarks_profile_Level_1_-_PostgreSQL_on_Linux"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_org.cisecurity.benchmarks_benchmark_1.0.0_CIS_PostgreSQL_11_Benchmark" benchmarkVersion="1.0.0">
+      <Policy policyID="xccdf_org.cisecurity.benchmarks_profile_Level_1_-_PostgreSQL"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_org.cisecurity.benchmarks_benchmark_1.0.0_CIS_PostgreSQL_11_Benchmark" benchmarkVersion="1.0.0">
+      <Policy policyID="xccdf_org.cisecurity.benchmarks_profile_Level_1_-_PostgreSQL_on_Linux"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_org.cisecurity.benchmarks_benchmark_1.0.0_CIS_PostgreSQL_12_Benchmark" benchmarkVersion="1.0.0">
+      <Policy policyID="xccdf_org.cisecurity.benchmarks_profile_Level_1_-_PostgreSQL"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_org.cisecurity.benchmarks_benchmark_1.0.0_CIS_PostgreSQL_12_Benchmark" benchmarkVersion="1.0.0">
+      <Policy policyID="xccdf_org.cisecurity.benchmarks_profile_Level_1_-_PostgreSQL_on_Linux"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_org.cisecurity.benchmarks_benchmark_1.0.0_CIS_PostgreSQL_13_Benchmark" benchmarkVersion="1.0.0">
+      <Policy policyID="xccdf_org.cisecurity.benchmarks_profile_Level_1_-_PostgreSQL"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_org.cisecurity.benchmarks_benchmark_1.0.0_CIS_PostgreSQL_13_Benchmark" benchmarkVersion="1.0.0">
+      <Policy policyID="xccdf_org.cisecurity.benchmarks_profile_Level_1_-_PostgreSQL_on_Linux"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_org.cisecurity.benchmarks_benchmark_1.0.0_CIS_PostgreSQL_9.6_Benchmark" benchmarkVersion="1.0.0">
+      <Policy policyID="xccdf_org.cisecurity.benchmarks_profile_Level_1_-_PostgreSQL"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_org.cisecurity.benchmarks_benchmark_1.0.0_CIS_PostgreSQL_9.6_Benchmark" benchmarkVersion="1.0.0">
+      <Policy policyID="xccdf_org.cisecurity.benchmarks_profile_Level_1_-_PostgreSQL_on_Linux"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_org.cisecurity.benchmarks_benchmark_1.0.0_CIS_Red_Hat_Enterprise_Linux_9_STIG_Benchmark" benchmarkVersion="1.0.0">
+      <Policy policyID="xccdf_org.cisecurity.benchmarks_profile_SEVERITY_CAT_I"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_org.cisecurity.benchmarks_benchmark_1.0.0_CIS_Red_Hat_Enterprise_Linux_9_STIG_Benchmark" benchmarkVersion="1.0.0">
+      <Policy policyID="xccdf_org.cisecurity.benchmarks_profile_SEVERITY_CAT_II"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_org.cisecurity.benchmarks_benchmark_1.0.0_CIS_Red_Hat_Enterprise_Linux_9_STIG_Benchmark" benchmarkVersion="1.0.0">
+      <Policy policyID="xccdf_org.cisecurity.benchmarks_profile_SEVERITY_CAT_III"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_org.cisecurity.benchmarks_benchmark_1.0.0_CIS_Ubuntu_Linux_20.04_LTS_STIG_Benchmark" benchmarkVersion="1.0.0">
+      <Policy policyID="xccdf_org.cisecurity.benchmarks_profile_Level_1_-_Server"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_org.cisecurity.benchmarks_benchmark_1.0.0_CIS_Ubuntu_Linux_20.04_LTS_STIG_Benchmark" benchmarkVersion="1.0.0">
+      <Policy policyID="xccdf_org.cisecurity.benchmarks_profile_Level_1_-_Workstation"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_org.cisecurity.benchmarks_benchmark_1.0.0_CIS_Ubuntu_Linux_20.04_LTS_STIG_Benchmark" benchmarkVersion="1.0.0">
+      <Policy policyID="xccdf_org.cisecurity.benchmarks_profile_Level_2_-_Server"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_org.cisecurity.benchmarks_benchmark_1.0.0_CIS_Ubuntu_Linux_20.04_LTS_STIG_Benchmark" benchmarkVersion="1.0.0">
+      <Policy policyID="xccdf_org.cisecurity.benchmarks_profile_Level_2_-_Workstation"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_org.cisecurity.benchmarks_benchmark_1.0.0_CIS_Ubuntu_Linux_20.04_LTS_STIG_Benchmark" benchmarkVersion="1.0.0">
+      <Policy policyID="xccdf_org.cisecurity.benchmarks_profile_STIG_-_Server"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_org.cisecurity.benchmarks_benchmark_1.0.0_CIS_Ubuntu_Linux_20.04_LTS_STIG_Benchmark" benchmarkVersion="1.0.0">
+      <Policy policyID="xccdf_org.cisecurity.benchmarks_profile_STIG_-_Workstation"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_org.cisecurity.benchmarks_benchmark_1.0.0_CIS_Ubuntu_Linux_22.04_LTS_STIG_Benchmark" benchmarkVersion="1.0.0">
+      <Policy policyID="xccdf_org.cisecurity.benchmarks_profile_SEVERITY_CAT_I"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_org.cisecurity.benchmarks_benchmark_1.0.0_CIS_Ubuntu_Linux_22.04_LTS_STIG_Benchmark" benchmarkVersion="1.0.0">
+      <Policy policyID="xccdf_org.cisecurity.benchmarks_profile_SEVERITY_CAT_II"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_org.cisecurity.benchmarks_benchmark_1.0.0_CIS_Ubuntu_Linux_22.04_LTS_STIG_Benchmark" benchmarkVersion="1.0.0">
+      <Policy policyID="xccdf_org.cisecurity.benchmarks_profile_SEVERITY_CAT_III"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_org.cisecurity.benchmarks_benchmark_1.0.0_CIS_Ubuntu_Linux_24.04_LTS_Benchmark" benchmarkVersion="1.0.0">
+      <Policy policyID="xccdf_org.cisecurity.benchmarks_profile_Level_1_-_Server"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_org.cisecurity.benchmarks_benchmark_1.0.0_CIS_Ubuntu_Linux_24.04_LTS_Benchmark" benchmarkVersion="1.0.0">
+      <Policy policyID="xccdf_org.cisecurity.benchmarks_profile_Level_1_-_Workstation"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_org.cisecurity.benchmarks_benchmark_1.0.0_CIS_Ubuntu_Linux_24.04_LTS_Benchmark" benchmarkVersion="1.0.0">
+      <Policy policyID="xccdf_org.cisecurity.benchmarks_profile_Level_2_-_Server"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_org.cisecurity.benchmarks_benchmark_1.0.0_CIS_Ubuntu_Linux_24.04_LTS_Benchmark" benchmarkVersion="1.0.0">
+      <Policy policyID="xccdf_org.cisecurity.benchmarks_profile_Level_2_-_Workstation"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_org.cisecurity.benchmarks_benchmark_1.0.0_CIS_Ubuntu_Linux_24.04_LTS_STIG_Benchmark" benchmarkVersion="1.0.0">
+      <Policy policyID="xccdf_org.cisecurity.benchmarks_profile_SEVERITY_CAT_I"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_org.cisecurity.benchmarks_benchmark_1.0.0_CIS_Ubuntu_Linux_24.04_LTS_STIG_Benchmark" benchmarkVersion="1.0.0">
+      <Policy policyID="xccdf_org.cisecurity.benchmarks_profile_SEVERITY_CAT_II"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_org.cisecurity.benchmarks_benchmark_1.0.0_CIS_Ubuntu_Linux_24.04_LTS_STIG_Benchmark" benchmarkVersion="1.0.0">
+      <Policy policyID="xccdf_org.cisecurity.benchmarks_profile_SEVERITY_CAT_III"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_org.cisecurity.benchmarks_benchmark_1.0.0_CIS_VMware_ESXi_6.5_Benchmark" benchmarkVersion="1.0.0">
+      <Policy policyID="xccdf_org.cisecurity.benchmarks_profile_Level_1"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_org.cisecurity.benchmarks_benchmark_1.0.0_CIS_VMware_ESXi_6.5_Benchmark" benchmarkVersion="1.0.0">
+      <Policy policyID="xccdf_org.cisecurity.benchmarks_profile_Level_2"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_org.cisecurity.benchmarks_benchmark_1.0.1_CIS_Apache_Tomcat_8_Benchmark" benchmarkVersion="1.0.1">
+      <Policy policyID="xccdf_org.cisecurity.benchmarks_profile_Level_1"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_org.cisecurity.benchmarks_benchmark_1.0.1_CIS_Apache_Tomcat_8_Benchmark" benchmarkVersion="1.0.1">
+      <Policy policyID="xccdf_org.cisecurity.benchmarks_profile_Level_2"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_org.cisecurity.benchmarks_benchmark_1.0.1_CIS_CentOS_Linux_8_Benchmark" benchmarkVersion="1.0.1">
+      <Policy policyID="xccdf_org.cisecurity.benchmarks_profile_Level_1_-_Server"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_org.cisecurity.benchmarks_benchmark_1.0.1_CIS_CentOS_Linux_8_Benchmark" benchmarkVersion="1.0.1">
+      <Policy policyID="xccdf_org.cisecurity.benchmarks_profile_Level_1_-_Workstation"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_org.cisecurity.benchmarks_benchmark_1.0.1_CIS_CentOS_Linux_8_Benchmark" benchmarkVersion="1.0.1">
+      <Policy policyID="xccdf_org.cisecurity.benchmarks_profile_Level_2_-_Server"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_org.cisecurity.benchmarks_benchmark_1.0.1_CIS_CentOS_Linux_8_Benchmark" benchmarkVersion="1.0.1">
+      <Policy policyID="xccdf_org.cisecurity.benchmarks_profile_Level_2_-_Workstation"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_org.cisecurity.benchmarks_benchmark_1.0.1_CIS_Debian_Linux_9_Benchmark" benchmarkVersion="1.0.1">
+      <Policy policyID="xccdf_org.cisecurity.benchmarks_profile_Level_1_-_Server"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_org.cisecurity.benchmarks_benchmark_1.0.1_CIS_Debian_Linux_9_Benchmark" benchmarkVersion="1.0.1">
+      <Policy policyID="xccdf_org.cisecurity.benchmarks_profile_Level_1_-_Workstation"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_org.cisecurity.benchmarks_benchmark_1.0.1_CIS_Debian_Linux_9_Benchmark" benchmarkVersion="1.0.1">
+      <Policy policyID="xccdf_org.cisecurity.benchmarks_profile_Level_2_-_Server"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_org.cisecurity.benchmarks_benchmark_1.0.1_CIS_Debian_Linux_9_Benchmark" benchmarkVersion="1.0.1">
+      <Policy policyID="xccdf_org.cisecurity.benchmarks_profile_Level_2_-_Workstation"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_org.cisecurity.benchmarks_benchmark_1.0.1_CIS_Microsoft_Office_Access_2013_Benchmark" benchmarkVersion="1.0.1">
+      <Policy policyID="xccdf_org.cisecurity.benchmarks_profile_Level_1"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_org.cisecurity.benchmarks_benchmark_1.0.1_CIS_Microsoft_Office_Access_2016_Benchmark" benchmarkVersion="1.0.1">
+      <Policy policyID="xccdf_org.cisecurity.benchmarks_profile_Level_1"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_org.cisecurity.benchmarks_benchmark_1.0.1_CIS_Microsoft_Office_Excel_2013_Benchmark" benchmarkVersion="1.0.1">
+      <Policy policyID="xccdf_org.cisecurity.benchmarks_profile_Level_1"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_org.cisecurity.benchmarks_benchmark_1.0.1_CIS_Microsoft_Office_Excel_2016_Benchmark" benchmarkVersion="1.0.1">
+      <Policy policyID="xccdf_org.cisecurity.benchmarks_profile_Level_1"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_org.cisecurity.benchmarks_benchmark_1.0.1_CIS_Microsoft_Office_PowerPoint_2013_Benchmark" benchmarkVersion="1.0.1">
+      <Policy policyID="xccdf_org.cisecurity.benchmarks_profile_Level_1"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_org.cisecurity.benchmarks_benchmark_1.0.1_CIS_Microsoft_Office_PowerPoint_2016_Benchmark" benchmarkVersion="1.0.1">
+      <Policy policyID="xccdf_org.cisecurity.benchmarks_profile_Level_1"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_org.cisecurity.benchmarks_benchmark_1.0.1_CIS_Red_Hat_Enterprise_Linux_10_Benchmark" benchmarkVersion="1.0.1">
+      <Policy policyID="xccdf_org.cisecurity.benchmarks_profile_Level_1_-_Server"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_org.cisecurity.benchmarks_benchmark_1.0.1_CIS_Red_Hat_Enterprise_Linux_10_Benchmark" benchmarkVersion="1.0.1">
+      <Policy policyID="xccdf_org.cisecurity.benchmarks_profile_Level_1_-_Workstation"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_org.cisecurity.benchmarks_benchmark_1.0.1_CIS_Red_Hat_Enterprise_Linux_10_Benchmark" benchmarkVersion="1.0.1">
+      <Policy policyID="xccdf_org.cisecurity.benchmarks_profile_Level_2_-_Server"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_org.cisecurity.benchmarks_benchmark_1.0.1_CIS_Red_Hat_Enterprise_Linux_10_Benchmark" benchmarkVersion="1.0.1">
+      <Policy policyID="xccdf_org.cisecurity.benchmarks_profile_Level_2_-_Workstation"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_org.cisecurity.benchmarks_benchmark_1.1.0.1_CIS_Oracle_Solaris_11_Benchmark" benchmarkVersion="1.1.0.1">
+      <Policy policyID="xccdf_org.cisecurity.benchmarks_profile_Level_1"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_org.cisecurity.benchmarks_benchmark_1.1.0.1_CIS_Oracle_Solaris_11_Benchmark" benchmarkVersion="1.1.0.1">
+      <Policy policyID="xccdf_org.cisecurity.benchmarks_profile_Level_2"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_org.cisecurity.benchmarks_benchmark_1.1.0.1_CIS_PostgreSQL_9.5_Benchmark" benchmarkVersion="1.1.0.1">
+      <Policy policyID="xccdf_org.cisecurity.benchmarks_profile_Level_1_-_PostgreSQL"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_org.cisecurity.benchmarks_benchmark_1.1.0.1_CIS_PostgreSQL_9.5_Benchmark" benchmarkVersion="1.1.0.1">
+      <Policy policyID="xccdf_org.cisecurity.benchmarks_profile_Level_1_-_PostgreSQL_on_Linux"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_org.cisecurity.benchmarks_benchmark_1.1.0_CIS_Apache_Tomcat_7_Benchmark" benchmarkVersion="1.1.0">
+      <Policy policyID="xccdf_org.cisecurity.benchmarks_profile_Level_1"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_org.cisecurity.benchmarks_benchmark_1.1.0_CIS_Apache_Tomcat_7_Benchmark" benchmarkVersion="1.1.0">
+      <Policy policyID="xccdf_org.cisecurity.benchmarks_profile_Level_2"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_org.cisecurity.benchmarks_benchmark_1.1.0_CIS_Apple_macOS_10.13_Benchmark" benchmarkVersion="1.1.0">
+      <Policy policyID="xccdf_org.cisecurity.benchmarks_profile_Level_1"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_org.cisecurity.benchmarks_benchmark_1.1.0_CIS_Apple_macOS_10.13_Benchmark" benchmarkVersion="1.1.0">
+      <Policy policyID="xccdf_org.cisecurity.benchmarks_profile_Level_2"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_org.cisecurity.benchmarks_benchmark_1.1.0_CIS_Apple_OSX_10.11_Benchmark" benchmarkVersion="1.1.0">
+      <Policy policyID="xccdf_org.cisecurity.benchmarks_profile_Level_1"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_org.cisecurity.benchmarks_benchmark_1.1.0_CIS_Apple_OSX_10.11_Benchmark" benchmarkVersion="1.1.0">
+      <Policy policyID="xccdf_org.cisecurity.benchmarks_profile_Level_2"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_org.cisecurity.benchmarks_benchmark_1.1.0_CIS_Check_Point_Firewall_Benchmark" benchmarkVersion="1.1.0">
+      <Policy policyID="xccdf_org.cisecurity.benchmarks_profile_Level_1"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_org.cisecurity.benchmarks_benchmark_1.1.0_CIS_Check_Point_Firewall_Benchmark" benchmarkVersion="1.1.0">
+      <Policy policyID="xccdf_org.cisecurity.benchmarks_profile_Level_2"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_org.cisecurity.benchmarks_benchmark_1.1.0_CIS_Cisco_Wireless_LAN_Controller_7_Benchmark" benchmarkVersion="1.1.0">
+      <Policy policyID="xccdf_org.cisecurity.benchmarks_profile_Level_1"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_org.cisecurity.benchmarks_benchmark_1.1.0_CIS_Cisco_Wireless_LAN_Controller_7_Benchmark" benchmarkVersion="1.1.0">
+      <Policy policyID="xccdf_org.cisecurity.benchmarks_profile_Level_2"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_org.cisecurity.benchmarks_benchmark_1.1.0_CIS_Debian_Linux_12_Benchmark" benchmarkVersion="1.1.0">
+      <Policy policyID="xccdf_org.cisecurity.benchmarks_profile_Level_1_-_Server"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_org.cisecurity.benchmarks_benchmark_1.1.0_CIS_Debian_Linux_12_Benchmark" benchmarkVersion="1.1.0">
+      <Policy policyID="xccdf_org.cisecurity.benchmarks_profile_Level_1_-_Workstation"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_org.cisecurity.benchmarks_benchmark_1.1.0_CIS_Debian_Linux_12_Benchmark" benchmarkVersion="1.1.0">
+      <Policy policyID="xccdf_org.cisecurity.benchmarks_profile_Level_2_-_Server"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_org.cisecurity.benchmarks_benchmark_1.1.0_CIS_Debian_Linux_12_Benchmark" benchmarkVersion="1.1.0">
+      <Policy policyID="xccdf_org.cisecurity.benchmarks_profile_Level_2_-_Workstation"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_org.cisecurity.benchmarks_benchmark_1.1.0_CIS_IBM_AIX_5.3-6.1_Benchmark" benchmarkVersion="1.1.0">
+      <Policy policyID="aix-level-1-profile"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_org.cisecurity.benchmarks_benchmark_1.1.0_CIS_IBM_AIX_5.3-6.1_Benchmark" benchmarkVersion="1.1.0">
+      <Policy policyID="aix-level-2-profile"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_org.cisecurity.benchmarks_benchmark_1.1.0_CIS_IBM_AIX_7.1_Benchmark" benchmarkVersion="1.1.0">
+      <Policy policyID="xccdf_org.cisecurity.benchmarks_profile_Level_1"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_org.cisecurity.benchmarks_benchmark_1.1.0_CIS_IBM_AIX_7.1_Benchmark" benchmarkVersion="1.1.0">
+      <Policy policyID="xccdf_org.cisecurity.benchmarks_profile_Level_2"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_org.cisecurity.benchmarks_benchmark_1.1.0_CIS_IBM_AIX_7.2_Benchmark" benchmarkVersion="1.1.0">
+      <Policy policyID="xccdf_org.cisecurity.benchmarks_profile_Level_1"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_org.cisecurity.benchmarks_benchmark_1.1.0_CIS_IBM_AIX_7.2_Benchmark" benchmarkVersion="1.1.0">
+      <Policy policyID="xccdf_org.cisecurity.benchmarks_profile_Level_2"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_org.cisecurity.benchmarks_benchmark_1.1.0_CIS_IBM_DB2_10_Benchmark" benchmarkVersion="1.1.0">
+      <Policy policyID="xccdf_org.cisecurity.benchmarks_profile_Level_1_-_Linux_Host_OS_DB2_10"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_org.cisecurity.benchmarks_benchmark_1.1.0_CIS_IBM_DB2_10_Benchmark" benchmarkVersion="1.1.0">
+      <Policy policyID="xccdf_org.cisecurity.benchmarks_profile_Level_1_-_RDBMS_DB2_10"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_org.cisecurity.benchmarks_benchmark_1.1.0_CIS_IBM_DB2_10_Benchmark" benchmarkVersion="1.1.0">
+      <Policy policyID="xccdf_org.cisecurity.benchmarks_profile_Level_1_-_Windows_Host_OS_DB2_10"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_org.cisecurity.benchmarks_benchmark_1.1.0_CIS_IBM_DB2_10_Benchmark" benchmarkVersion="1.1.0">
+      <Policy policyID="xccdf_org.cisecurity.benchmarks_profile_Level_2_-_Linux_Host_OS_DB2_10"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_org.cisecurity.benchmarks_benchmark_1.1.0_CIS_IBM_DB2_10_Benchmark" benchmarkVersion="1.1.0">
+      <Policy policyID="xccdf_org.cisecurity.benchmarks_profile_Level_2_-_RDBMS_DB2_10"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_org.cisecurity.benchmarks_benchmark_1.1.0_CIS_IBM_DB2_10_Benchmark" benchmarkVersion="1.1.0">
+      <Policy policyID="xccdf_org.cisecurity.benchmarks_profile_Level_2_-_Windows_Host_OS_DB2_10"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_org.cisecurity.benchmarks_benchmark_1.1.0_CIS_Microsoft_Internet_Explorer_10_Benchmark" benchmarkVersion="1.1.0">
+      <Policy policyID="xccdf_org.cisecurity.benchmarks_profile_Level_1"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_org.cisecurity.benchmarks_benchmark_1.1.0_CIS_Microsoft_Intune_for_Windows_10_Benchmark" benchmarkVersion="1.1.0">
+      <Policy policyID="xccdf_org.cisecurity.benchmarks_profile_BitLocker_BL_-_optional_add-on_for_when_BitLocker_is_deployed"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_org.cisecurity.benchmarks_benchmark_1.1.0_CIS_Microsoft_Intune_for_Windows_10_Benchmark" benchmarkVersion="1.1.0">
+      <Policy policyID="xccdf_org.cisecurity.benchmarks_profile_Level_2_L2_-_High_SecuritySensitive_Data_Environment_limited_functionality"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_org.cisecurity.benchmarks_benchmark_1.1.0_CIS_Microsoft_Intune_for_Windows_10_Benchmark" benchmarkVersion="1.1.0">
+      <Policy policyID="xccdf_org.cisecurity.benchmarks_profile_Level_2_L2__BitLocker_BL"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_org.cisecurity.benchmarks_benchmark_1.1.0_CIS_Microsoft_Intune_for_Windows_10_Benchmark" benchmarkVersion="1.1.0">
+      <Policy policyID="xccdf_org.cisecurity.benchmarks_profile_Level_2_L2__BitLocker_BL__Next_Generation_Windows_Security_NG"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_org.cisecurity.benchmarks_benchmark_1.1.0_CIS_Microsoft_Intune_for_Windows_10_Benchmark" benchmarkVersion="1.1.0">
+      <Policy policyID="xccdf_org.cisecurity.benchmarks_profile_Level_2_L2__Next_Generation_Windows_Security_NG"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_org.cisecurity.benchmarks_benchmark_1.1.0_CIS_Microsoft_Intune_for_Windows_10_Benchmark" benchmarkVersion="1.1.0">
+      <Policy policyID="xccdf_org.cisecurity.benchmarks_profile_Next_Generation_Windows_Security_NG_-_optional_add-on_for_use_in_the_newest_hardware_and_configuration_environments"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_org.cisecurity.benchmarks_benchmark_1.1.0_CIS_Microsoft_Office_2013_Benchmark" benchmarkVersion="1.1.0">
+      <Policy policyID="xccdf_org.cisecurity.benchmarks_profile_Level_1"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_org.cisecurity.benchmarks_benchmark_1.1.0_CIS_Microsoft_Office_2016_Benchmark" benchmarkVersion="1.1.0">
+      <Policy policyID="xccdf_org.cisecurity.benchmarks_profile_Level_1"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_org.cisecurity.benchmarks_benchmark_1.1.0_CIS_Microsoft_Office_Outlook_2013_Benchmark" benchmarkVersion="1.1.0">
+      <Policy policyID="xccdf_org.cisecurity.benchmarks_profile_Level_1"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_org.cisecurity.benchmarks_benchmark_1.1.0_CIS_Microsoft_Office_Outlook_2016_Benchmark" benchmarkVersion="1.1.0">
+      <Policy policyID="xccdf_org.cisecurity.benchmarks_profile_Level_1"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_org.cisecurity.benchmarks_benchmark_1.1.0_CIS_Microsoft_Office_Word_2013_Benchmark" benchmarkVersion="1.1.0">
+      <Policy policyID="xccdf_org.cisecurity.benchmarks_profile_Level_1"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_org.cisecurity.benchmarks_benchmark_1.1.0_CIS_Microsoft_Office_Word_2016_Benchmark" benchmarkVersion="1.1.0">
+      <Policy policyID="xccdf_org.cisecurity.benchmarks_profile_Level_1"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_org.cisecurity.benchmarks_benchmark_1.1.0_CIS_Microsoft_SQL_Server_2022_Benchmark" benchmarkVersion="1.1.0">
+      <Policy policyID="xccdf_org.cisecurity.benchmarks_profile_Level_1_-_AWS_RDS"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_org.cisecurity.benchmarks_benchmark_1.1.0_CIS_Microsoft_SQL_Server_2022_Benchmark" benchmarkVersion="1.1.0">
+      <Policy policyID="xccdf_org.cisecurity.benchmarks_profile_Level_1_-_Database_Engine"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_org.cisecurity.benchmarks_benchmark_1.1.0_CIS_Microsoft_SQL_Server_2022_Benchmark" benchmarkVersion="1.1.0">
+      <Policy policyID="xccdf_org.cisecurity.benchmarks_profile_Level_2_-_Database_Engine"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_org.cisecurity.benchmarks_benchmark_1.1.0_CIS_Microsoft_Windows_10_EMS_Gateway_Benchmark" benchmarkVersion="1.1.0">
+      <Policy policyID="xccdf_org.cisecurity.benchmarks_profile_Level_1_L1_-_Elections_Management_System_EMS_Gateway_general_use"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_org.cisecurity.benchmarks_benchmark_1.1.0_CIS_MongoDB_3.6_Benchmark" benchmarkVersion="1.1.0">
+      <Policy policyID="xccdf_org.cisecurity.benchmarks_profile_Level_1-_MongoDB"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_org.cisecurity.benchmarks_benchmark_1.1.0_CIS_MongoDB_3.6_Benchmark" benchmarkVersion="1.1.0">
+      <Policy policyID="xccdf_org.cisecurity.benchmarks_profile_Level_2_-_MongoDB"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_org.cisecurity.benchmarks_benchmark_1.1.0_CIS_Oracle_MySQL_Community_Server_5.6_Benchmark" benchmarkVersion="1.1.0">
+      <Policy policyID="xccdf_org.cisecurity.benchmarks_profile_Level_1_-_MySQL_RDBMS"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_org.cisecurity.benchmarks_benchmark_1.1.0_CIS_Oracle_MySQL_Community_Server_5.6_Benchmark" benchmarkVersion="1.1.0">
+      <Policy policyID="xccdf_org.cisecurity.benchmarks_profile_Level_1_-_MySQL_RDBMS_on_Linux"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_org.cisecurity.benchmarks_benchmark_1.1.0_CIS_Oracle_MySQL_Community_Server_5.6_Benchmark" benchmarkVersion="1.1.0">
+      <Policy policyID="xccdf_org.cisecurity.benchmarks_profile_Level_2_-_MySQL_RDBMS"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_org.cisecurity.benchmarks_benchmark_1.1.0_CIS_Oracle_MySQL_Community_Server_5.6_Benchmark" benchmarkVersion="1.1.0">
+      <Policy policyID="xccdf_org.cisecurity.benchmarks_profile_Level_2_-_MySQL_RDBMS_on_Linux"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_org.cisecurity.benchmarks_benchmark_1.1.0_CIS_Oracle_MySQL_Enterprise_Edition_5.6_Benchmark" benchmarkVersion="1.1.0">
+      <Policy policyID="xccdf_org.cisecurity.benchmarks_profile_Level_1_-_MySQL_RDBMS"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_org.cisecurity.benchmarks_benchmark_1.1.0_CIS_Oracle_MySQL_Enterprise_Edition_5.6_Benchmark" benchmarkVersion="1.1.0">
+      <Policy policyID="xccdf_org.cisecurity.benchmarks_profile_Level_1_-_MySQL_RDBMS_on_Linux"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_org.cisecurity.benchmarks_benchmark_1.1.0_CIS_Oracle_MySQL_Enterprise_Edition_5.6_Benchmark" benchmarkVersion="1.1.0">
+      <Policy policyID="xccdf_org.cisecurity.benchmarks_profile_Level_2_-_MySQL_RDBMS"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_org.cisecurity.benchmarks_benchmark_1.1.0_CIS_Oracle_MySQL_Enterprise_Edition_5.6_Benchmark" benchmarkVersion="1.1.0">
+      <Policy policyID="xccdf_org.cisecurity.benchmarks_profile_Level_2_-_MySQL_RDBMS_on_Linux"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_org.cisecurity.benchmarks_benchmark_1.1.0_CIS_Palo_Alto_Firewall_11_Benchmark" benchmarkVersion="1.1.0">
+      <Policy policyID="xccdf_org.cisecurity.benchmarks_profile_Level_1"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_org.cisecurity.benchmarks_benchmark_1.1.0_CIS_Palo_Alto_Firewall_11_Benchmark" benchmarkVersion="1.1.0">
+      <Policy policyID="xccdf_org.cisecurity.benchmarks_profile_Level_2"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_org.cisecurity.benchmarks_benchmark_1.1.0_CIS_Palo_Alto_Firewall_9_Benchmark" benchmarkVersion="1.1.0">
+      <Policy policyID="xccdf_org.cisecurity.benchmarks_profile_Level_1"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_org.cisecurity.benchmarks_benchmark_1.1.0_CIS_Palo_Alto_Firewall_9_Benchmark" benchmarkVersion="1.1.0">
+      <Policy policyID="xccdf_org.cisecurity.benchmarks_profile_Level_2"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_org.cisecurity.benchmarks_benchmark_1.1.0_CIS_PostgreSQL_16_Benchmark" benchmarkVersion="1.1.0">
+      <Policy policyID="xccdf_org.cisecurity.benchmarks_profile_Level_1_-_PostgreSQL"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_org.cisecurity.benchmarks_benchmark_1.1.0_CIS_PostgreSQL_16_Benchmark" benchmarkVersion="1.1.0">
+      <Policy policyID="xccdf_org.cisecurity.benchmarks_profile_Level_1_-_PostgreSQL_on_Linux"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_org.cisecurity.benchmarks_benchmark_1.1.0_CIS_Ubuntu_12.04_LTS_Server_Benchmark" benchmarkVersion="1.1.0">
+      <Policy policyID="xccdf_org.cisecurity.benchmarks_profile_Level_1"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_org.cisecurity.benchmarks_benchmark_1.1.0_CIS_Ubuntu_12.04_LTS_Server_Benchmark" benchmarkVersion="1.1.0">
+      <Policy policyID="xccdf_org.cisecurity.benchmarks_profile_Level_2"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_org.cisecurity.benchmarks_benchmark_1.1.1_CIS_Microsoft_IIS_10_Benchmark" benchmarkVersion="1.1.1">
+      <Policy policyID="xccdf_org.cisecurity.benchmarks_profile_Level_1_-_IIS_10"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_org.cisecurity.benchmarks_benchmark_1.1.1_CIS_Microsoft_IIS_10_Benchmark" benchmarkVersion="1.1.1">
+      <Policy policyID="xccdf_org.cisecurity.benchmarks_profile_Level_2_-_IIS_10"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_org.cisecurity.benchmarks_benchmark_1.2.0_CIS_Apache_Tomcat_9_Benchmark" benchmarkVersion="1.2.0">
+      <Policy policyID="xccdf_org.cisecurity.benchmarks_profile_Level_1"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_org.cisecurity.benchmarks_benchmark_1.2.0_CIS_Apache_Tomcat_9_Benchmark" benchmarkVersion="1.2.0">
+      <Policy policyID="xccdf_org.cisecurity.benchmarks_profile_Level_2"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_org.cisecurity.benchmarks_benchmark_1.2.0_CIS_Apple_macOS_11.0_Benchmark" benchmarkVersion="1.2.0">
+      <Policy policyID="xccdf_org.cisecurity.benchmarks_profile_Level_1"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_org.cisecurity.benchmarks_benchmark_1.2.0_CIS_Apple_macOS_11.0_Benchmark" benchmarkVersion="1.2.0">
+      <Policy policyID="xccdf_org.cisecurity.benchmarks_profile_Level_2"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_org.cisecurity.benchmarks_benchmark_1.2.0_CIS_Apple_OSX_10.10_Benchmark" benchmarkVersion="1.2.0">
+      <Policy policyID="xccdf_org.cisecurity.benchmarks_profile_Level_1"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_org.cisecurity.benchmarks_benchmark_1.2.0_CIS_Apple_OSX_10.10_Benchmark" benchmarkVersion="1.2.0">
+      <Policy policyID="xccdf_org.cisecurity.benchmarks_profile_Level_2"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_org.cisecurity.benchmarks_benchmark_1.2.0_CIS_Docker_Benchmark" benchmarkVersion="1.2.0">
+      <Policy policyID="xccdf_org.cisecurity.benchmarks_profile_Level_1_-_Docker_-_Linux"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_org.cisecurity.benchmarks_benchmark_1.2.0_CIS_Docker_Benchmark" benchmarkVersion="1.2.0">
+      <Policy policyID="xccdf_org.cisecurity.benchmarks_profile_Level_1_-_Docker_Engine_-_Enterprise"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_org.cisecurity.benchmarks_benchmark_1.2.0_CIS_Docker_Benchmark" benchmarkVersion="1.2.0">
+      <Policy policyID="xccdf_org.cisecurity.benchmarks_profile_Level_1_-_Linux_Host_OS"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_org.cisecurity.benchmarks_benchmark_1.2.0_CIS_Docker_Benchmark" benchmarkVersion="1.2.0">
+      <Policy policyID="xccdf_org.cisecurity.benchmarks_profile_Level_2_-_Docker_-_Linux"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_org.cisecurity.benchmarks_benchmark_1.2.0_CIS_Docker_Benchmark" benchmarkVersion="1.2.0">
+      <Policy policyID="xccdf_org.cisecurity.benchmarks_profile_Level_2_-_Docker_Engine_-_Enterprise"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_org.cisecurity.benchmarks_benchmark_1.2.0_CIS_Docker_Benchmark" benchmarkVersion="1.2.0">
+      <Policy policyID="xccdf_org.cisecurity.benchmarks_profile_Level_2_-_Linux_Host_OS"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_org.cisecurity.benchmarks_benchmark_1.2.0_CIS_Microsoft_SQL_Server_2017_Benchmark" benchmarkVersion="1.2.0">
+      <Policy policyID="xccdf_org.cisecurity.benchmarks_profile_Level_1_-_AWS_RDS"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_org.cisecurity.benchmarks_benchmark_1.2.0_CIS_Microsoft_SQL_Server_2017_Benchmark" benchmarkVersion="1.2.0">
+      <Policy policyID="xccdf_org.cisecurity.benchmarks_profile_Level_1_-_Database_Engine"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_org.cisecurity.benchmarks_benchmark_1.2.0_CIS_Microsoft_SQL_Server_2019_Benchmark" benchmarkVersion="1.2.0">
+      <Policy policyID="xccdf_org.cisecurity.benchmarks_profile_Level_1_-_AWS_RDS"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_org.cisecurity.benchmarks_benchmark_1.2.0_CIS_Microsoft_SQL_Server_2019_Benchmark" benchmarkVersion="1.2.0">
+      <Policy policyID="xccdf_org.cisecurity.benchmarks_profile_Level_1_-_Database_Engine"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_org.cisecurity.benchmarks_benchmark_1.2.0_CIS_Microsoft_SQL_Server_2019_Benchmark" benchmarkVersion="1.2.0">
+      <Policy policyID="xccdf_org.cisecurity.benchmarks_profile_Level_2_-_AWS_RDS"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_org.cisecurity.benchmarks_benchmark_1.2.0_CIS_Microsoft_SQL_Server_2019_Benchmark" benchmarkVersion="1.2.0">
+      <Policy policyID="xccdf_org.cisecurity.benchmarks_profile_Level_2_-_Database_Engine"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_org.cisecurity.benchmarks_benchmark_1.2.0_CIS_Microsoft_Windows_Server_2016_RTM_Release_1607_Benchmark" benchmarkVersion="1.2.0">
+      <Policy policyID="xccdf_org.cisecurity.benchmarks_profile_Next_Generation_Windows_Security"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_org.cisecurity.benchmarks_benchmark_1.2.0_CIS_Oracle_Database_19c_Benchmark" benchmarkVersion="1.2.0">
+      <Policy policyID="xccdf_org.cisecurity.benchmarks_profile_Level_1_-_Linux_Host_OS_using_Traditional_Auditing"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_org.cisecurity.benchmarks_benchmark_1.2.0_CIS_Oracle_Database_19c_Benchmark" benchmarkVersion="1.2.0">
+      <Policy policyID="xccdf_org.cisecurity.benchmarks_profile_Level_1_-_Linux_Host_OS_using_Unified_Auditing"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_org.cisecurity.benchmarks_benchmark_1.2.0_CIS_Oracle_Database_19c_Benchmark" benchmarkVersion="1.2.0">
+      <Policy policyID="xccdf_org.cisecurity.benchmarks_profile_Level_1_-_RDBMS_using_Traditional_Auditing"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_org.cisecurity.benchmarks_benchmark_1.2.0_CIS_Oracle_Database_19c_Benchmark" benchmarkVersion="1.2.0">
+      <Policy policyID="xccdf_org.cisecurity.benchmarks_profile_Level_1_-_RDBMS_using_Unified_Auditing"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_org.cisecurity.benchmarks_benchmark_1.2.0_CIS_Oracle_Database_19c_Benchmark" benchmarkVersion="1.2.0">
+      <Policy policyID="xccdf_org.cisecurity.benchmarks_profile_Level_1_-_Windows_Server_Host_OS_using_Traditional_Auditing"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_org.cisecurity.benchmarks_benchmark_1.2.0_CIS_Oracle_Database_19c_Benchmark" benchmarkVersion="1.2.0">
+      <Policy policyID="xccdf_org.cisecurity.benchmarks_profile_Level_1_-_Windows_Server_Host_OS_using_Unified_Auditing"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_org.cisecurity.benchmarks_benchmark_1.2.0_CIS_Oracle_MySQL_Enterprise_Edition_8.0_Benchmark" benchmarkVersion="1.2.0">
+      <Policy policyID="xccdf_org.cisecurity.benchmarks_profile_Level_1_-_MySQL_RDBMS"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_org.cisecurity.benchmarks_benchmark_1.2.0_CIS_Oracle_MySQL_Enterprise_Edition_8.0_Benchmark" benchmarkVersion="1.2.0">
+      <Policy policyID="xccdf_org.cisecurity.benchmarks_profile_Level_1_-_MySQL_RDBMS_on_Linux"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_org.cisecurity.benchmarks_benchmark_1.2.0_CIS_Oracle_MySQL_Enterprise_Edition_8.0_Benchmark" benchmarkVersion="1.2.0">
+      <Policy policyID="xccdf_org.cisecurity.benchmarks_profile_Level_2_-_MySQL_RDBMS"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_org.cisecurity.benchmarks_benchmark_1.2.0_CIS_Oracle_MySQL_Enterprise_Edition_8.0_Benchmark" benchmarkVersion="1.2.0">
+      <Policy policyID="xccdf_org.cisecurity.benchmarks_profile_Level_2_-_MySQL_RDBMS_on_Linux"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_org.cisecurity.benchmarks_benchmark_1.2.0_CIS_Palo_Alto_Firewall_10_Benchmark" benchmarkVersion="1.2.0">
+      <Policy policyID="xccdf_org.cisecurity.benchmarks_profile_Level_1"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_org.cisecurity.benchmarks_benchmark_1.2.0_CIS_Palo_Alto_Firewall_10_Benchmark" benchmarkVersion="1.2.0">
+      <Policy policyID="xccdf_org.cisecurity.benchmarks_profile_Level_2"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_org.cisecurity.benchmarks_benchmark_1.2.0_CIS_PostgreSQL_15_Benchmark" benchmarkVersion="1.2.0">
+      <Policy policyID="xccdf_org.cisecurity.benchmarks_profile_Level_1_-_PostgreSQL"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_org.cisecurity.benchmarks_benchmark_1.2.0_CIS_PostgreSQL_15_Benchmark" benchmarkVersion="1.2.0">
+      <Policy policyID="xccdf_org.cisecurity.benchmarks_profile_Level_1_-_PostgreSQL_on_Linux"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_org.cisecurity.benchmarks_benchmark_1.2.0_CIS_VMware_ESXi_5.5_Benchmark" benchmarkVersion="1.2.0">
+      <Policy policyID="xccdf_org.cisecurity.benchmarks_profile_Level_1"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_org.cisecurity.benchmarks_benchmark_1.2.0_CIS_VMware_ESXi_5.5_Benchmark" benchmarkVersion="1.2.0">
+      <Policy policyID="xccdf_org.cisecurity.benchmarks_profile_Level_2"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_org.cisecurity.benchmarks_benchmark_1.2.0_CIS_VMware_ESXi_7.0_Benchmark" benchmarkVersion="1.2.0">
+      <Policy policyID="xccdf_org.cisecurity.benchmarks_profile_Level_1_L1_-_CorporateEnterprise_Environment_general_use"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_org.cisecurity.benchmarks_benchmark_1.2.0_CIS_VMware_ESXi_7.0_Benchmark" benchmarkVersion="1.2.0">
+      <Policy policyID="xccdf_org.cisecurity.benchmarks_profile_Level_2_L2_-_High_SecuritySensitive_Data_Environment_limited_functionality"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_org.cisecurity.benchmarks_benchmark_1.2.0_CIS_VMware_ESXi_8.0_Benchmark" benchmarkVersion="1.2.0">
+      <Policy policyID="xccdf_org.cisecurity.benchmarks_profile_Level_1_L1_-_CorporateEnterprise_Environment_general_use"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_org.cisecurity.benchmarks_benchmark_1.2.0_CIS_VMware_ESXi_8.0_Benchmark" benchmarkVersion="1.2.0">
+      <Policy policyID="xccdf_org.cisecurity.benchmarks_profile_Level_2_L2_-_High_SecuritySensitive_Data_Environment_limited_functionality"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_org.cisecurity.benchmarks_benchmark_1.3.0_CIS_Apache_HTTP_Server_2.4_Benchmark" benchmarkVersion="1.3.0">
+      <Policy policyID="xccdf_org.cisecurity.benchmarks_profile_Level_1"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_org.cisecurity.benchmarks_benchmark_1.3.0_CIS_Apache_HTTP_Server_2.4_Benchmark" benchmarkVersion="1.3.0">
+      <Policy policyID="xccdf_org.cisecurity.benchmarks_profile_Level_2"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_org.cisecurity.benchmarks_benchmark_1.3.0_CIS_Apple_OSX_10.8_Benchmark" benchmarkVersion="1.3.0">
+      <Policy policyID="xccdf_org.cisecurity.benchmarks_profile_Level_1"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_org.cisecurity.benchmarks_benchmark_1.3.0_CIS_Apple_OSX_10.8_Benchmark" benchmarkVersion="1.3.0">
+      <Policy policyID="xccdf_org.cisecurity.benchmarks_profile_Level_2"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_org.cisecurity.benchmarks_benchmark_1.3.0_CIS_Apple_OSX_10.9_Benchmark" benchmarkVersion="1.3.0">
+      <Policy policyID="xccdf_org.cisecurity.benchmarks_profile_Level_1"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_org.cisecurity.benchmarks_benchmark_1.3.0_CIS_Apple_OSX_10.9_Benchmark" benchmarkVersion="1.3.0">
+      <Policy policyID="xccdf_org.cisecurity.benchmarks_profile_Level_2"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_org.cisecurity.benchmarks_benchmark_1.3.0_CIS_Fortigate_7.0.x_Benchmark" benchmarkVersion="1.3.0">
+      <Policy policyID="xccdf_org.cisecurity.benchmarks_profile_Level_1"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_org.cisecurity.benchmarks_benchmark_1.3.0_CIS_Fortigate_7.0.x_Benchmark" benchmarkVersion="1.3.0">
+      <Policy policyID="xccdf_org.cisecurity.benchmarks_profile_Level_2"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_org.cisecurity.benchmarks_benchmark_1.3.0_CIS_Microsoft_SQL_Server_2016_Benchmark" benchmarkVersion="1.3.0">
+      <Policy policyID="xccdf_org.cisecurity.benchmarks_profile_Level_1_-_AWS_RDS"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_org.cisecurity.benchmarks_benchmark_1.3.0_CIS_Microsoft_SQL_Server_2016_Benchmark" benchmarkVersion="1.3.0">
+      <Policy policyID="xccdf_org.cisecurity.benchmarks_profile_Level_1_-_Database_Engine"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_org.cisecurity.benchmarks_benchmark_1.3.0_CIS_VMware_ESXi_6.7_Benchmark" benchmarkVersion="1.3.0">
+      <Policy policyID="xccdf_org.cisecurity.benchmarks_profile_Level_1_L1_-_CorporateEnterprise_Environment_general_use"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_org.cisecurity.benchmarks_benchmark_1.3.0_CIS_VMware_ESXi_6.7_Benchmark" benchmarkVersion="1.3.0">
+      <Policy policyID="xccdf_org.cisecurity.benchmarks_profile_Level_2_L2_-_High_SecuritySensitive_Data_Environment_limited_functionality"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_org.cisecurity.benchmarks_benchmark_1.4.0_CIS_Apple_macOS_10.14_Benchmark" benchmarkVersion="1.4.0">
+      <Policy policyID="xccdf_org.cisecurity.benchmarks_profile_Level_1"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_org.cisecurity.benchmarks_benchmark_1.4.0_CIS_Apple_macOS_10.14_Benchmark" benchmarkVersion="1.4.0">
+      <Policy policyID="xccdf_org.cisecurity.benchmarks_profile_Level_2"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_org.cisecurity.benchmarks_benchmark_1.4.2_CIS_HP_UX_11i_Benchmark" benchmarkVersion="1.4.2">
+      <Policy policyID="xccdf_org.cisecurity.benchmarks_profile_Level_1"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_org.cisecurity.benchmarks_benchmark_1.4.2_CIS_HP_UX_11i_Benchmark" benchmarkVersion="1.4.2">
+      <Policy policyID="xccdf_org.cisecurity.benchmarks_profile_Level_2"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_org.cisecurity.benchmarks_benchmark_1.5.0_CIS_Microsoft_IIS_8_Benchmark" benchmarkVersion="1.5.0">
+      <Policy policyID="xccdf_org.cisecurity.benchmarks_profile_Level_1_-_IIS_8.0"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_org.cisecurity.benchmarks_benchmark_1.5.0_CIS_Microsoft_IIS_8_Benchmark" benchmarkVersion="1.5.0">
+      <Policy policyID="xccdf_org.cisecurity.benchmarks_profile_Level_1_-_IIS_8.5"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_org.cisecurity.benchmarks_benchmark_1.5.0_CIS_Microsoft_IIS_8_Benchmark" benchmarkVersion="1.5.0">
+      <Policy policyID="xccdf_org.cisecurity.benchmarks_profile_Level_2_-_IIS_8.0"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_org.cisecurity.benchmarks_benchmark_1.5.0_CIS_Microsoft_IIS_8_Benchmark" benchmarkVersion="1.5.0">
+      <Policy policyID="xccdf_org.cisecurity.benchmarks_profile_Level_2_-_IIS_8.5"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_org.cisecurity.benchmarks_benchmark_1.5.0_CIS_Microsoft_SQL_Server_2014_Benchmark" benchmarkVersion="1.5.0">
+      <Policy policyID="xccdf_org.cisecurity.benchmarks_profile_Level_1_-_AWS_RDS"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_org.cisecurity.benchmarks_benchmark_1.5.0_CIS_Microsoft_SQL_Server_2014_Benchmark" benchmarkVersion="1.5.0">
+      <Policy policyID="xccdf_org.cisecurity.benchmarks_profile_Level_1_-_Database_Engine"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_org.cisecurity.benchmarks_benchmark_1.6.0_CIS_Microsoft_SQL_Server_2012_Benchmark" benchmarkVersion="1.6.0">
+      <Policy policyID="xccdf_org.cisecurity.benchmarks_profile_Level_1_-_AWS_RDS"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_org.cisecurity.benchmarks_benchmark_1.6.0_CIS_Microsoft_SQL_Server_2012_Benchmark" benchmarkVersion="1.6.0">
+      <Policy policyID="xccdf_org.cisecurity.benchmarks_profile_Level_1_-_Database_Engine"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_org.cisecurity.benchmarks_benchmark_1.6.0_CIS_Microsoft_Windows_10_Enterprise_Benchmark" benchmarkVersion="1.6.0">
+      <Policy policyID="xccdf_org.cisecurity.benchmarks_profile_Level_2_L2__BitLocker_BL__Next_Generation_Windows_Security_NG"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_org.cisecurity.benchmarks_benchmark_1.6.1_CIS_Kubernetes_Benchmark" benchmarkVersion="1.6.1">
+      <Policy policyID="xccdf_org.cisecurity.benchmarks_profile_Level_1_Master_Node"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_org.cisecurity.benchmarks_benchmark_1.6.1_CIS_Kubernetes_Benchmark" benchmarkVersion="1.6.1">
+      <Policy policyID="xccdf_org.cisecurity.benchmarks_profile_Level_1_Worker_Node"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_org.cisecurity.benchmarks_benchmark_1.6.1_CIS_Kubernetes_Benchmark" benchmarkVersion="1.6.1">
+      <Policy policyID="xccdf_org.cisecurity.benchmarks_profile_Level_2_Master_Node"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_org.cisecurity.benchmarks_benchmark_1.6.1_CIS_Kubernetes_Benchmark" benchmarkVersion="1.6.1">
+      <Policy policyID="xccdf_org.cisecurity.benchmarks_profile_Level_2_Worker_Node"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_org.cisecurity.benchmarks_benchmark_1.7.0_CIS_Microsoft_SQL_Server_2008_R2_Benchmark" benchmarkVersion="1.7.0">
+      <Policy policyID="xccdf_org.cisecurity.benchmarks_profile_Level_1_-_Database_Engine"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_org.cisecurity.benchmarks_benchmark_1.8.0_CIS_Microsoft_IIS_7_Benchmark" benchmarkVersion="1.8.0">
+      <Policy policyID="xccdf_org.cisecurity.benchmarks_profile_Level_1_-_IIS_7.0"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_org.cisecurity.benchmarks_benchmark_1.8.0_CIS_Microsoft_IIS_7_Benchmark" benchmarkVersion="1.8.0">
+      <Policy policyID="xccdf_org.cisecurity.benchmarks_profile_Level_1_-_IIS_7.5"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_org.cisecurity.benchmarks_benchmark_1.8.0_CIS_Microsoft_IIS_7_Benchmark" benchmarkVersion="1.8.0">
+      <Policy policyID="xccdf_org.cisecurity.benchmarks_profile_Level_2_-_IIS_7.0"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_org.cisecurity.benchmarks_benchmark_1.8.0_CIS_Microsoft_IIS_7_Benchmark" benchmarkVersion="1.8.0">
+      <Policy policyID="xccdf_org.cisecurity.benchmarks_profile_Level_2_-_IIS_7.5"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_org.cisecurity.benchmarks_benchmark_2.0.0_CIS_AlmaLinux_OS_9_Benchmark" benchmarkVersion="2.0.0">
+      <Policy policyID="xccdf_org.cisecurity.benchmarks_profile_Level_1_-_Server"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_org.cisecurity.benchmarks_benchmark_2.0.0_CIS_AlmaLinux_OS_9_Benchmark" benchmarkVersion="2.0.0">
+      <Policy policyID="xccdf_org.cisecurity.benchmarks_profile_Level_1_-_Workstation"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_org.cisecurity.benchmarks_benchmark_2.0.0_CIS_AlmaLinux_OS_9_Benchmark" benchmarkVersion="2.0.0">
+      <Policy policyID="xccdf_org.cisecurity.benchmarks_profile_Level_2_-_Server"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_org.cisecurity.benchmarks_benchmark_2.0.0_CIS_AlmaLinux_OS_9_Benchmark" benchmarkVersion="2.0.0">
+      <Policy policyID="xccdf_org.cisecurity.benchmarks_profile_Level_2_-_Workstation"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_org.cisecurity.benchmarks_benchmark_2.0.0_CIS_Amazon_Linux_2_STIG_Benchmark" benchmarkVersion="2.0.0">
+      <Policy policyID="xccdf_org.cisecurity.benchmarks_profile_Level_1_-_Server"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_org.cisecurity.benchmarks_benchmark_2.0.0_CIS_Amazon_Linux_2_STIG_Benchmark" benchmarkVersion="2.0.0">
+      <Policy policyID="xccdf_org.cisecurity.benchmarks_profile_Level_1_-_Workstation"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_org.cisecurity.benchmarks_benchmark_2.0.0_CIS_Amazon_Linux_2_STIG_Benchmark" benchmarkVersion="2.0.0">
+      <Policy policyID="xccdf_org.cisecurity.benchmarks_profile_Level_2_-_Server"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_org.cisecurity.benchmarks_benchmark_2.0.0_CIS_Amazon_Linux_2_STIG_Benchmark" benchmarkVersion="2.0.0">
+      <Policy policyID="xccdf_org.cisecurity.benchmarks_profile_Level_2_-_Workstation"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_org.cisecurity.benchmarks_benchmark_2.0.0_CIS_Amazon_Linux_2_STIG_Benchmark" benchmarkVersion="2.0.0">
+      <Policy policyID="xccdf_org.cisecurity.benchmarks_profile_STIG"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_org.cisecurity.benchmarks_benchmark_2.0.0_CIS_Cisco_IOS_16_Benchmark" benchmarkVersion="2.0.0">
+      <Policy policyID="xccdf_org.cisecurity.benchmarks_profile_Level_1"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_org.cisecurity.benchmarks_benchmark_2.0.0_CIS_Cisco_IOS_16_Benchmark" benchmarkVersion="2.0.0">
+      <Policy policyID="xccdf_org.cisecurity.benchmarks_profile_Level_2"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_org.cisecurity.benchmarks_benchmark_2.0.0_CIS_Cisco_IOS_17.x_Benchmark" benchmarkVersion="2.0.0">
+      <Policy policyID="xccdf_org.cisecurity.benchmarks_profile_Level_1"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_org.cisecurity.benchmarks_benchmark_2.0.0_CIS_Cisco_IOS_17.x_Benchmark" benchmarkVersion="2.0.0">
+      <Policy policyID="xccdf_org.cisecurity.benchmarks_profile_Level_2"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_org.cisecurity.benchmarks_benchmark_2.0.0_CIS_Debian_Linux_11_Benchmark" benchmarkVersion="2.0.0">
+      <Policy policyID="xccdf_org.cisecurity.benchmarks_profile_Level_1_-_Server"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_org.cisecurity.benchmarks_benchmark_2.0.0_CIS_Debian_Linux_11_Benchmark" benchmarkVersion="2.0.0">
+      <Policy policyID="xccdf_org.cisecurity.benchmarks_profile_Level_1_-_Workstation"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_org.cisecurity.benchmarks_benchmark_2.0.0_CIS_Debian_Linux_11_Benchmark" benchmarkVersion="2.0.0">
+      <Policy policyID="xccdf_org.cisecurity.benchmarks_profile_Level_2_-_Server"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_org.cisecurity.benchmarks_benchmark_2.0.0_CIS_Debian_Linux_11_Benchmark" benchmarkVersion="2.0.0">
+      <Policy policyID="xccdf_org.cisecurity.benchmarks_profile_Level_2_-_Workstation"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_org.cisecurity.benchmarks_benchmark_2.0.0_CIS_Juniper_OS_Benchmark" benchmarkVersion="2.0.0">
+      <Policy policyID="xccdf_org.cisecurity.benchmarks_profile_Level_1"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_org.cisecurity.benchmarks_benchmark_2.0.0_CIS_Juniper_OS_Benchmark" benchmarkVersion="2.0.0">
+      <Policy policyID="xccdf_org.cisecurity.benchmarks_profile_Level_2"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_org.cisecurity.benchmarks_benchmark_2.0.0_CIS_macOS_Safari_Benchmark" benchmarkVersion="2.0.0.0">
+      <Policy policyID="xccdf_org.cisecurity.benchmarks_profile_Level_1"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_org.cisecurity.benchmarks_benchmark_2.0.0_CIS_macOS_Safari_Benchmark" benchmarkVersion="2.0.0.0">
+      <Policy policyID="xccdf_org.cisecurity.benchmarks_profile_Level_2"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_org.cisecurity.benchmarks_benchmark_2.0.0_CIS_Microsoft_Edge_Benchmark" benchmarkVersion="2.0.0">
+      <Policy policyID="xccdf_org.cisecurity.benchmarks_profile_Level_1_L1_-_CorporateEnterprise_Environment_general_use"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_org.cisecurity.benchmarks_benchmark_2.0.0_CIS_Microsoft_Edge_Benchmark" benchmarkVersion="2.0.0">
+      <Policy policyID="xccdf_org.cisecurity.benchmarks_profile_Level_2_L2_-_High_SecuritySensitive_Data_Environment_limited_functionality"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_org.cisecurity.benchmarks_benchmark_2.0.0_CIS_Oracle_Linux_6_Benchmark" benchmarkVersion="2.0.0">
+      <Policy policyID="xccdf_org.cisecurity.benchmarks_profile_Level_1_-_Server"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_org.cisecurity.benchmarks_benchmark_2.0.0_CIS_Oracle_Linux_6_Benchmark" benchmarkVersion="2.0.0">
+      <Policy policyID="xccdf_org.cisecurity.benchmarks_profile_Level_1_-_Workstation"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_org.cisecurity.benchmarks_benchmark_2.0.0_CIS_Oracle_Linux_6_Benchmark" benchmarkVersion="2.0.0">
+      <Policy policyID="xccdf_org.cisecurity.benchmarks_profile_Level_2_-_Server"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_org.cisecurity.benchmarks_benchmark_2.0.0_CIS_Oracle_Linux_6_Benchmark" benchmarkVersion="2.0.0">
+      <Policy policyID="xccdf_org.cisecurity.benchmarks_profile_Level_2_-_Workstation"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_org.cisecurity.benchmarks_benchmark_2.0.0_CIS_Oracle_Linux_9_Benchmark" benchmarkVersion="2.0.0">
+      <Policy policyID="xccdf_org.cisecurity.benchmarks_profile_Level_1_-_Server"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_org.cisecurity.benchmarks_benchmark_2.0.0_CIS_Oracle_Linux_9_Benchmark" benchmarkVersion="2.0.0">
+      <Policy policyID="xccdf_org.cisecurity.benchmarks_profile_Level_1_-_Workstation"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_org.cisecurity.benchmarks_benchmark_2.0.0_CIS_Oracle_Linux_9_Benchmark" benchmarkVersion="2.0.0">
+      <Policy policyID="xccdf_org.cisecurity.benchmarks_profile_Level_2_-_Server"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_org.cisecurity.benchmarks_benchmark_2.0.0_CIS_Oracle_Linux_9_Benchmark" benchmarkVersion="2.0.0">
+      <Policy policyID="xccdf_org.cisecurity.benchmarks_profile_Level_2_-_Workstation"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_org.cisecurity.benchmarks_benchmark_2.0.0_CIS_Red_Hat_Enterprise_Linux_8_STIG_Benchmark" benchmarkVersion="2.0.0">
+      <Policy policyID="xccdf_org.cisecurity.benchmarks_profile_Level_1_-_Server"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_org.cisecurity.benchmarks_benchmark_2.0.0_CIS_Red_Hat_Enterprise_Linux_8_STIG_Benchmark" benchmarkVersion="2.0.0">
+      <Policy policyID="xccdf_org.cisecurity.benchmarks_profile_Level_1_-_Workstation"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_org.cisecurity.benchmarks_benchmark_2.0.0_CIS_Red_Hat_Enterprise_Linux_8_STIG_Benchmark" benchmarkVersion="2.0.0">
+      <Policy policyID="xccdf_org.cisecurity.benchmarks_profile_Level_2_-_Server"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_org.cisecurity.benchmarks_benchmark_2.0.0_CIS_Red_Hat_Enterprise_Linux_8_STIG_Benchmark" benchmarkVersion="2.0.0">
+      <Policy policyID="xccdf_org.cisecurity.benchmarks_profile_Level_2_-_Workstation"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_org.cisecurity.benchmarks_benchmark_2.0.0_CIS_Red_Hat_Enterprise_Linux_8_STIG_Benchmark" benchmarkVersion="2.0.0">
+      <Policy policyID="xccdf_org.cisecurity.benchmarks_profile_STIG"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_org.cisecurity.benchmarks_benchmark_2.0.0_CIS_Red_Hat_Enterprise_Linux_9_Benchmark" benchmarkVersion="2.0.0">
+      <Policy policyID="xccdf_org.cisecurity.benchmarks_profile_Level_1_-_Server"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_org.cisecurity.benchmarks_benchmark_2.0.0_CIS_Red_Hat_Enterprise_Linux_9_Benchmark" benchmarkVersion="2.0.0">
+      <Policy policyID="xccdf_org.cisecurity.benchmarks_profile_Level_1_-_Workstation"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_org.cisecurity.benchmarks_benchmark_2.0.0_CIS_Red_Hat_Enterprise_Linux_9_Benchmark" benchmarkVersion="2.0.0">
+      <Policy policyID="xccdf_org.cisecurity.benchmarks_profile_Level_2_-_Server"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_org.cisecurity.benchmarks_benchmark_2.0.0_CIS_Red_Hat_Enterprise_Linux_9_Benchmark" benchmarkVersion="2.0.0">
+      <Policy policyID="xccdf_org.cisecurity.benchmarks_profile_Level_2_-_Workstation"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_org.cisecurity.benchmarks_benchmark_2.0.0_CIS_Rocky_Linux_8_Benchmark" benchmarkVersion="2.0.0">
+      <Policy policyID="xccdf_org.cisecurity.benchmarks_profile_Level_1_-_Server"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_org.cisecurity.benchmarks_benchmark_2.0.0_CIS_Rocky_Linux_8_Benchmark" benchmarkVersion="2.0.0">
+      <Policy policyID="xccdf_org.cisecurity.benchmarks_profile_Level_1_-_Workstation"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_org.cisecurity.benchmarks_benchmark_2.0.0_CIS_Rocky_Linux_8_Benchmark" benchmarkVersion="2.0.0">
+      <Policy policyID="xccdf_org.cisecurity.benchmarks_profile_Level_2_-_Server"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_org.cisecurity.benchmarks_benchmark_2.0.0_CIS_Rocky_Linux_8_Benchmark" benchmarkVersion="2.0.0">
+      <Policy policyID="xccdf_org.cisecurity.benchmarks_profile_Level_2_-_Workstation"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_org.cisecurity.benchmarks_benchmark_2.0.0_CIS_Rocky_Linux_9_Benchmark" benchmarkVersion="2.0.0">
+      <Policy policyID="xccdf_org.cisecurity.benchmarks_profile_Level_1_-_Server"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_org.cisecurity.benchmarks_benchmark_2.0.0_CIS_Rocky_Linux_9_Benchmark" benchmarkVersion="2.0.0">
+      <Policy policyID="xccdf_org.cisecurity.benchmarks_profile_Level_1_-_Workstation"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_org.cisecurity.benchmarks_benchmark_2.0.0_CIS_Rocky_Linux_9_Benchmark" benchmarkVersion="2.0.0">
+      <Policy policyID="xccdf_org.cisecurity.benchmarks_profile_Level_2_-_Server"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_org.cisecurity.benchmarks_benchmark_2.0.0_CIS_Rocky_Linux_9_Benchmark" benchmarkVersion="2.0.0">
+      <Policy policyID="xccdf_org.cisecurity.benchmarks_profile_Level_2_-_Workstation"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_org.cisecurity.benchmarks_benchmark_2.0.0_CIS_Ubuntu_Linux_16.04_LTS_Benchmark" benchmarkVersion="2.0.0">
+      <Policy policyID="xccdf_org.cisecurity.benchmarks_profile_Level_1_-_Server"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_org.cisecurity.benchmarks_benchmark_2.0.0_CIS_Ubuntu_Linux_16.04_LTS_Benchmark" benchmarkVersion="2.0.0">
+      <Policy policyID="xccdf_org.cisecurity.benchmarks_profile_Level_1_-_Workstation"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_org.cisecurity.benchmarks_benchmark_2.0.0_CIS_Ubuntu_Linux_16.04_LTS_Benchmark" benchmarkVersion="2.0.0">
+      <Policy policyID="xccdf_org.cisecurity.benchmarks_profile_Level_2_-_Server"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_org.cisecurity.benchmarks_benchmark_2.0.0_CIS_Ubuntu_Linux_16.04_LTS_Benchmark" benchmarkVersion="2.0.0">
+      <Policy policyID="xccdf_org.cisecurity.benchmarks_profile_Level_2_-_Workstation"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_org.cisecurity.benchmarks_benchmark_2.0.0_CIS_Ubuntu_Linux_22.04_LTS_Benchmark" benchmarkVersion="2.0.0">
+      <Policy policyID="xccdf_org.cisecurity.benchmarks_profile_Level_1_-_Server"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_org.cisecurity.benchmarks_benchmark_2.0.0_CIS_Ubuntu_Linux_22.04_LTS_Benchmark" benchmarkVersion="2.0.0">
+      <Policy policyID="xccdf_org.cisecurity.benchmarks_profile_Level_1_-_Workstation"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_org.cisecurity.benchmarks_benchmark_2.0.0_CIS_Ubuntu_Linux_22.04_LTS_Benchmark" benchmarkVersion="2.0.0">
+      <Policy policyID="xccdf_org.cisecurity.benchmarks_profile_Level_2_-_Server"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_org.cisecurity.benchmarks_benchmark_2.0.0_CIS_Ubuntu_Linux_22.04_LTS_Benchmark" benchmarkVersion="2.0.0">
+      <Policy policyID="xccdf_org.cisecurity.benchmarks_profile_Level_2_-_Workstation"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_org.cisecurity.benchmarks_benchmark_2.0.1_CIS_Fedora_28_Family_Linux_Benchmark" benchmarkVersion="2.0.1">
+      <Policy policyID="xccdf_org.cisecurity.benchmarks_profile_Level_1_-_Server"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_org.cisecurity.benchmarks_benchmark_2.0.1_CIS_Fedora_28_Family_Linux_Benchmark" benchmarkVersion="2.0.1">
+      <Policy policyID="xccdf_org.cisecurity.benchmarks_profile_Level_1_-_Workstation"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_org.cisecurity.benchmarks_benchmark_2.0.1_CIS_Fedora_28_Family_Linux_Benchmark" benchmarkVersion="2.0.1">
+      <Policy policyID="xccdf_org.cisecurity.benchmarks_profile_Level_2_-_Server"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_org.cisecurity.benchmarks_benchmark_2.0.1_CIS_Fedora_28_Family_Linux_Benchmark" benchmarkVersion="2.0.1">
+      <Policy policyID="xccdf_org.cisecurity.benchmarks_profile_Level_2_-_Workstation"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_org.cisecurity.benchmarks_benchmark_2.0.1_CIS_Oracle_Database_9i-10g_Benchmark" benchmarkVersion="2.0.1.5">
+      <Policy policyID="xccdf_org.cisecurity.benchmarks_profile_Level-I-DB"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_org.cisecurity.benchmarks_benchmark_2.0.1_CIS_Oracle_Database_9i-10g_Benchmark" benchmarkVersion="2.0.1.5">
+      <Policy policyID="xccdf_org.cisecurity.benchmarks_profile_Level-I-Linux"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_org.cisecurity.benchmarks_benchmark_2.0.1_CIS_Oracle_Database_9i-10g_Benchmark" benchmarkVersion="2.0.1.5">
+      <Policy policyID="xccdf_org.cisecurity.benchmarks_profile_Level-I-Windows"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_org.cisecurity.benchmarks_benchmark_2.0.1_CIS_Oracle_Database_9i-10g_Benchmark" benchmarkVersion="2.0.1.5">
+      <Policy policyID="xccdf_org.cisecurity.benchmarks_profile_Level-II-DB"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_org.cisecurity.benchmarks_benchmark_2.0.1_CIS_Oracle_Database_9i-10g_Benchmark" benchmarkVersion="2.0.1.5">
+      <Policy policyID="xccdf_org.cisecurity.benchmarks_profile_Level-II-Linux"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_org.cisecurity.benchmarks_benchmark_2.0.1_CIS_Oracle_Database_9i-10g_Benchmark" benchmarkVersion="2.0.1.5">
+      <Policy policyID="xccdf_org.cisecurity.benchmarks_profile_Level-II-Linux-Known-Tests"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_org.cisecurity.benchmarks_benchmark_2.0.1_CIS_Oracle_Database_9i-10g_Benchmark" benchmarkVersion="2.0.1.5">
+      <Policy policyID="xccdf_org.cisecurity.benchmarks_profile_Level-II-Windows"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_org.cisecurity.benchmarks_benchmark_2.0.1_CIS_Oracle_Database_9i-10g_Benchmark" benchmarkVersion="2.0.1.5">
+      <Policy policyID="xccdf_org.cisecurity.benchmarks_profile_Level-II-Windows-Known-Tests"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_org.cisecurity.benchmarks_benchmark_2.0.1_CIS_SUSE_Linux_Enterprise_15_Benchmark" benchmarkVersion="2.0.1">
+      <Policy policyID="xccdf_org.cisecurity.benchmarks_profile_Level_1_-_Server"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_org.cisecurity.benchmarks_benchmark_2.0.1_CIS_SUSE_Linux_Enterprise_15_Benchmark" benchmarkVersion="2.0.1">
+      <Policy policyID="xccdf_org.cisecurity.benchmarks_profile_Level_1_-_Workstation"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_org.cisecurity.benchmarks_benchmark_2.0.1_CIS_SUSE_Linux_Enterprise_15_Benchmark" benchmarkVersion="2.0.1">
+      <Policy policyID="xccdf_org.cisecurity.benchmarks_profile_Level_2_-_Server"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_org.cisecurity.benchmarks_benchmark_2.0.1_CIS_SUSE_Linux_Enterprise_15_Benchmark" benchmarkVersion="2.0.1">
+      <Policy policyID="xccdf_org.cisecurity.benchmarks_profile_Level_2_-_Workstation"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_org.cisecurity.benchmarks_benchmark_2.0.2_CIS_Debian_Linux_8_Benchmark" benchmarkVersion="2.0.2">
+      <Policy policyID="xccdf_org.cisecurity.benchmarks_profile_Level_1_-_Server"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_org.cisecurity.benchmarks_benchmark_2.0.2_CIS_Debian_Linux_8_Benchmark" benchmarkVersion="2.0.2">
+      <Policy policyID="xccdf_org.cisecurity.benchmarks_profile_Level_1_-_Workstation"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_org.cisecurity.benchmarks_benchmark_2.0.2_CIS_Debian_Linux_8_Benchmark" benchmarkVersion="2.0.2">
+      <Policy policyID="xccdf_org.cisecurity.benchmarks_profile_Level_2_-_Server"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_org.cisecurity.benchmarks_benchmark_2.0.2_CIS_Debian_Linux_8_Benchmark" benchmarkVersion="2.0.2">
+      <Policy policyID="xccdf_org.cisecurity.benchmarks_profile_Level_2_-_Workstation"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_org.cisecurity.benchmarks_benchmark_2.1.0_CIS_Amazon_Linux_Benchmark" benchmarkVersion="2.1.0">
+      <Policy policyID="xccdf_org.cisecurity.benchmarks_profile_Level_1"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_org.cisecurity.benchmarks_benchmark_2.1.0_CIS_Amazon_Linux_Benchmark" benchmarkVersion="2.1.0">
+      <Policy policyID="xccdf_org.cisecurity.benchmarks_profile_Level_2"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_org.cisecurity.benchmarks_benchmark_2.1.0_CIS_NGINX_Benchmark" benchmarkVersion="2.1.0">
+      <Policy policyID="xccdf_org.cisecurity.benchmarks_profile_Level_1_-_Loadbalancer"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_org.cisecurity.benchmarks_benchmark_2.1.0_CIS_NGINX_Benchmark" benchmarkVersion="2.1.0">
+      <Policy policyID="xccdf_org.cisecurity.benchmarks_profile_Level_1_-_Proxy"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_org.cisecurity.benchmarks_benchmark_2.1.0_CIS_NGINX_Benchmark" benchmarkVersion="2.1.0">
+      <Policy policyID="xccdf_org.cisecurity.benchmarks_profile_Level_1_-_Webserver"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_org.cisecurity.benchmarks_benchmark_2.1.0_CIS_NGINX_Benchmark" benchmarkVersion="2.1.0">
+      <Policy policyID="xccdf_org.cisecurity.benchmarks_profile_Level_2_-_Loadbalancer"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_org.cisecurity.benchmarks_benchmark_2.1.0_CIS_NGINX_Benchmark" benchmarkVersion="2.1.0">
+      <Policy policyID="xccdf_org.cisecurity.benchmarks_profile_Level_2_-_Proxy"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_org.cisecurity.benchmarks_benchmark_2.1.0_CIS_NGINX_Benchmark" benchmarkVersion="2.1.0">
+      <Policy policyID="xccdf_org.cisecurity.benchmarks_profile_Level_2_-_Webserver"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_org.cisecurity.benchmarks_benchmark_2.1.0_CIS_SUSE_Linux_Enterprise_11_Benchmark" benchmarkVersion="2.1.0">
+      <Policy policyID="xccdf_org.cisecurity.benchmarks_profile_Level_1_-_Server"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_org.cisecurity.benchmarks_benchmark_2.1.0_CIS_SUSE_Linux_Enterprise_11_Benchmark" benchmarkVersion="2.1.0">
+      <Policy policyID="xccdf_org.cisecurity.benchmarks_profile_Level_1_-_Workstation"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_org.cisecurity.benchmarks_benchmark_2.1.0_CIS_SUSE_Linux_Enterprise_11_Benchmark" benchmarkVersion="2.1.0">
+      <Policy policyID="xccdf_org.cisecurity.benchmarks_profile_Level_2_-_Server"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_org.cisecurity.benchmarks_benchmark_2.1.0_CIS_SUSE_Linux_Enterprise_11_Benchmark" benchmarkVersion="2.1.0">
+      <Policy policyID="xccdf_org.cisecurity.benchmarks_profile_Level_2_-_Workstation"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_org.cisecurity.benchmarks_benchmark_2.1.0_CIS_Ubuntu_Linux_14.04_LTS_Benchmark" benchmarkVersion="2.1.0">
+      <Policy policyID="xccdf_org.cisecurity.benchmarks_profile_Level_1_-_Server"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_org.cisecurity.benchmarks_benchmark_2.1.0_CIS_Ubuntu_Linux_14.04_LTS_Benchmark" benchmarkVersion="2.1.0">
+      <Policy policyID="xccdf_org.cisecurity.benchmarks_profile_Level_1_-_Workstation"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_org.cisecurity.benchmarks_benchmark_2.1.0_CIS_Ubuntu_Linux_14.04_LTS_Benchmark" benchmarkVersion="2.1.0">
+      <Policy policyID="xccdf_org.cisecurity.benchmarks_profile_Level_2_-_Server"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_org.cisecurity.benchmarks_benchmark_2.1.0_CIS_Ubuntu_Linux_14.04_LTS_Benchmark" benchmarkVersion="2.1.0">
+      <Policy policyID="xccdf_org.cisecurity.benchmarks_profile_Level_2_-_Workstation"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_org.cisecurity.benchmarks_benchmark_2.1.0_CIS_Ubuntu_Linux_18.04_LTS_Benchmark" benchmarkVersion="2.1.0">
+      <Policy policyID="xccdf_org.cisecurity.benchmarks_profile_Level_1_-_Server"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_org.cisecurity.benchmarks_benchmark_2.1.0_CIS_Ubuntu_Linux_18.04_LTS_Benchmark" benchmarkVersion="2.1.0">
+      <Policy policyID="xccdf_org.cisecurity.benchmarks_profile_Level_1_-_Workstation"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_org.cisecurity.benchmarks_benchmark_2.1.0_CIS_Ubuntu_Linux_18.04_LTS_Benchmark" benchmarkVersion="2.1.0">
+      <Policy policyID="xccdf_org.cisecurity.benchmarks_profile_Level_2_-_Server"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_org.cisecurity.benchmarks_benchmark_2.1.0_CIS_Ubuntu_Linux_18.04_LTS_Benchmark" benchmarkVersion="2.1.0">
+      <Policy policyID="xccdf_org.cisecurity.benchmarks_profile_Level_2_-_Workstation"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_org.cisecurity.benchmarks_benchmark_2.2.0.1_CIS_Red_Hat_Enterprise_Linux_5_Benchmark" benchmarkVersion="2.2.0.1">
+      <Policy policyID="xccdf_org.cisecurity.benchmarks_profile_Level_1"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_org.cisecurity.benchmarks_benchmark_2.2.0.1_CIS_Red_Hat_Enterprise_Linux_5_Benchmark" benchmarkVersion="2.2.0.1">
+      <Policy policyID="xccdf_org.cisecurity.benchmarks_profile_Level_2"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_org.cisecurity.benchmarks_benchmark_2.2.0_CIS_Oracle_Database_11g_R2_Benchmark" benchmarkVersion="2.2.0">
+      <Policy policyID="xccdf_org.cisecurity.benchmarks_profile_Level_1_-__RDBMS"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_org.cisecurity.benchmarks_benchmark_2.2.0_CIS_Oracle_Database_11g_R2_Benchmark" benchmarkVersion="2.2.0">
+      <Policy policyID="xccdf_org.cisecurity.benchmarks_profile_Level_1_-_Linux_Host_OS"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_org.cisecurity.benchmarks_benchmark_2.2.0_CIS_Oracle_Database_11g_R2_Benchmark" benchmarkVersion="2.2.0">
+      <Policy policyID="xccdf_org.cisecurity.benchmarks_profile_Level_1_-_Windows_Server_Host_OS"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_org.cisecurity.benchmarks_benchmark_2.3.0_CIS_Microsoft_Windows_Server_2012_non-R2_Benchmark" benchmarkVersion="2.3.0">
+      <Policy policyID="xccdf_org.cisecurity.benchmarks_profile_Level_1_-_Domain_Controller"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_org.cisecurity.benchmarks_benchmark_2.3.0_CIS_Microsoft_Windows_Server_2012_non-R2_Benchmark" benchmarkVersion="2.3.0">
+      <Policy policyID="xccdf_org.cisecurity.benchmarks_profile_Level_1_-_Member_Server"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_org.cisecurity.benchmarks_benchmark_2.3.0_CIS_Microsoft_Windows_Server_2012_non-R2_Benchmark" benchmarkVersion="2.3.0">
+      <Policy policyID="xccdf_org.cisecurity.benchmarks_profile_Level_2_-_Domain_Controller"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_org.cisecurity.benchmarks_benchmark_2.3.0_CIS_Microsoft_Windows_Server_2012_non-R2_Benchmark" benchmarkVersion="2.3.0">
+      <Policy policyID="xccdf_org.cisecurity.benchmarks_profile_Level_2_-_Member_Server"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_org.cisecurity.benchmarks_benchmark_2.3.0_CIS_Microsoft_Windows_Server_2012_non-R2_Benchmark" benchmarkVersion="2.3.0">
+      <Policy policyID="xccdf_org.cisecurity.benchmarks_profile_Next_Generation_Windows_Security_-_Domain_Controller"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_org.cisecurity.benchmarks_benchmark_2.3.0_CIS_Microsoft_Windows_Server_2012_non-R2_Benchmark" benchmarkVersion="2.3.0">
+      <Policy policyID="xccdf_org.cisecurity.benchmarks_profile_Next_Generation_Windows_Security_-_Member_Server"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_org.cisecurity.benchmarks_benchmark_2.4.0_CIS_Microsoft_Windows_8.1_Workstation_Benchmark" benchmarkVersion="2.4.0">
+      <Policy policyID="xccdf_org.cisecurity.benchmarks_profile_BitLocker_BL_-_optional_add-on_for_when_BitLocker_is_deployed"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_org.cisecurity.benchmarks_benchmark_2.4.0_CIS_Microsoft_Windows_8.1_Workstation_Benchmark" benchmarkVersion="2.4.0">
+      <Policy policyID="xccdf_org.cisecurity.benchmarks_profile_Level_1_L1_-_CorporateEnterprise_Environment_general_use"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_org.cisecurity.benchmarks_benchmark_2.4.0_CIS_Microsoft_Windows_8.1_Workstation_Benchmark" benchmarkVersion="2.4.0">
+      <Policy policyID="xccdf_org.cisecurity.benchmarks_profile_Level_1_L1__BitLocker_BL"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_org.cisecurity.benchmarks_benchmark_2.4.0_CIS_Microsoft_Windows_8.1_Workstation_Benchmark" benchmarkVersion="2.4.0">
+      <Policy policyID="xccdf_org.cisecurity.benchmarks_profile_Level_1_L1__BitLocker_BL__Next_Generation_Windows_Security_NG"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_org.cisecurity.benchmarks_benchmark_2.4.0_CIS_Microsoft_Windows_8.1_Workstation_Benchmark" benchmarkVersion="2.4.0">
+      <Policy policyID="xccdf_org.cisecurity.benchmarks_profile_Level_1_L1__Next_Generation_Windows_Security_NG"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_org.cisecurity.benchmarks_benchmark_2.4.0_CIS_Microsoft_Windows_8.1_Workstation_Benchmark" benchmarkVersion="2.4.0">
+      <Policy policyID="xccdf_org.cisecurity.benchmarks_profile_Level_2_L2_-_High_SecuritySensitive_Data_Environment_limited_functionality"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_org.cisecurity.benchmarks_benchmark_2.4.0_CIS_Microsoft_Windows_8.1_Workstation_Benchmark" benchmarkVersion="2.4.0">
+      <Policy policyID="xccdf_org.cisecurity.benchmarks_profile_Level_2_L2__BitLocker_BL"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_org.cisecurity.benchmarks_benchmark_2.4.0_CIS_Microsoft_Windows_8.1_Workstation_Benchmark" benchmarkVersion="2.4.0">
+      <Policy policyID="xccdf_org.cisecurity.benchmarks_profile_Level_2_L2__BitLocker_BL__Next_Generation_Windows_Security_NG"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_org.cisecurity.benchmarks_benchmark_2.4.0_CIS_Microsoft_Windows_8.1_Workstation_Benchmark" benchmarkVersion="2.4.0">
+      <Policy policyID="xccdf_org.cisecurity.benchmarks_profile_Level_2_L2__Next_Generation_Windows_Security_NG"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_org.cisecurity.benchmarks_benchmark_2.4.0_CIS_Microsoft_Windows_8.1_Workstation_Benchmark" benchmarkVersion="2.4.0">
+      <Policy policyID="xccdf_org.cisecurity.benchmarks_profile_Next_Generation_Windows_Security_NG_-_optional_add-on_for_use_in_the_newest_hardware_and_configuration_environments"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_org.cisecurity.benchmarks_benchmark_2.6.0_CIS_Microsoft_Windows_Server_2012_R2_Benchmark" benchmarkVersion="2.6.0">
+      <Policy policyID="xccdf_org.cisecurity.benchmarks_profile_Level_1_-_Domain_Controller"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_org.cisecurity.benchmarks_benchmark_2.6.0_CIS_Microsoft_Windows_Server_2012_R2_Benchmark" benchmarkVersion="2.6.0">
+      <Policy policyID="xccdf_org.cisecurity.benchmarks_profile_Level_1_-_Member_Server"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_org.cisecurity.benchmarks_benchmark_2.6.0_CIS_Microsoft_Windows_Server_2012_R2_Benchmark" benchmarkVersion="2.6.0">
+      <Policy policyID="xccdf_org.cisecurity.benchmarks_profile_Level_2_-_Domain_Controller"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_org.cisecurity.benchmarks_benchmark_2.6.0_CIS_Microsoft_Windows_Server_2012_R2_Benchmark" benchmarkVersion="2.6.0">
+      <Policy policyID="xccdf_org.cisecurity.benchmarks_profile_Level_2_-_Member_Server"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_org.cisecurity.benchmarks_benchmark_3.0.0_CIS_AlmaLinux_OS_8_Benchmark" benchmarkVersion="3.0.0">
+      <Policy policyID="xccdf_org.cisecurity.benchmarks_profile_Level_1_-_Server"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_org.cisecurity.benchmarks_benchmark_3.0.0_CIS_AlmaLinux_OS_8_Benchmark" benchmarkVersion="3.0.0">
+      <Policy policyID="xccdf_org.cisecurity.benchmarks_profile_Level_1_-_Workstation"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_org.cisecurity.benchmarks_benchmark_3.0.0_CIS_AlmaLinux_OS_8_Benchmark" benchmarkVersion="3.0.0">
+      <Policy policyID="xccdf_org.cisecurity.benchmarks_profile_Level_2_-_Server"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_org.cisecurity.benchmarks_benchmark_3.0.0_CIS_AlmaLinux_OS_8_Benchmark" benchmarkVersion="3.0.0">
+      <Policy policyID="xccdf_org.cisecurity.benchmarks_profile_Level_2_-_Workstation"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_org.cisecurity.benchmarks_benchmark_3.0.0_CIS_Amazon_Linux_2_Benchmark" benchmarkVersion="3.0.0">
+      <Policy policyID="xccdf_org.cisecurity.benchmarks_profile_Level_1"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_org.cisecurity.benchmarks_benchmark_3.0.0_CIS_Amazon_Linux_2_Benchmark" benchmarkVersion="3.0.0">
+      <Policy policyID="xccdf_org.cisecurity.benchmarks_profile_Level_2"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_org.cisecurity.benchmarks_benchmark_3.0.0_CIS_Apple_macOS_10.15_Catalina_Benchmark" benchmarkVersion="3.0.0">
+      <Policy policyID="xccdf_org.cisecurity.benchmarks_profile_Level_1"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_org.cisecurity.benchmarks_benchmark_3.0.0_CIS_Apple_macOS_10.15_Catalina_Benchmark" benchmarkVersion="3.0.0">
+      <Policy policyID="xccdf_org.cisecurity.benchmarks_profile_Level_2"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_org.cisecurity.benchmarks_benchmark_3.0.0_CIS_Apple_macOS_11.0_Big_Sur_Benchmark" benchmarkVersion="3.0.0">
+      <Policy policyID="xccdf_org.cisecurity.benchmarks_profile_Level_1"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_org.cisecurity.benchmarks_benchmark_3.0.0_CIS_Apple_macOS_11.0_Big_Sur_Benchmark" benchmarkVersion="3.0.0">
+      <Policy policyID="xccdf_org.cisecurity.benchmarks_profile_Level_2"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_org.cisecurity.benchmarks_benchmark_3.0.0_CIS_CentOS_Linux_6_Benchmark" benchmarkVersion="3.0.0">
+      <Policy policyID="xccdf_org.cisecurity.benchmarks_profile_Level_1_-_Server"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_org.cisecurity.benchmarks_benchmark_3.0.0_CIS_CentOS_Linux_6_Benchmark" benchmarkVersion="3.0.0">
+      <Policy policyID="xccdf_org.cisecurity.benchmarks_profile_Level_1_-_Workstation"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_org.cisecurity.benchmarks_benchmark_3.0.0_CIS_CentOS_Linux_6_Benchmark" benchmarkVersion="3.0.0">
+      <Policy policyID="xccdf_org.cisecurity.benchmarks_profile_Level_2_-_Server"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_org.cisecurity.benchmarks_benchmark_3.0.0_CIS_CentOS_Linux_6_Benchmark" benchmarkVersion="3.0.0">
+      <Policy policyID="xccdf_org.cisecurity.benchmarks_profile_Level_2_-_Workstation"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_org.cisecurity.benchmarks_benchmark_3.0.0_CIS_Google_Chrome_Benchmark" benchmarkVersion="3.0.0">
+      <Policy policyID="xccdf_org.cisecurity.benchmarks_profile_Level_1_L1_-_CorporateEnterprise_Environment_general_use"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_org.cisecurity.benchmarks_benchmark_3.0.0_CIS_Google_Chrome_Benchmark" benchmarkVersion="3.0.0">
+      <Policy policyID="xccdf_org.cisecurity.benchmarks_profile_Level_2_L2_-_High_SecuritySensitive_Data_Environment_limited_functionality"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_org.cisecurity.benchmarks_benchmark_3.0.0_CIS_Microsoft_Windows_Server_2019_Stand-alone" benchmarkVersion="3.0.0">
+      <Policy policyID="xccdf_org.cisecurity.benchmarks_profile_Level_1_-_Member_Server"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_org.cisecurity.benchmarks_benchmark_3.0.0_CIS_Microsoft_Windows_Server_2019_Stand-alone" benchmarkVersion="3.0.0">
+      <Policy policyID="xccdf_org.cisecurity.benchmarks_profile_Level_2_-_Member_Server"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_org.cisecurity.benchmarks_benchmark_3.0.0_CIS_Microsoft_Windows_Server_2019_Stand-alone" benchmarkVersion="3.0.0">
+      <Policy policyID="xccdf_org.cisecurity.benchmarks_profile_Next_Generation_Windows_Security_-_Member_Server"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_org.cisecurity.benchmarks_benchmark_3.0.0_CIS_Microsoft_Windows_Server_2022_STIG_Benchmark" benchmarkVersion="3.0.0">
+      <Policy policyID="xccdf_org.cisecurity.benchmarks_profile_DC_SEVERITY_CAT_I"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_org.cisecurity.benchmarks_benchmark_3.0.0_CIS_Microsoft_Windows_Server_2022_STIG_Benchmark" benchmarkVersion="3.0.0">
+      <Policy policyID="xccdf_org.cisecurity.benchmarks_profile_DC_SEVERITY_CAT_II"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_org.cisecurity.benchmarks_benchmark_3.0.0_CIS_Microsoft_Windows_Server_2022_STIG_Benchmark" benchmarkVersion="3.0.0">
+      <Policy policyID="xccdf_org.cisecurity.benchmarks_profile_DC_SEVERITY_CAT_III"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_org.cisecurity.benchmarks_benchmark_3.0.0_CIS_Microsoft_Windows_Server_2022_STIG_Benchmark" benchmarkVersion="3.0.0">
+      <Policy policyID="xccdf_org.cisecurity.benchmarks_profile_MS_SEVERITY_CAT_I"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_org.cisecurity.benchmarks_benchmark_3.0.0_CIS_Microsoft_Windows_Server_2022_STIG_Benchmark" benchmarkVersion="3.0.0">
+      <Policy policyID="xccdf_org.cisecurity.benchmarks_profile_MS_SEVERITY_CAT_II"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_org.cisecurity.benchmarks_benchmark_3.0.0_CIS_Microsoft_Windows_Server_2022_STIG_Benchmark" benchmarkVersion="3.0.0">
+      <Policy policyID="xccdf_org.cisecurity.benchmarks_profile_MS_SEVERITY_CAT_III"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_org.cisecurity.benchmarks_benchmark_3.0.0_CIS_Oracle_Database_12c_Benchmark" benchmarkVersion="3.0.0">
+      <Policy policyID="xccdf_org.cisecurity.benchmarks_profile_Level_1_-_Linux_Host_OS_using_Traditional_Auditing"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_org.cisecurity.benchmarks_benchmark_3.0.0_CIS_Oracle_Database_12c_Benchmark" benchmarkVersion="3.0.0">
+      <Policy policyID="xccdf_org.cisecurity.benchmarks_profile_Level_1_-_Linux_Host_OS_using_Unified_Auditing"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_org.cisecurity.benchmarks_benchmark_3.0.0_CIS_Oracle_Database_12c_Benchmark" benchmarkVersion="3.0.0">
+      <Policy policyID="xccdf_org.cisecurity.benchmarks_profile_Level_1_-_RDBMS_using_Traditional_Auditing"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_org.cisecurity.benchmarks_benchmark_3.0.0_CIS_Oracle_Database_12c_Benchmark" benchmarkVersion="3.0.0">
+      <Policy policyID="xccdf_org.cisecurity.benchmarks_profile_Level_1_-_RDBMS_using_Unified_Auditing"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_org.cisecurity.benchmarks_benchmark_3.0.0_CIS_Oracle_Database_12c_Benchmark" benchmarkVersion="3.0.0">
+      <Policy policyID="xccdf_org.cisecurity.benchmarks_profile_Level_1_-_Windows_Server_Host_OS_using_Traditional_Auditing"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_org.cisecurity.benchmarks_benchmark_3.0.0_CIS_Oracle_Database_12c_Benchmark" benchmarkVersion="3.0.0">
+      <Policy policyID="xccdf_org.cisecurity.benchmarks_profile_Level_1_-_Windows_Server_Host_OS_using_Unified_Auditing"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_org.cisecurity.benchmarks_benchmark_3.0.0_CIS_Oracle_Linux_8_Benchmark" benchmarkVersion="3.0.0">
+      <Policy policyID="xccdf_org.cisecurity.benchmarks_profile_Level_1_-_Server"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_org.cisecurity.benchmarks_benchmark_3.0.0_CIS_Oracle_Linux_8_Benchmark" benchmarkVersion="3.0.0">
+      <Policy policyID="xccdf_org.cisecurity.benchmarks_profile_Level_1_-_Workstation"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_org.cisecurity.benchmarks_benchmark_3.0.0_CIS_Oracle_Linux_8_Benchmark" benchmarkVersion="3.0.0">
+      <Policy policyID="xccdf_org.cisecurity.benchmarks_profile_Level_2_-_Server"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_org.cisecurity.benchmarks_benchmark_3.0.0_CIS_Oracle_Linux_8_Benchmark" benchmarkVersion="3.0.0">
+      <Policy policyID="xccdf_org.cisecurity.benchmarks_profile_Level_2_-_Workstation"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_org.cisecurity.benchmarks_benchmark_3.0.0_CIS_Red_Hat_Enterprise_Linux_6_Benchmark" benchmarkVersion="3.0.0">
+      <Policy policyID="xccdf_org.cisecurity.benchmarks_profile_Level_1_-_Server"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_org.cisecurity.benchmarks_benchmark_3.0.0_CIS_Red_Hat_Enterprise_Linux_6_Benchmark" benchmarkVersion="3.0.0">
+      <Policy policyID="xccdf_org.cisecurity.benchmarks_profile_Level_1_-_Workstation"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_org.cisecurity.benchmarks_benchmark_3.0.0_CIS_Red_Hat_Enterprise_Linux_6_Benchmark" benchmarkVersion="3.0.0">
+      <Policy policyID="xccdf_org.cisecurity.benchmarks_profile_Level_2_-_Server"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_org.cisecurity.benchmarks_benchmark_3.0.0_CIS_Red_Hat_Enterprise_Linux_6_Benchmark" benchmarkVersion="3.0.0">
+      <Policy policyID="xccdf_org.cisecurity.benchmarks_profile_Level_2_-_Workstation"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_org.cisecurity.benchmarks_benchmark_3.0.0_CIS_Ubuntu_Linux_20.04_LTS_Benchmark" benchmarkVersion="3.0.0">
+      <Policy policyID="xccdf_org.cisecurity.benchmarks_profile_Level_1_-_Server"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_org.cisecurity.benchmarks_benchmark_3.0.0_CIS_Ubuntu_Linux_20.04_LTS_Benchmark" benchmarkVersion="3.0.0">
+      <Policy policyID="xccdf_org.cisecurity.benchmarks_profile_Level_1_-_Workstation"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_org.cisecurity.benchmarks_benchmark_3.0.0_CIS_Ubuntu_Linux_20.04_LTS_Benchmark" benchmarkVersion="3.0.0">
+      <Policy policyID="xccdf_org.cisecurity.benchmarks_profile_Level_2_-_Server"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_org.cisecurity.benchmarks_benchmark_3.0.0_CIS_Ubuntu_Linux_20.04_LTS_Benchmark" benchmarkVersion="3.0.0">
+      <Policy policyID="xccdf_org.cisecurity.benchmarks_profile_Level_2_-_Workstation"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_org.cisecurity.benchmarks_benchmark_3.0.1_CIS_IBM_DB2_9_Benchmark" benchmarkVersion="3.0.1.0">
+      <Policy policyID="xccdf_org.cisecurity.benchmarks_profile_Level_1_-_Linux_Host_OS_DB2_9"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_org.cisecurity.benchmarks_benchmark_3.0.1_CIS_IBM_DB2_9_Benchmark" benchmarkVersion="3.0.1.0">
+      <Policy policyID="xccdf_org.cisecurity.benchmarks_profile_Level_1_-_RDBMS_DB2_9"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_org.cisecurity.benchmarks_benchmark_3.0.1_CIS_IBM_DB2_9_Benchmark" benchmarkVersion="3.0.1.0">
+      <Policy policyID="xccdf_org.cisecurity.benchmarks_profile_Level_1_-_Windows_Host_OS_DB2_9"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_org.cisecurity.benchmarks_benchmark_3.0.1_CIS_IBM_DB2_9_Benchmark" benchmarkVersion="3.0.1.0">
+      <Policy policyID="xccdf_org.cisecurity.benchmarks_profile_Level_2_-_RDBMS_DB2_9"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_org.cisecurity.benchmarks_benchmark_3.0.1_CIS_ISC_BIND_DNS_Server_9.9_Benchmark" benchmarkVersion="3.0.1">
+      <Policy policyID="xccdf_org.cisecurity.benchmarks_profile_Authoritative_Name_Server"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_org.cisecurity.benchmarks_benchmark_3.0.1_CIS_ISC_BIND_DNS_Server_9.9_Benchmark" benchmarkVersion="3.0.1">
+      <Policy policyID="xccdf_org.cisecurity.benchmarks_profile_Caching_Only_Name_Server"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_org.cisecurity.benchmarks_benchmark_3.0.1_CIS_Microsoft_Intune_for_Windows_11_Benchmark" benchmarkVersion="3.0.1">
+      <Policy policyID="xccdf_org.cisecurity.benchmarks_profile_BitLocker_BL"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_org.cisecurity.benchmarks_benchmark_3.0.1_CIS_Microsoft_Intune_for_Windows_11_Benchmark" benchmarkVersion="3.0.1">
+      <Policy policyID="xccdf_org.cisecurity.benchmarks_profile_Level_1_L1_-_CorporateEnterprise_Environment_general_use"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_org.cisecurity.benchmarks_benchmark_3.0.1_CIS_Microsoft_Intune_for_Windows_11_Benchmark" benchmarkVersion="3.0.1">
+      <Policy policyID="xccdf_org.cisecurity.benchmarks_profile_Level_2_L2_-_High_SecuritySensitive_Data_Environment_limited_functionality"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_org.cisecurity.benchmarks_benchmark_3.0.1_CIS_Microsoft_Windows_7_Benchmark" benchmarkVersion="3.0.1.0">
+      <Policy policyID="xccdf_org.cisecutiry.benchmarks_profile_Level_2__BitLocker"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_org.cisecurity.benchmarks_benchmark_3.1.0.2_CIS_Microsoft_Windows_Server_2003_Benchmark" benchmarkVersion="3.1.0.2">
+      <Policy policyID="xccdf_org.cisecurity.benchmarks_profile_Level_1_-_Domain_Controller"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_org.cisecurity.benchmarks_benchmark_3.1.0.2_CIS_Microsoft_Windows_Server_2003_Benchmark" benchmarkVersion="3.1.0.2">
+      <Policy policyID="xccdf_org.cisecurity.benchmarks_profile_Level_1_-_Member_Server"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_org.cisecurity.benchmarks_benchmark_3.1.0.2_CIS_Microsoft_Windows_XP_Benchmark" benchmarkVersion="3.1.0.2">
+      <Policy policyID="xccdf_org.cisecurity.benchmarks_profile_Level_1"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_org.cisecurity.benchmarks_benchmark_3.1.1_CIS_Oracle_Linux_7_Benchmark" benchmarkVersion="3.1.1">
+      <Policy policyID="xccdf_org.cisecurity.benchmarks_profile_Level_1_-_Server"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_org.cisecurity.benchmarks_benchmark_3.1.1_CIS_Oracle_Linux_7_Benchmark" benchmarkVersion="3.1.1">
+      <Policy policyID="xccdf_org.cisecurity.benchmarks_profile_Level_1_-_Workstation"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_org.cisecurity.benchmarks_benchmark_3.1.1_CIS_Oracle_Linux_7_Benchmark" benchmarkVersion="3.1.1">
+      <Policy policyID="xccdf_org.cisecurity.benchmarks_profile_Level_2_-_Server"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_org.cisecurity.benchmarks_benchmark_3.1.1_CIS_Oracle_Linux_7_Benchmark" benchmarkVersion="3.1.1">
+      <Policy policyID="xccdf_org.cisecurity.benchmarks_profile_Level_2_-_Workstation"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_org.cisecurity.benchmarks_benchmark_3.1.2_CIS_CentOS_Linux_7_Benchmark" benchmarkVersion="3.1.2">
+      <Policy policyID="xccdf_org.cisecurity.benchmarks_profile_Level_1_-_Server"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_org.cisecurity.benchmarks_benchmark_3.1.2_CIS_CentOS_Linux_7_Benchmark" benchmarkVersion="3.1.2">
+      <Policy policyID="xccdf_org.cisecurity.benchmarks_profile_Level_1_-_Workstation"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_org.cisecurity.benchmarks_benchmark_3.1.2_CIS_CentOS_Linux_7_Benchmark" benchmarkVersion="3.1.2">
+      <Policy policyID="xccdf_org.cisecurity.benchmarks_profile_Level_2_-_Server"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_org.cisecurity.benchmarks_benchmark_3.1.2_CIS_CentOS_Linux_7_Benchmark" benchmarkVersion="3.1.2">
+      <Policy policyID="xccdf_org.cisecurity.benchmarks_profile_Level_2_-_Workstation"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_org.cisecurity.benchmarks_benchmark_3.2.0_CIS_Microsoft_Windows_7_Workstation_Benchmark" benchmarkVersion="3.2.0">
+      <Policy policyID="xccdf_org.cisecurity.benchmarks_profile_BitLocker_BL_-_optional_add-on_for_when_BitLocker_is_deployed"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_org.cisecurity.benchmarks_benchmark_3.2.0_CIS_Microsoft_Windows_7_Workstation_Benchmark" benchmarkVersion="3.2.0">
+      <Policy policyID="xccdf_org.cisecurity.benchmarks_profile_Level_1_L1_-_CorporateEnterprise_Environment_general_use"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_org.cisecurity.benchmarks_benchmark_3.2.0_CIS_Microsoft_Windows_7_Workstation_Benchmark" benchmarkVersion="3.2.0">
+      <Policy policyID="xccdf_org.cisecurity.benchmarks_profile_Level_1_L1__BitLocker_BL"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_org.cisecurity.benchmarks_benchmark_3.2.0_CIS_Microsoft_Windows_7_Workstation_Benchmark" benchmarkVersion="3.2.0">
+      <Policy policyID="xccdf_org.cisecurity.benchmarks_profile_Level_1_L1__BitLocker_BL__Next_Generation_Windows_Security_NG"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_org.cisecurity.benchmarks_benchmark_3.2.0_CIS_Microsoft_Windows_7_Workstation_Benchmark" benchmarkVersion="3.2.0">
+      <Policy policyID="xccdf_org.cisecurity.benchmarks_profile_Level_1_L1__Next_Generation_Windows_Security_NG"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_org.cisecurity.benchmarks_benchmark_3.2.0_CIS_Microsoft_Windows_7_Workstation_Benchmark" benchmarkVersion="3.2.0">
+      <Policy policyID="xccdf_org.cisecurity.benchmarks_profile_Level_2_L2_-_High_SecuritySensitive_Data_Environment_limited_functionality"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_org.cisecurity.benchmarks_benchmark_3.2.0_CIS_Microsoft_Windows_7_Workstation_Benchmark" benchmarkVersion="3.2.0">
+      <Policy policyID="xccdf_org.cisecurity.benchmarks_profile_Level_2_L2__BitLocker_BL"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_org.cisecurity.benchmarks_benchmark_3.2.0_CIS_Microsoft_Windows_7_Workstation_Benchmark" benchmarkVersion="3.2.0">
+      <Policy policyID="xccdf_org.cisecurity.benchmarks_profile_Level_2_L2__BitLocker_BL__Next_Generation_Windows_Security_NG"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_org.cisecurity.benchmarks_benchmark_3.2.0_CIS_Microsoft_Windows_7_Workstation_Benchmark" benchmarkVersion="3.2.0">
+      <Policy policyID="xccdf_org.cisecurity.benchmarks_profile_Level_2_L2__Next_Generation_Windows_Security_NG"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_org.cisecurity.benchmarks_benchmark_3.2.0_CIS_Microsoft_Windows_7_Workstation_Benchmark" benchmarkVersion="3.2.0">
+      <Policy policyID="xccdf_org.cisecurity.benchmarks_profile_Next_Generation_Windows_Security_NG_-_optional_add-on_for_use_in_the_newest_hardware_and_configuration_environments"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_org.cisecurity.benchmarks_benchmark_3.2.0_CIS_Microsoft_Windows_Server_2008_non-R2_Benchmark" benchmarkVersion="3.2.0">
+      <Policy policyID="xccdf_org.cisecurity.benchmarks_profile_Level_1_-_Domain_Controller"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_org.cisecurity.benchmarks_benchmark_3.2.0_CIS_Microsoft_Windows_Server_2008_non-R2_Benchmark" benchmarkVersion="3.2.0">
+      <Policy policyID="xccdf_org.cisecurity.benchmarks_profile_Level_1_-_Member_Server"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_org.cisecurity.benchmarks_benchmark_3.2.0_CIS_Microsoft_Windows_Server_2008_non-R2_Benchmark" benchmarkVersion="3.2.0">
+      <Policy policyID="xccdf_org.cisecurity.benchmarks_profile_Level_2_-_Domain_Controller"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_org.cisecurity.benchmarks_benchmark_3.2.0_CIS_Microsoft_Windows_Server_2008_non-R2_Benchmark" benchmarkVersion="3.2.0">
+      <Policy policyID="xccdf_org.cisecurity.benchmarks_profile_Level_2_-_Member_Server"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_org.cisecurity.benchmarks_benchmark_3.2.0_CIS_Microsoft_Windows_Server_2008_non-R2_Benchmark" benchmarkVersion="3.2.0">
+      <Policy policyID="xccdf_org.cisecurity.benchmarks_profile_Next_Generation_Windows_Security_-_Domain_Controller"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_org.cisecurity.benchmarks_benchmark_3.2.0_CIS_Microsoft_Windows_Server_2008_non-R2_Benchmark" benchmarkVersion="3.2.0">
+      <Policy policyID="xccdf_org.cisecurity.benchmarks_profile_Next_Generation_Windows_Security_-_Member_Server"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_org.cisecurity.benchmarks_benchmark_3.2.1_CIS_SUSE_Linux_Enterprise_12_Benchmark" benchmarkVersion="3.2.1">
+      <Policy policyID="xccdf_org.cisecurity.benchmarks_profile_Level_1_-_Server"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_org.cisecurity.benchmarks_benchmark_3.2.1_CIS_SUSE_Linux_Enterprise_12_Benchmark" benchmarkVersion="3.2.1">
+      <Policy policyID="xccdf_org.cisecurity.benchmarks_profile_Level_1_-_Workstation"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_org.cisecurity.benchmarks_benchmark_3.2.1_CIS_SUSE_Linux_Enterprise_12_Benchmark" benchmarkVersion="3.2.1">
+      <Policy policyID="xccdf_org.cisecurity.benchmarks_profile_Level_2_-_Server"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_org.cisecurity.benchmarks_benchmark_3.2.1_CIS_SUSE_Linux_Enterprise_12_Benchmark" benchmarkVersion="3.2.1">
+      <Policy policyID="xccdf_org.cisecurity.benchmarks_profile_Level_2_-_Workstation"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_org.cisecurity.benchmarks_benchmark_3.3.0_CIS_Microsoft_Windows_Server_2008_R2_Benchmark" benchmarkVersion="3.3.0">
+      <Policy policyID="xccdf_org.cisecurity.benchmarks_profile_Level_1_-_Domain_Controller"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_org.cisecurity.benchmarks_benchmark_3.3.0_CIS_Microsoft_Windows_Server_2008_R2_Benchmark" benchmarkVersion="3.3.0">
+      <Policy policyID="xccdf_org.cisecurity.benchmarks_profile_Level_1_-_Member_Server"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_org.cisecurity.benchmarks_benchmark_3.3.0_CIS_Microsoft_Windows_Server_2008_R2_Benchmark" benchmarkVersion="3.3.0">
+      <Policy policyID="xccdf_org.cisecurity.benchmarks_profile_Level_2_-_Domain_Controller"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_org.cisecurity.benchmarks_benchmark_3.3.0_CIS_Microsoft_Windows_Server_2008_R2_Benchmark" benchmarkVersion="3.3.0">
+      <Policy policyID="xccdf_org.cisecurity.benchmarks_profile_Level_2_-_Member_Server"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_org.cisecurity.benchmarks_benchmark_4.0.0_CIS_Apple_macOS_12.0_Monterey_Benchmark" benchmarkVersion="4.0.0">
+      <Policy policyID="xccdf_org.cisecurity.benchmarks_profile_Level_1"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_org.cisecurity.benchmarks_benchmark_4.0.0_CIS_Apple_macOS_12.0_Monterey_Benchmark" benchmarkVersion="4.0.0">
+      <Policy policyID="xccdf_org.cisecurity.benchmarks_profile_Level_2"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_org.cisecurity.benchmarks_benchmark_4.0.0_CIS_Cisco_IOS_12_Benchmark" benchmarkVersion="4.0.0.0">
+      <Policy policyID="xccdf_org.cisecurity.benchmarks_profile_Level_1"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_org.cisecurity.benchmarks_benchmark_4.0.0_CIS_Cisco_IOS_12_Benchmark" benchmarkVersion="4.0.0.0">
+      <Policy policyID="xccdf_org.cisecurity.benchmarks_profile_Level_2"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_org.cisecurity.benchmarks_benchmark_4.0.0_CIS_Microsoft_Intune_for_Windows_10_Benchmark" benchmarkVersion="4.0.0">
+      <Policy policyID="xccdf_org.cisecurity.benchmarks_profile_BitLocker_BL"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_org.cisecurity.benchmarks_benchmark_4.0.0_CIS_Microsoft_Intune_for_Windows_10_Benchmark" benchmarkVersion="4.0.0">
+      <Policy policyID="xccdf_org.cisecurity.benchmarks_profile_Level_1_L1"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_org.cisecurity.benchmarks_benchmark_4.0.0_CIS_Microsoft_Intune_for_Windows_10_Benchmark" benchmarkVersion="4.0.0">
+      <Policy policyID="xccdf_org.cisecurity.benchmarks_profile_Level_2_L2"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_org.cisecurity.benchmarks_benchmark_4.0.0_CIS_Microsoft_Intune_for_Windows_10_Benchmark" benchmarkVersion="4.0.0">
+      <Policy policyID="xccdf_org.cisecurity.benchmarks_profile_Next_Generation_Windows_Security_NG"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_org.cisecurity.benchmarks_benchmark_4.0.0_CIS_Microsoft_Windows_10_Enterprise_Benchmark" benchmarkVersion="4.0.0">
+      <Policy policyID="xccdf_org.cisecurity.benchmarks_profile_BitLocker_BL"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_org.cisecurity.benchmarks_benchmark_4.0.0_CIS_Microsoft_Windows_10_Enterprise_Benchmark" benchmarkVersion="4.0.0">
+      <Policy policyID="xccdf_org.cisecurity.benchmarks_profile_Level_1_L1"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_org.cisecurity.benchmarks_benchmark_4.0.0_CIS_Microsoft_Windows_10_Enterprise_Benchmark" benchmarkVersion="4.0.0">
+      <Policy policyID="xccdf_org.cisecurity.benchmarks_profile_Level_1_L1__BitLocker_BL"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_org.cisecurity.benchmarks_benchmark_4.0.0_CIS_Microsoft_Windows_10_Enterprise_Benchmark" benchmarkVersion="4.0.0">
+      <Policy policyID="xccdf_org.cisecurity.benchmarks_profile_Level_1_L1__BitLocker_BL__Next_Generation_NG"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_org.cisecurity.benchmarks_benchmark_4.0.0_CIS_Microsoft_Windows_10_Enterprise_Benchmark" benchmarkVersion="4.0.0">
+      <Policy policyID="xccdf_org.cisecurity.benchmarks_profile_Level_1_L1__Next_Generation_NG"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_org.cisecurity.benchmarks_benchmark_4.0.0_CIS_Microsoft_Windows_10_Enterprise_Benchmark" benchmarkVersion="4.0.0">
+      <Policy policyID="xccdf_org.cisecurity.benchmarks_profile_Level_2_L2"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_org.cisecurity.benchmarks_benchmark_4.0.0_CIS_Microsoft_Windows_10_Enterprise_Benchmark" benchmarkVersion="4.0.0">
+      <Policy policyID="xccdf_org.cisecurity.benchmarks_profile_Level_2_L2__BitLocker_BL"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_org.cisecurity.benchmarks_benchmark_4.0.0_CIS_Microsoft_Windows_10_Enterprise_Benchmark" benchmarkVersion="4.0.0">
+      <Policy policyID="xccdf_org.cisecurity.benchmarks_profile_Level_2_L2__BitLocker_BL__Next_Generation_NG"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_org.cisecurity.benchmarks_benchmark_4.0.0_CIS_Microsoft_Windows_10_Enterprise_Benchmark" benchmarkVersion="4.0.0">
+      <Policy policyID="xccdf_org.cisecurity.benchmarks_profile_Level_2_L2__Next_Generation_NG"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_org.cisecurity.benchmarks_benchmark_4.0.0_CIS_Microsoft_Windows_10_Enterprise_Benchmark" benchmarkVersion="4.0.0">
+      <Policy policyID="xccdf_org.cisecurity.benchmarks_profile_Next_Generation_NG"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_org.cisecurity.benchmarks_benchmark_4.0.0_CIS_Microsoft_Windows_10_Stand-alone_Benchmark" benchmarkVersion="4.0.0">
+      <Policy policyID="xccdf_org.cisecurity.benchmarks_profile_BitLocker_BL"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_org.cisecurity.benchmarks_benchmark_4.0.0_CIS_Microsoft_Windows_10_Stand-alone_Benchmark" benchmarkVersion="4.0.0">
+      <Policy policyID="xccdf_org.cisecurity.benchmarks_profile_Level_1_L1"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_org.cisecurity.benchmarks_benchmark_4.0.0_CIS_Microsoft_Windows_10_Stand-alone_Benchmark" benchmarkVersion="4.0.0">
+      <Policy policyID="xccdf_org.cisecurity.benchmarks_profile_Level_1_L1__BitLocker_BL"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_org.cisecurity.benchmarks_benchmark_4.0.0_CIS_Microsoft_Windows_10_Stand-alone_Benchmark" benchmarkVersion="4.0.0">
+      <Policy policyID="xccdf_org.cisecurity.benchmarks_profile_Level_1_L1__BitLocker_BL__Next_Generation_NG"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_org.cisecurity.benchmarks_benchmark_4.0.0_CIS_Microsoft_Windows_10_Stand-alone_Benchmark" benchmarkVersion="4.0.0">
+      <Policy policyID="xccdf_org.cisecurity.benchmarks_profile_Level_1_L1__Next_Generation_NG"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_org.cisecurity.benchmarks_benchmark_4.0.0_CIS_Microsoft_Windows_10_Stand-alone_Benchmark" benchmarkVersion="4.0.0">
+      <Policy policyID="xccdf_org.cisecurity.benchmarks_profile_Level_2_L2"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_org.cisecurity.benchmarks_benchmark_4.0.0_CIS_Microsoft_Windows_10_Stand-alone_Benchmark" benchmarkVersion="4.0.0">
+      <Policy policyID="xccdf_org.cisecurity.benchmarks_profile_Level_2_L2__BitLocker_BL"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_org.cisecurity.benchmarks_benchmark_4.0.0_CIS_Microsoft_Windows_10_Stand-alone_Benchmark" benchmarkVersion="4.0.0">
+      <Policy policyID="xccdf_org.cisecurity.benchmarks_profile_Level_2_L2__BitLocker_BL__Next_Generation_NG"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_org.cisecurity.benchmarks_benchmark_4.0.0_CIS_Microsoft_Windows_10_Stand-alone_Benchmark" benchmarkVersion="4.0.0">
+      <Policy policyID="xccdf_org.cisecurity.benchmarks_profile_Level_2_L2__Next_Generation_NG"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_org.cisecurity.benchmarks_benchmark_4.0.0_CIS_Microsoft_Windows_10_Stand-alone_Benchmark" benchmarkVersion="4.0.0">
+      <Policy policyID="xccdf_org.cisecurity.benchmarks_profile_Next_Generation_NG"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_org.cisecurity.benchmarks_benchmark_4.0.0_CIS_Microsoft_Windows_11_Enterprise_Benchmark" benchmarkVersion="4.0.0">
+      <Policy policyID="xccdf_org.cisecurity.benchmarks_profile_BitLocker_BL"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_org.cisecurity.benchmarks_benchmark_4.0.0_CIS_Microsoft_Windows_11_Enterprise_Benchmark" benchmarkVersion="4.0.0">
+      <Policy policyID="xccdf_org.cisecurity.benchmarks_profile_Level_1_L1"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_org.cisecurity.benchmarks_benchmark_4.0.0_CIS_Microsoft_Windows_11_Enterprise_Benchmark" benchmarkVersion="4.0.0">
+      <Policy policyID="xccdf_org.cisecurity.benchmarks_profile_Level_1_L1__BitLocker_BL"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_org.cisecurity.benchmarks_benchmark_4.0.0_CIS_Microsoft_Windows_11_Enterprise_Benchmark" benchmarkVersion="4.0.0">
+      <Policy policyID="xccdf_org.cisecurity.benchmarks_profile_Level_2_L2"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_org.cisecurity.benchmarks_benchmark_4.0.0_CIS_Microsoft_Windows_11_Enterprise_Benchmark" benchmarkVersion="4.0.0">
+      <Policy policyID="xccdf_org.cisecurity.benchmarks_profile_Level_2_L2__BitLocker_BL"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_org.cisecurity.benchmarks_benchmark_4.0.0_CIS_Microsoft_Windows_11_Stand-alone_Benchmark" benchmarkVersion="4.0.0">
+      <Policy policyID="xccdf_org.cisecurity.benchmarks_profile_BitLocker_BL"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_org.cisecurity.benchmarks_benchmark_4.0.0_CIS_Microsoft_Windows_11_Stand-alone_Benchmark" benchmarkVersion="4.0.0">
+      <Policy policyID="xccdf_org.cisecurity.benchmarks_profile_Level_1_L1"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_org.cisecurity.benchmarks_benchmark_4.0.0_CIS_Microsoft_Windows_11_Stand-alone_Benchmark" benchmarkVersion="4.0.0">
+      <Policy policyID="xccdf_org.cisecurity.benchmarks_profile_Level_1_L1__BitLocker_BL"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_org.cisecurity.benchmarks_benchmark_4.0.0_CIS_Microsoft_Windows_11_Stand-alone_Benchmark" benchmarkVersion="4.0.0">
+      <Policy policyID="xccdf_org.cisecurity.benchmarks_profile_Level_2_L2"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_org.cisecurity.benchmarks_benchmark_4.0.0_CIS_Microsoft_Windows_11_Stand-alone_Benchmark" benchmarkVersion="4.0.0">
+      <Policy policyID="xccdf_org.cisecurity.benchmarks_profile_Level_2_L2__BitLocker_BL"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_org.cisecurity.benchmarks_benchmark_4.0.0_CIS_Microsoft_Windows_Server_2016_Benchmark" benchmarkVersion="4.0.0">
+      <Policy policyID="xccdf_org.cisecurity.benchmarks_profile_Level_1_-_Domain_Controller"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_org.cisecurity.benchmarks_benchmark_4.0.0_CIS_Microsoft_Windows_Server_2016_Benchmark" benchmarkVersion="4.0.0">
+      <Policy policyID="xccdf_org.cisecurity.benchmarks_profile_Level_1_-_Member_Server"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_org.cisecurity.benchmarks_benchmark_4.0.0_CIS_Microsoft_Windows_Server_2016_Benchmark" benchmarkVersion="4.0.0">
+      <Policy policyID="xccdf_org.cisecurity.benchmarks_profile_Level_2_-_Domain_Controller"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_org.cisecurity.benchmarks_benchmark_4.0.0_CIS_Microsoft_Windows_Server_2016_Benchmark" benchmarkVersion="4.0.0">
+      <Policy policyID="xccdf_org.cisecurity.benchmarks_profile_Level_2_-_Member_Server"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_org.cisecurity.benchmarks_benchmark_4.0.0_CIS_Microsoft_Windows_Server_2016_Benchmark" benchmarkVersion="4.0.0">
+      <Policy policyID="xccdf_org.cisecurity.benchmarks_profile_Next_Generation_Windows_Security_-_Domain_Controller"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_org.cisecurity.benchmarks_benchmark_4.0.0_CIS_Microsoft_Windows_Server_2016_Benchmark" benchmarkVersion="4.0.0">
+      <Policy policyID="xccdf_org.cisecurity.benchmarks_profile_Next_Generation_Windows_Security_-_Member_Server"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_org.cisecurity.benchmarks_benchmark_4.0.0_CIS_Microsoft_Windows_Server_2016_STIG_Benchmark" benchmarkVersion="4.0.0">
+      <Policy policyID="xccdf_org.cisecurity.benchmarks_profile_DC_SEVERITY_CAT_I"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_org.cisecurity.benchmarks_benchmark_4.0.0_CIS_Microsoft_Windows_Server_2016_STIG_Benchmark" benchmarkVersion="4.0.0">
+      <Policy policyID="xccdf_org.cisecurity.benchmarks_profile_DC_SEVERITY_CAT_II"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_org.cisecurity.benchmarks_benchmark_4.0.0_CIS_Microsoft_Windows_Server_2016_STIG_Benchmark" benchmarkVersion="4.0.0">
+      <Policy policyID="xccdf_org.cisecurity.benchmarks_profile_DC_SEVERITY_CAT_III"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_org.cisecurity.benchmarks_benchmark_4.0.0_CIS_Microsoft_Windows_Server_2016_STIG_Benchmark" benchmarkVersion="4.0.0">
+      <Policy policyID="xccdf_org.cisecurity.benchmarks_profile_MS_SEVERITY_CAT_I"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_org.cisecurity.benchmarks_benchmark_4.0.0_CIS_Microsoft_Windows_Server_2016_STIG_Benchmark" benchmarkVersion="4.0.0">
+      <Policy policyID="xccdf_org.cisecurity.benchmarks_profile_MS_SEVERITY_CAT_II"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_org.cisecurity.benchmarks_benchmark_4.0.0_CIS_Microsoft_Windows_Server_2016_STIG_Benchmark" benchmarkVersion="4.0.0">
+      <Policy policyID="xccdf_org.cisecurity.benchmarks_profile_MS_SEVERITY_CAT_III"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_org.cisecurity.benchmarks_benchmark_4.0.0_CIS_Microsoft_Windows_Server_2019_Benchmark" benchmarkVersion="4.0.0">
+      <Policy policyID="xccdf_org.cisecurity.benchmarks_profile_Level_1_-_Domain_Controller"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_org.cisecurity.benchmarks_benchmark_4.0.0_CIS_Microsoft_Windows_Server_2019_Benchmark" benchmarkVersion="4.0.0">
+      <Policy policyID="xccdf_org.cisecurity.benchmarks_profile_Level_1_-_Member_Server"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_org.cisecurity.benchmarks_benchmark_4.0.0_CIS_Microsoft_Windows_Server_2019_Benchmark" benchmarkVersion="4.0.0">
+      <Policy policyID="xccdf_org.cisecurity.benchmarks_profile_Level_2_-_Domain_Controller"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_org.cisecurity.benchmarks_benchmark_4.0.0_CIS_Microsoft_Windows_Server_2019_Benchmark" benchmarkVersion="4.0.0">
+      <Policy policyID="xccdf_org.cisecurity.benchmarks_profile_Level_2_-_Member_Server"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_org.cisecurity.benchmarks_benchmark_4.0.0_CIS_Microsoft_Windows_Server_2019_Benchmark" benchmarkVersion="4.0.0">
+      <Policy policyID="xccdf_org.cisecurity.benchmarks_profile_Next_Generation_Windows_Security_-_Domain_Controller"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_org.cisecurity.benchmarks_benchmark_4.0.0_CIS_Microsoft_Windows_Server_2019_Benchmark" benchmarkVersion="4.0.0">
+      <Policy policyID="xccdf_org.cisecurity.benchmarks_profile_Next_Generation_Windows_Security_-_Member_Server"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_org.cisecurity.benchmarks_benchmark_4.0.0_CIS_Microsoft_Windows_Server_2019_STIG_Benchmark" benchmarkVersion="4.0.0">
+      <Policy policyID="xccdf_org.cisecurity.benchmarks_profile_DC_SEVERITY_CAT_I"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_org.cisecurity.benchmarks_benchmark_4.0.0_CIS_Microsoft_Windows_Server_2019_STIG_Benchmark" benchmarkVersion="4.0.0">
+      <Policy policyID="xccdf_org.cisecurity.benchmarks_profile_DC_SEVERITY_CAT_II"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_org.cisecurity.benchmarks_benchmark_4.0.0_CIS_Microsoft_Windows_Server_2019_STIG_Benchmark" benchmarkVersion="4.0.0">
+      <Policy policyID="xccdf_org.cisecurity.benchmarks_profile_DC_SEVERITY_CAT_III"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_org.cisecurity.benchmarks_benchmark_4.0.0_CIS_Microsoft_Windows_Server_2019_STIG_Benchmark" benchmarkVersion="4.0.0">
+      <Policy policyID="xccdf_org.cisecurity.benchmarks_profile_MS_SEVERITY_CAT_I"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_org.cisecurity.benchmarks_benchmark_4.0.0_CIS_Microsoft_Windows_Server_2019_STIG_Benchmark" benchmarkVersion="4.0.0">
+      <Policy policyID="xccdf_org.cisecurity.benchmarks_profile_MS_SEVERITY_CAT_II"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_org.cisecurity.benchmarks_benchmark_4.0.0_CIS_Microsoft_Windows_Server_2019_STIG_Benchmark" benchmarkVersion="4.0.0">
+      <Policy policyID="xccdf_org.cisecurity.benchmarks_profile_MS_SEVERITY_CAT_III"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_org.cisecurity.benchmarks_benchmark_4.0.0_CIS_Microsoft_Windows_Server_2022_Benchmark" benchmarkVersion="4.0.0">
+      <Policy policyID="xccdf_org.cisecurity.benchmarks_profile_Level_1_-_Domain_Controller"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_org.cisecurity.benchmarks_benchmark_4.0.0_CIS_Microsoft_Windows_Server_2022_Benchmark" benchmarkVersion="4.0.0">
+      <Policy policyID="xccdf_org.cisecurity.benchmarks_profile_Level_1_-_Member_Server"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_org.cisecurity.benchmarks_benchmark_4.0.0_CIS_Microsoft_Windows_Server_2022_Benchmark" benchmarkVersion="4.0.0">
+      <Policy policyID="xccdf_org.cisecurity.benchmarks_profile_Level_2_-_Domain_Controller"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_org.cisecurity.benchmarks_benchmark_4.0.0_CIS_Microsoft_Windows_Server_2022_Benchmark" benchmarkVersion="4.0.0">
+      <Policy policyID="xccdf_org.cisecurity.benchmarks_profile_Level_2_-_Member_Server"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_org.cisecurity.benchmarks_benchmark_4.0.0_CIS_Microsoft_Windows_Server_2022_Benchmark" benchmarkVersion="4.0.0">
+      <Policy policyID="xccdf_org.cisecurity.benchmarks_profile_Next_Generation_Windows_Security_-_Domain_Controller"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_org.cisecurity.benchmarks_benchmark_4.0.0_CIS_Microsoft_Windows_Server_2022_Benchmark" benchmarkVersion="4.0.0">
+      <Policy policyID="xccdf_org.cisecurity.benchmarks_profile_Next_Generation_Windows_Security_-_Member_Server"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_org.cisecurity.benchmarks_benchmark_4.0.0_CIS_Red_Hat_Enterprise_Linux_7_Benchmark" benchmarkVersion="4.0.0">
+      <Policy policyID="xccdf_org.cisecurity.benchmarks_profile_Level_1_-_Server"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_org.cisecurity.benchmarks_benchmark_4.0.0_CIS_Red_Hat_Enterprise_Linux_7_Benchmark" benchmarkVersion="4.0.0">
+      <Policy policyID="xccdf_org.cisecurity.benchmarks_profile_Level_1_-_Workstation"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_org.cisecurity.benchmarks_benchmark_4.0.0_CIS_Red_Hat_Enterprise_Linux_7_Benchmark" benchmarkVersion="4.0.0">
+      <Policy policyID="xccdf_org.cisecurity.benchmarks_profile_Level_2_-_Server"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_org.cisecurity.benchmarks_benchmark_4.0.0_CIS_Red_Hat_Enterprise_Linux_7_Benchmark" benchmarkVersion="4.0.0">
+      <Policy policyID="xccdf_org.cisecurity.benchmarks_profile_Level_2_-_Workstation"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_org.cisecurity.benchmarks_benchmark_4.0.0_CIS_Red_Hat_Enterprise_Linux_8_Benchmark" benchmarkVersion="4.0.0">
+      <Policy policyID="xccdf_org.cisecurity.benchmarks_profile_Level_1_-_Server"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_org.cisecurity.benchmarks_benchmark_4.0.0_CIS_Red_Hat_Enterprise_Linux_8_Benchmark" benchmarkVersion="4.0.0">
+      <Policy policyID="xccdf_org.cisecurity.benchmarks_profile_Level_1_-_Workstation"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_org.cisecurity.benchmarks_benchmark_4.0.0_CIS_Red_Hat_Enterprise_Linux_8_Benchmark" benchmarkVersion="4.0.0">
+      <Policy policyID="xccdf_org.cisecurity.benchmarks_profile_Level_2_-_Server"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_org.cisecurity.benchmarks_benchmark_4.0.0_CIS_Red_Hat_Enterprise_Linux_8_Benchmark" benchmarkVersion="4.0.0">
+      <Policy policyID="xccdf_org.cisecurity.benchmarks_profile_Level_2_-_Workstation"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_org.cisecurity.benchmarks_benchmark_4.1.0_CIS_Cisco_Firewall_Benchmark" benchmarkVersion="4.1.0">
+      <Policy policyID="xccdf_org.cisecurity.benchmarks_profile_Level_1_-_Cisco_ASA_8.x"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_org.cisecurity.benchmarks_benchmark_4.1.0_CIS_Cisco_Firewall_Benchmark" benchmarkVersion="4.1.0">
+      <Policy policyID="xccdf_org.cisecurity.benchmarks_profile_Level_1_-_Cisco_ASA_9.x"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_org.cisecurity.benchmarks_benchmark_4.1.1_CIS_Cisco_IOS_15_Benchmark" benchmarkVersion="4.1.1">
+      <Policy policyID="xccdf_org.cisecurity.benchmarks_profile_Level_1"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_org.cisecurity.benchmarks_benchmark_4.1.1_CIS_Cisco_IOS_15_Benchmark" benchmarkVersion="4.1.1">
+      <Policy policyID="xccdf_org.cisecurity.benchmarks_profile_Level_2"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_org.cisecurity.benchmarks_benchmark_5.2.0_CIS_Oracle_Solaris_10_Benchmark" benchmarkVersion="5.2.0">
+      <Policy policyID="xccdf_org.cisecurity.benchmarks_profile_Level_1"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_org.cisecurity.benchmarks_benchmark_5.2.0_CIS_Oracle_Solaris_10_Benchmark" benchmarkVersion="5.2.0">
+      <Policy policyID="xccdf_org.cisecurity.benchmarks_profile_Level_2"/>
+   </PolicyBenchmark>
+  </Enabled>
+ </Policies>
+ <ControlsScan>
+  <localControlsScanEnabled enabled="0"/>
+  <globalControlsScanEnabled enabled="0"/>
+ </ControlsScan>
+ <FileSearching>
+ </FileSearching>
+<ScanAssistant rotateCerts="0" applyUpdates="0"/> <Plugins>
+  <Plugin name="java/WindowsPolicyScanner">
+   <param name="dcPolicyFile"></param>
+   <param name="wksPolicyFile"></param>
+   <param name="srvPolicyFile"></param>
+  </Plugin>
+  <Plugin name="java/AS400Scanner">
+   <param name="acctLockoutThreshold"></param>
+   <param name="minPasswordLength"></param>
+   <param name="minSecurityLevel">40</param>
+  </Plugin>
+  <Plugin name="java/UnixScanner">
+   <param name="umask"></param>
+  </Plugin>
+  <Plugin name="java/HttpScanner">
+   <param name="Spider_ReadTimeout">120000</param>
+   <param name="spamRecipient">user@example.com</param>
+   <param name="Spider_HonorRobots">0</param>
+   <param name="Spider_MaxPagesPerWebsite"></param>
+   <param name="Spider_MaxThreadsPerEndpoint"></param>
+   <param name="Spider_MaxRetries">2</param>
+   <param name="Spider_CheckCommonPasswords">0</param>
+   <param name="Spider_On">0</param>
+   <param name="Spider_SkipPrinters">1</param>
+   <param name="adaptiveFingerprinting">0</param>
+   <param name="HTTP_REFERER"></param>
+   <param name="Spider_MaxDepth"></param>
+   <param name="Spider_MaxTimePerWebsite"></param>
+   <param name="Spider_IncludeURLQueries">0</param>
+   <param name="Spider_SkipDaemons">Virata-EmWeb, Allegro-Software-RomPager, JetDirect, HP JetDirect, HP Web Jetadmin, HP-ChaiSOE, HP-ChaiServer, CUPS, DigitalV6-HTTPD, Rapid Logic, Agranat-EmWeb, cisco-IOS, RAC_ONE_HTTP, RMC Webserver, EWS-NIC3, EMWHTTPD, IOS, ESWeb</param>
+  </Plugin>
+  <Plugin name="java/SmtpScanner">
+   <param name="spamRecipient">user@example.com</param>
+   <param name="readTimeout"></param>
+   <param name="timeAccuracyThreshold"></param>
+  </Plugin>
+  <Plugin name="java/TelnetScanner">
+   <param name="terminalCharset">US-ASCII</param>
+  </Plugin>
+  <Plugin name="java/CifsScanner">
+   <param name="acctLockoutThreshold"></param>
+   <param name="minPasswordLength"></param>
+   <param name="windowsServiceEditor">0</param>
+  </Plugin>
+  <Plugin name="java/PostgresScanner">
+   <param name="Default_Database"></param>
+  </Plugin>
+  <Plugin name="java/Db2Scanner">
+   <param name="Default_Database"></param>
+  </Plugin>
+  <Plugin name="java/CvsScanner">
+   <param name="CVS_Repository_Root"></param>
+  </Plugin>
+  <Plugin name="java/NotesPolicyScanner">
+   <param name="policyFiles"></param>
+  </Plugin>
+  <Plugin name="java/DhcpScanner">
+   <param name="DHCP_Pool_Range"></param>
+  </Plugin>
+  <Plugin name="java/OracleScanner">
+   <param name="Default_Databases"></param>
+  </Plugin>
+  <Plugin name="java/OraclePolicyScanner">
+   <param name="policyFiles"></param>
+  </Plugin>
+  <Plugin name="java/NetworkScanners">
+   <param name="doWhoisLookups">0</param>
+   <param name="trustedMacAddressFile"></param>
+   <param name="ipFingerprintEnabled">0</param>
+   <param name="OSGuessRetryCount">4</param>
+   <param name="defaultServicePropertiesFile"></param>
+   <param name="ipFingerprintLowThreshold">0.16</param>
+  </Plugin>
+ </Plugins>
+</ScanTemplate>

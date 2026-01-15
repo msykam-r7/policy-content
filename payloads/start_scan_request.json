@@ -1,0 +1,4 @@
+{
+    "description": "Start site scan request payload - XML format",
+    "xml_payload": "<SiteScanRequest session-id=\"SESSION_ID_PLACEHOLDER\" site-id=\"SITE_ID_PLACEHOLDER\"/>"
+}

@@ -1,0 +1,1870 @@
+<ScanTemplate id="#NewScanTemplate#" configVersion="4">
+ <templateDescription lang="en_us" title="DISA Copy">Conducts DISA benchmark compliance testing and security auditing across both the operating system and application layers on supported platforms. This scan requires administrative authentication. Vulnerability checks are not included and only default ports are scanned.</templateDescription>
+ <General disableVulnScan="1" disablePolicyScan="0" disableWebSpider="1" invulnerableStorage="off" enableAuthDisc="0" enableFingerprinting="1" enableWindowsPathResolver="0">
+  <scanThreads>10</scanThreads>
+  <hostThreads>10</hostThreads>
+  <watchdog enabled="0"/>
+ </General>
+ <Logging>
+  <aces level="default"/>
+  <debugLogging enabled="0"/>
+ </Logging>
+ <DeviceDiscovery>
+  <networkDiscovery enabled="0"/>
+  <CheckHosts>
+    <icmpHostCheck enabled="1"/>
+    <TCPHostCheck enabled="1">
+      <portList>22,135,139,445,1521,5432,5985,5986</portList>
+    </TCPHostCheck>
+    <UDPHostCheck enabled="0">
+    </UDPHostCheck>
+    <ignoreTCPReset enabled="0"/>
+    <arpHostCheck enabled="1"/>
+  </CheckHosts>
+ </DeviceDiscovery>
+ <ServiceDiscovery>
+  <TCPPortScan mode="custom" method="syn">
+    <portList>22,135,139,445,1521,5432,5985,5986</portList>
+  </TCPPortScan>
+  <ExcludedTCPPortScan>
+    <portList></portList>
+  </ExcludedTCPPortScan>
+  <UDPPortScan mode="none">
+    <portList></portList>
+  </UDPPortScan>
+  <ExcludedUDPPortScan>
+    <portList></portList>
+  </ExcludedUDPPortScan>
+  <protocolFingerprinting enabled="1">
+  </protocolFingerprinting>
+  <NmapScriptTimeout>180</NmapScriptTimeout>
+ </ServiceDiscovery>
+ <DiscoveryPerformance>
+  <MaxRetries maxretries="3"/>
+  <MinTimeout mintimeout="500"/>
+  <MaxTimeout maxtimeout="3000"/>
+  <InitTimeout inittimeout="500"/>
+  <MinScanDelay minscandelay="0"/>
+  <MaxScanDelay maxscandelay="0"/>
+  <DefeatRate enabled="1"/>
+  <MinRate minrate="2000"/>
+  <MaxRate maxrate="15000"/>
+  <MinParallelism minparallelism="0"/>
+  <MaxParallelism maxparallelism="0"/>
+ </DiscoveryPerformance>
+ <Credentials/>
+ <Policies>
+  <persistARFResults enabled="0"/>
+  <enableRecursiveFileSystemSearch enabled="0"/>
+  <Enabled>
+   <PolicyBenchmark scope="G" benchmarkID="Windows_Vista_V6R44_STIG" benchmarkVersion="6">
+      <Policy policyID="CAT_I_Only"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="Windows_Vista_V6R44_STIG" benchmarkVersion="6">
+      <Policy policyID="Disable_Slow_Rules"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="Windows_Vista_V6R44_STIG" benchmarkVersion="6">
+      <Policy policyID="MAC-1_Classified"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="Windows_Vista_V6R44_STIG" benchmarkVersion="6">
+      <Policy policyID="MAC-1_Public"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="Windows_Vista_V6R44_STIG" benchmarkVersion="6">
+      <Policy policyID="MAC-1_Sensitive"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="Windows_Vista_V6R44_STIG" benchmarkVersion="6">
+      <Policy policyID="MAC-2_Classified"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="Windows_Vista_V6R44_STIG" benchmarkVersion="6">
+      <Policy policyID="MAC-2_Public"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="Windows_Vista_V6R44_STIG" benchmarkVersion="6">
+      <Policy policyID="MAC-2_Sensitive"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="Windows_Vista_V6R44_STIG" benchmarkVersion="6">
+      <Policy policyID="MAC-3_Classified"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="Windows_Vista_V6R44_STIG" benchmarkVersion="6">
+      <Policy policyID="MAC-3_Public"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="Windows_Vista_V6R44_STIG" benchmarkVersion="6">
+      <Policy policyID="MAC-3_Sensitive"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_mil.disa.stig_benchmark_Adobe_Acrobat_Reader_DC_Classic_Track_V2R1_STIG" benchmarkVersion="2">
+      <Policy policyID="xccdf_mil.disa.stig_profile_CAT_I_Only"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_mil.disa.stig_benchmark_Adobe_Acrobat_Reader_DC_Classic_Track_V2R1_STIG" benchmarkVersion="2">
+      <Policy policyID="xccdf_mil.disa.stig_profile_MAC-1_Classified"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_mil.disa.stig_benchmark_Adobe_Acrobat_Reader_DC_Classic_Track_V2R1_STIG" benchmarkVersion="2">
+      <Policy policyID="xccdf_mil.disa.stig_profile_MAC-1_Public"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_mil.disa.stig_benchmark_Adobe_Acrobat_Reader_DC_Classic_Track_V2R1_STIG" benchmarkVersion="2">
+      <Policy policyID="xccdf_mil.disa.stig_profile_MAC-1_Sensitive"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_mil.disa.stig_benchmark_Adobe_Acrobat_Reader_DC_Classic_Track_V2R1_STIG" benchmarkVersion="2">
+      <Policy policyID="xccdf_mil.disa.stig_profile_MAC-2_Classified"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_mil.disa.stig_benchmark_Adobe_Acrobat_Reader_DC_Classic_Track_V2R1_STIG" benchmarkVersion="2">
+      <Policy policyID="xccdf_mil.disa.stig_profile_MAC-2_Public"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_mil.disa.stig_benchmark_Adobe_Acrobat_Reader_DC_Classic_Track_V2R1_STIG" benchmarkVersion="2">
+      <Policy policyID="xccdf_mil.disa.stig_profile_MAC-2_Sensitive"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_mil.disa.stig_benchmark_Adobe_Acrobat_Reader_DC_Classic_Track_V2R1_STIG" benchmarkVersion="2">
+      <Policy policyID="xccdf_mil.disa.stig_profile_MAC-3_Classified"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_mil.disa.stig_benchmark_Adobe_Acrobat_Reader_DC_Classic_Track_V2R1_STIG" benchmarkVersion="2">
+      <Policy policyID="xccdf_mil.disa.stig_profile_MAC-3_Public"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_mil.disa.stig_benchmark_Adobe_Acrobat_Reader_DC_Classic_Track_V2R1_STIG" benchmarkVersion="2">
+      <Policy policyID="xccdf_mil.disa.stig_profile_MAC-3_Sensitive"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_mil.disa.stig_benchmark_Adobe_Acrobat_Reader_DC_Continuous_Track_V1R5_STIG" benchmarkVersion="1">
+      <Policy policyID="xccdf_mil.disa.stig_profile_CAT_I_Only"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_mil.disa.stig_benchmark_Adobe_Acrobat_Reader_DC_Continuous_Track_V1R5_STIG" benchmarkVersion="1">
+      <Policy policyID="xccdf_mil.disa.stig_profile_MAC-1_Classified"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_mil.disa.stig_benchmark_Adobe_Acrobat_Reader_DC_Continuous_Track_V1R5_STIG" benchmarkVersion="1">
+      <Policy policyID="xccdf_mil.disa.stig_profile_MAC-1_Public"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_mil.disa.stig_benchmark_Adobe_Acrobat_Reader_DC_Continuous_Track_V1R5_STIG" benchmarkVersion="1">
+      <Policy policyID="xccdf_mil.disa.stig_profile_MAC-1_Sensitive"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_mil.disa.stig_benchmark_Adobe_Acrobat_Reader_DC_Continuous_Track_V1R5_STIG" benchmarkVersion="1">
+      <Policy policyID="xccdf_mil.disa.stig_profile_MAC-2_Classified"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_mil.disa.stig_benchmark_Adobe_Acrobat_Reader_DC_Continuous_Track_V1R5_STIG" benchmarkVersion="1">
+      <Policy policyID="xccdf_mil.disa.stig_profile_MAC-2_Public"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_mil.disa.stig_benchmark_Adobe_Acrobat_Reader_DC_Continuous_Track_V1R5_STIG" benchmarkVersion="1">
+      <Policy policyID="xccdf_mil.disa.stig_profile_MAC-2_Sensitive"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_mil.disa.stig_benchmark_Adobe_Acrobat_Reader_DC_Continuous_Track_V1R5_STIG" benchmarkVersion="1">
+      <Policy policyID="xccdf_mil.disa.stig_profile_MAC-3_Classified"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_mil.disa.stig_benchmark_Adobe_Acrobat_Reader_DC_Continuous_Track_V1R5_STIG" benchmarkVersion="1">
+      <Policy policyID="xccdf_mil.disa.stig_profile_MAC-3_Public"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_mil.disa.stig_benchmark_Adobe_Acrobat_Reader_DC_Continuous_Track_V1R5_STIG" benchmarkVersion="1">
+      <Policy policyID="xccdf_mil.disa.stig_profile_MAC-3_Sensitive"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_mil.disa.stig_benchmark_AIX_6.1_V1R14_STIG" benchmarkVersion="1">
+      <Policy policyID="xccdf_mil.disa.stig.aix61_profile_MAC-1_Classified"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_mil.disa.stig_benchmark_AIX_6.1_V1R14_STIG" benchmarkVersion="1">
+      <Policy policyID="xccdf_mil.disa.stig.aix61_profile_MAC-1_Public"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_mil.disa.stig_benchmark_AIX_6.1_V1R14_STIG" benchmarkVersion="1">
+      <Policy policyID="xccdf_mil.disa.stig.aix61_profile_MAC-1_Sensitive"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_mil.disa.stig_benchmark_AIX_6.1_V1R14_STIG" benchmarkVersion="1">
+      <Policy policyID="xccdf_mil.disa.stig.aix61_profile_MAC-2_Classified"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_mil.disa.stig_benchmark_AIX_6.1_V1R14_STIG" benchmarkVersion="1">
+      <Policy policyID="xccdf_mil.disa.stig.aix61_profile_MAC-2_Public"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_mil.disa.stig_benchmark_AIX_6.1_V1R14_STIG" benchmarkVersion="1">
+      <Policy policyID="xccdf_mil.disa.stig.aix61_profile_MAC-2_Sensitive"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_mil.disa.stig_benchmark_AIX_6.1_V1R14_STIG" benchmarkVersion="1">
+      <Policy policyID="xccdf_mil.disa.stig.aix61_profile_MAC-3_Classified"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_mil.disa.stig_benchmark_AIX_6.1_V1R14_STIG" benchmarkVersion="1">
+      <Policy policyID="xccdf_mil.disa.stig.aix61_profile_MAC-3_Public"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_mil.disa.stig_benchmark_AIX_6.1_V1R14_STIG" benchmarkVersion="1">
+      <Policy policyID="xccdf_mil.disa.stig.aix61_profile_MAC-3_Sensitive"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_mil.disa.stig_benchmark_Apache_Server_2-4_UNIX_Server_STIG_V2R3" benchmarkVersion="2">
+      <Policy policyID="xccdf_mil.disa.stig_profile_MAC-1_Classified"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_mil.disa.stig_benchmark_Apache_Server_2-4_UNIX_Server_STIG_V2R3" benchmarkVersion="2">
+      <Policy policyID="xccdf_mil.disa.stig_profile_MAC-1_Public"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_mil.disa.stig_benchmark_Apache_Server_2-4_UNIX_Server_STIG_V2R3" benchmarkVersion="2">
+      <Policy policyID="xccdf_mil.disa.stig_profile_MAC-1_Sensitive"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_mil.disa.stig_benchmark_Apache_Server_2-4_UNIX_Server_STIG_V2R3" benchmarkVersion="2">
+      <Policy policyID="xccdf_mil.disa.stig_profile_MAC-2_Classified"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_mil.disa.stig_benchmark_Apache_Server_2-4_UNIX_Server_STIG_V2R3" benchmarkVersion="2">
+      <Policy policyID="xccdf_mil.disa.stig_profile_MAC-2_Public"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_mil.disa.stig_benchmark_Apache_Server_2-4_UNIX_Server_STIG_V2R3" benchmarkVersion="2">
+      <Policy policyID="xccdf_mil.disa.stig_profile_MAC-2_Sensitive"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_mil.disa.stig_benchmark_Apache_Server_2-4_UNIX_Server_STIG_V2R3" benchmarkVersion="2">
+      <Policy policyID="xccdf_mil.disa.stig_profile_MAC-3_Classified"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_mil.disa.stig_benchmark_Apache_Server_2-4_UNIX_Server_STIG_V2R3" benchmarkVersion="2">
+      <Policy policyID="xccdf_mil.disa.stig_profile_MAC-3_Public"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_mil.disa.stig_benchmark_Apache_Server_2-4_UNIX_Server_STIG_V2R3" benchmarkVersion="2">
+      <Policy policyID="xccdf_mil.disa.stig_profile_MAC-3_Sensitive"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_mil.disa.stig_benchmark_Apache_Server_2-4_UNIX_Site_STIG_V2R2" benchmarkVersion="2">
+      <Policy policyID="xccdf_mil.disa.stig_profile_MAC-1_Classified"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_mil.disa.stig_benchmark_Apache_Server_2-4_UNIX_Site_STIG_V2R2" benchmarkVersion="2">
+      <Policy policyID="xccdf_mil.disa.stig_profile_MAC-1_Public"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_mil.disa.stig_benchmark_Apache_Server_2-4_UNIX_Site_STIG_V2R2" benchmarkVersion="2">
+      <Policy policyID="xccdf_mil.disa.stig_profile_MAC-1_Sensitive"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_mil.disa.stig_benchmark_Apache_Server_2-4_UNIX_Site_STIG_V2R2" benchmarkVersion="2">
+      <Policy policyID="xccdf_mil.disa.stig_profile_MAC-2_Classified"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_mil.disa.stig_benchmark_Apache_Server_2-4_UNIX_Site_STIG_V2R2" benchmarkVersion="2">
+      <Policy policyID="xccdf_mil.disa.stig_profile_MAC-2_Public"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_mil.disa.stig_benchmark_Apache_Server_2-4_UNIX_Site_STIG_V2R2" benchmarkVersion="2">
+      <Policy policyID="xccdf_mil.disa.stig_profile_MAC-2_Sensitive"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_mil.disa.stig_benchmark_Apache_Server_2-4_UNIX_Site_STIG_V2R2" benchmarkVersion="2">
+      <Policy policyID="xccdf_mil.disa.stig_profile_MAC-3_Classified"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_mil.disa.stig_benchmark_Apache_Server_2-4_UNIX_Site_STIG_V2R2" benchmarkVersion="2">
+      <Policy policyID="xccdf_mil.disa.stig_profile_MAC-3_Public"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_mil.disa.stig_benchmark_Apache_Server_2-4_UNIX_Site_STIG_V2R2" benchmarkVersion="2">
+      <Policy policyID="xccdf_mil.disa.stig_profile_MAC-3_Sensitive"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_mil.disa.stig_benchmark_CAN_Ubuntu_16-04_LTS_V2R3_STIG" benchmarkVersion="2">
+      <Policy policyID="xccdf_mil.disa.stig_profile_CAT_I_Only"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_mil.disa.stig_benchmark_CAN_Ubuntu_16-04_LTS_V2R3_STIG" benchmarkVersion="2">
+      <Policy policyID="xccdf_mil.disa.stig_profile_MAC-1_Classified"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_mil.disa.stig_benchmark_CAN_Ubuntu_16-04_LTS_V2R3_STIG" benchmarkVersion="2">
+      <Policy policyID="xccdf_mil.disa.stig_profile_MAC-1_Public"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_mil.disa.stig_benchmark_CAN_Ubuntu_16-04_LTS_V2R3_STIG" benchmarkVersion="2">
+      <Policy policyID="xccdf_mil.disa.stig_profile_MAC-1_Sensitive"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_mil.disa.stig_benchmark_CAN_Ubuntu_16-04_LTS_V2R3_STIG" benchmarkVersion="2">
+      <Policy policyID="xccdf_mil.disa.stig_profile_MAC-2_Classified"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_mil.disa.stig_benchmark_CAN_Ubuntu_16-04_LTS_V2R3_STIG" benchmarkVersion="2">
+      <Policy policyID="xccdf_mil.disa.stig_profile_MAC-2_Public"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_mil.disa.stig_benchmark_CAN_Ubuntu_16-04_LTS_V2R3_STIG" benchmarkVersion="2">
+      <Policy policyID="xccdf_mil.disa.stig_profile_MAC-2_Sensitive"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_mil.disa.stig_benchmark_CAN_Ubuntu_16-04_LTS_V2R3_STIG" benchmarkVersion="2">
+      <Policy policyID="xccdf_mil.disa.stig_profile_MAC-3_Classified"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_mil.disa.stig_benchmark_CAN_Ubuntu_16-04_LTS_V2R3_STIG" benchmarkVersion="2">
+      <Policy policyID="xccdf_mil.disa.stig_profile_MAC-3_Public"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_mil.disa.stig_benchmark_CAN_Ubuntu_16-04_LTS_V2R3_STIG" benchmarkVersion="2">
+      <Policy policyID="xccdf_mil.disa.stig_profile_MAC-3_Sensitive"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_mil.disa.stig_benchmark_CAN_Ubuntu_18-04_V2R7_STIG" benchmarkVersion="2">
+      <Policy policyID="xccdf_mil.disa.stig_profile_CAT_I_Only"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_mil.disa.stig_benchmark_CAN_Ubuntu_18-04_V2R7_STIG" benchmarkVersion="2">
+      <Policy policyID="xccdf_mil.disa.stig_profile_MAC-1_Classified"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_mil.disa.stig_benchmark_CAN_Ubuntu_18-04_V2R7_STIG" benchmarkVersion="2">
+      <Policy policyID="xccdf_mil.disa.stig_profile_MAC-1_Public"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_mil.disa.stig_benchmark_CAN_Ubuntu_18-04_V2R7_STIG" benchmarkVersion="2">
+      <Policy policyID="xccdf_mil.disa.stig_profile_MAC-1_Sensitive"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_mil.disa.stig_benchmark_CAN_Ubuntu_18-04_V2R7_STIG" benchmarkVersion="2">
+      <Policy policyID="xccdf_mil.disa.stig_profile_MAC-2_Classified"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_mil.disa.stig_benchmark_CAN_Ubuntu_18-04_V2R7_STIG" benchmarkVersion="2">
+      <Policy policyID="xccdf_mil.disa.stig_profile_MAC-2_Public"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_mil.disa.stig_benchmark_CAN_Ubuntu_18-04_V2R7_STIG" benchmarkVersion="2">
+      <Policy policyID="xccdf_mil.disa.stig_profile_MAC-2_Sensitive"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_mil.disa.stig_benchmark_CAN_Ubuntu_18-04_V2R7_STIG" benchmarkVersion="2">
+      <Policy policyID="xccdf_mil.disa.stig_profile_MAC-3_Classified"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_mil.disa.stig_benchmark_CAN_Ubuntu_18-04_V2R7_STIG" benchmarkVersion="2">
+      <Policy policyID="xccdf_mil.disa.stig_profile_MAC-3_Public"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_mil.disa.stig_benchmark_CAN_Ubuntu_18-04_V2R7_STIG" benchmarkVersion="2">
+      <Policy policyID="xccdf_mil.disa.stig_profile_MAC-3_Sensitive"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_mil.disa.stig_benchmark_Canonical_Ubuntu_20-04_LTS_V1R3_STIG" benchmarkVersion="1">
+      <Policy policyID="xccdf_mil.disa.stig_profile_CAT_I_Only"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_mil.disa.stig_benchmark_Canonical_Ubuntu_20-04_LTS_V1R3_STIG" benchmarkVersion="1">
+      <Policy policyID="xccdf_mil.disa.stig_profile_MAC-1_Classified"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_mil.disa.stig_benchmark_Canonical_Ubuntu_20-04_LTS_V1R3_STIG" benchmarkVersion="1">
+      <Policy policyID="xccdf_mil.disa.stig_profile_MAC-1_Public"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_mil.disa.stig_benchmark_Canonical_Ubuntu_20-04_LTS_V1R3_STIG" benchmarkVersion="1">
+      <Policy policyID="xccdf_mil.disa.stig_profile_MAC-1_Sensitive"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_mil.disa.stig_benchmark_Canonical_Ubuntu_20-04_LTS_V1R3_STIG" benchmarkVersion="1">
+      <Policy policyID="xccdf_mil.disa.stig_profile_MAC-2_Classified"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_mil.disa.stig_benchmark_Canonical_Ubuntu_20-04_LTS_V1R3_STIG" benchmarkVersion="1">
+      <Policy policyID="xccdf_mil.disa.stig_profile_MAC-2_Public"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_mil.disa.stig_benchmark_Canonical_Ubuntu_20-04_LTS_V1R3_STIG" benchmarkVersion="1">
+      <Policy policyID="xccdf_mil.disa.stig_profile_MAC-2_Sensitive"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_mil.disa.stig_benchmark_Canonical_Ubuntu_20-04_LTS_V1R3_STIG" benchmarkVersion="1">
+      <Policy policyID="xccdf_mil.disa.stig_profile_MAC-3_Classified"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_mil.disa.stig_benchmark_Canonical_Ubuntu_20-04_LTS_V1R3_STIG" benchmarkVersion="1">
+      <Policy policyID="xccdf_mil.disa.stig_profile_MAC-3_Public"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_mil.disa.stig_benchmark_Canonical_Ubuntu_20-04_LTS_V1R3_STIG" benchmarkVersion="1">
+      <Policy policyID="xccdf_mil.disa.stig_profile_MAC-3_Sensitive"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_mil.disa.stig_benchmark_Cisco_NX-OS_Switch_L2S_STIG_V1R1" benchmarkVersion="1">
+      <Policy policyID="xccdf_mil.disa.stig_profile_MAC-1_Classified"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_mil.disa.stig_benchmark_Cisco_NX-OS_Switch_L2S_STIG_V1R1" benchmarkVersion="1">
+      <Policy policyID="xccdf_mil.disa.stig_profile_MAC-1_Public"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_mil.disa.stig_benchmark_Cisco_NX-OS_Switch_L2S_STIG_V1R1" benchmarkVersion="1">
+      <Policy policyID="xccdf_mil.disa.stig_profile_MAC-1_Sensitive"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_mil.disa.stig_benchmark_Cisco_NX-OS_Switch_L2S_STIG_V1R1" benchmarkVersion="1">
+      <Policy policyID="xccdf_mil.disa.stig_profile_MAC-2_Classified"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_mil.disa.stig_benchmark_Cisco_NX-OS_Switch_L2S_STIG_V1R1" benchmarkVersion="1">
+      <Policy policyID="xccdf_mil.disa.stig_profile_MAC-2_Public"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_mil.disa.stig_benchmark_Cisco_NX-OS_Switch_L2S_STIG_V1R1" benchmarkVersion="1">
+      <Policy policyID="xccdf_mil.disa.stig_profile_MAC-2_Sensitive"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_mil.disa.stig_benchmark_Cisco_NX-OS_Switch_L2S_STIG_V1R1" benchmarkVersion="1">
+      <Policy policyID="xccdf_mil.disa.stig_profile_MAC-3_Classified"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_mil.disa.stig_benchmark_Cisco_NX-OS_Switch_L2S_STIG_V1R1" benchmarkVersion="1">
+      <Policy policyID="xccdf_mil.disa.stig_profile_MAC-3_Public"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_mil.disa.stig_benchmark_Cisco_NX-OS_Switch_L2S_STIG_V1R1" benchmarkVersion="1">
+      <Policy policyID="xccdf_mil.disa.stig_profile_MAC-3_Sensitive"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_mil.disa.stig_benchmark_Cisco_NX-OS_Switch_NDM_V2R1_STIG" benchmarkVersion="2">
+      <Policy policyID="xccdf_mil.disa.stig_profile_MAC-1_Classified"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_mil.disa.stig_benchmark_Cisco_NX-OS_Switch_NDM_V2R1_STIG" benchmarkVersion="2">
+      <Policy policyID="xccdf_mil.disa.stig_profile_MAC-1_Public"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_mil.disa.stig_benchmark_Cisco_NX-OS_Switch_NDM_V2R1_STIG" benchmarkVersion="2">
+      <Policy policyID="xccdf_mil.disa.stig_profile_MAC-1_Sensitive"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_mil.disa.stig_benchmark_Cisco_NX-OS_Switch_NDM_V2R1_STIG" benchmarkVersion="2">
+      <Policy policyID="xccdf_mil.disa.stig_profile_MAC-2_Classified"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_mil.disa.stig_benchmark_Cisco_NX-OS_Switch_NDM_V2R1_STIG" benchmarkVersion="2">
+      <Policy policyID="xccdf_mil.disa.stig_profile_MAC-2_Public"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_mil.disa.stig_benchmark_Cisco_NX-OS_Switch_NDM_V2R1_STIG" benchmarkVersion="2">
+      <Policy policyID="xccdf_mil.disa.stig_profile_MAC-2_Sensitive"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_mil.disa.stig_benchmark_Cisco_NX-OS_Switch_NDM_V2R1_STIG" benchmarkVersion="2">
+      <Policy policyID="xccdf_mil.disa.stig_profile_MAC-3_Classified"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_mil.disa.stig_benchmark_Cisco_NX-OS_Switch_NDM_V2R1_STIG" benchmarkVersion="2">
+      <Policy policyID="xccdf_mil.disa.stig_profile_MAC-3_Public"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_mil.disa.stig_benchmark_Cisco_NX-OS_Switch_NDM_V2R1_STIG" benchmarkVersion="2">
+      <Policy policyID="xccdf_mil.disa.stig_profile_MAC-3_Sensitive"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_mil.disa.stig_benchmark_Google_Chrome_Windows_V2R3_STIG" benchmarkVersion="2">
+      <Policy policyID="xccdf_mil.disa.stig_profile_CAT_I_Only"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_mil.disa.stig_benchmark_Google_Chrome_Windows_V2R3_STIG" benchmarkVersion="2">
+      <Policy policyID="xccdf_mil.disa.stig_profile_MAC-1_Classified"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_mil.disa.stig_benchmark_Google_Chrome_Windows_V2R3_STIG" benchmarkVersion="2">
+      <Policy policyID="xccdf_mil.disa.stig_profile_MAC-1_Public"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_mil.disa.stig_benchmark_Google_Chrome_Windows_V2R3_STIG" benchmarkVersion="2">
+      <Policy policyID="xccdf_mil.disa.stig_profile_MAC-1_Sensitive"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_mil.disa.stig_benchmark_Google_Chrome_Windows_V2R3_STIG" benchmarkVersion="2">
+      <Policy policyID="xccdf_mil.disa.stig_profile_MAC-2_Classified"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_mil.disa.stig_benchmark_Google_Chrome_Windows_V2R3_STIG" benchmarkVersion="2">
+      <Policy policyID="xccdf_mil.disa.stig_profile_MAC-2_Public"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_mil.disa.stig_benchmark_Google_Chrome_Windows_V2R3_STIG" benchmarkVersion="2">
+      <Policy policyID="xccdf_mil.disa.stig_profile_MAC-2_Sensitive"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_mil.disa.stig_benchmark_Google_Chrome_Windows_V2R3_STIG" benchmarkVersion="2">
+      <Policy policyID="xccdf_mil.disa.stig_profile_MAC-3_Classified"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_mil.disa.stig_benchmark_Google_Chrome_Windows_V2R3_STIG" benchmarkVersion="2">
+      <Policy policyID="xccdf_mil.disa.stig_profile_MAC-3_Public"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_mil.disa.stig_benchmark_Google_Chrome_Windows_V2R3_STIG" benchmarkVersion="2">
+      <Policy policyID="xccdf_mil.disa.stig_profile_MAC-3_Sensitive"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_mil.disa.stig_benchmark_IE10_V1R10_STIG" benchmarkVersion="1">
+      <Policy policyID="xccdf_mil.disa.stig_profile_CAT_I_Only"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_mil.disa.stig_benchmark_IE10_V1R10_STIG" benchmarkVersion="1">
+      <Policy policyID="xccdf_mil.disa.stig_profile_MAC-1_Classified"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_mil.disa.stig_benchmark_IE10_V1R10_STIG" benchmarkVersion="1">
+      <Policy policyID="xccdf_mil.disa.stig_profile_MAC-1_Public"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_mil.disa.stig_benchmark_IE10_V1R10_STIG" benchmarkVersion="1">
+      <Policy policyID="xccdf_mil.disa.stig_profile_MAC-1_Sensitive"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_mil.disa.stig_benchmark_IE10_V1R10_STIG" benchmarkVersion="1">
+      <Policy policyID="xccdf_mil.disa.stig_profile_MAC-2_Classified"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_mil.disa.stig_benchmark_IE10_V1R10_STIG" benchmarkVersion="1">
+      <Policy policyID="xccdf_mil.disa.stig_profile_MAC-2_Public"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_mil.disa.stig_benchmark_IE10_V1R10_STIG" benchmarkVersion="1">
+      <Policy policyID="xccdf_mil.disa.stig_profile_MAC-2_Sensitive"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_mil.disa.stig_benchmark_IE10_V1R10_STIG" benchmarkVersion="1">
+      <Policy policyID="xccdf_mil.disa.stig_profile_MAC-3_Classified"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_mil.disa.stig_benchmark_IE10_V1R10_STIG" benchmarkVersion="1">
+      <Policy policyID="xccdf_mil.disa.stig_profile_MAC-3_Public"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_mil.disa.stig_benchmark_IE10_V1R10_STIG" benchmarkVersion="1">
+      <Policy policyID="xccdf_mil.disa.stig_profile_MAC-3_Sensitive"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_mil.disa.stig_benchmark_IE_11_V2R2_STIG" benchmarkVersion="2">
+      <Policy policyID="xccdf_mil.disa.stig_profile_CAT_I_Only"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_mil.disa.stig_benchmark_IE_11_V2R2_STIG" benchmarkVersion="2">
+      <Policy policyID="xccdf_mil.disa.stig_profile_MAC-1_Classified"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_mil.disa.stig_benchmark_IE_11_V2R2_STIG" benchmarkVersion="2">
+      <Policy policyID="xccdf_mil.disa.stig_profile_MAC-1_Public"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_mil.disa.stig_benchmark_IE_11_V2R2_STIG" benchmarkVersion="2">
+      <Policy policyID="xccdf_mil.disa.stig_profile_MAC-1_Sensitive"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_mil.disa.stig_benchmark_IE_11_V2R2_STIG" benchmarkVersion="2">
+      <Policy policyID="xccdf_mil.disa.stig_profile_MAC-2_Classified"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_mil.disa.stig_benchmark_IE_11_V2R2_STIG" benchmarkVersion="2">
+      <Policy policyID="xccdf_mil.disa.stig_profile_MAC-2_Public"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_mil.disa.stig_benchmark_IE_11_V2R2_STIG" benchmarkVersion="2">
+      <Policy policyID="xccdf_mil.disa.stig_profile_MAC-2_Sensitive"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_mil.disa.stig_benchmark_IE_11_V2R2_STIG" benchmarkVersion="2">
+      <Policy policyID="xccdf_mil.disa.stig_profile_MAC-3_Classified"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_mil.disa.stig_benchmark_IE_11_V2R2_STIG" benchmarkVersion="2">
+      <Policy policyID="xccdf_mil.disa.stig_profile_MAC-3_Public"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_mil.disa.stig_benchmark_IE_11_V2R2_STIG" benchmarkVersion="2">
+      <Policy policyID="xccdf_mil.disa.stig_profile_MAC-3_Sensitive"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_mil.disa.stig_benchmark_McAfee_VirusScan88_Local_Client_V1R4_STIG" benchmarkVersion="1">
+      <Policy policyID="xccdf_mil.disa.stig_profile_CAT_I_Only"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_mil.disa.stig_benchmark_McAfee_VirusScan88_Local_Client_V1R4_STIG" benchmarkVersion="1">
+      <Policy policyID="xccdf_mil.disa.stig_profile_MAC-1_Classified"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_mil.disa.stig_benchmark_McAfee_VirusScan88_Local_Client_V1R4_STIG" benchmarkVersion="1">
+      <Policy policyID="xccdf_mil.disa.stig_profile_MAC-1_Public"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_mil.disa.stig_benchmark_McAfee_VirusScan88_Local_Client_V1R4_STIG" benchmarkVersion="1">
+      <Policy policyID="xccdf_mil.disa.stig_profile_MAC-1_Sensitive"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_mil.disa.stig_benchmark_McAfee_VirusScan88_Local_Client_V1R4_STIG" benchmarkVersion="1">
+      <Policy policyID="xccdf_mil.disa.stig_profile_MAC-2_Classified"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_mil.disa.stig_benchmark_McAfee_VirusScan88_Local_Client_V1R4_STIG" benchmarkVersion="1">
+      <Policy policyID="xccdf_mil.disa.stig_profile_MAC-2_Public"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_mil.disa.stig_benchmark_McAfee_VirusScan88_Local_Client_V1R4_STIG" benchmarkVersion="1">
+      <Policy policyID="xccdf_mil.disa.stig_profile_MAC-2_Sensitive"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_mil.disa.stig_benchmark_McAfee_VirusScan88_Local_Client_V1R4_STIG" benchmarkVersion="1">
+      <Policy policyID="xccdf_mil.disa.stig_profile_MAC-3_Classified"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_mil.disa.stig_benchmark_McAfee_VirusScan88_Local_Client_V1R4_STIG" benchmarkVersion="1">
+      <Policy policyID="xccdf_mil.disa.stig_profile_MAC-3_Public"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_mil.disa.stig_benchmark_McAfee_VirusScan88_Local_Client_V1R4_STIG" benchmarkVersion="1">
+      <Policy policyID="xccdf_mil.disa.stig_profile_MAC-3_Sensitive"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_mil.disa.stig_benchmark_McAfee_VirusScan88_Managed_Client" benchmarkVersion="1">
+      <Policy policyID="xccdf_mil.disa.stig_profile_CAT_I_Only"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_mil.disa.stig_benchmark_McAfee_VirusScan88_Managed_Client" benchmarkVersion="1">
+      <Policy policyID="xccdf_mil.disa.stig_profile_MAC-1_Classified"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_mil.disa.stig_benchmark_McAfee_VirusScan88_Managed_Client" benchmarkVersion="1">
+      <Policy policyID="xccdf_mil.disa.stig_profile_MAC-1_Public"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_mil.disa.stig_benchmark_McAfee_VirusScan88_Managed_Client" benchmarkVersion="1">
+      <Policy policyID="xccdf_mil.disa.stig_profile_MAC-1_Sensitive"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_mil.disa.stig_benchmark_McAfee_VirusScan88_Managed_Client" benchmarkVersion="1">
+      <Policy policyID="xccdf_mil.disa.stig_profile_MAC-2_Classified"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_mil.disa.stig_benchmark_McAfee_VirusScan88_Managed_Client" benchmarkVersion="1">
+      <Policy policyID="xccdf_mil.disa.stig_profile_MAC-2_Public"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_mil.disa.stig_benchmark_McAfee_VirusScan88_Managed_Client" benchmarkVersion="1">
+      <Policy policyID="xccdf_mil.disa.stig_profile_MAC-2_Sensitive"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_mil.disa.stig_benchmark_McAfee_VirusScan88_Managed_Client" benchmarkVersion="1">
+      <Policy policyID="xccdf_mil.disa.stig_profile_MAC-3_Classified"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_mil.disa.stig_benchmark_McAfee_VirusScan88_Managed_Client" benchmarkVersion="1">
+      <Policy policyID="xccdf_mil.disa.stig_profile_MAC-3_Public"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_mil.disa.stig_benchmark_McAfee_VirusScan88_Managed_Client" benchmarkVersion="1">
+      <Policy policyID="xccdf_mil.disa.stig_profile_MAC-3_Sensitive"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_mil.disa.stig_benchmark_McAfee_VirusScan88_Managed_Client_V1R3_STIG" benchmarkVersion="1">
+      <Policy policyID="xccdf_mil.disa.stig_profile_CAT_I_Only"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_mil.disa.stig_benchmark_McAfee_VirusScan88_Managed_Client_V1R3_STIG" benchmarkVersion="1">
+      <Policy policyID="xccdf_mil.disa.stig_profile_MAC-1_Classified"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_mil.disa.stig_benchmark_McAfee_VirusScan88_Managed_Client_V1R3_STIG" benchmarkVersion="1">
+      <Policy policyID="xccdf_mil.disa.stig_profile_MAC-1_Public"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_mil.disa.stig_benchmark_McAfee_VirusScan88_Managed_Client_V1R3_STIG" benchmarkVersion="1">
+      <Policy policyID="xccdf_mil.disa.stig_profile_MAC-1_Sensitive"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_mil.disa.stig_benchmark_McAfee_VirusScan88_Managed_Client_V1R3_STIG" benchmarkVersion="1">
+      <Policy policyID="xccdf_mil.disa.stig_profile_MAC-2_Classified"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_mil.disa.stig_benchmark_McAfee_VirusScan88_Managed_Client_V1R3_STIG" benchmarkVersion="1">
+      <Policy policyID="xccdf_mil.disa.stig_profile_MAC-2_Public"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_mil.disa.stig_benchmark_McAfee_VirusScan88_Managed_Client_V1R3_STIG" benchmarkVersion="1">
+      <Policy policyID="xccdf_mil.disa.stig_profile_MAC-2_Sensitive"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_mil.disa.stig_benchmark_McAfee_VirusScan88_Managed_Client_V1R3_STIG" benchmarkVersion="1">
+      <Policy policyID="xccdf_mil.disa.stig_profile_MAC-3_Classified"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_mil.disa.stig_benchmark_McAfee_VirusScan88_Managed_Client_V1R3_STIG" benchmarkVersion="1">
+      <Policy policyID="xccdf_mil.disa.stig_profile_MAC-3_Public"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_mil.disa.stig_benchmark_McAfee_VirusScan88_Managed_Client_V1R3_STIG" benchmarkVersion="1">
+      <Policy policyID="xccdf_mil.disa.stig_profile_MAC-3_Sensitive"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_mil.disa.stig_benchmark_Microsoft_Office_System_2013" benchmarkVersion="1">
+      <Policy policyID="xccdf_mil.disa.stig_profile_CAT_I_Only"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_mil.disa.stig_benchmark_Microsoft_Office_System_2013" benchmarkVersion="1">
+      <Policy policyID="xccdf_mil.disa.stig_profile_MAC-1_Classified"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_mil.disa.stig_benchmark_Microsoft_Office_System_2013" benchmarkVersion="1">
+      <Policy policyID="xccdf_mil.disa.stig_profile_MAC-1_Public"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_mil.disa.stig_benchmark_Microsoft_Office_System_2013" benchmarkVersion="1">
+      <Policy policyID="xccdf_mil.disa.stig_profile_MAC-1_Sensitive"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_mil.disa.stig_benchmark_Microsoft_Office_System_2013" benchmarkVersion="1">
+      <Policy policyID="xccdf_mil.disa.stig_profile_MAC-2_Classified"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_mil.disa.stig_benchmark_Microsoft_Office_System_2013" benchmarkVersion="1">
+      <Policy policyID="xccdf_mil.disa.stig_profile_MAC-2_Public"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_mil.disa.stig_benchmark_Microsoft_Office_System_2013" benchmarkVersion="1">
+      <Policy policyID="xccdf_mil.disa.stig_profile_MAC-2_Sensitive"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_mil.disa.stig_benchmark_Microsoft_Office_System_2013" benchmarkVersion="1">
+      <Policy policyID="xccdf_mil.disa.stig_profile_MAC-3_Classified"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_mil.disa.stig_benchmark_Microsoft_Office_System_2013" benchmarkVersion="1">
+      <Policy policyID="xccdf_mil.disa.stig_profile_MAC-3_Public"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_mil.disa.stig_benchmark_Microsoft_Office_System_2013" benchmarkVersion="1">
+      <Policy policyID="xccdf_mil.disa.stig_profile_MAC-3_Sensitive"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_mil.disa.stig_benchmark_MOZ_Firefox_Linux_V6R2_STIG" benchmarkVersion="6">
+      <Policy policyID="xccdf_mil.disa.stig_profile_CAT_I_Only"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_mil.disa.stig_benchmark_MOZ_Firefox_Linux_V6R2_STIG" benchmarkVersion="6">
+      <Policy policyID="xccdf_mil.disa.stig_profile_MAC-1_Classified"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_mil.disa.stig_benchmark_MOZ_Firefox_Linux_V6R2_STIG" benchmarkVersion="6">
+      <Policy policyID="xccdf_mil.disa.stig_profile_MAC-1_Public"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_mil.disa.stig_benchmark_MOZ_Firefox_Linux_V6R2_STIG" benchmarkVersion="6">
+      <Policy policyID="xccdf_mil.disa.stig_profile_MAC-1_Sensitive"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_mil.disa.stig_benchmark_MOZ_Firefox_Linux_V6R2_STIG" benchmarkVersion="6">
+      <Policy policyID="xccdf_mil.disa.stig_profile_MAC-2_Classified"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_mil.disa.stig_benchmark_MOZ_Firefox_Linux_V6R2_STIG" benchmarkVersion="6">
+      <Policy policyID="xccdf_mil.disa.stig_profile_MAC-2_Public"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_mil.disa.stig_benchmark_MOZ_Firefox_Linux_V6R2_STIG" benchmarkVersion="6">
+      <Policy policyID="xccdf_mil.disa.stig_profile_MAC-2_Sensitive"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_mil.disa.stig_benchmark_MOZ_Firefox_Linux_V6R2_STIG" benchmarkVersion="6">
+      <Policy policyID="xccdf_mil.disa.stig_profile_MAC-3_Classified"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_mil.disa.stig_benchmark_MOZ_Firefox_Linux_V6R2_STIG" benchmarkVersion="6">
+      <Policy policyID="xccdf_mil.disa.stig_profile_MAC-3_Public"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_mil.disa.stig_benchmark_MOZ_Firefox_Linux_V6R2_STIG" benchmarkVersion="6">
+      <Policy policyID="xccdf_mil.disa.stig_profile_MAC-3_Sensitive"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_mil.disa.stig_benchmark_MOZ_Firefox_RHEL_V5R2_STIG" benchmarkVersion="5">
+      <Policy policyID="xccdf_mil.disa.stig_profile_CAT_I_Only"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_mil.disa.stig_benchmark_MOZ_Firefox_RHEL_V5R2_STIG" benchmarkVersion="5">
+      <Policy policyID="xccdf_mil.disa.stig_profile_MAC-1_Classified"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_mil.disa.stig_benchmark_MOZ_Firefox_RHEL_V5R2_STIG" benchmarkVersion="5">
+      <Policy policyID="xccdf_mil.disa.stig_profile_MAC-1_Public"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_mil.disa.stig_benchmark_MOZ_Firefox_RHEL_V5R2_STIG" benchmarkVersion="5">
+      <Policy policyID="xccdf_mil.disa.stig_profile_MAC-1_Sensitive"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_mil.disa.stig_benchmark_MOZ_Firefox_RHEL_V5R2_STIG" benchmarkVersion="5">
+      <Policy policyID="xccdf_mil.disa.stig_profile_MAC-2_Classified"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_mil.disa.stig_benchmark_MOZ_Firefox_RHEL_V5R2_STIG" benchmarkVersion="5">
+      <Policy policyID="xccdf_mil.disa.stig_profile_MAC-2_Public"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_mil.disa.stig_benchmark_MOZ_Firefox_RHEL_V5R2_STIG" benchmarkVersion="5">
+      <Policy policyID="xccdf_mil.disa.stig_profile_MAC-2_Sensitive"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_mil.disa.stig_benchmark_MOZ_Firefox_RHEL_V5R2_STIG" benchmarkVersion="5">
+      <Policy policyID="xccdf_mil.disa.stig_profile_MAC-3_Classified"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_mil.disa.stig_benchmark_MOZ_Firefox_RHEL_V5R2_STIG" benchmarkVersion="5">
+      <Policy policyID="xccdf_mil.disa.stig_profile_MAC-3_Public"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_mil.disa.stig_benchmark_MOZ_Firefox_RHEL_V5R2_STIG" benchmarkVersion="5">
+      <Policy policyID="xccdf_mil.disa.stig_profile_MAC-3_Sensitive"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_mil.disa.stig_benchmark_MOZ_Firefox_Windows_V6R2_STIG" benchmarkVersion="6">
+      <Policy policyID="xccdf_mil.disa.stig_profile_CAT_I_Only"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_mil.disa.stig_benchmark_MOZ_Firefox_Windows_V6R2_STIG" benchmarkVersion="6">
+      <Policy policyID="xccdf_mil.disa.stig_profile_MAC-1_Classified"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_mil.disa.stig_benchmark_MOZ_Firefox_Windows_V6R2_STIG" benchmarkVersion="6">
+      <Policy policyID="xccdf_mil.disa.stig_profile_MAC-1_Public"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_mil.disa.stig_benchmark_MOZ_Firefox_Windows_V6R2_STIG" benchmarkVersion="6">
+      <Policy policyID="xccdf_mil.disa.stig_profile_MAC-1_Sensitive"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_mil.disa.stig_benchmark_MOZ_Firefox_Windows_V6R2_STIG" benchmarkVersion="6">
+      <Policy policyID="xccdf_mil.disa.stig_profile_MAC-2_Classified"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_mil.disa.stig_benchmark_MOZ_Firefox_Windows_V6R2_STIG" benchmarkVersion="6">
+      <Policy policyID="xccdf_mil.disa.stig_profile_MAC-2_Public"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_mil.disa.stig_benchmark_MOZ_Firefox_Windows_V6R2_STIG" benchmarkVersion="6">
+      <Policy policyID="xccdf_mil.disa.stig_profile_MAC-2_Sensitive"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_mil.disa.stig_benchmark_MOZ_Firefox_Windows_V6R2_STIG" benchmarkVersion="6">
+      <Policy policyID="xccdf_mil.disa.stig_profile_MAC-3_Classified"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_mil.disa.stig_benchmark_MOZ_Firefox_Windows_V6R2_STIG" benchmarkVersion="6">
+      <Policy policyID="xccdf_mil.disa.stig_profile_MAC-3_Public"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_mil.disa.stig_benchmark_MOZ_Firefox_Windows_V6R2_STIG" benchmarkVersion="6">
+      <Policy policyID="xccdf_mil.disa.stig_profile_MAC-3_Sensitive"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_mil.disa.stig_benchmark_MS_DotNet_Framework_4-0_V2R1_STIG" benchmarkVersion="2">
+      <Policy policyID="xccdf_mil.disa.stig_profile_CAT_I_Only"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_mil.disa.stig_benchmark_MS_DotNet_Framework_4-0_V2R1_STIG" benchmarkVersion="2">
+      <Policy policyID="xccdf_mil.disa.stig_profile_MAC-1_Classified"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_mil.disa.stig_benchmark_MS_DotNet_Framework_4-0_V2R1_STIG" benchmarkVersion="2">
+      <Policy policyID="xccdf_mil.disa.stig_profile_MAC-1_Public"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_mil.disa.stig_benchmark_MS_DotNet_Framework_4-0_V2R1_STIG" benchmarkVersion="2">
+      <Policy policyID="xccdf_mil.disa.stig_profile_MAC-1_Sensitive"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_mil.disa.stig_benchmark_MS_DotNet_Framework_4-0_V2R1_STIG" benchmarkVersion="2">
+      <Policy policyID="xccdf_mil.disa.stig_profile_MAC-2_Classified"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_mil.disa.stig_benchmark_MS_DotNet_Framework_4-0_V2R1_STIG" benchmarkVersion="2">
+      <Policy policyID="xccdf_mil.disa.stig_profile_MAC-2_Public"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_mil.disa.stig_benchmark_MS_DotNet_Framework_4-0_V2R1_STIG" benchmarkVersion="2">
+      <Policy policyID="xccdf_mil.disa.stig_profile_MAC-2_Sensitive"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_mil.disa.stig_benchmark_MS_DotNet_Framework_4-0_V2R1_STIG" benchmarkVersion="2">
+      <Policy policyID="xccdf_mil.disa.stig_profile_MAC-3_Classified"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_mil.disa.stig_benchmark_MS_DotNet_Framework_4-0_V2R1_STIG" benchmarkVersion="2">
+      <Policy policyID="xccdf_mil.disa.stig_profile_MAC-3_Public"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_mil.disa.stig_benchmark_MS_DotNet_Framework_4-0_V2R1_STIG" benchmarkVersion="2">
+      <Policy policyID="xccdf_mil.disa.stig_profile_MAC-3_Sensitive"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_mil.disa.stig_benchmark_MS_DotNet_Framework_4_V1R8_STIG" benchmarkVersion="1">
+      <Policy policyID="xccdf_mil.disa.stig_profile_CAT_I_Only"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_mil.disa.stig_benchmark_MS_DotNet_Framework_4_V1R8_STIG" benchmarkVersion="1">
+      <Policy policyID="xccdf_mil.disa.stig_profile_MAC-1_Classified"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_mil.disa.stig_benchmark_MS_DotNet_Framework_4_V1R8_STIG" benchmarkVersion="1">
+      <Policy policyID="xccdf_mil.disa.stig_profile_MAC-1_Public"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_mil.disa.stig_benchmark_MS_DotNet_Framework_4_V1R8_STIG" benchmarkVersion="1">
+      <Policy policyID="xccdf_mil.disa.stig_profile_MAC-1_Sensitive"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_mil.disa.stig_benchmark_MS_DotNet_Framework_4_V1R8_STIG" benchmarkVersion="1">
+      <Policy policyID="xccdf_mil.disa.stig_profile_MAC-2_Classified"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_mil.disa.stig_benchmark_MS_DotNet_Framework_4_V1R8_STIG" benchmarkVersion="1">
+      <Policy policyID="xccdf_mil.disa.stig_profile_MAC-2_Public"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_mil.disa.stig_benchmark_MS_DotNet_Framework_4_V1R8_STIG" benchmarkVersion="1">
+      <Policy policyID="xccdf_mil.disa.stig_profile_MAC-2_Sensitive"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_mil.disa.stig_benchmark_MS_DotNet_Framework_4_V1R8_STIG" benchmarkVersion="1">
+      <Policy policyID="xccdf_mil.disa.stig_profile_MAC-3_Classified"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_mil.disa.stig_benchmark_MS_DotNet_Framework_4_V1R8_STIG" benchmarkVersion="1">
+      <Policy policyID="xccdf_mil.disa.stig_profile_MAC-3_Public"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_mil.disa.stig_benchmark_MS_DotNet_Framework_4_V1R8_STIG" benchmarkVersion="1">
+      <Policy policyID="xccdf_mil.disa.stig_profile_MAC-3_Sensitive"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_mil.disa.stig_benchmark_MS_Edge_V1R1_STIG" benchmarkVersion="1">
+      <Policy policyID="xccdf_mil.disa.stig_profile_CAT_I_Only"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_mil.disa.stig_benchmark_MS_Edge_V1R1_STIG" benchmarkVersion="1">
+      <Policy policyID="xccdf_mil.disa.stig_profile_MAC-1_Classified"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_mil.disa.stig_benchmark_MS_Edge_V1R1_STIG" benchmarkVersion="1">
+      <Policy policyID="xccdf_mil.disa.stig_profile_MAC-1_Public"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_mil.disa.stig_benchmark_MS_Edge_V1R1_STIG" benchmarkVersion="1">
+      <Policy policyID="xccdf_mil.disa.stig_profile_MAC-1_Sensitive"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_mil.disa.stig_benchmark_MS_Edge_V1R1_STIG" benchmarkVersion="1">
+      <Policy policyID="xccdf_mil.disa.stig_profile_MAC-2_Classified"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_mil.disa.stig_benchmark_MS_Edge_V1R1_STIG" benchmarkVersion="1">
+      <Policy policyID="xccdf_mil.disa.stig_profile_MAC-2_Public"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_mil.disa.stig_benchmark_MS_Edge_V1R1_STIG" benchmarkVersion="1">
+      <Policy policyID="xccdf_mil.disa.stig_profile_MAC-2_Sensitive"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_mil.disa.stig_benchmark_MS_Edge_V1R1_STIG" benchmarkVersion="1">
+      <Policy policyID="xccdf_mil.disa.stig_profile_MAC-3_Classified"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_mil.disa.stig_benchmark_MS_Edge_V1R1_STIG" benchmarkVersion="1">
+      <Policy policyID="xccdf_mil.disa.stig_profile_MAC-3_Public"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_mil.disa.stig_benchmark_MS_Edge_V1R1_STIG" benchmarkVersion="1">
+      <Policy policyID="xccdf_mil.disa.stig_profile_MAC-3_Sensitive"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_mil.disa.stig_benchmark_MS_Excel_2010_STIG_V1R11" benchmarkVersion="1">
+      <Policy policyID="xccdf_mil.disa.stig_profile_MAC-1_Classified"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_mil.disa.stig_benchmark_MS_Excel_2010_STIG_V1R11" benchmarkVersion="1">
+      <Policy policyID="xccdf_mil.disa.stig_profile_MAC-1_Public"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_mil.disa.stig_benchmark_MS_Excel_2010_STIG_V1R11" benchmarkVersion="1">
+      <Policy policyID="xccdf_mil.disa.stig_profile_MAC-1_Sensitive"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_mil.disa.stig_benchmark_MS_Excel_2010_STIG_V1R11" benchmarkVersion="1">
+      <Policy policyID="xccdf_mil.disa.stig_profile_MAC-2_Classified"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_mil.disa.stig_benchmark_MS_Excel_2010_STIG_V1R11" benchmarkVersion="1">
+      <Policy policyID="xccdf_mil.disa.stig_profile_MAC-2_Public"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_mil.disa.stig_benchmark_MS_Excel_2010_STIG_V1R11" benchmarkVersion="1">
+      <Policy policyID="xccdf_mil.disa.stig_profile_MAC-2_Sensitive"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_mil.disa.stig_benchmark_MS_Excel_2010_STIG_V1R11" benchmarkVersion="1">
+      <Policy policyID="xccdf_mil.disa.stig_profile_MAC-3_Classified"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_mil.disa.stig_benchmark_MS_Excel_2010_STIG_V1R11" benchmarkVersion="1">
+      <Policy policyID="xccdf_mil.disa.stig_profile_MAC-3_Public"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_mil.disa.stig_benchmark_MS_Excel_2010_STIG_V1R11" benchmarkVersion="1">
+      <Policy policyID="xccdf_mil.disa.stig_profile_MAC-3_Sensitive"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_mil.disa.stig_benchmark_MS_IIS_8-5_Site_STIG_V2R4" benchmarkVersion="2">
+      <Policy policyID="xccdf_mil.disa.stig_profile_MAC-1_Classified"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_mil.disa.stig_benchmark_MS_IIS_8-5_Site_STIG_V2R4" benchmarkVersion="2">
+      <Policy policyID="xccdf_mil.disa.stig_profile_MAC-1_Public"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_mil.disa.stig_benchmark_MS_IIS_8-5_Site_STIG_V2R4" benchmarkVersion="2">
+      <Policy policyID="xccdf_mil.disa.stig_profile_MAC-1_Sensitive"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_mil.disa.stig_benchmark_MS_IIS_8-5_Site_STIG_V2R4" benchmarkVersion="2">
+      <Policy policyID="xccdf_mil.disa.stig_profile_MAC-2_Classified"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_mil.disa.stig_benchmark_MS_IIS_8-5_Site_STIG_V2R4" benchmarkVersion="2">
+      <Policy policyID="xccdf_mil.disa.stig_profile_MAC-2_Public"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_mil.disa.stig_benchmark_MS_IIS_8-5_Site_STIG_V2R4" benchmarkVersion="2">
+      <Policy policyID="xccdf_mil.disa.stig_profile_MAC-2_Sensitive"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_mil.disa.stig_benchmark_MS_IIS_8-5_Site_STIG_V2R4" benchmarkVersion="2">
+      <Policy policyID="xccdf_mil.disa.stig_profile_MAC-3_Classified"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_mil.disa.stig_benchmark_MS_IIS_8-5_Site_STIG_V2R4" benchmarkVersion="2">
+      <Policy policyID="xccdf_mil.disa.stig_profile_MAC-3_Public"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_mil.disa.stig_benchmark_MS_IIS_8-5_Site_STIG_V2R4" benchmarkVersion="2">
+      <Policy policyID="xccdf_mil.disa.stig_profile_MAC-3_Sensitive"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_mil.disa.stig_benchmark_MS_IIS_85_Server_V1R5_STIG" benchmarkVersion="1">
+      <Policy policyID="xccdf_mil.disa.stig_profile_MAC-1_Classified"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_mil.disa.stig_benchmark_MS_IIS_85_Server_V1R5_STIG" benchmarkVersion="1">
+      <Policy policyID="xccdf_mil.disa.stig_profile_MAC-1_Public"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_mil.disa.stig_benchmark_MS_IIS_85_Server_V1R5_STIG" benchmarkVersion="1">
+      <Policy policyID="xccdf_mil.disa.stig_profile_MAC-1_Sensitive"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_mil.disa.stig_benchmark_MS_IIS_85_Server_V1R5_STIG" benchmarkVersion="1">
+      <Policy policyID="xccdf_mil.disa.stig_profile_MAC-2_Classified"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_mil.disa.stig_benchmark_MS_IIS_85_Server_V1R5_STIG" benchmarkVersion="1">
+      <Policy policyID="xccdf_mil.disa.stig_profile_MAC-2_Public"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_mil.disa.stig_benchmark_MS_IIS_85_Server_V1R5_STIG" benchmarkVersion="1">
+      <Policy policyID="xccdf_mil.disa.stig_profile_MAC-2_Sensitive"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_mil.disa.stig_benchmark_MS_IIS_85_Server_V1R5_STIG" benchmarkVersion="1">
+      <Policy policyID="xccdf_mil.disa.stig_profile_MAC-3_Classified"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_mil.disa.stig_benchmark_MS_IIS_85_Server_V1R5_STIG" benchmarkVersion="1">
+      <Policy policyID="xccdf_mil.disa.stig_profile_MAC-3_Public"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_mil.disa.stig_benchmark_MS_IIS_85_Server_V1R5_STIG" benchmarkVersion="1">
+      <Policy policyID="xccdf_mil.disa.stig_profile_MAC-3_Sensitive"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_mil.disa.stig_benchmark_MS_Windows_10_STIG" benchmarkVersion="3">
+      <Policy policyID="xccdf_mil.disa.stig_profile_CAT_I_Only"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_mil.disa.stig_benchmark_MS_Windows_10_STIG" benchmarkVersion="3">
+      <Policy policyID="xccdf_mil.disa.stig_profile_Disable_Slow_Rules"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_mil.disa.stig_benchmark_MS_Windows_10_STIG" benchmarkVersion="3">
+      <Policy policyID="xccdf_mil.disa.stig_profile_MAC-1_Classified"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_mil.disa.stig_benchmark_MS_Windows_10_STIG" benchmarkVersion="3">
+      <Policy policyID="xccdf_mil.disa.stig_profile_MAC-1_Public"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_mil.disa.stig_benchmark_MS_Windows_10_STIG" benchmarkVersion="3">
+      <Policy policyID="xccdf_mil.disa.stig_profile_MAC-1_Sensitive"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_mil.disa.stig_benchmark_MS_Windows_10_STIG" benchmarkVersion="3">
+      <Policy policyID="xccdf_mil.disa.stig_profile_MAC-2_Classified"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_mil.disa.stig_benchmark_MS_Windows_10_STIG" benchmarkVersion="3">
+      <Policy policyID="xccdf_mil.disa.stig_profile_MAC-2_Public"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_mil.disa.stig_benchmark_MS_Windows_10_STIG" benchmarkVersion="3">
+      <Policy policyID="xccdf_mil.disa.stig_profile_MAC-2_Sensitive"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_mil.disa.stig_benchmark_MS_Windows_10_STIG" benchmarkVersion="3">
+      <Policy policyID="xccdf_mil.disa.stig_profile_MAC-3_Classified"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_mil.disa.stig_benchmark_MS_Windows_10_STIG" benchmarkVersion="3">
+      <Policy policyID="xccdf_mil.disa.stig_profile_MAC-3_Public"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_mil.disa.stig_benchmark_MS_Windows_10_STIG" benchmarkVersion="3">
+      <Policy policyID="xccdf_mil.disa.stig_profile_MAC-3_Sensitive"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_mil.disa.stig_benchmark_MS_Windows_11_V1R6_STIG" benchmarkVersion="1">
+      <Policy policyID="xccdf_mil.disa.stig_profile_MAC-1_Classified"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_mil.disa.stig_benchmark_MS_Windows_11_V1R6_STIG" benchmarkVersion="1">
+      <Policy policyID="xccdf_mil.disa.stig_profile_MAC-1_Public"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_mil.disa.stig_benchmark_MS_Windows_11_V1R6_STIG" benchmarkVersion="1">
+      <Policy policyID="xccdf_mil.disa.stig_profile_MAC-1_Sensitive"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_mil.disa.stig_benchmark_MS_Windows_11_V1R6_STIG" benchmarkVersion="1">
+      <Policy policyID="xccdf_mil.disa.stig_profile_MAC-2_Classified"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_mil.disa.stig_benchmark_MS_Windows_11_V1R6_STIG" benchmarkVersion="1">
+      <Policy policyID="xccdf_mil.disa.stig_profile_MAC-2_Public"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_mil.disa.stig_benchmark_MS_Windows_11_V1R6_STIG" benchmarkVersion="1">
+      <Policy policyID="xccdf_mil.disa.stig_profile_MAC-2_Sensitive"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_mil.disa.stig_benchmark_MS_Windows_11_V1R6_STIG" benchmarkVersion="1">
+      <Policy policyID="xccdf_mil.disa.stig_profile_MAC-3_Classified"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_mil.disa.stig_benchmark_MS_Windows_11_V1R6_STIG" benchmarkVersion="1">
+      <Policy policyID="xccdf_mil.disa.stig_profile_MAC-3_Public"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_mil.disa.stig_benchmark_MS_Windows_11_V1R6_STIG" benchmarkVersion="1">
+      <Policy policyID="xccdf_mil.disa.stig_profile_MAC-3_Sensitive"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_mil.disa.stig_benchmark_MS_Windows_2008_R2_DC_V1R33_STIG" benchmarkVersion="1">
+      <Policy policyID="xccdf_mil.disa.stig_profile_CAT_I_Only"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_mil.disa.stig_benchmark_MS_Windows_2008_R2_DC_V1R33_STIG" benchmarkVersion="1">
+      <Policy policyID="xccdf_mil.disa.stig_profile_Disable_Slow_Rules"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_mil.disa.stig_benchmark_MS_Windows_2008_R2_DC_V1R33_STIG" benchmarkVersion="1">
+      <Policy policyID="xccdf_mil.disa.stig_profile_MAC-1_Classified"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_mil.disa.stig_benchmark_MS_Windows_2008_R2_DC_V1R33_STIG" benchmarkVersion="1">
+      <Policy policyID="xccdf_mil.disa.stig_profile_MAC-1_Public"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_mil.disa.stig_benchmark_MS_Windows_2008_R2_DC_V1R33_STIG" benchmarkVersion="1">
+      <Policy policyID="xccdf_mil.disa.stig_profile_MAC-1_Sensitive"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_mil.disa.stig_benchmark_MS_Windows_2008_R2_DC_V1R33_STIG" benchmarkVersion="1">
+      <Policy policyID="xccdf_mil.disa.stig_profile_MAC-2_Classified"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_mil.disa.stig_benchmark_MS_Windows_2008_R2_DC_V1R33_STIG" benchmarkVersion="1">
+      <Policy policyID="xccdf_mil.disa.stig_profile_MAC-2_Public"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_mil.disa.stig_benchmark_MS_Windows_2008_R2_DC_V1R33_STIG" benchmarkVersion="1">
+      <Policy policyID="xccdf_mil.disa.stig_profile_MAC-2_Sensitive"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_mil.disa.stig_benchmark_MS_Windows_2008_R2_DC_V1R33_STIG" benchmarkVersion="1">
+      <Policy policyID="xccdf_mil.disa.stig_profile_MAC-3_Classified"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_mil.disa.stig_benchmark_MS_Windows_2008_R2_DC_V1R33_STIG" benchmarkVersion="1">
+      <Policy policyID="xccdf_mil.disa.stig_profile_MAC-3_Public"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_mil.disa.stig_benchmark_MS_Windows_2008_R2_DC_V1R33_STIG" benchmarkVersion="1">
+      <Policy policyID="xccdf_mil.disa.stig_profile_MAC-3_Sensitive"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_mil.disa.stig_benchmark_MS_Windows_2012_and_2012_R2_MS_V3R7_STIG_SCAP_1-2" benchmarkVersion="3">
+      <Policy policyID="xccdf_mil.disa.stig_profile_MAC-1_Classified"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_mil.disa.stig_benchmark_MS_Windows_2012_and_2012_R2_MS_V3R7_STIG_SCAP_1-2" benchmarkVersion="3">
+      <Policy policyID="xccdf_mil.disa.stig_profile_MAC-1_Public"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_mil.disa.stig_benchmark_MS_Windows_2012_and_2012_R2_MS_V3R7_STIG_SCAP_1-2" benchmarkVersion="3">
+      <Policy policyID="xccdf_mil.disa.stig_profile_MAC-1_Sensitive"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_mil.disa.stig_benchmark_MS_Windows_2012_and_2012_R2_MS_V3R7_STIG_SCAP_1-2" benchmarkVersion="3">
+      <Policy policyID="xccdf_mil.disa.stig_profile_MAC-2_Classified"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_mil.disa.stig_benchmark_MS_Windows_2012_and_2012_R2_MS_V3R7_STIG_SCAP_1-2" benchmarkVersion="3">
+      <Policy policyID="xccdf_mil.disa.stig_profile_MAC-2_Public"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_mil.disa.stig_benchmark_MS_Windows_2012_and_2012_R2_MS_V3R7_STIG_SCAP_1-2" benchmarkVersion="3">
+      <Policy policyID="xccdf_mil.disa.stig_profile_MAC-2_Sensitive"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_mil.disa.stig_benchmark_MS_Windows_2012_and_2012_R2_MS_V3R7_STIG_SCAP_1-2" benchmarkVersion="3">
+      <Policy policyID="xccdf_mil.disa.stig_profile_MAC-3_Classified"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_mil.disa.stig_benchmark_MS_Windows_2012_and_2012_R2_MS_V3R7_STIG_SCAP_1-2" benchmarkVersion="3">
+      <Policy policyID="xccdf_mil.disa.stig_profile_MAC-3_Public"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_mil.disa.stig_benchmark_MS_Windows_2012_and_2012_R2_MS_V3R7_STIG_SCAP_1-2" benchmarkVersion="3">
+      <Policy policyID="xccdf_mil.disa.stig_profile_MAC-3_Sensitive"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_mil.disa.stig_benchmark_MS_Windows_Defender_AV_V2R1_STIG" benchmarkVersion="2">
+      <Policy policyID="xccdf_mil.disa.stig_profile_CAT_I_Only"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_mil.disa.stig_benchmark_MS_Windows_Defender_AV_V2R1_STIG" benchmarkVersion="2">
+      <Policy policyID="xccdf_mil.disa.stig_profile_MAC-1_Classified"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_mil.disa.stig_benchmark_MS_Windows_Defender_AV_V2R1_STIG" benchmarkVersion="2">
+      <Policy policyID="xccdf_mil.disa.stig_profile_MAC-1_Public"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_mil.disa.stig_benchmark_MS_Windows_Defender_AV_V2R1_STIG" benchmarkVersion="2">
+      <Policy policyID="xccdf_mil.disa.stig_profile_MAC-1_Sensitive"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_mil.disa.stig_benchmark_MS_Windows_Defender_AV_V2R1_STIG" benchmarkVersion="2">
+      <Policy policyID="xccdf_mil.disa.stig_profile_MAC-2_Classified"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_mil.disa.stig_benchmark_MS_Windows_Defender_AV_V2R1_STIG" benchmarkVersion="2">
+      <Policy policyID="xccdf_mil.disa.stig_profile_MAC-2_Public"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_mil.disa.stig_benchmark_MS_Windows_Defender_AV_V2R1_STIG" benchmarkVersion="2">
+      <Policy policyID="xccdf_mil.disa.stig_profile_MAC-2_Sensitive"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_mil.disa.stig_benchmark_MS_Windows_Defender_AV_V2R1_STIG" benchmarkVersion="2">
+      <Policy policyID="xccdf_mil.disa.stig_profile_MAC-3_Classified"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_mil.disa.stig_benchmark_MS_Windows_Defender_AV_V2R1_STIG" benchmarkVersion="2">
+      <Policy policyID="xccdf_mil.disa.stig_profile_MAC-3_Public"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_mil.disa.stig_benchmark_MS_Windows_Defender_AV_V2R1_STIG" benchmarkVersion="2">
+      <Policy policyID="xccdf_mil.disa.stig_profile_MAC-3_Sensitive"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_mil.disa.stig_benchmark_MS_Windows_Server_2016_V2R8_STIG_SCAP_1-2" benchmarkVersion="2">
+      <Policy policyID="xccdf_mil.disa.stig_profile_MAC-1_Classified"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_mil.disa.stig_benchmark_MS_Windows_Server_2016_V2R8_STIG_SCAP_1-2" benchmarkVersion="2">
+      <Policy policyID="xccdf_mil.disa.stig_profile_MAC-1_Public"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_mil.disa.stig_benchmark_MS_Windows_Server_2016_V2R8_STIG_SCAP_1-2" benchmarkVersion="2">
+      <Policy policyID="xccdf_mil.disa.stig_profile_MAC-1_Sensitive"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_mil.disa.stig_benchmark_MS_Windows_Server_2016_V2R8_STIG_SCAP_1-2" benchmarkVersion="2">
+      <Policy policyID="xccdf_mil.disa.stig_profile_MAC-2_Classified"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_mil.disa.stig_benchmark_MS_Windows_Server_2016_V2R8_STIG_SCAP_1-2" benchmarkVersion="2">
+      <Policy policyID="xccdf_mil.disa.stig_profile_MAC-2_Public"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_mil.disa.stig_benchmark_MS_Windows_Server_2016_V2R8_STIG_SCAP_1-2" benchmarkVersion="2">
+      <Policy policyID="xccdf_mil.disa.stig_profile_MAC-2_Sensitive"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_mil.disa.stig_benchmark_MS_Windows_Server_2016_V2R8_STIG_SCAP_1-2" benchmarkVersion="2">
+      <Policy policyID="xccdf_mil.disa.stig_profile_MAC-3_Classified"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_mil.disa.stig_benchmark_MS_Windows_Server_2016_V2R8_STIG_SCAP_1-2" benchmarkVersion="2">
+      <Policy policyID="xccdf_mil.disa.stig_profile_MAC-3_Public"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_mil.disa.stig_benchmark_MS_Windows_Server_2016_V2R8_STIG_SCAP_1-2" benchmarkVersion="2">
+      <Policy policyID="xccdf_mil.disa.stig_profile_MAC-3_Sensitive"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_mil.disa.stig_benchmark_MS_Windows_Server_2019_V2R9_STIG_SCAP_1-2" benchmarkVersion="2">
+      <Policy policyID="xccdf_mil.disa.stig_profile_MAC-1_Classified"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_mil.disa.stig_benchmark_MS_Windows_Server_2019_V2R9_STIG_SCAP_1-2" benchmarkVersion="2">
+      <Policy policyID="xccdf_mil.disa.stig_profile_MAC-1_Public"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_mil.disa.stig_benchmark_MS_Windows_Server_2019_V2R9_STIG_SCAP_1-2" benchmarkVersion="2">
+      <Policy policyID="xccdf_mil.disa.stig_profile_MAC-1_Sensitive"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_mil.disa.stig_benchmark_MS_Windows_Server_2019_V2R9_STIG_SCAP_1-2" benchmarkVersion="2">
+      <Policy policyID="xccdf_mil.disa.stig_profile_MAC-2_Classified"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_mil.disa.stig_benchmark_MS_Windows_Server_2019_V2R9_STIG_SCAP_1-2" benchmarkVersion="2">
+      <Policy policyID="xccdf_mil.disa.stig_profile_MAC-2_Public"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_mil.disa.stig_benchmark_MS_Windows_Server_2019_V2R9_STIG_SCAP_1-2" benchmarkVersion="2">
+      <Policy policyID="xccdf_mil.disa.stig_profile_MAC-2_Sensitive"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_mil.disa.stig_benchmark_MS_Windows_Server_2019_V2R9_STIG_SCAP_1-2" benchmarkVersion="2">
+      <Policy policyID="xccdf_mil.disa.stig_profile_MAC-3_Classified"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_mil.disa.stig_benchmark_MS_Windows_Server_2019_V2R9_STIG_SCAP_1-2" benchmarkVersion="2">
+      <Policy policyID="xccdf_mil.disa.stig_profile_MAC-3_Public"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_mil.disa.stig_benchmark_MS_Windows_Server_2019_V2R9_STIG_SCAP_1-2" benchmarkVersion="2">
+      <Policy policyID="xccdf_mil.disa.stig_profile_MAC-3_Sensitive"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_mil.disa.stig_benchmark_MS_Windows_Server_2022_STIG" benchmarkVersion="2">
+      <Policy policyID="xccdf_mil.disa.stig_profile_CAT_I_Only"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_mil.disa.stig_benchmark_MS_Windows_Server_2022_STIG" benchmarkVersion="2">
+      <Policy policyID="xccdf_mil.disa.stig_profile_Disable_Slow_Rules"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_mil.disa.stig_benchmark_MS_Windows_Server_2022_STIG" benchmarkVersion="2">
+      <Policy policyID="xccdf_mil.disa.stig_profile_MAC-1_Classified"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_mil.disa.stig_benchmark_MS_Windows_Server_2022_STIG" benchmarkVersion="2">
+      <Policy policyID="xccdf_mil.disa.stig_profile_MAC-1_Public"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_mil.disa.stig_benchmark_MS_Windows_Server_2022_STIG" benchmarkVersion="2">
+      <Policy policyID="xccdf_mil.disa.stig_profile_MAC-1_Sensitive"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_mil.disa.stig_benchmark_MS_Windows_Server_2022_STIG" benchmarkVersion="2">
+      <Policy policyID="xccdf_mil.disa.stig_profile_MAC-2_Classified"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_mil.disa.stig_benchmark_MS_Windows_Server_2022_STIG" benchmarkVersion="2">
+      <Policy policyID="xccdf_mil.disa.stig_profile_MAC-2_Public"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_mil.disa.stig_benchmark_MS_Windows_Server_2022_STIG" benchmarkVersion="2">
+      <Policy policyID="xccdf_mil.disa.stig_profile_MAC-2_Sensitive"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_mil.disa.stig_benchmark_MS_Windows_Server_2022_STIG" benchmarkVersion="2">
+      <Policy policyID="xccdf_mil.disa.stig_profile_MAC-3_Classified"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_mil.disa.stig_benchmark_MS_Windows_Server_2022_STIG" benchmarkVersion="2">
+      <Policy policyID="xccdf_mil.disa.stig_profile_MAC-3_Public"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_mil.disa.stig_benchmark_MS_Windows_Server_2022_STIG" benchmarkVersion="2">
+      <Policy policyID="xccdf_mil.disa.stig_profile_MAC-3_Sensitive"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_mil.disa.stig_benchmark_Oracle_Linux_7_V2R3_STIG" benchmarkVersion="2">
+      <Policy policyID="xccdf_mil.disa.stig_profile_CAT_I_Only"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_mil.disa.stig_benchmark_Oracle_Linux_7_V2R3_STIG" benchmarkVersion="2">
+      <Policy policyID="xccdf_mil.disa.stig_profile_MAC-1_Classified"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_mil.disa.stig_benchmark_Oracle_Linux_7_V2R3_STIG" benchmarkVersion="2">
+      <Policy policyID="xccdf_mil.disa.stig_profile_MAC-1_Public"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_mil.disa.stig_benchmark_Oracle_Linux_7_V2R3_STIG" benchmarkVersion="2">
+      <Policy policyID="xccdf_mil.disa.stig_profile_MAC-1_Sensitive"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_mil.disa.stig_benchmark_Oracle_Linux_7_V2R3_STIG" benchmarkVersion="2">
+      <Policy policyID="xccdf_mil.disa.stig_profile_MAC-2_Classified"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_mil.disa.stig_benchmark_Oracle_Linux_7_V2R3_STIG" benchmarkVersion="2">
+      <Policy policyID="xccdf_mil.disa.stig_profile_MAC-2_Public"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_mil.disa.stig_benchmark_Oracle_Linux_7_V2R3_STIG" benchmarkVersion="2">
+      <Policy policyID="xccdf_mil.disa.stig_profile_MAC-2_Sensitive"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_mil.disa.stig_benchmark_Oracle_Linux_7_V2R3_STIG" benchmarkVersion="2">
+      <Policy policyID="xccdf_mil.disa.stig_profile_MAC-3_Classified"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_mil.disa.stig_benchmark_Oracle_Linux_7_V2R3_STIG" benchmarkVersion="2">
+      <Policy policyID="xccdf_mil.disa.stig_profile_MAC-3_Public"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_mil.disa.stig_benchmark_Oracle_Linux_7_V2R3_STIG" benchmarkVersion="2">
+      <Policy policyID="xccdf_mil.disa.stig_profile_MAC-3_Sensitive"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_mil.disa.stig_benchmark_Oracle_Linux_8_V1R2_STIG" benchmarkVersion="1">
+      <Policy policyID="xccdf_mil.disa.stig_profile_CAT_I_Only"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_mil.disa.stig_benchmark_Oracle_Linux_8_V1R2_STIG" benchmarkVersion="1">
+      <Policy policyID="xccdf_mil.disa.stig_profile_MAC-1_Classified"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_mil.disa.stig_benchmark_Oracle_Linux_8_V1R2_STIG" benchmarkVersion="1">
+      <Policy policyID="xccdf_mil.disa.stig_profile_MAC-1_Public"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_mil.disa.stig_benchmark_Oracle_Linux_8_V1R2_STIG" benchmarkVersion="1">
+      <Policy policyID="xccdf_mil.disa.stig_profile_MAC-1_Sensitive"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_mil.disa.stig_benchmark_Oracle_Linux_8_V1R2_STIG" benchmarkVersion="1">
+      <Policy policyID="xccdf_mil.disa.stig_profile_MAC-2_Classified"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_mil.disa.stig_benchmark_Oracle_Linux_8_V1R2_STIG" benchmarkVersion="1">
+      <Policy policyID="xccdf_mil.disa.stig_profile_MAC-2_Public"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_mil.disa.stig_benchmark_Oracle_Linux_8_V1R2_STIG" benchmarkVersion="1">
+      <Policy policyID="xccdf_mil.disa.stig_profile_MAC-2_Sensitive"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_mil.disa.stig_benchmark_Oracle_Linux_8_V1R2_STIG" benchmarkVersion="1">
+      <Policy policyID="xccdf_mil.disa.stig_profile_MAC-3_Classified"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_mil.disa.stig_benchmark_Oracle_Linux_8_V1R2_STIG" benchmarkVersion="1">
+      <Policy policyID="xccdf_mil.disa.stig_profile_MAC-3_Public"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_mil.disa.stig_benchmark_Oracle_Linux_8_V1R2_STIG" benchmarkVersion="1">
+      <Policy policyID="xccdf_mil.disa.stig_profile_MAC-3_Sensitive"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_mil.disa.stig_benchmark_Oracle_MySQL_8-0_STIG_V2R2" benchmarkVersion="2">
+      <Policy policyID="xccdf_mil.disa.stig_profile_MAC-1_Classified"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_mil.disa.stig_benchmark_Oracle_MySQL_8-0_STIG_V2R2" benchmarkVersion="2">
+      <Policy policyID="xccdf_mil.disa.stig_profile_MAC-1_Public"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_mil.disa.stig_benchmark_Oracle_MySQL_8-0_STIG_V2R2" benchmarkVersion="2">
+      <Policy policyID="xccdf_mil.disa.stig_profile_MAC-1_Sensitive"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_mil.disa.stig_benchmark_Oracle_MySQL_8-0_STIG_V2R2" benchmarkVersion="2">
+      <Policy policyID="xccdf_mil.disa.stig_profile_MAC-2_Classified"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_mil.disa.stig_benchmark_Oracle_MySQL_8-0_STIG_V2R2" benchmarkVersion="2">
+      <Policy policyID="xccdf_mil.disa.stig_profile_MAC-2_Public"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_mil.disa.stig_benchmark_Oracle_MySQL_8-0_STIG_V2R2" benchmarkVersion="2">
+      <Policy policyID="xccdf_mil.disa.stig_profile_MAC-2_Sensitive"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_mil.disa.stig_benchmark_Oracle_MySQL_8-0_STIG_V2R2" benchmarkVersion="2">
+      <Policy policyID="xccdf_mil.disa.stig_profile_MAC-3_Classified"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_mil.disa.stig_benchmark_Oracle_MySQL_8-0_STIG_V2R2" benchmarkVersion="2">
+      <Policy policyID="xccdf_mil.disa.stig_profile_MAC-3_Public"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_mil.disa.stig_benchmark_Oracle_MySQL_8-0_STIG_V2R2" benchmarkVersion="2">
+      <Policy policyID="xccdf_mil.disa.stig_profile_MAC-3_Sensitive"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_mil.disa.stig_benchmark_PostgreSQL_9-x_STIG_V2R1" benchmarkVersion="2">
+      <Policy policyID="xccdf_mil.disa.stig_profile_MAC-1_Classified"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_mil.disa.stig_benchmark_PostgreSQL_9-x_STIG_V2R1" benchmarkVersion="2">
+      <Policy policyID="xccdf_mil.disa.stig_profile_MAC-1_Public"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_mil.disa.stig_benchmark_PostgreSQL_9-x_STIG_V2R1" benchmarkVersion="2">
+      <Policy policyID="xccdf_mil.disa.stig_profile_MAC-1_Sensitive"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_mil.disa.stig_benchmark_PostgreSQL_9-x_STIG_V2R1" benchmarkVersion="2">
+      <Policy policyID="xccdf_mil.disa.stig_profile_MAC-2_Classified"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_mil.disa.stig_benchmark_PostgreSQL_9-x_STIG_V2R1" benchmarkVersion="2">
+      <Policy policyID="xccdf_mil.disa.stig_profile_MAC-2_Public"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_mil.disa.stig_benchmark_PostgreSQL_9-x_STIG_V2R1" benchmarkVersion="2">
+      <Policy policyID="xccdf_mil.disa.stig_profile_MAC-2_Sensitive"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_mil.disa.stig_benchmark_PostgreSQL_9-x_STIG_V2R1" benchmarkVersion="2">
+      <Policy policyID="xccdf_mil.disa.stig_profile_MAC-3_Classified"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_mil.disa.stig_benchmark_PostgreSQL_9-x_STIG_V2R1" benchmarkVersion="2">
+      <Policy policyID="xccdf_mil.disa.stig_profile_MAC-3_Public"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_mil.disa.stig_benchmark_PostgreSQL_9-x_STIG_V2R1" benchmarkVersion="2">
+      <Policy policyID="xccdf_mil.disa.stig_profile_MAC-3_Sensitive"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_mil.disa.stig_benchmark_PostgreSQL_9_STIG" benchmarkVersion="1">
+      <Policy policyID="xccdf_mil.disa.stig_profile_MAC-1_Classified"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_mil.disa.stig_benchmark_PostgreSQL_9_STIG" benchmarkVersion="1">
+      <Policy policyID="xccdf_mil.disa.stig_profile_MAC-1_Public"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_mil.disa.stig_benchmark_PostgreSQL_9_STIG" benchmarkVersion="1">
+      <Policy policyID="xccdf_mil.disa.stig_profile_MAC-1_Sensitive"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_mil.disa.stig_benchmark_PostgreSQL_9_STIG" benchmarkVersion="1">
+      <Policy policyID="xccdf_mil.disa.stig_profile_MAC-2_Classified"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_mil.disa.stig_benchmark_PostgreSQL_9_STIG" benchmarkVersion="1">
+      <Policy policyID="xccdf_mil.disa.stig_profile_MAC-2_Public"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_mil.disa.stig_benchmark_PostgreSQL_9_STIG" benchmarkVersion="1">
+      <Policy policyID="xccdf_mil.disa.stig_profile_MAC-2_Sensitive"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_mil.disa.stig_benchmark_PostgreSQL_9_STIG" benchmarkVersion="1">
+      <Policy policyID="xccdf_mil.disa.stig_profile_MAC-3_Classified"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_mil.disa.stig_benchmark_PostgreSQL_9_STIG" benchmarkVersion="1">
+      <Policy policyID="xccdf_mil.disa.stig_profile_MAC-3_Public"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_mil.disa.stig_benchmark_PostgreSQL_9_STIG" benchmarkVersion="1">
+      <Policy policyID="xccdf_mil.disa.stig_profile_MAC-3_Sensitive"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_mil.disa.stig_benchmark_RHEL_5_V1R19_STIG" benchmarkVersion="1">
+      <Policy policyID="xccdf_mil.disa.stig_profile_CAT_I_Only"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_mil.disa.stig_benchmark_RHEL_5_V1R19_STIG" benchmarkVersion="1">
+      <Policy policyID="xccdf_mil.disa.stig_profile_MAC-1_Classified"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_mil.disa.stig_benchmark_RHEL_5_V1R19_STIG" benchmarkVersion="1">
+      <Policy policyID="xccdf_mil.disa.stig_profile_MAC-1_Public"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_mil.disa.stig_benchmark_RHEL_5_V1R19_STIG" benchmarkVersion="1">
+      <Policy policyID="xccdf_mil.disa.stig_profile_MAC-1_Sensitive"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_mil.disa.stig_benchmark_RHEL_5_V1R19_STIG" benchmarkVersion="1">
+      <Policy policyID="xccdf_mil.disa.stig_profile_MAC-2_Classified"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_mil.disa.stig_benchmark_RHEL_5_V1R19_STIG" benchmarkVersion="1">
+      <Policy policyID="xccdf_mil.disa.stig_profile_MAC-2_Public"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_mil.disa.stig_benchmark_RHEL_5_V1R19_STIG" benchmarkVersion="1">
+      <Policy policyID="xccdf_mil.disa.stig_profile_MAC-2_Sensitive"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_mil.disa.stig_benchmark_RHEL_5_V1R19_STIG" benchmarkVersion="1">
+      <Policy policyID="xccdf_mil.disa.stig_profile_MAC-3_Classified"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_mil.disa.stig_benchmark_RHEL_5_V1R19_STIG" benchmarkVersion="1">
+      <Policy policyID="xccdf_mil.disa.stig_profile_MAC-3_Public"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_mil.disa.stig_benchmark_RHEL_5_V1R19_STIG" benchmarkVersion="1">
+      <Policy policyID="xccdf_mil.disa.stig_profile_MAC-3_Sensitive"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_mil.disa.stig_benchmark_RHEL_6_V2R2_STIG" benchmarkVersion="2">
+      <Policy policyID="xccdf_mil.disa.stig_profile_CAT_I_Only"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_mil.disa.stig_benchmark_RHEL_6_V2R2_STIG" benchmarkVersion="2">
+      <Policy policyID="xccdf_mil.disa.stig_profile_MAC-1_Classified"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_mil.disa.stig_benchmark_RHEL_6_V2R2_STIG" benchmarkVersion="2">
+      <Policy policyID="xccdf_mil.disa.stig_profile_MAC-1_Public"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_mil.disa.stig_benchmark_RHEL_6_V2R2_STIG" benchmarkVersion="2">
+      <Policy policyID="xccdf_mil.disa.stig_profile_MAC-1_Sensitive"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_mil.disa.stig_benchmark_RHEL_6_V2R2_STIG" benchmarkVersion="2">
+      <Policy policyID="xccdf_mil.disa.stig_profile_MAC-2_Classified"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_mil.disa.stig_benchmark_RHEL_6_V2R2_STIG" benchmarkVersion="2">
+      <Policy policyID="xccdf_mil.disa.stig_profile_MAC-2_Public"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_mil.disa.stig_benchmark_RHEL_6_V2R2_STIG" benchmarkVersion="2">
+      <Policy policyID="xccdf_mil.disa.stig_profile_MAC-2_Sensitive"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_mil.disa.stig_benchmark_RHEL_6_V2R2_STIG" benchmarkVersion="2">
+      <Policy policyID="xccdf_mil.disa.stig_profile_MAC-3_Classified"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_mil.disa.stig_benchmark_RHEL_6_V2R2_STIG" benchmarkVersion="2">
+      <Policy policyID="xccdf_mil.disa.stig_profile_MAC-3_Public"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_mil.disa.stig_benchmark_RHEL_6_V2R2_STIG" benchmarkVersion="2">
+      <Policy policyID="xccdf_mil.disa.stig_profile_MAC-3_Sensitive"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_mil.disa.stig_benchmark_RHEL_7_V3R15_STIG" benchmarkVersion="3">
+      <Policy policyID="xccdf_mil.disa.stig_profile_CAT_I_Only"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_mil.disa.stig_benchmark_RHEL_7_V3R15_STIG" benchmarkVersion="3">
+      <Policy policyID="xccdf_mil.disa.stig_profile_MAC-1_Classified"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_mil.disa.stig_benchmark_RHEL_7_V3R15_STIG" benchmarkVersion="3">
+      <Policy policyID="xccdf_mil.disa.stig_profile_MAC-1_Public"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_mil.disa.stig_benchmark_RHEL_7_V3R15_STIG" benchmarkVersion="3">
+      <Policy policyID="xccdf_mil.disa.stig_profile_MAC-1_Sensitive"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_mil.disa.stig_benchmark_RHEL_7_V3R15_STIG" benchmarkVersion="3">
+      <Policy policyID="xccdf_mil.disa.stig_profile_MAC-2_Classified"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_mil.disa.stig_benchmark_RHEL_7_V3R15_STIG" benchmarkVersion="3">
+      <Policy policyID="xccdf_mil.disa.stig_profile_MAC-2_Public"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_mil.disa.stig_benchmark_RHEL_7_V3R15_STIG" benchmarkVersion="3">
+      <Policy policyID="xccdf_mil.disa.stig_profile_MAC-2_Sensitive"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_mil.disa.stig_benchmark_RHEL_7_V3R15_STIG" benchmarkVersion="3">
+      <Policy policyID="xccdf_mil.disa.stig_profile_MAC-3_Classified"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_mil.disa.stig_benchmark_RHEL_7_V3R15_STIG" benchmarkVersion="3">
+      <Policy policyID="xccdf_mil.disa.stig_profile_MAC-3_Public"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_mil.disa.stig_benchmark_RHEL_7_V3R15_STIG" benchmarkVersion="3">
+      <Policy policyID="xccdf_mil.disa.stig_profile_MAC-3_Sensitive"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_mil.disa.stig_benchmark_RHEL_8_V1R14_STIG" benchmarkVersion="1">
+      <Policy policyID="xccdf_mil.disa.stig_profile_MAC-1_Classified"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_mil.disa.stig_benchmark_RHEL_8_V1R14_STIG" benchmarkVersion="1">
+      <Policy policyID="xccdf_mil.disa.stig_profile_MAC-1_Public"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_mil.disa.stig_benchmark_RHEL_8_V1R14_STIG" benchmarkVersion="1">
+      <Policy policyID="xccdf_mil.disa.stig_profile_MAC-1_Sensitive"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_mil.disa.stig_benchmark_RHEL_8_V1R14_STIG" benchmarkVersion="1">
+      <Policy policyID="xccdf_mil.disa.stig_profile_MAC-2_Classified"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_mil.disa.stig_benchmark_RHEL_8_V1R14_STIG" benchmarkVersion="1">
+      <Policy policyID="xccdf_mil.disa.stig_profile_MAC-2_Public"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_mil.disa.stig_benchmark_RHEL_8_V1R14_STIG" benchmarkVersion="1">
+      <Policy policyID="xccdf_mil.disa.stig_profile_MAC-2_Sensitive"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_mil.disa.stig_benchmark_RHEL_8_V1R14_STIG" benchmarkVersion="1">
+      <Policy policyID="xccdf_mil.disa.stig_profile_MAC-3_Classified"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_mil.disa.stig_benchmark_RHEL_8_V1R14_STIG" benchmarkVersion="1">
+      <Policy policyID="xccdf_mil.disa.stig_profile_MAC-3_Public"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_mil.disa.stig_benchmark_RHEL_8_V1R14_STIG" benchmarkVersion="1">
+      <Policy policyID="xccdf_mil.disa.stig_profile_MAC-3_Sensitive"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_mil.disa.stig_benchmark_RHEL_9_STIG_V1R3" benchmarkVersion="1">
+      <Policy policyID="xccdf_mil.disa.stig_profile_MAC-1_Classified"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_mil.disa.stig_benchmark_RHEL_9_STIG_V1R3" benchmarkVersion="1">
+      <Policy policyID="xccdf_mil.disa.stig_profile_MAC-1_Public"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_mil.disa.stig_benchmark_RHEL_9_STIG_V1R3" benchmarkVersion="1">
+      <Policy policyID="xccdf_mil.disa.stig_profile_MAC-1_Sensitive"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_mil.disa.stig_benchmark_RHEL_9_STIG_V1R3" benchmarkVersion="1">
+      <Policy policyID="xccdf_mil.disa.stig_profile_MAC-2_Classified"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_mil.disa.stig_benchmark_RHEL_9_STIG_V1R3" benchmarkVersion="1">
+      <Policy policyID="xccdf_mil.disa.stig_profile_MAC-2_Public"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_mil.disa.stig_benchmark_RHEL_9_STIG_V1R3" benchmarkVersion="1">
+      <Policy policyID="xccdf_mil.disa.stig_profile_MAC-2_Sensitive"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_mil.disa.stig_benchmark_RHEL_9_STIG_V1R3" benchmarkVersion="1">
+      <Policy policyID="xccdf_mil.disa.stig_profile_MAC-3_Classified"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_mil.disa.stig_benchmark_RHEL_9_STIG_V1R3" benchmarkVersion="1">
+      <Policy policyID="xccdf_mil.disa.stig_profile_MAC-3_Public"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_mil.disa.stig_benchmark_RHEL_9_STIG_V1R3" benchmarkVersion="1">
+      <Policy policyID="xccdf_mil.disa.stig_profile_MAC-3_Sensitive"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_mil.disa.stig_benchmark_SLES_12_V2R7_STIG" benchmarkVersion="2">
+      <Policy policyID="xccdf_mil.disa.stig_profile_CAT_I_Only"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_mil.disa.stig_benchmark_SLES_12_V2R7_STIG" benchmarkVersion="2">
+      <Policy policyID="xccdf_mil.disa.stig_profile_MAC-1_Classified"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_mil.disa.stig_benchmark_SLES_12_V2R7_STIG" benchmarkVersion="2">
+      <Policy policyID="xccdf_mil.disa.stig_profile_MAC-1_Public"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_mil.disa.stig_benchmark_SLES_12_V2R7_STIG" benchmarkVersion="2">
+      <Policy policyID="xccdf_mil.disa.stig_profile_MAC-1_Sensitive"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_mil.disa.stig_benchmark_SLES_12_V2R7_STIG" benchmarkVersion="2">
+      <Policy policyID="xccdf_mil.disa.stig_profile_MAC-2_Classified"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_mil.disa.stig_benchmark_SLES_12_V2R7_STIG" benchmarkVersion="2">
+      <Policy policyID="xccdf_mil.disa.stig_profile_MAC-2_Public"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_mil.disa.stig_benchmark_SLES_12_V2R7_STIG" benchmarkVersion="2">
+      <Policy policyID="xccdf_mil.disa.stig_profile_MAC-2_Sensitive"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_mil.disa.stig_benchmark_SLES_12_V2R7_STIG" benchmarkVersion="2">
+      <Policy policyID="xccdf_mil.disa.stig_profile_MAC-3_Classified"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_mil.disa.stig_benchmark_SLES_12_V2R7_STIG" benchmarkVersion="2">
+      <Policy policyID="xccdf_mil.disa.stig_profile_MAC-3_Public"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_mil.disa.stig_benchmark_SLES_12_V2R7_STIG" benchmarkVersion="2">
+      <Policy policyID="xccdf_mil.disa.stig_profile_MAC-3_Sensitive"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_mil.disa.stig_benchmark_SLES_15_V1R1_STIG" benchmarkVersion="1">
+      <Policy policyID="xccdf_mil.disa.stig_profile_CAT_I_Only"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_mil.disa.stig_benchmark_SLES_15_V1R1_STIG" benchmarkVersion="1">
+      <Policy policyID="xccdf_mil.disa.stig_profile_MAC-1_Classified"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_mil.disa.stig_benchmark_SLES_15_V1R1_STIG" benchmarkVersion="1">
+      <Policy policyID="xccdf_mil.disa.stig_profile_MAC-1_Public"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_mil.disa.stig_benchmark_SLES_15_V1R1_STIG" benchmarkVersion="1">
+      <Policy policyID="xccdf_mil.disa.stig_profile_MAC-1_Sensitive"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_mil.disa.stig_benchmark_SLES_15_V1R1_STIG" benchmarkVersion="1">
+      <Policy policyID="xccdf_mil.disa.stig_profile_MAC-2_Classified"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_mil.disa.stig_benchmark_SLES_15_V1R1_STIG" benchmarkVersion="1">
+      <Policy policyID="xccdf_mil.disa.stig_profile_MAC-2_Public"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_mil.disa.stig_benchmark_SLES_15_V1R1_STIG" benchmarkVersion="1">
+      <Policy policyID="xccdf_mil.disa.stig_profile_MAC-2_Sensitive"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_mil.disa.stig_benchmark_SLES_15_V1R1_STIG" benchmarkVersion="1">
+      <Policy policyID="xccdf_mil.disa.stig_profile_MAC-3_Classified"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_mil.disa.stig_benchmark_SLES_15_V1R1_STIG" benchmarkVersion="1">
+      <Policy policyID="xccdf_mil.disa.stig_profile_MAC-3_Public"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_mil.disa.stig_benchmark_SLES_15_V1R1_STIG" benchmarkVersion="1">
+      <Policy policyID="xccdf_mil.disa.stig_profile_MAC-3_Sensitive"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_mil.disa.stig_benchmark_Solaris_11_SPARC_V2R2_STIG" benchmarkVersion="2">
+      <Policy policyID="xccdf_mil.disa.stig_profile_CAT_I_Only"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_mil.disa.stig_benchmark_Solaris_11_SPARC_V2R2_STIG" benchmarkVersion="2">
+      <Policy policyID="xccdf_mil.disa.stig_profile_MAC-1_Classified"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_mil.disa.stig_benchmark_Solaris_11_SPARC_V2R2_STIG" benchmarkVersion="2">
+      <Policy policyID="xccdf_mil.disa.stig_profile_MAC-1_Public"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_mil.disa.stig_benchmark_Solaris_11_SPARC_V2R2_STIG" benchmarkVersion="2">
+      <Policy policyID="xccdf_mil.disa.stig_profile_MAC-1_Sensitive"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_mil.disa.stig_benchmark_Solaris_11_SPARC_V2R2_STIG" benchmarkVersion="2">
+      <Policy policyID="xccdf_mil.disa.stig_profile_MAC-2_Classified"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_mil.disa.stig_benchmark_Solaris_11_SPARC_V2R2_STIG" benchmarkVersion="2">
+      <Policy policyID="xccdf_mil.disa.stig_profile_MAC-2_Public"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_mil.disa.stig_benchmark_Solaris_11_SPARC_V2R2_STIG" benchmarkVersion="2">
+      <Policy policyID="xccdf_mil.disa.stig_profile_MAC-2_Sensitive"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_mil.disa.stig_benchmark_Solaris_11_SPARC_V2R2_STIG" benchmarkVersion="2">
+      <Policy policyID="xccdf_mil.disa.stig_profile_MAC-3_Classified"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_mil.disa.stig_benchmark_Solaris_11_SPARC_V2R2_STIG" benchmarkVersion="2">
+      <Policy policyID="xccdf_mil.disa.stig_profile_MAC-3_Public"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_mil.disa.stig_benchmark_Solaris_11_SPARC_V2R2_STIG" benchmarkVersion="2">
+      <Policy policyID="xccdf_mil.disa.stig_profile_MAC-3_Sensitive"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_mil.disa.stig_benchmark_Solaris_11_X86_V2R2_STIG" benchmarkVersion="2">
+      <Policy policyID="xccdf_mil.disa.stig_profile_CAT_I_Only"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_mil.disa.stig_benchmark_Solaris_11_X86_V2R2_STIG" benchmarkVersion="2">
+      <Policy policyID="xccdf_mil.disa.stig_profile_MAC-1_Classified"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_mil.disa.stig_benchmark_Solaris_11_X86_V2R2_STIG" benchmarkVersion="2">
+      <Policy policyID="xccdf_mil.disa.stig_profile_MAC-1_Public"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_mil.disa.stig_benchmark_Solaris_11_X86_V2R2_STIG" benchmarkVersion="2">
+      <Policy policyID="xccdf_mil.disa.stig_profile_MAC-1_Sensitive"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_mil.disa.stig_benchmark_Solaris_11_X86_V2R2_STIG" benchmarkVersion="2">
+      <Policy policyID="xccdf_mil.disa.stig_profile_MAC-2_Classified"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_mil.disa.stig_benchmark_Solaris_11_X86_V2R2_STIG" benchmarkVersion="2">
+      <Policy policyID="xccdf_mil.disa.stig_profile_MAC-2_Public"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_mil.disa.stig_benchmark_Solaris_11_X86_V2R2_STIG" benchmarkVersion="2">
+      <Policy policyID="xccdf_mil.disa.stig_profile_MAC-2_Sensitive"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_mil.disa.stig_benchmark_Solaris_11_X86_V2R2_STIG" benchmarkVersion="2">
+      <Policy policyID="xccdf_mil.disa.stig_profile_MAC-3_Classified"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_mil.disa.stig_benchmark_Solaris_11_X86_V2R2_STIG" benchmarkVersion="2">
+      <Policy policyID="xccdf_mil.disa.stig_profile_MAC-3_Public"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_mil.disa.stig_benchmark_Solaris_11_X86_V2R2_STIG" benchmarkVersion="2">
+      <Policy policyID="xccdf_mil.disa.stig_profile_MAC-3_Sensitive"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_mil.disa.stig_benchmark_U_Oracle_Database_11g_Instance_STIG" benchmarkVersion="8">
+      <Policy policyID="xccdf_mil.disa.stig_profile_CAT_I_Only"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_mil.disa.stig_benchmark_U_Oracle_Database_11g_Instance_STIG" benchmarkVersion="8">
+      <Policy policyID="xccdf_mil.disa.stig_profile_MAC-1_Classified"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_mil.disa.stig_benchmark_U_Oracle_Database_11g_Instance_STIG" benchmarkVersion="8">
+      <Policy policyID="xccdf_mil.disa.stig_profile_MAC-1_Public"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_mil.disa.stig_benchmark_U_Oracle_Database_11g_Instance_STIG" benchmarkVersion="8">
+      <Policy policyID="xccdf_mil.disa.stig_profile_MAC-1_Sensitive"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_mil.disa.stig_benchmark_U_Oracle_Database_11g_Instance_STIG" benchmarkVersion="8">
+      <Policy policyID="xccdf_mil.disa.stig_profile_MAC-2_Classified"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_mil.disa.stig_benchmark_U_Oracle_Database_11g_Instance_STIG" benchmarkVersion="8">
+      <Policy policyID="xccdf_mil.disa.stig_profile_MAC-2_Public"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_mil.disa.stig_benchmark_U_Oracle_Database_11g_Instance_STIG" benchmarkVersion="8">
+      <Policy policyID="xccdf_mil.disa.stig_profile_MAC-2_Sensitive"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_mil.disa.stig_benchmark_U_Oracle_Database_11g_Instance_STIG" benchmarkVersion="8">
+      <Policy policyID="xccdf_mil.disa.stig_profile_MAC-3_Classified"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_mil.disa.stig_benchmark_U_Oracle_Database_11g_Instance_STIG" benchmarkVersion="8">
+      <Policy policyID="xccdf_mil.disa.stig_profile_MAC-3_Public"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_mil.disa.stig_benchmark_U_Oracle_Database_11g_Instance_STIG" benchmarkVersion="8">
+      <Policy policyID="xccdf_mil.disa.stig_profile_MAC-3_Sensitive"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_mil.disa.stig_benchmark_Windows_2008_DC_V6R45_STIG" benchmarkVersion="6">
+      <Policy policyID="xccdf_mil.disa.stig_profile_CAT_I_Only"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_mil.disa.stig_benchmark_Windows_2008_DC_V6R45_STIG" benchmarkVersion="6">
+      <Policy policyID="xccdf_mil.disa.stig_profile_Disable_Slow_Rules"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_mil.disa.stig_benchmark_Windows_2008_DC_V6R45_STIG" benchmarkVersion="6">
+      <Policy policyID="xccdf_mil.disa.stig_profile_MAC-1_Classified"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_mil.disa.stig_benchmark_Windows_2008_DC_V6R45_STIG" benchmarkVersion="6">
+      <Policy policyID="xccdf_mil.disa.stig_profile_MAC-1_Public"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_mil.disa.stig_benchmark_Windows_2008_DC_V6R45_STIG" benchmarkVersion="6">
+      <Policy policyID="xccdf_mil.disa.stig_profile_MAC-1_Sensitive"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_mil.disa.stig_benchmark_Windows_2008_DC_V6R45_STIG" benchmarkVersion="6">
+      <Policy policyID="xccdf_mil.disa.stig_profile_MAC-2_Classified"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_mil.disa.stig_benchmark_Windows_2008_DC_V6R45_STIG" benchmarkVersion="6">
+      <Policy policyID="xccdf_mil.disa.stig_profile_MAC-2_Public"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_mil.disa.stig_benchmark_Windows_2008_DC_V6R45_STIG" benchmarkVersion="6">
+      <Policy policyID="xccdf_mil.disa.stig_profile_MAC-2_Sensitive"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_mil.disa.stig_benchmark_Windows_2008_DC_V6R45_STIG" benchmarkVersion="6">
+      <Policy policyID="xccdf_mil.disa.stig_profile_MAC-3_Classified"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_mil.disa.stig_benchmark_Windows_2008_DC_V6R45_STIG" benchmarkVersion="6">
+      <Policy policyID="xccdf_mil.disa.stig_profile_MAC-3_Public"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_mil.disa.stig_benchmark_Windows_2008_DC_V6R45_STIG" benchmarkVersion="6">
+      <Policy policyID="xccdf_mil.disa.stig_profile_MAC-3_Sensitive"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_mil.disa.stig_benchmark_Windows_2008_MS_V6R45_STIG" benchmarkVersion="6">
+      <Policy policyID="xccdf_mil.disa.stig_profile_CAT_I_Only"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_mil.disa.stig_benchmark_Windows_2008_MS_V6R45_STIG" benchmarkVersion="6">
+      <Policy policyID="xccdf_mil.disa.stig_profile_Disable_Slow_Rules"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_mil.disa.stig_benchmark_Windows_2008_MS_V6R45_STIG" benchmarkVersion="6">
+      <Policy policyID="xccdf_mil.disa.stig_profile_MAC-1_Classified"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_mil.disa.stig_benchmark_Windows_2008_MS_V6R45_STIG" benchmarkVersion="6">
+      <Policy policyID="xccdf_mil.disa.stig_profile_MAC-1_Public"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_mil.disa.stig_benchmark_Windows_2008_MS_V6R45_STIG" benchmarkVersion="6">
+      <Policy policyID="xccdf_mil.disa.stig_profile_MAC-1_Sensitive"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_mil.disa.stig_benchmark_Windows_2008_MS_V6R45_STIG" benchmarkVersion="6">
+      <Policy policyID="xccdf_mil.disa.stig_profile_MAC-2_Classified"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_mil.disa.stig_benchmark_Windows_2008_MS_V6R45_STIG" benchmarkVersion="6">
+      <Policy policyID="xccdf_mil.disa.stig_profile_MAC-2_Public"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_mil.disa.stig_benchmark_Windows_2008_MS_V6R45_STIG" benchmarkVersion="6">
+      <Policy policyID="xccdf_mil.disa.stig_profile_MAC-2_Sensitive"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_mil.disa.stig_benchmark_Windows_2008_MS_V6R45_STIG" benchmarkVersion="6">
+      <Policy policyID="xccdf_mil.disa.stig_profile_MAC-3_Classified"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_mil.disa.stig_benchmark_Windows_2008_MS_V6R45_STIG" benchmarkVersion="6">
+      <Policy policyID="xccdf_mil.disa.stig_profile_MAC-3_Public"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_mil.disa.stig_benchmark_Windows_2008_MS_V6R45_STIG" benchmarkVersion="6">
+      <Policy policyID="xccdf_mil.disa.stig_profile_MAC-3_Sensitive"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_mil.disa.stig_benchmark_Windows_2008_R2_MS_V1R34_STIG" benchmarkVersion="1">
+      <Policy policyID="xccdf_mil.disa.stig_profile_CAT_I_Only"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_mil.disa.stig_benchmark_Windows_2008_R2_MS_V1R34_STIG" benchmarkVersion="1">
+      <Policy policyID="xccdf_mil.disa.stig_profile_Disable_Slow_Rules"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_mil.disa.stig_benchmark_Windows_2008_R2_MS_V1R34_STIG" benchmarkVersion="1">
+      <Policy policyID="xccdf_mil.disa.stig_profile_MAC-1_Classified"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_mil.disa.stig_benchmark_Windows_2008_R2_MS_V1R34_STIG" benchmarkVersion="1">
+      <Policy policyID="xccdf_mil.disa.stig_profile_MAC-1_Public"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_mil.disa.stig_benchmark_Windows_2008_R2_MS_V1R34_STIG" benchmarkVersion="1">
+      <Policy policyID="xccdf_mil.disa.stig_profile_MAC-1_Sensitive"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_mil.disa.stig_benchmark_Windows_2008_R2_MS_V1R34_STIG" benchmarkVersion="1">
+      <Policy policyID="xccdf_mil.disa.stig_profile_MAC-2_Classified"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_mil.disa.stig_benchmark_Windows_2008_R2_MS_V1R34_STIG" benchmarkVersion="1">
+      <Policy policyID="xccdf_mil.disa.stig_profile_MAC-2_Public"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_mil.disa.stig_benchmark_Windows_2008_R2_MS_V1R34_STIG" benchmarkVersion="1">
+      <Policy policyID="xccdf_mil.disa.stig_profile_MAC-2_Sensitive"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_mil.disa.stig_benchmark_Windows_2008_R2_MS_V1R34_STIG" benchmarkVersion="1">
+      <Policy policyID="xccdf_mil.disa.stig_profile_MAC-3_Classified"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_mil.disa.stig_benchmark_Windows_2008_R2_MS_V1R34_STIG" benchmarkVersion="1">
+      <Policy policyID="xccdf_mil.disa.stig_profile_MAC-3_Public"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_mil.disa.stig_benchmark_Windows_2008_R2_MS_V1R34_STIG" benchmarkVersion="1">
+      <Policy policyID="xccdf_mil.disa.stig_profile_MAC-3_Sensitive"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_mil.disa.stig_benchmark_Windows_2012_DC_V3R4_STIG" benchmarkVersion="3">
+      <Policy policyID="xccdf_mil.disa.stig_profile_CAT_I_Only"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_mil.disa.stig_benchmark_Windows_2012_DC_V3R4_STIG" benchmarkVersion="3">
+      <Policy policyID="xccdf_mil.disa.stig_profile_Disable_Slow_Rules"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_mil.disa.stig_benchmark_Windows_2012_DC_V3R4_STIG" benchmarkVersion="3">
+      <Policy policyID="xccdf_mil.disa.stig_profile_MAC-1_Classified"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_mil.disa.stig_benchmark_Windows_2012_DC_V3R4_STIG" benchmarkVersion="3">
+      <Policy policyID="xccdf_mil.disa.stig_profile_MAC-1_Public"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_mil.disa.stig_benchmark_Windows_2012_DC_V3R4_STIG" benchmarkVersion="3">
+      <Policy policyID="xccdf_mil.disa.stig_profile_MAC-1_Sensitive"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_mil.disa.stig_benchmark_Windows_2012_DC_V3R4_STIG" benchmarkVersion="3">
+      <Policy policyID="xccdf_mil.disa.stig_profile_MAC-2_Classified"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_mil.disa.stig_benchmark_Windows_2012_DC_V3R4_STIG" benchmarkVersion="3">
+      <Policy policyID="xccdf_mil.disa.stig_profile_MAC-2_Public"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_mil.disa.stig_benchmark_Windows_2012_DC_V3R4_STIG" benchmarkVersion="3">
+      <Policy policyID="xccdf_mil.disa.stig_profile_MAC-2_Sensitive"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_mil.disa.stig_benchmark_Windows_2012_DC_V3R4_STIG" benchmarkVersion="3">
+      <Policy policyID="xccdf_mil.disa.stig_profile_MAC-3_Classified"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_mil.disa.stig_benchmark_Windows_2012_DC_V3R4_STIG" benchmarkVersion="3">
+      <Policy policyID="xccdf_mil.disa.stig_profile_MAC-3_Public"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_mil.disa.stig_benchmark_Windows_2012_DC_V3R4_STIG" benchmarkVersion="3">
+      <Policy policyID="xccdf_mil.disa.stig_profile_MAC-3_Sensitive"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_mil.disa.stig_benchmark_Windows_2012_MS_V3R4_STIG" benchmarkVersion="3">
+      <Policy policyID="xccdf_mil.disa.stig_profile_MAC-1_Classified"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_mil.disa.stig_benchmark_Windows_7_STIG" benchmarkVersion="1">
+      <Policy policyID="xccdf_mil.disa.stig_profile_CAT_I_Only"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_mil.disa.stig_benchmark_Windows_7_STIG" benchmarkVersion="1">
+      <Policy policyID="xccdf_mil.disa.stig_profile_Disable_EMET"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_mil.disa.stig_benchmark_Windows_7_STIG" benchmarkVersion="1">
+      <Policy policyID="xccdf_mil.disa.stig_profile_Disable_Slow_Rules"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_mil.disa.stig_benchmark_Windows_7_STIG" benchmarkVersion="1">
+      <Policy policyID="xccdf_mil.disa.stig_profile_MAC-1_Classified"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_mil.disa.stig_benchmark_Windows_7_STIG" benchmarkVersion="1">
+      <Policy policyID="xccdf_mil.disa.stig_profile_MAC-1_Public"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_mil.disa.stig_benchmark_Windows_7_STIG" benchmarkVersion="1">
+      <Policy policyID="xccdf_mil.disa.stig_profile_MAC-1_Sensitive"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_mil.disa.stig_benchmark_Windows_7_STIG" benchmarkVersion="1">
+      <Policy policyID="xccdf_mil.disa.stig_profile_MAC-2_Classified"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_mil.disa.stig_benchmark_Windows_7_STIG" benchmarkVersion="1">
+      <Policy policyID="xccdf_mil.disa.stig_profile_MAC-2_Public"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_mil.disa.stig_benchmark_Windows_7_STIG" benchmarkVersion="1">
+      <Policy policyID="xccdf_mil.disa.stig_profile_MAC-2_Sensitive"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_mil.disa.stig_benchmark_Windows_7_STIG" benchmarkVersion="1">
+      <Policy policyID="xccdf_mil.disa.stig_profile_MAC-3_Classified"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_mil.disa.stig_benchmark_Windows_7_STIG" benchmarkVersion="1">
+      <Policy policyID="xccdf_mil.disa.stig_profile_MAC-3_Public"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_mil.disa.stig_benchmark_Windows_7_STIG" benchmarkVersion="1">
+      <Policy policyID="xccdf_mil.disa.stig_profile_MAC-3_Sensitive"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_mil.disa.stig_benchmark_Windows_8_V1R22_STIG" benchmarkVersion="1">
+      <Policy policyID="xccdf_mil.disa.stig_profile_CAT_I_Only"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_mil.disa.stig_benchmark_Windows_8_V1R22_STIG" benchmarkVersion="1">
+      <Policy policyID="xccdf_mil.disa.stig_profile_Disable_EMET"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_mil.disa.stig_benchmark_Windows_8_V1R22_STIG" benchmarkVersion="1">
+      <Policy policyID="xccdf_mil.disa.stig_profile_Disable_Slow_Rules"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_mil.disa.stig_benchmark_Windows_8_V1R22_STIG" benchmarkVersion="1">
+      <Policy policyID="xccdf_mil.disa.stig_profile_MAC-1_Classified"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_mil.disa.stig_benchmark_Windows_8_V1R22_STIG" benchmarkVersion="1">
+      <Policy policyID="xccdf_mil.disa.stig_profile_MAC-1_Public"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_mil.disa.stig_benchmark_Windows_8_V1R22_STIG" benchmarkVersion="1">
+      <Policy policyID="xccdf_mil.disa.stig_profile_MAC-1_Sensitive"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_mil.disa.stig_benchmark_Windows_8_V1R22_STIG" benchmarkVersion="1">
+      <Policy policyID="xccdf_mil.disa.stig_profile_MAC-2_Classified"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_mil.disa.stig_benchmark_Windows_8_V1R22_STIG" benchmarkVersion="1">
+      <Policy policyID="xccdf_mil.disa.stig_profile_MAC-2_Public"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_mil.disa.stig_benchmark_Windows_8_V1R22_STIG" benchmarkVersion="1">
+      <Policy policyID="xccdf_mil.disa.stig_profile_MAC-2_Sensitive"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_mil.disa.stig_benchmark_Windows_8_V1R22_STIG" benchmarkVersion="1">
+      <Policy policyID="xccdf_mil.disa.stig_profile_MAC-3_Classified"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_mil.disa.stig_benchmark_Windows_8_V1R22_STIG" benchmarkVersion="1">
+      <Policy policyID="xccdf_mil.disa.stig_profile_MAC-3_Public"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_mil.disa.stig_benchmark_Windows_8_V1R22_STIG" benchmarkVersion="1">
+      <Policy policyID="xccdf_mil.disa.stig_profile_MAC-3_Sensitive"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_mil.disa.stig_benchmark_Windows_Firewall" benchmarkVersion="1">
+      <Policy policyID="xccdf_mil.disa.stig_profile_CAT_I_Only"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_mil.disa.stig_benchmark_Windows_Firewall" benchmarkVersion="1">
+      <Policy policyID="xccdf_mil.disa.stig_profile_MAC-1_Classified"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_mil.disa.stig_benchmark_Windows_Firewall" benchmarkVersion="1">
+      <Policy policyID="xccdf_mil.disa.stig_profile_MAC-1_Public"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_mil.disa.stig_benchmark_Windows_Firewall" benchmarkVersion="1">
+      <Policy policyID="xccdf_mil.disa.stig_profile_MAC-1_Sensitive"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_mil.disa.stig_benchmark_Windows_Firewall" benchmarkVersion="1">
+      <Policy policyID="xccdf_mil.disa.stig_profile_MAC-2_Classified"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_mil.disa.stig_benchmark_Windows_Firewall" benchmarkVersion="1">
+      <Policy policyID="xccdf_mil.disa.stig_profile_MAC-2_Public"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_mil.disa.stig_benchmark_Windows_Firewall" benchmarkVersion="1">
+      <Policy policyID="xccdf_mil.disa.stig_profile_MAC-2_Sensitive"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_mil.disa.stig_benchmark_Windows_Firewall" benchmarkVersion="1">
+      <Policy policyID="xccdf_mil.disa.stig_profile_MAC-3_Classified"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_mil.disa.stig_benchmark_Windows_Firewall" benchmarkVersion="1">
+      <Policy policyID="xccdf_mil.disa.stig_profile_MAC-3_Public"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_mil.disa.stig_benchmark_Windows_Firewall" benchmarkVersion="1">
+      <Policy policyID="xccdf_mil.disa.stig_profile_MAC-3_Sensitive"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_mil.disa.stig_benchmark_Windows_Firewall_with_Advanced_Security_V2R1_STIG" benchmarkVersion="2">
+      <Policy policyID="xccdf_mil.disa.stig_profile_CAT_I_Only"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_mil.disa.stig_benchmark_Windows_Firewall_with_Advanced_Security_V2R1_STIG" benchmarkVersion="2">
+      <Policy policyID="xccdf_mil.disa.stig_profile_MAC-1_Classified"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_mil.disa.stig_benchmark_Windows_Firewall_with_Advanced_Security_V2R1_STIG" benchmarkVersion="2">
+      <Policy policyID="xccdf_mil.disa.stig_profile_MAC-1_Public"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_mil.disa.stig_benchmark_Windows_Firewall_with_Advanced_Security_V2R1_STIG" benchmarkVersion="2">
+      <Policy policyID="xccdf_mil.disa.stig_profile_MAC-1_Sensitive"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_mil.disa.stig_benchmark_Windows_Firewall_with_Advanced_Security_V2R1_STIG" benchmarkVersion="2">
+      <Policy policyID="xccdf_mil.disa.stig_profile_MAC-2_Classified"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_mil.disa.stig_benchmark_Windows_Firewall_with_Advanced_Security_V2R1_STIG" benchmarkVersion="2">
+      <Policy policyID="xccdf_mil.disa.stig_profile_MAC-2_Public"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_mil.disa.stig_benchmark_Windows_Firewall_with_Advanced_Security_V2R1_STIG" benchmarkVersion="2">
+      <Policy policyID="xccdf_mil.disa.stig_profile_MAC-2_Sensitive"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_mil.disa.stig_benchmark_Windows_Firewall_with_Advanced_Security_V2R1_STIG" benchmarkVersion="2">
+      <Policy policyID="xccdf_mil.disa.stig_profile_MAC-3_Classified"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_mil.disa.stig_benchmark_Windows_Firewall_with_Advanced_Security_V2R1_STIG" benchmarkVersion="2">
+      <Policy policyID="xccdf_mil.disa.stig_profile_MAC-3_Public"/>
+   </PolicyBenchmark>
+   <PolicyBenchmark scope="G" benchmarkID="xccdf_mil.disa.stig_benchmark_Windows_Firewall_with_Advanced_Security_V2R1_STIG" benchmarkVersion="2">
+      <Policy policyID="xccdf_mil.disa.stig_profile_MAC-3_Sensitive"/>
+   </PolicyBenchmark>
+  </Enabled>
+ </Policies>
+ <ControlsScan>
+  <localControlsScanEnabled enabled="0"/>
+  <globalControlsScanEnabled enabled="0"/>
+ </ControlsScan>
+ <FileSearching>
+ </FileSearching>
+<ScanAssistant rotateCerts="0" applyUpdates="0"/> <Plugins>
+  <Plugin name="java/WindowsPolicyScanner">
+   <param name="dcPolicyFile"></param>
+   <param name="wksPolicyFile"></param>
+   <param name="srvPolicyFile"></param>
+  </Plugin>
+  <Plugin name="java/AS400Scanner">
+   <param name="acctLockoutThreshold"></param>
+   <param name="minPasswordLength"></param>
+   <param name="minSecurityLevel">40</param>
+  </Plugin>
+  <Plugin name="java/UnixScanner">
+   <param name="umask"></param>
+  </Plugin>
+  <Plugin name="java/HttpScanner">
+   <param name="Spider_ReadTimeout">120000</param>
+   <param name="spamRecipient">user@example.com</param>
+   <param name="Spider_HonorRobots">0</param>
+   <param name="Spider_MaxPagesPerWebsite"></param>
+   <param name="Spider_MaxThreadsPerEndpoint"></param>
+   <param name="Spider_MaxRetries">2</param>
+   <param name="Spider_CheckCommonPasswords">0</param>
+   <param name="Spider_On">0</param>
+   <param name="Spider_SkipPrinters">1</param>
+   <param name="adaptiveFingerprinting">0</param>
+   <param name="HTTP_REFERER"></param>
+   <param name="Spider_MaxDepth"></param>
+   <param name="Spider_MaxTimePerWebsite"></param>
+   <param name="Spider_IncludeURLQueries">0</param>
+   <param name="Spider_SkipDaemons">Virata-EmWeb, Allegro-Software-RomPager, JetDirect, HP JetDirect, HP Web Jetadmin, HP-ChaiSOE, HP-ChaiServer, CUPS, DigitalV6-HTTPD, Rapid Logic, Agranat-EmWeb, cisco-IOS, RAC_ONE_HTTP, RMC Webserver, EWS-NIC3, EMWHTTPD, IOS</param>
+  </Plugin>
+  <Plugin name="java/SmtpScanner">
+   <param name="spamRecipient">user@example.com</param>
+   <param name="readTimeout"></param>
+   <param name="timeAccuracyThreshold"></param>
+  </Plugin>
+  <Plugin name="java/TelnetScanner">
+   <param name="terminalCharset">US-ASCII</param>
+  </Plugin>
+  <Plugin name="java/CifsScanner">
+   <param name="acctLockoutThreshold"></param>
+   <param name="minPasswordLength"></param>
+   <param name="windowsServiceEditor">0</param>
+  </Plugin>
+  <Plugin name="java/PostgresScanner">
+   <param name="Default_Database"></param>
+  </Plugin>
+  <Plugin name="java/Db2Scanner">
+   <param name="Default_Database"></param>
+  </Plugin>
+  <Plugin name="java/CvsScanner">
+   <param name="CVS_Repository_Root"></param>
+  </Plugin>
+  <Plugin name="java/NotesPolicyScanner">
+   <param name="policyFiles"></param>
+  </Plugin>
+  <Plugin name="java/DhcpScanner">
+   <param name="DHCP_Pool_Range"></param>
+  </Plugin>
+  <Plugin name="java/OracleScanner">
+   <param name="Default_Databases"></param>
+  </Plugin>
+  <Plugin name="java/OraclePolicyScanner">
+   <param name="policyFiles"></param>
+  </Plugin>
+  <Plugin name="java/NetworkScanners">
+   <param name="doWhoisLookups">0</param>
+   <param name="trustedMacAddressFile"></param>
+   <param name="ipFingerprintEnabled">0</param>
+   <param name="OSGuessRetryCount">4</param>
+   <param name="defaultServicePropertiesFile"></param>
+   <param name="ipFingerprintLowThreshold">0.16</param>
+  </Plugin>
+ </Plugins>
+</ScanTemplate>

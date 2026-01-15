@@ -1,0 +1,79 @@
+# Production Environment Configuration
+# This file contains environment-specific settings for production
+
+environment:
+  name: production
+  description: Production environment
+  debug_mode: false
+
+# Nexpose/Console Configuration
+nexpose:
+  host: prod-nexpose.rapid7.com
+  port: 3780
+  protocol: https
+  ssl_verify: true
+  timeout:
+    default: 120
+    login: 300
+    scan: 10800
+    network: 180
+
+# API Configuration
+api:
+  base_path: /api
+  version: "3"
+  retry:
+    max_attempts: 3
+    interval: 15
+    backoff_multiplier: 2
+
+# Logging Configuration
+logging:
+  level: INFO
+  console_level: WARN
+  file_level: INFO
+  format: "[%(asctime)s] [%(levelname)s] [%(name)s] %(message)s"
+  date_format: "%Y-%m-%d %H:%M:%S"
+  rotate_size_mb: 100
+  rotate_count: 20
+
+# Test Execution Configuration
+execution:
+  parallel_workers: 8
+  default_timeout: 120
+  include_tags:
+    - smoke
+    - critical
+    - production
+  exclude_tags:
+    - manual
+    - debug
+    - performance
+    - development
+
+# Results Configuration
+results:
+  base_dir: results/prod
+  reports_dir: results/prod/reports
+  logs_dir: results/prod/logs
+  screenshots_dir: results/prod/screenshots
+  artifacts_dir: results/prod/artifacts
+
+# Cleanup Configuration
+cleanup:
+  skip_cleanup: false
+  auto_delete_resources: true
+  preserve_logs_on_failure: true
+
+# Feature Flags
+features:
+  dry_run: false
+  capture_screenshots: true
+  detailed_logging: false
+  performance_monitoring: true
+
+# Security Settings
+security:
+  high_security_mode: true
+  alerts_enabled: true
+  audit_logging: true

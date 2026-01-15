@@ -1,0 +1,27 @@
+# Robot Framework Core
+robotframework>=7.0.0
+
+# Robot Framework Libraries
+robotframework-requests>=0.9.4
+robotframework-pabot>=2.18.0
+robotframework-sshlibrary>=3.8.0
+robotframework-jsonlibrary>=0.5
+
+# Common Robot Automation Framework (Rapid7 internal)
+# git+https://github.com/rapid7/common-robot-automation.git@main
+
+# XML/JSON Processing
+lxml>=4.9.0
+
+# Utilities
+PyYAML>=6.0
+requests>=2.31.0
+
+# Optional: Secure Credential Management
+# Install based on your chosen backend:
+#   - AWS Secrets Manager: pip install boto3
+#   - Encrypted Files: pip install cryptography
+#   - HashiCorp Vault: pip install hvac
+# boto3>=1.26.0              # For AWS Secrets Manager backend
+# cryptography>=41.0.0       # For encrypted file backend
+# hvac>=1.2.0                # For HashiCorp Vault backend

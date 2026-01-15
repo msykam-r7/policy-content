@@ -1,0 +1,72 @@
+# Staging Environment Configuration
+# This file contains environment-specific settings for staging
+
+environment:
+  name: staging
+  description: Staging environment for pre-production testing
+  debug_mode: false
+
+# Nexpose/Console Configuration
+nexpose:
+  host: staging-nexpose.rapid7.local
+  port: 3780
+  protocol: https
+  ssl_verify: true
+  timeout:
+    default: 60
+    login: 180
+    scan: 7200
+    network: 120
+
+# API Configuration
+api:
+  base_path: /api
+  version: "3"
+  retry:
+    max_attempts: 5
+    interval: 10
+    backoff_multiplier: 2
+
+# Logging Configuration
+logging:
+  level: INFO
+  console_level: INFO
+  file_level: DEBUG
+  format: "[%(asctime)s] [%(levelname)s] [%(name)s] %(message)s"
+  date_format: "%Y-%m-%d %H:%M:%S"
+  rotate_size_mb: 50
+  rotate_count: 10
+
+# Test Execution Configuration
+execution:
+  parallel_workers: 4
+  default_timeout: 60
+  include_tags:
+    - smoke
+    - regression
+    - integration
+  exclude_tags:
+    - manual
+    - performance
+    - debug
+
+# Results Configuration
+results:
+  base_dir: results/staging
+  reports_dir: results/staging/reports
+  logs_dir: results/staging/logs
+  screenshots_dir: results/staging/screenshots
+  artifacts_dir: results/staging/artifacts
+
+# Cleanup Configuration
+cleanup:
+  skip_cleanup: false
+  auto_delete_resources: true
+  preserve_logs_on_failure: true
+
+# Feature Flags
+features:
+  dry_run: false
+  capture_screenshots: true
+  detailed_logging: true
+  performance_monitoring: true

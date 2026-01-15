@@ -1,0 +1,2225 @@
+{
+  "template_id": "cis",
+  "policy_benchmarks": [
+    {
+      "os": "Oracle Database 11g",
+      "benchmark_id": "cis_oracle_database_11g_benchmark",
+      "version": "1.0.1.11",
+      "scope": "G",
+      "policies": [
+        "Level-I",
+        "Level-II",
+        "linux-profile-1",
+        "linux-profile-2",
+        "linux-profile-known-tests",
+        "windows-profile-1",
+        "windows-profile-2",
+        "windows-profile-known-tests"
+      ],
+      "policy_count": 8
+    },
+    {
+      "os": "Redhat Enterprise Linux 4",
+      "benchmark_id": "cis_redhat_enterprise_linux_4_benchmark",
+      "version": "1.0.5.0",
+      "scope": "G",
+      "policies": [
+        "rhel4-level-1-profile"
+      ],
+      "policy_count": 1
+    },
+    {
+      "os": "Xccdf Org.ecurity.s 1.0.0.1 Cis Apple Macos 10.14 Benchmark",
+      "benchmark_id": "xccdf_org.cisecurity.benchmarks_benchmark_1.0.0.1_CIS_Apple_macOS_10.14_Benchmark",
+      "version": "1.0.0.1",
+      "scope": "G",
+      "policies": [
+        "xccdf_org.cisecurity.benchmarks_profile_Level_1",
+        "xccdf_org.cisecurity.benchmarks_profile_Level_2"
+      ],
+      "policy_count": 2
+    },
+    {
+      "os": "Xccdf Org.ecurity.s 1.0.0.1 Cis Debian Linux 7 Benchmark",
+      "benchmark_id": "xccdf_org.cisecurity.benchmarks_benchmark_1.0.0.1_CIS_Debian_Linux_7_Benchmark",
+      "version": "1.0.0",
+      "scope": "G",
+      "policies": [
+        "xccdf_org.cisecurity.benchmarks_profile_Level_1",
+        "xccdf_org.cisecurity.benchmarks_profile_Level_2"
+      ],
+      "policy_count": 2
+    },
+    {
+      "os": "Xccdf Org.ecurity.s 1.0.0.1 Cis Mozilla Firefox 24 Esr Benchmark",
+      "benchmark_id": "xccdf_org.cisecurity.benchmarks_benchmark_1.0.0.1_CIS_Mozilla_Firefox_24_ESR_Benchmark",
+      "version": "1.0.0.1",
+      "scope": "G",
+      "policies": [
+        "xccdf_org.cisecurity.benchmarks_profile_Level_1",
+        "xccdf_org.cisecurity.benchmarks_profile_Level_2"
+      ],
+      "policy_count": 2
+    },
+    {
+      "os": "Xccdf Org.ecurity.s 1.0.0.7 Cis Apache Tomcat 55 60 Benchmark",
+      "benchmark_id": "xccdf_org.cisecurity.benchmarks_benchmark_1.0.0.7_CIS_Apache_Tomcat_55_60_Benchmark",
+      "version": "1.0.0.7",
+      "scope": "G",
+      "policies": [
+        "xccdf_org.cisecurity.benchmarks_profile_Level_1",
+        "xccdf_org.cisecurity.benchmarks_profile_Level_2"
+      ],
+      "policy_count": 2
+    },
+    {
+      "os": "Xccdf Org.ecurity.s 1.0.0 Cis Amazon Linux 2023 Benchmark",
+      "benchmark_id": "xccdf_org.cisecurity.benchmarks_benchmark_1.0.0_CIS_Amazon_Linux_2023_Benchmark",
+      "version": "1.0.0",
+      "scope": "G",
+      "policies": [
+        "xccdf_org.cisecurity.benchmarks_profile_Level_1_-_Server",
+        "xccdf_org.cisecurity.benchmarks_profile_Level_2_-_Server"
+      ],
+      "policy_count": 2
+    },
+    {
+      "os": "Xccdf Org.ecurity.s 1.0.0 Cis Apple Osx 10.12 Benchmark",
+      "benchmark_id": "xccdf_org.cisecurity.benchmarks_benchmark_1.0.0_CIS_Apple_OSX_10.12_Benchmark",
+      "version": "1.0.0",
+      "scope": "G",
+      "policies": [
+        "xccdf_org.cisecurity.benchmarks_profile_Level_1",
+        "xccdf_org.cisecurity.benchmarks_profile_Level_2"
+      ],
+      "policy_count": 2
+    },
+    {
+      "os": "Xccdf Org.ecurity.s 1.0.0 Cis Apple Macos 13.0 Ventura Benchmark",
+      "benchmark_id": "xccdf_org.cisecurity.benchmarks_benchmark_1.0.0_CIS_Apple_macOS_13.0_Ventura_Benchmark",
+      "version": "1.0.0",
+      "scope": "G",
+      "policies": [
+        "xccdf_org.cisecurity.benchmarks_profile_Level_1",
+        "xccdf_org.cisecurity.benchmarks_profile_Level_2"
+      ],
+      "policy_count": 2
+    },
+    {
+      "os": "Xccdf Org.ecurity.s 1.0.0 Cis Apple Macos 14.0 Sonoma Benchmark",
+      "benchmark_id": "xccdf_org.cisecurity.benchmarks_benchmark_1.0.0_CIS_Apple_macOS_14.0_Sonoma_Benchmark",
+      "version": "1.0.0",
+      "scope": "G",
+      "policies": [
+        "xccdf_org.cisecurity.benchmarks_profile_Level_1",
+        "xccdf_org.cisecurity.benchmarks_profile_Level_2"
+      ],
+      "policy_count": 2
+    },
+    {
+      "os": "Xccdf Org.ecurity.s 1.0.0 Cis Apple Macos 15.0 Sequoia Benchmark",
+      "benchmark_id": "xccdf_org.cisecurity.benchmarks_benchmark_1.0.0_CIS_Apple_macOS_15.0_Sequoia_Benchmark",
+      "version": "1.0.0",
+      "scope": "G",
+      "policies": [
+        "xccdf_org.cisecurity.benchmarks_profile_Level_1",
+        "xccdf_org.cisecurity.benchmarks_profile_Level_2"
+      ],
+      "policy_count": 2
+    },
+    {
+      "os": "Xccdf Org.ecurity.s 1.0.0 Cis Cisco Nx-os Benchmark",
+      "benchmark_id": "xccdf_org.cisecurity.benchmarks_benchmark_1.0.0_CIS_Cisco_NX-OS_Benchmark",
+      "version": "1.0.0",
+      "scope": "G",
+      "policies": [
+        "xccdf_org.cisecurity.benchmarks_profile_Level_1",
+        "xccdf_org.cisecurity.benchmarks_profile_Level_2"
+      ],
+      "policy_count": 2
+    },
+    {
+      "os": "Xccdf Org.ecurity.s 1.0.0 Cis Debian Linux 10 Benchmark",
+      "benchmark_id": "xccdf_org.cisecurity.benchmarks_benchmark_1.0.0_CIS_Debian_Linux_10_Benchmark",
+      "version": "1.0.0",
+      "scope": "G",
+      "policies": [
+        "xccdf_org.cisecurity.benchmarks_profile_Level_1_-_Server",
+        "xccdf_org.cisecurity.benchmarks_profile_Level_1_-_Workstation",
+        "xccdf_org.cisecurity.benchmarks_profile_Level_2_-_Server",
+        "xccdf_org.cisecurity.benchmarks_profile_Level_2_-_Workstation"
+      ],
+      "policy_count": 4
+    },
+    {
+      "os": "Xccdf Org.ecurity.s 1.0.0 Cis Docker 1.13 Benchmark",
+      "benchmark_id": "xccdf_org.cisecurity.benchmarks_benchmark_1.0.0_CIS_Docker_1.13_Benchmark",
+      "version": "1.0.0",
+      "scope": "G",
+      "policies": [
+        "xccdf_org.cisecurity.benchmarks_profile_Level_1_-_Docker",
+        "xccdf_org.cisecurity.benchmarks_profile_Level_1_-_Linux_Host_OS",
+        "xccdf_org.cisecurity.benchmarks_profile_Level_2_-_Docker"
+      ],
+      "policy_count": 3
+    },
+    {
+      "os": "Xccdf Org.ecurity.s 1.0.0 Cis Docker 1.6 Benchmark",
+      "benchmark_id": "xccdf_org.cisecurity.benchmarks_benchmark_1.0.0_CIS_Docker_1.6_Benchmark",
+      "version": "1.0.0",
+      "scope": "G",
+      "policies": [
+        "xccdf_org.cisecurity.benchmarks_profile_Level_1_-_Docker",
+        "xccdf_org.cisecurity.benchmarks_profile_Level_1_-_Linux_Host",
+        "xccdf_org.cisecurity.benchmarks_profile_Level_2_-_Docker"
+      ],
+      "policy_count": 3
+    },
+    {
+      "os": "Xccdf Org.ecurity.s 1.0.0 Cis Fedora 19 Family Linux Benchmark",
+      "benchmark_id": "xccdf_org.cisecurity.benchmarks_benchmark_1.0.0_CIS_Fedora_19_Family_Linux_Benchmark",
+      "version": "1.0.0",
+      "scope": "G",
+      "policies": [
+        "xccdf_org.cisecurity.benchmarks_profile_Level_1_-_Server",
+        "xccdf_org.cisecurity.benchmarks_profile_Level_1_-_Workstation",
+        "xccdf_org.cisecurity.benchmarks_profile_Level_2_-_Server",
+        "xccdf_org.cisecurity.benchmarks_profile_Level_2_-_Workstation"
+      ],
+      "policy_count": 4
+    },
+    {
+      "os": "Xccdf Org.ecurity.s 1.0.0 Cis Mit Kerberos 1.10 Benchmark",
+      "benchmark_id": "xccdf_org.cisecurity.benchmarks_benchmark_1.0.0_CIS_MIT_Kerberos_1.10_Benchmark",
+      "version": "1.0.0",
+      "scope": "G",
+      "policies": [
+        "xccdf_org.cisecurity.benchmarks_profile_KDC_with_DB2_Database",
+        "xccdf_org.cisecurity.benchmarks_profile_KDC_with_LDAP_Database"
+      ],
+      "policy_count": 2
+    },
+    {
+      "os": "Xccdf Org.ecurity.s 1.0.0 Cis Microsoft Internet Explorer 11 Benchmark",
+      "benchmark_id": "xccdf_org.cisecurity.benchmarks_benchmark_1.0.0_CIS_Microsoft_Internet_Explorer_11_Benchmark",
+      "version": "1.0.0",
+      "scope": "G",
+      "policies": [
+        "xccdf_org.cisecurity.benchmarks_profile_Level_1"
+      ],
+      "policy_count": 1
+    },
+    {
+      "os": "Xccdf Org.ecurity.s 1.0.0 Cis Microsoft Internet Explorer 9 Benchmark",
+      "benchmark_id": "xccdf_org.cisecurity.benchmarks_benchmark_1.0.0_CIS_Microsoft_Internet_Explorer_9_Benchmark",
+      "version": "1.0.0",
+      "scope": "G",
+      "policies": [
+        "xccdf_org.cisecurity.benchmarks_profile_Level_1"
+      ],
+      "policy_count": 1
+    },
+    {
+      "os": "Xccdf Org.ecurity.s 1.0.0 Cis Microsoft Windows 8 Benchmark",
+      "benchmark_id": "xccdf_org.cisecurity.benchmarks_benchmark_1.0.0_CIS_Microsoft_Windows_8_Benchmark",
+      "version": "1.0.0",
+      "scope": "G",
+      "policies": [
+        "xccdf_org.cisecurity.benchmarks_profile_Level_1",
+        "xccdf_org.cisecurity.benchmarks_profile_Level_1__BitLocker"
+      ],
+      "policy_count": 2
+    },
+    {
+      "os": "Xccdf Org.ecurity.s 1.0.0 Cis Microsoft Windows Server 2022 Stand-alone Benchmark",
+      "benchmark_id": "xccdf_org.cisecurity.benchmarks_benchmark_1.0.0_CIS_Microsoft_Windows_Server_2022_Stand-alone_Benchmark",
+      "version": "1.0.0",
+      "scope": "G",
+      "policies": [
+        "xccdf_org.cisecurity.benchmarks_profile_Level_1_-_Member_Server",
+        "xccdf_org.cisecurity.benchmarks_profile_Level_2_-_Member_Server",
+        "xccdf_org.cisecurity.benchmarks_profile_Next_Generation_Windows_Security_-_Member_Server"
+      ],
+      "policy_count": 3
+    },
+    {
+      "os": "Xccdf Org.ecurity.s 1.0.0 Cis Microsoft Windows Server 2025 Benchmark",
+      "benchmark_id": "xccdf_org.cisecurity.benchmarks_benchmark_1.0.0_CIS_Microsoft_Windows_Server_2025_Benchmark",
+      "version": "1.0.0",
+      "scope": "G",
+      "policies": [
+        "xccdf_org.cisecurity.benchmarks_profile_Level_1_-_Domain_Controller",
+        "xccdf_org.cisecurity.benchmarks_profile_Level_1_-_Member_Server",
+        "xccdf_org.cisecurity.benchmarks_profile_Level_2_-_Domain_Controller",
+        "xccdf_org.cisecurity.benchmarks_profile_Level_2_-_Member_Server",
+        "xccdf_org.cisecurity.benchmarks_profile_Next_Generation_Windows_Security_-_Domain_Controller",
+        "xccdf_org.cisecurity.benchmarks_profile_Next_Generation_Windows_Security_-_Member_Server"
+      ],
+      "policy_count": 6
+    },
+    {
+      "os": "Xccdf Org.ecurity.s 1.0.0 Cis Mongodb 3.2 Benchmark",
+      "benchmark_id": "xccdf_org.cisecurity.benchmarks_benchmark_1.0.0_CIS_MongoDB_3.2_Benchmark",
+      "version": "1.0.0",
+      "scope": "G",
+      "policies": [
+        "xccdf_org.cisecurity.benchmarks_profile_Level_1_-_MongoDB_on_Linux",
+        "xccdf_org.cisecurity.benchmarks_profile_Level_2_-_MongoDB_on_Linux"
+      ],
+      "policy_count": 2
+    },
+    {
+      "os": "Xccdf Org.ecurity.s 1.0.0 Cis Mongodb 3.4 Benchmark",
+      "benchmark_id": "xccdf_org.cisecurity.benchmarks_benchmark_1.0.0_CIS_MongoDB_3.4_Benchmark",
+      "version": "1.0.0",
+      "scope": "G",
+      "policies": [
+        "xccdf_org.cisecurity.benchmarks_profile_Level_1",
+        "xccdf_org.cisecurity.benchmarks_profile_Level_2"
+      ],
+      "policy_count": 2
+    },
+    {
+      "os": "Xccdf Org.ecurity.s 1.0.0 Cis Mozilla Firefox 38 Esr Benchmark",
+      "benchmark_id": "xccdf_org.cisecurity.benchmarks_benchmark_1.0.0_CIS_Mozilla_Firefox_38_ESR_Benchmark",
+      "version": "1.0.0",
+      "scope": "G",
+      "policies": [
+        "xccdf_org.cisecurity.benchmarks_profile_Level_1",
+        "xccdf_org.cisecurity.benchmarks_profile_Level_2"
+      ],
+      "policy_count": 2
+    },
+    {
+      "os": "Xccdf Org.ecurity.s 1.0.0 Cis Oracle Database 18c Benchmark",
+      "benchmark_id": "xccdf_org.cisecurity.benchmarks_benchmark_1.0.0_CIS_Oracle_Database_18c_Benchmark",
+      "version": "1.0.0",
+      "scope": "G",
+      "policies": [
+        "xccdf_org.cisecurity.benchmarks_profile_Level_1_-_Linux_Host_OS_using_Traditional_Auditing",
+        "xccdf_org.cisecurity.benchmarks_profile_Level_1_-_Linux_Host_OS_using_Unified_Auditing",
+        "xccdf_org.cisecurity.benchmarks_profile_Level_1_-_RDBMS_using_Traditional_Auditing",
+        "xccdf_org.cisecurity.benchmarks_profile_Level_1_-_RDBMS_using_Unified_Auditing",
+        "xccdf_org.cisecurity.benchmarks_profile_Level_1_-_Windows_Server_Host_OS_using_Traditional_Auditing",
+        "xccdf_org.cisecurity.benchmarks_profile_Level_1_-_Windows_Server_Host_OS_using_Unified_Auditing"
+      ],
+      "policy_count": 6
+    },
+    {
+      "os": "Xccdf Org.ecurity.s 1.0.0 Cis Oracle Mysql Community Server 5.7 Benchmark",
+      "benchmark_id": "xccdf_org.cisecurity.benchmarks_benchmark_1.0.0_CIS_Oracle_MySQL_Community_Server_5.7_Benchmark",
+      "version": "1.0.0",
+      "scope": "G",
+      "policies": [
+        "xccdf_org.cisecurity.benchmarks_profile_Level_1_-_MySQL_RDBMS",
+        "xccdf_org.cisecurity.benchmarks_profile_Level_1_-_MySQL_RDBMS_on_Linux",
+        "xccdf_org.cisecurity.benchmarks_profile_Level_2_-_MySQL_RDBMS",
+        "xccdf_org.cisecurity.benchmarks_profile_Level_2_-_MySQL_RDBMS_on_Linux"
+      ],
+      "policy_count": 4
+    },
+    {
+      "os": "Xccdf Org.ecurity.s 1.0.0 Cis Oracle Mysql Enterprise Edition 5.7 Benchmark",
+      "benchmark_id": "xccdf_org.cisecurity.benchmarks_benchmark_1.0.0_CIS_Oracle_MySQL_Enterprise_Edition_5.7_Benchmark",
+      "version": "1.0.0",
+      "scope": "G",
+      "policies": [
+        "xccdf_org.cisecurity.benchmarks_profile_Level_1_-_MySQL_RDBMS",
+        "xccdf_org.cisecurity.benchmarks_profile_Level_1_-_MySQL_RDBMS_on_Linux",
+        "xccdf_org.cisecurity.benchmarks_profile_Level_2_-_MySQL_RDBMS",
+        "xccdf_org.cisecurity.benchmarks_profile_Level_2_-_MySQL_RDBMS_on_Linux"
+      ],
+      "policy_count": 4
+    },
+    {
+      "os": "Xccdf Org.ecurity.s 1.0.0 Cis Oracle Solaris 11.4 Benchmark",
+      "benchmark_id": "xccdf_org.cisecurity.benchmarks_benchmark_1.0.0_CIS_Oracle_Solaris_11.4_Benchmark",
+      "version": "1.0.0",
+      "scope": "G",
+      "policies": [
+        "xccdf_org.cisecurity.benchmarks_profile_Level_1",
+        "xccdf_org.cisecurity.benchmarks_profile_Level_2"
+      ],
+      "policy_count": 2
+    },
+    {
+      "os": "Xccdf Org.ecurity.s 1.0.0 Cis Palo Alto Firewall 6 Benchmark",
+      "benchmark_id": "xccdf_org.cisecurity.benchmarks_benchmark_1.0.0_CIS_Palo_Alto_Firewall_6_Benchmark",
+      "version": "1.0.0",
+      "scope": "G",
+      "policies": [
+        "xccdf_org.cisecurity.benchmarks_profile_Level_1",
+        "xccdf_org.cisecurity.benchmarks_profile_Level_2"
+      ],
+      "policy_count": 2
+    },
+    {
+      "os": "Xccdf Org.ecurity.s 1.0.0 Cis Palo Alto Firewall 7 Benchmark",
+      "benchmark_id": "xccdf_org.cisecurity.benchmarks_benchmark_1.0.0_CIS_Palo_Alto_Firewall_7_Benchmark",
+      "version": "1.0.0",
+      "scope": "G",
+      "policies": [
+        "xccdf_org.cisecurity.benchmarks_profile_Level_1",
+        "xccdf_org.cisecurity.benchmarks_profile_Level_2"
+      ],
+      "policy_count": 2
+    },
+    {
+      "os": "Xccdf Org.ecurity.s 1.0.0 Cis Palo Alto Firewall 8 Benchmark",
+      "benchmark_id": "xccdf_org.cisecurity.benchmarks_benchmark_1.0.0_CIS_Palo_Alto_Firewall_8_Benchmark",
+      "version": "1.0.0",
+      "scope": "G",
+      "policies": [
+        "xccdf_org.cisecurity.benchmarks_profile_Level_1",
+        "xccdf_org.cisecurity.benchmarks_profile_Level_2"
+      ],
+      "policy_count": 2
+    },
+    {
+      "os": "Xccdf Org.ecurity.s 1.0.0 Cis Postgresql 10 Benchmark",
+      "benchmark_id": "xccdf_org.cisecurity.benchmarks_benchmark_1.0.0_CIS_PostgreSQL_10_Benchmark",
+      "version": "1.0.0",
+      "scope": "G",
+      "policies": [
+        "xccdf_org.cisecurity.benchmarks_profile_Level_1_-_PostgreSQL",
+        "xccdf_org.cisecurity.benchmarks_profile_Level_1_-_PostgreSQL_on_Linux"
+      ],
+      "policy_count": 2
+    },
+    {
+      "os": "Xccdf Org.ecurity.s 1.0.0 Cis Postgresql 11 Benchmark",
+      "benchmark_id": "xccdf_org.cisecurity.benchmarks_benchmark_1.0.0_CIS_PostgreSQL_11_Benchmark",
+      "version": "1.0.0",
+      "scope": "G",
+      "policies": [
+        "xccdf_org.cisecurity.benchmarks_profile_Level_1_-_PostgreSQL",
+        "xccdf_org.cisecurity.benchmarks_profile_Level_1_-_PostgreSQL_on_Linux"
+      ],
+      "policy_count": 2
+    },
+    {
+      "os": "Xccdf Org.ecurity.s 1.0.0 Cis Postgresql 12 Benchmark",
+      "benchmark_id": "xccdf_org.cisecurity.benchmarks_benchmark_1.0.0_CIS_PostgreSQL_12_Benchmark",
+      "version": "1.0.0",
+      "scope": "G",
+      "policies": [
+        "xccdf_org.cisecurity.benchmarks_profile_Level_1_-_PostgreSQL",
+        "xccdf_org.cisecurity.benchmarks_profile_Level_1_-_PostgreSQL_on_Linux"
+      ],
+      "policy_count": 2
+    },
+    {
+      "os": "Xccdf Org.ecurity.s 1.0.0 Cis Postgresql 13 Benchmark",
+      "benchmark_id": "xccdf_org.cisecurity.benchmarks_benchmark_1.0.0_CIS_PostgreSQL_13_Benchmark",
+      "version": "1.0.0",
+      "scope": "G",
+      "policies": [
+        "xccdf_org.cisecurity.benchmarks_profile_Level_1_-_PostgreSQL",
+        "xccdf_org.cisecurity.benchmarks_profile_Level_1_-_PostgreSQL_on_Linux"
+      ],
+      "policy_count": 2
+    },
+    {
+      "os": "Xccdf Org.ecurity.s 1.0.0 Cis Postgresql 9.6 Benchmark",
+      "benchmark_id": "xccdf_org.cisecurity.benchmarks_benchmark_1.0.0_CIS_PostgreSQL_9.6_Benchmark",
+      "version": "1.0.0",
+      "scope": "G",
+      "policies": [
+        "xccdf_org.cisecurity.benchmarks_profile_Level_1_-_PostgreSQL",
+        "xccdf_org.cisecurity.benchmarks_profile_Level_1_-_PostgreSQL_on_Linux"
+      ],
+      "policy_count": 2
+    },
+    {
+      "os": "Xccdf Org.ecurity.s 1.0.0 Cis Red Hat Enterprise Linux 9 Stig Benchmark",
+      "benchmark_id": "xccdf_org.cisecurity.benchmarks_benchmark_1.0.0_CIS_Red_Hat_Enterprise_Linux_9_STIG_Benchmark",
+      "version": "1.0.0",
+      "scope": "G",
+      "policies": [
+        "xccdf_org.cisecurity.benchmarks_profile_SEVERITY_CAT_I",
+        "xccdf_org.cisecurity.benchmarks_profile_SEVERITY_CAT_II",
+        "xccdf_org.cisecurity.benchmarks_profile_SEVERITY_CAT_III"
+      ],
+      "policy_count": 3
+    },
+    {
+      "os": "Xccdf Org.ecurity.s 1.0.0 Cis Ubuntu Linux 20.04 Lts Stig Benchmark",
+      "benchmark_id": "xccdf_org.cisecurity.benchmarks_benchmark_1.0.0_CIS_Ubuntu_Linux_20.04_LTS_STIG_Benchmark",
+      "version": "1.0.0",
+      "scope": "G",
+      "policies": [
+        "xccdf_org.cisecurity.benchmarks_profile_Level_1_-_Server",
+        "xccdf_org.cisecurity.benchmarks_profile_Level_1_-_Workstation",
+        "xccdf_org.cisecurity.benchmarks_profile_Level_2_-_Server",
+        "xccdf_org.cisecurity.benchmarks_profile_Level_2_-_Workstation",
+        "xccdf_org.cisecurity.benchmarks_profile_STIG_-_Server",
+        "xccdf_org.cisecurity.benchmarks_profile_STIG_-_Workstation"
+      ],
+      "policy_count": 6
+    },
+    {
+      "os": "Xccdf Org.ecurity.s 1.0.0 Cis Ubuntu Linux 22.04 Lts Stig Benchmark",
+      "benchmark_id": "xccdf_org.cisecurity.benchmarks_benchmark_1.0.0_CIS_Ubuntu_Linux_22.04_LTS_STIG_Benchmark",
+      "version": "1.0.0",
+      "scope": "G",
+      "policies": [
+        "xccdf_org.cisecurity.benchmarks_profile_SEVERITY_CAT_I",
+        "xccdf_org.cisecurity.benchmarks_profile_SEVERITY_CAT_II",
+        "xccdf_org.cisecurity.benchmarks_profile_SEVERITY_CAT_III"
+      ],
+      "policy_count": 3
+    },
+    {
+      "os": "Xccdf Org.ecurity.s 1.0.0 Cis Ubuntu Linux 24.04 Lts Benchmark",
+      "benchmark_id": "xccdf_org.cisecurity.benchmarks_benchmark_1.0.0_CIS_Ubuntu_Linux_24.04_LTS_Benchmark",
+      "version": "1.0.0",
+      "scope": "G",
+      "policies": [
+        "xccdf_org.cisecurity.benchmarks_profile_Level_1_-_Server",
+        "xccdf_org.cisecurity.benchmarks_profile_Level_1_-_Workstation",
+        "xccdf_org.cisecurity.benchmarks_profile_Level_2_-_Server",
+        "xccdf_org.cisecurity.benchmarks_profile_Level_2_-_Workstation"
+      ],
+      "policy_count": 4
+    },
+    {
+      "os": "Xccdf Org.ecurity.s 1.0.0 Cis Ubuntu Linux 24.04 Lts Stig Benchmark",
+      "benchmark_id": "xccdf_org.cisecurity.benchmarks_benchmark_1.0.0_CIS_Ubuntu_Linux_24.04_LTS_STIG_Benchmark",
+      "version": "1.0.0",
+      "scope": "G",
+      "policies": [
+        "xccdf_org.cisecurity.benchmarks_profile_SEVERITY_CAT_I",
+        "xccdf_org.cisecurity.benchmarks_profile_SEVERITY_CAT_II",
+        "xccdf_org.cisecurity.benchmarks_profile_SEVERITY_CAT_III"
+      ],
+      "policy_count": 3
+    },
+    {
+      "os": "Xccdf Org.ecurity.s 1.0.0 Cis Vmware Esxi 6.5 Benchmark",
+      "benchmark_id": "xccdf_org.cisecurity.benchmarks_benchmark_1.0.0_CIS_VMware_ESXi_6.5_Benchmark",
+      "version": "1.0.0",
+      "scope": "G",
+      "policies": [
+        "xccdf_org.cisecurity.benchmarks_profile_Level_1",
+        "xccdf_org.cisecurity.benchmarks_profile_Level_2"
+      ],
+      "policy_count": 2
+    },
+    {
+      "os": "Xccdf Org.ecurity.s 1.0.1 Cis Apache Tomcat 8 Benchmark",
+      "benchmark_id": "xccdf_org.cisecurity.benchmarks_benchmark_1.0.1_CIS_Apache_Tomcat_8_Benchmark",
+      "version": "1.0.1",
+      "scope": "G",
+      "policies": [
+        "xccdf_org.cisecurity.benchmarks_profile_Level_1",
+        "xccdf_org.cisecurity.benchmarks_profile_Level_2"
+      ],
+      "policy_count": 2
+    },
+    {
+      "os": "Xccdf Org.ecurity.s 1.0.1 Cis Centos Linux 8 Benchmark",
+      "benchmark_id": "xccdf_org.cisecurity.benchmarks_benchmark_1.0.1_CIS_CentOS_Linux_8_Benchmark",
+      "version": "1.0.1",
+      "scope": "G",
+      "policies": [
+        "xccdf_org.cisecurity.benchmarks_profile_Level_1_-_Server",
+        "xccdf_org.cisecurity.benchmarks_profile_Level_1_-_Workstation",
+        "xccdf_org.cisecurity.benchmarks_profile_Level_2_-_Server",
+        "xccdf_org.cisecurity.benchmarks_profile_Level_2_-_Workstation"
+      ],
+      "policy_count": 4
+    },
+    {
+      "os": "Xccdf Org.ecurity.s 1.0.1 Cis Debian Linux 9 Benchmark",
+      "benchmark_id": "xccdf_org.cisecurity.benchmarks_benchmark_1.0.1_CIS_Debian_Linux_9_Benchmark",
+      "version": "1.0.1",
+      "scope": "G",
+      "policies": [
+        "xccdf_org.cisecurity.benchmarks_profile_Level_1_-_Server",
+        "xccdf_org.cisecurity.benchmarks_profile_Level_1_-_Workstation",
+        "xccdf_org.cisecurity.benchmarks_profile_Level_2_-_Server",
+        "xccdf_org.cisecurity.benchmarks_profile_Level_2_-_Workstation"
+      ],
+      "policy_count": 4
+    },
+    {
+      "os": "Xccdf Org.ecurity.s 1.0.1 Cis Microsoft Office Access 2013 Benchmark",
+      "benchmark_id": "xccdf_org.cisecurity.benchmarks_benchmark_1.0.1_CIS_Microsoft_Office_Access_2013_Benchmark",
+      "version": "1.0.1",
+      "scope": "G",
+      "policies": [
+        "xccdf_org.cisecurity.benchmarks_profile_Level_1"
+      ],
+      "policy_count": 1
+    },
+    {
+      "os": "Xccdf Org.ecurity.s 1.0.1 Cis Microsoft Office Access 2016 Benchmark",
+      "benchmark_id": "xccdf_org.cisecurity.benchmarks_benchmark_1.0.1_CIS_Microsoft_Office_Access_2016_Benchmark",
+      "version": "1.0.1",
+      "scope": "G",
+      "policies": [
+        "xccdf_org.cisecurity.benchmarks_profile_Level_1"
+      ],
+      "policy_count": 1
+    },
+    {
+      "os": "Xccdf Org.ecurity.s 1.0.1 Cis Microsoft Office Excel 2013 Benchmark",
+      "benchmark_id": "xccdf_org.cisecurity.benchmarks_benchmark_1.0.1_CIS_Microsoft_Office_Excel_2013_Benchmark",
+      "version": "1.0.1",
+      "scope": "G",
+      "policies": [
+        "xccdf_org.cisecurity.benchmarks_profile_Level_1"
+      ],
+      "policy_count": 1
+    },
+    {
+      "os": "Xccdf Org.ecurity.s 1.0.1 Cis Microsoft Office Excel 2016 Benchmark",
+      "benchmark_id": "xccdf_org.cisecurity.benchmarks_benchmark_1.0.1_CIS_Microsoft_Office_Excel_2016_Benchmark",
+      "version": "1.0.1",
+      "scope": "G",
+      "policies": [
+        "xccdf_org.cisecurity.benchmarks_profile_Level_1"
+      ],
+      "policy_count": 1
+    },
+    {
+      "os": "Xccdf Org.ecurity.s 1.0.1 Cis Microsoft Office Powerpoint 2013 Benchmark",
+      "benchmark_id": "xccdf_org.cisecurity.benchmarks_benchmark_1.0.1_CIS_Microsoft_Office_PowerPoint_2013_Benchmark",
+      "version": "1.0.1",
+      "scope": "G",
+      "policies": [
+        "xccdf_org.cisecurity.benchmarks_profile_Level_1"
+      ],
+      "policy_count": 1
+    },
+    {
+      "os": "Xccdf Org.ecurity.s 1.0.1 Cis Microsoft Office Powerpoint 2016 Benchmark",
+      "benchmark_id": "xccdf_org.cisecurity.benchmarks_benchmark_1.0.1_CIS_Microsoft_Office_PowerPoint_2016_Benchmark",
+      "version": "1.0.1",
+      "scope": "G",
+      "policies": [
+        "xccdf_org.cisecurity.benchmarks_profile_Level_1"
+      ],
+      "policy_count": 1
+    },
+    {
+      "os": "Xccdf Org.ecurity.s 1.0.1 Cis Red Hat Enterprise Linux 10 Benchmark",
+      "benchmark_id": "xccdf_org.cisecurity.benchmarks_benchmark_1.0.1_CIS_Red_Hat_Enterprise_Linux_10_Benchmark",
+      "version": "1.0.1",
+      "scope": "G",
+      "policies": [
+        "xccdf_org.cisecurity.benchmarks_profile_Level_1_-_Server",
+        "xccdf_org.cisecurity.benchmarks_profile_Level_1_-_Workstation",
+        "xccdf_org.cisecurity.benchmarks_profile_Level_2_-_Server",
+        "xccdf_org.cisecurity.benchmarks_profile_Level_2_-_Workstation"
+      ],
+      "policy_count": 4
+    },
+    {
+      "os": "Xccdf Org.ecurity.s 1.1.0.1 Cis Oracle Solaris 11 Benchmark",
+      "benchmark_id": "xccdf_org.cisecurity.benchmarks_benchmark_1.1.0.1_CIS_Oracle_Solaris_11_Benchmark",
+      "version": "1.1.0.1",
+      "scope": "G",
+      "policies": [
+        "xccdf_org.cisecurity.benchmarks_profile_Level_1",
+        "xccdf_org.cisecurity.benchmarks_profile_Level_2"
+      ],
+      "policy_count": 2
+    },
+    {
+      "os": "Xccdf Org.ecurity.s 1.1.0.1 Cis Postgresql 9.5 Benchmark",
+      "benchmark_id": "xccdf_org.cisecurity.benchmarks_benchmark_1.1.0.1_CIS_PostgreSQL_9.5_Benchmark",
+      "version": "1.1.0.1",
+      "scope": "G",
+      "policies": [
+        "xccdf_org.cisecurity.benchmarks_profile_Level_1_-_PostgreSQL",
+        "xccdf_org.cisecurity.benchmarks_profile_Level_1_-_PostgreSQL_on_Linux"
+      ],
+      "policy_count": 2
+    },
+    {
+      "os": "Xccdf Org.ecurity.s 1.1.0 Cis Apache Tomcat 7 Benchmark",
+      "benchmark_id": "xccdf_org.cisecurity.benchmarks_benchmark_1.1.0_CIS_Apache_Tomcat_7_Benchmark",
+      "version": "1.1.0",
+      "scope": "G",
+      "policies": [
+        "xccdf_org.cisecurity.benchmarks_profile_Level_1",
+        "xccdf_org.cisecurity.benchmarks_profile_Level_2"
+      ],
+      "policy_count": 2
+    },
+    {
+      "os": "Xccdf Org.ecurity.s 1.1.0 Cis Apple Osx 10.11 Benchmark",
+      "benchmark_id": "xccdf_org.cisecurity.benchmarks_benchmark_1.1.0_CIS_Apple_OSX_10.11_Benchmark",
+      "version": "1.1.0",
+      "scope": "G",
+      "policies": [
+        "xccdf_org.cisecurity.benchmarks_profile_Level_1",
+        "xccdf_org.cisecurity.benchmarks_profile_Level_2"
+      ],
+      "policy_count": 2
+    },
+    {
+      "os": "Xccdf Org.ecurity.s 1.1.0 Cis Apple Macos 10.13 Benchmark",
+      "benchmark_id": "xccdf_org.cisecurity.benchmarks_benchmark_1.1.0_CIS_Apple_macOS_10.13_Benchmark",
+      "version": "1.1.0",
+      "scope": "G",
+      "policies": [
+        "xccdf_org.cisecurity.benchmarks_profile_Level_1",
+        "xccdf_org.cisecurity.benchmarks_profile_Level_2"
+      ],
+      "policy_count": 2
+    },
+    {
+      "os": "Xccdf Org.ecurity.s 1.1.0 Cis Check Point Firewall Benchmark",
+      "benchmark_id": "xccdf_org.cisecurity.benchmarks_benchmark_1.1.0_CIS_Check_Point_Firewall_Benchmark",
+      "version": "1.1.0",
+      "scope": "G",
+      "policies": [
+        "xccdf_org.cisecurity.benchmarks_profile_Level_1",
+        "xccdf_org.cisecurity.benchmarks_profile_Level_2"
+      ],
+      "policy_count": 2
+    },
+    {
+      "os": "Xccdf Org.ecurity.s 1.1.0 Cis Cisco Wireless Lan Controller 7 Benchmark",
+      "benchmark_id": "xccdf_org.cisecurity.benchmarks_benchmark_1.1.0_CIS_Cisco_Wireless_LAN_Controller_7_Benchmark",
+      "version": "1.1.0",
+      "scope": "G",
+      "policies": [
+        "xccdf_org.cisecurity.benchmarks_profile_Level_1",
+        "xccdf_org.cisecurity.benchmarks_profile_Level_2"
+      ],
+      "policy_count": 2
+    },
+    {
+      "os": "Xccdf Org.ecurity.s 1.1.0 Cis Debian Linux 12 Benchmark",
+      "benchmark_id": "xccdf_org.cisecurity.benchmarks_benchmark_1.1.0_CIS_Debian_Linux_12_Benchmark",
+      "version": "1.1.0",
+      "scope": "G",
+      "policies": [
+        "xccdf_org.cisecurity.benchmarks_profile_Level_1_-_Server",
+        "xccdf_org.cisecurity.benchmarks_profile_Level_1_-_Workstation",
+        "xccdf_org.cisecurity.benchmarks_profile_Level_2_-_Server",
+        "xccdf_org.cisecurity.benchmarks_profile_Level_2_-_Workstation"
+      ],
+      "policy_count": 4
+    },
+    {
+      "os": "Xccdf Org.ecurity.s 1.1.0 Cis Ibm Aix 5.3-6.1 Benchmark",
+      "benchmark_id": "xccdf_org.cisecurity.benchmarks_benchmark_1.1.0_CIS_IBM_AIX_5.3-6.1_Benchmark",
+      "version": "1.1.0",
+      "scope": "G",
+      "policies": [
+        "aix-level-1-profile",
+        "aix-level-2-profile"
+      ],
+      "policy_count": 2
+    },
+    {
+      "os": "Xccdf Org.ecurity.s 1.1.0 Cis Ibm Aix 7.1 Benchmark",
+      "benchmark_id": "xccdf_org.cisecurity.benchmarks_benchmark_1.1.0_CIS_IBM_AIX_7.1_Benchmark",
+      "version": "1.1.0",
+      "scope": "G",
+      "policies": [
+        "xccdf_org.cisecurity.benchmarks_profile_Level_1",
+        "xccdf_org.cisecurity.benchmarks_profile_Level_2"
+      ],
+      "policy_count": 2
+    },
+    {
+      "os": "Xccdf Org.ecurity.s 1.1.0 Cis Ibm Aix 7.2 Benchmark",
+      "benchmark_id": "xccdf_org.cisecurity.benchmarks_benchmark_1.1.0_CIS_IBM_AIX_7.2_Benchmark",
+      "version": "1.1.0",
+      "scope": "G",
+      "policies": [
+        "xccdf_org.cisecurity.benchmarks_profile_Level_1",
+        "xccdf_org.cisecurity.benchmarks_profile_Level_2"
+      ],
+      "policy_count": 2
+    },
+    {
+      "os": "Xccdf Org.ecurity.s 1.1.0 Cis Ibm Db2 10 Benchmark",
+      "benchmark_id": "xccdf_org.cisecurity.benchmarks_benchmark_1.1.0_CIS_IBM_DB2_10_Benchmark",
+      "version": "1.1.0",
+      "scope": "G",
+      "policies": [
+        "xccdf_org.cisecurity.benchmarks_profile_Level_1_-_Linux_Host_OS_DB2_10",
+        "xccdf_org.cisecurity.benchmarks_profile_Level_1_-_RDBMS_DB2_10",
+        "xccdf_org.cisecurity.benchmarks_profile_Level_1_-_Windows_Host_OS_DB2_10",
+        "xccdf_org.cisecurity.benchmarks_profile_Level_2_-_Linux_Host_OS_DB2_10",
+        "xccdf_org.cisecurity.benchmarks_profile_Level_2_-_RDBMS_DB2_10",
+        "xccdf_org.cisecurity.benchmarks_profile_Level_2_-_Windows_Host_OS_DB2_10"
+      ],
+      "policy_count": 6
+    },
+    {
+      "os": "Xccdf Org.ecurity.s 1.1.0 Cis Microsoft Internet Explorer 10 Benchmark",
+      "benchmark_id": "xccdf_org.cisecurity.benchmarks_benchmark_1.1.0_CIS_Microsoft_Internet_Explorer_10_Benchmark",
+      "version": "1.1.0",
+      "scope": "G",
+      "policies": [
+        "xccdf_org.cisecurity.benchmarks_profile_Level_1"
+      ],
+      "policy_count": 1
+    },
+    {
+      "os": "Xccdf Org.ecurity.s 1.1.0 Cis Microsoft Intune For Windows 10 Benchmark",
+      "benchmark_id": "xccdf_org.cisecurity.benchmarks_benchmark_1.1.0_CIS_Microsoft_Intune_for_Windows_10_Benchmark",
+      "version": "1.1.0",
+      "scope": "G",
+      "policies": [
+        "xccdf_org.cisecurity.benchmarks_profile_BitLocker_BL_-_optional_add-on_for_when_BitLocker_is_deployed",
+        "xccdf_org.cisecurity.benchmarks_profile_Level_2_L2_-_High_SecuritySensitive_Data_Environment_limited_functionality",
+        "xccdf_org.cisecurity.benchmarks_profile_Level_2_L2__BitLocker_BL",
+        "xccdf_org.cisecurity.benchmarks_profile_Level_2_L2__BitLocker_BL__Next_Generation_Windows_Security_NG",
+        "xccdf_org.cisecurity.benchmarks_profile_Level_2_L2__Next_Generation_Windows_Security_NG",
+        "xccdf_org.cisecurity.benchmarks_profile_Next_Generation_Windows_Security_NG_-_optional_add-on_for_use_in_the_newest_hardware_and_configuration_environments"
+      ],
+      "policy_count": 6
+    },
+    {
+      "os": "Xccdf Org.ecurity.s 1.1.0 Cis Microsoft Office 2013 Benchmark",
+      "benchmark_id": "xccdf_org.cisecurity.benchmarks_benchmark_1.1.0_CIS_Microsoft_Office_2013_Benchmark",
+      "version": "1.1.0",
+      "scope": "G",
+      "policies": [
+        "xccdf_org.cisecurity.benchmarks_profile_Level_1"
+      ],
+      "policy_count": 1
+    },
+    {
+      "os": "Xccdf Org.ecurity.s 1.1.0 Cis Microsoft Office 2016 Benchmark",
+      "benchmark_id": "xccdf_org.cisecurity.benchmarks_benchmark_1.1.0_CIS_Microsoft_Office_2016_Benchmark",
+      "version": "1.1.0",
+      "scope": "G",
+      "policies": [
+        "xccdf_org.cisecurity.benchmarks_profile_Level_1"
+      ],
+      "policy_count": 1
+    },
+    {
+      "os": "Xccdf Org.ecurity.s 1.1.0 Cis Microsoft Office Outlook 2013 Benchmark",
+      "benchmark_id": "xccdf_org.cisecurity.benchmarks_benchmark_1.1.0_CIS_Microsoft_Office_Outlook_2013_Benchmark",
+      "version": "1.1.0",
+      "scope": "G",
+      "policies": [
+        "xccdf_org.cisecurity.benchmarks_profile_Level_1"
+      ],
+      "policy_count": 1
+    },
+    {
+      "os": "Xccdf Org.ecurity.s 1.1.0 Cis Microsoft Office Outlook 2016 Benchmark",
+      "benchmark_id": "xccdf_org.cisecurity.benchmarks_benchmark_1.1.0_CIS_Microsoft_Office_Outlook_2016_Benchmark",
+      "version": "1.1.0",
+      "scope": "G",
+      "policies": [
+        "xccdf_org.cisecurity.benchmarks_profile_Level_1"
+      ],
+      "policy_count": 1
+    },
+    {
+      "os": "Xccdf Org.ecurity.s 1.1.0 Cis Microsoft Office Word 2013 Benchmark",
+      "benchmark_id": "xccdf_org.cisecurity.benchmarks_benchmark_1.1.0_CIS_Microsoft_Office_Word_2013_Benchmark",
+      "version": "1.1.0",
+      "scope": "G",
+      "policies": [
+        "xccdf_org.cisecurity.benchmarks_profile_Level_1"
+      ],
+      "policy_count": 1
+    },
+    {
+      "os": "Xccdf Org.ecurity.s 1.1.0 Cis Microsoft Office Word 2016 Benchmark",
+      "benchmark_id": "xccdf_org.cisecurity.benchmarks_benchmark_1.1.0_CIS_Microsoft_Office_Word_2016_Benchmark",
+      "version": "1.1.0",
+      "scope": "G",
+      "policies": [
+        "xccdf_org.cisecurity.benchmarks_profile_Level_1"
+      ],
+      "policy_count": 1
+    },
+    {
+      "os": "Xccdf Org.ecurity.s 1.1.0 Cis Microsoft Sql Server 2022 Benchmark",
+      "benchmark_id": "xccdf_org.cisecurity.benchmarks_benchmark_1.1.0_CIS_Microsoft_SQL_Server_2022_Benchmark",
+      "version": "1.1.0",
+      "scope": "G",
+      "policies": [
+        "xccdf_org.cisecurity.benchmarks_profile_Level_1_-_AWS_RDS",
+        "xccdf_org.cisecurity.benchmarks_profile_Level_1_-_Database_Engine",
+        "xccdf_org.cisecurity.benchmarks_profile_Level_2_-_Database_Engine"
+      ],
+      "policy_count": 3
+    },
+    {
+      "os": "Xccdf Org.ecurity.s 1.1.0 Cis Microsoft Windows 10 Ems Gateway Benchmark",
+      "benchmark_id": "xccdf_org.cisecurity.benchmarks_benchmark_1.1.0_CIS_Microsoft_Windows_10_EMS_Gateway_Benchmark",
+      "version": "1.1.0",
+      "scope": "G",
+      "policies": [
+        "xccdf_org.cisecurity.benchmarks_profile_Level_1_L1_-_Elections_Management_System_EMS_Gateway_general_use"
+      ],
+      "policy_count": 1
+    },
+    {
+      "os": "Xccdf Org.ecurity.s 1.1.0 Cis Mongodb 3.6 Benchmark",
+      "benchmark_id": "xccdf_org.cisecurity.benchmarks_benchmark_1.1.0_CIS_MongoDB_3.6_Benchmark",
+      "version": "1.1.0",
+      "scope": "G",
+      "policies": [
+        "xccdf_org.cisecurity.benchmarks_profile_Level_1-_MongoDB",
+        "xccdf_org.cisecurity.benchmarks_profile_Level_2_-_MongoDB"
+      ],
+      "policy_count": 2
+    },
+    {
+      "os": "Xccdf Org.ecurity.s 1.1.0 Cis Oracle Mysql Community Server 5.6 Benchmark",
+      "benchmark_id": "xccdf_org.cisecurity.benchmarks_benchmark_1.1.0_CIS_Oracle_MySQL_Community_Server_5.6_Benchmark",
+      "version": "1.1.0",
+      "scope": "G",
+      "policies": [
+        "xccdf_org.cisecurity.benchmarks_profile_Level_1_-_MySQL_RDBMS",
+        "xccdf_org.cisecurity.benchmarks_profile_Level_1_-_MySQL_RDBMS_on_Linux",
+        "xccdf_org.cisecurity.benchmarks_profile_Level_2_-_MySQL_RDBMS",
+        "xccdf_org.cisecurity.benchmarks_profile_Level_2_-_MySQL_RDBMS_on_Linux"
+      ],
+      "policy_count": 4
+    },
+    {
+      "os": "Xccdf Org.ecurity.s 1.1.0 Cis Oracle Mysql Enterprise Edition 5.6 Benchmark",
+      "benchmark_id": "xccdf_org.cisecurity.benchmarks_benchmark_1.1.0_CIS_Oracle_MySQL_Enterprise_Edition_5.6_Benchmark",
+      "version": "1.1.0",
+      "scope": "G",
+      "policies": [
+        "xccdf_org.cisecurity.benchmarks_profile_Level_1_-_MySQL_RDBMS",
+        "xccdf_org.cisecurity.benchmarks_profile_Level_1_-_MySQL_RDBMS_on_Linux",
+        "xccdf_org.cisecurity.benchmarks_profile_Level_2_-_MySQL_RDBMS",
+        "xccdf_org.cisecurity.benchmarks_profile_Level_2_-_MySQL_RDBMS_on_Linux"
+      ],
+      "policy_count": 4
+    },
+    {
+      "os": "Xccdf Org.ecurity.s 1.1.0 Cis Palo Alto Firewall 11 Benchmark",
+      "benchmark_id": "xccdf_org.cisecurity.benchmarks_benchmark_1.1.0_CIS_Palo_Alto_Firewall_11_Benchmark",
+      "version": "1.1.0",
+      "scope": "G",
+      "policies": [
+        "xccdf_org.cisecurity.benchmarks_profile_Level_1",
+        "xccdf_org.cisecurity.benchmarks_profile_Level_2"
+      ],
+      "policy_count": 2
+    },
+    {
+      "os": "Xccdf Org.ecurity.s 1.1.0 Cis Palo Alto Firewall 9 Benchmark",
+      "benchmark_id": "xccdf_org.cisecurity.benchmarks_benchmark_1.1.0_CIS_Palo_Alto_Firewall_9_Benchmark",
+      "version": "1.1.0",
+      "scope": "G",
+      "policies": [
+        "xccdf_org.cisecurity.benchmarks_profile_Level_1",
+        "xccdf_org.cisecurity.benchmarks_profile_Level_2"
+      ],
+      "policy_count": 2
+    },
+    {
+      "os": "Xccdf Org.ecurity.s 1.1.0 Cis Postgresql 16 Benchmark",
+      "benchmark_id": "xccdf_org.cisecurity.benchmarks_benchmark_1.1.0_CIS_PostgreSQL_16_Benchmark",
+      "version": "1.1.0",
+      "scope": "G",
+      "policies": [
+        "xccdf_org.cisecurity.benchmarks_profile_Level_1_-_PostgreSQL",
+        "xccdf_org.cisecurity.benchmarks_profile_Level_1_-_PostgreSQL_on_Linux"
+      ],
+      "policy_count": 2
+    },
+    {
+      "os": "Xccdf Org.ecurity.s 1.1.0 Cis Ubuntu 12.04 Lts Server Benchmark",
+      "benchmark_id": "xccdf_org.cisecurity.benchmarks_benchmark_1.1.0_CIS_Ubuntu_12.04_LTS_Server_Benchmark",
+      "version": "1.1.0",
+      "scope": "G",
+      "policies": [
+        "xccdf_org.cisecurity.benchmarks_profile_Level_1",
+        "xccdf_org.cisecurity.benchmarks_profile_Level_2"
+      ],
+      "policy_count": 2
+    },
+    {
+      "os": "Xccdf Org.ecurity.s 1.1.1 Cis Microsoft Iis 10 Benchmark",
+      "benchmark_id": "xccdf_org.cisecurity.benchmarks_benchmark_1.1.1_CIS_Microsoft_IIS_10_Benchmark",
+      "version": "1.1.1",
+      "scope": "G",
+      "policies": [
+        "xccdf_org.cisecurity.benchmarks_profile_Level_1_-_IIS_10",
+        "xccdf_org.cisecurity.benchmarks_profile_Level_2_-_IIS_10"
+      ],
+      "policy_count": 2
+    },
+    {
+      "os": "Xccdf Org.ecurity.s 1.2.0 Cis Apache Tomcat 9 Benchmark",
+      "benchmark_id": "xccdf_org.cisecurity.benchmarks_benchmark_1.2.0_CIS_Apache_Tomcat_9_Benchmark",
+      "version": "1.2.0",
+      "scope": "G",
+      "policies": [
+        "xccdf_org.cisecurity.benchmarks_profile_Level_1",
+        "xccdf_org.cisecurity.benchmarks_profile_Level_2"
+      ],
+      "policy_count": 2
+    },
+    {
+      "os": "Xccdf Org.ecurity.s 1.2.0 Cis Apple Osx 10.10 Benchmark",
+      "benchmark_id": "xccdf_org.cisecurity.benchmarks_benchmark_1.2.0_CIS_Apple_OSX_10.10_Benchmark",
+      "version": "1.2.0",
+      "scope": "G",
+      "policies": [
+        "xccdf_org.cisecurity.benchmarks_profile_Level_1",
+        "xccdf_org.cisecurity.benchmarks_profile_Level_2"
+      ],
+      "policy_count": 2
+    },
+    {
+      "os": "Xccdf Org.ecurity.s 1.2.0 Cis Apple Macos 11.0 Benchmark",
+      "benchmark_id": "xccdf_org.cisecurity.benchmarks_benchmark_1.2.0_CIS_Apple_macOS_11.0_Benchmark",
+      "version": "1.2.0",
+      "scope": "G",
+      "policies": [
+        "xccdf_org.cisecurity.benchmarks_profile_Level_1",
+        "xccdf_org.cisecurity.benchmarks_profile_Level_2"
+      ],
+      "policy_count": 2
+    },
+    {
+      "os": "Xccdf Org.ecurity.s 1.2.0 Cis Docker Benchmark",
+      "benchmark_id": "xccdf_org.cisecurity.benchmarks_benchmark_1.2.0_CIS_Docker_Benchmark",
+      "version": "1.2.0",
+      "scope": "G",
+      "policies": [
+        "xccdf_org.cisecurity.benchmarks_profile_Level_1_-_Docker_-_Linux",
+        "xccdf_org.cisecurity.benchmarks_profile_Level_1_-_Docker_Engine_-_Enterprise",
+        "xccdf_org.cisecurity.benchmarks_profile_Level_1_-_Linux_Host_OS",
+        "xccdf_org.cisecurity.benchmarks_profile_Level_2_-_Docker_-_Linux",
+        "xccdf_org.cisecurity.benchmarks_profile_Level_2_-_Docker_Engine_-_Enterprise",
+        "xccdf_org.cisecurity.benchmarks_profile_Level_2_-_Linux_Host_OS"
+      ],
+      "policy_count": 6
+    },
+    {
+      "os": "Xccdf Org.ecurity.s 1.2.0 Cis Microsoft Sql Server 2017 Benchmark",
+      "benchmark_id": "xccdf_org.cisecurity.benchmarks_benchmark_1.2.0_CIS_Microsoft_SQL_Server_2017_Benchmark",
+      "version": "1.2.0",
+      "scope": "G",
+      "policies": [
+        "xccdf_org.cisecurity.benchmarks_profile_Level_1_-_AWS_RDS",
+        "xccdf_org.cisecurity.benchmarks_profile_Level_1_-_Database_Engine"
+      ],
+      "policy_count": 2
+    },
+    {
+      "os": "Xccdf Org.ecurity.s 1.2.0 Cis Microsoft Sql Server 2019 Benchmark",
+      "benchmark_id": "xccdf_org.cisecurity.benchmarks_benchmark_1.2.0_CIS_Microsoft_SQL_Server_2019_Benchmark",
+      "version": "1.2.0",
+      "scope": "G",
+      "policies": [
+        "xccdf_org.cisecurity.benchmarks_profile_Level_1_-_AWS_RDS",
+        "xccdf_org.cisecurity.benchmarks_profile_Level_1_-_Database_Engine",
+        "xccdf_org.cisecurity.benchmarks_profile_Level_2_-_AWS_RDS",
+        "xccdf_org.cisecurity.benchmarks_profile_Level_2_-_Database_Engine"
+      ],
+      "policy_count": 4
+    },
+    {
+      "os": "Xccdf Org.ecurity.s 1.2.0 Cis Microsoft Windows Server 2016 Rtm Release 1607 Benchmark",
+      "benchmark_id": "xccdf_org.cisecurity.benchmarks_benchmark_1.2.0_CIS_Microsoft_Windows_Server_2016_RTM_Release_1607_Benchmark",
+      "version": "1.2.0",
+      "scope": "G",
+      "policies": [
+        "xccdf_org.cisecurity.benchmarks_profile_Next_Generation_Windows_Security"
+      ],
+      "policy_count": 1
+    },
+    {
+      "os": "Xccdf Org.ecurity.s 1.2.0 Cis Oracle Database 19c Benchmark",
+      "benchmark_id": "xccdf_org.cisecurity.benchmarks_benchmark_1.2.0_CIS_Oracle_Database_19c_Benchmark",
+      "version": "1.2.0",
+      "scope": "G",
+      "policies": [
+        "xccdf_org.cisecurity.benchmarks_profile_Level_1_-_Linux_Host_OS_using_Traditional_Auditing",
+        "xccdf_org.cisecurity.benchmarks_profile_Level_1_-_Linux_Host_OS_using_Unified_Auditing",
+        "xccdf_org.cisecurity.benchmarks_profile_Level_1_-_RDBMS_using_Traditional_Auditing",
+        "xccdf_org.cisecurity.benchmarks_profile_Level_1_-_RDBMS_using_Unified_Auditing",
+        "xccdf_org.cisecurity.benchmarks_profile_Level_1_-_Windows_Server_Host_OS_using_Traditional_Auditing",
+        "xccdf_org.cisecurity.benchmarks_profile_Level_1_-_Windows_Server_Host_OS_using_Unified_Auditing"
+      ],
+      "policy_count": 6
+    },
+    {
+      "os": "Xccdf Org.ecurity.s 1.2.0 Cis Oracle Mysql Enterprise Edition 8.0 Benchmark",
+      "benchmark_id": "xccdf_org.cisecurity.benchmarks_benchmark_1.2.0_CIS_Oracle_MySQL_Enterprise_Edition_8.0_Benchmark",
+      "version": "1.2.0",
+      "scope": "G",
+      "policies": [
+        "xccdf_org.cisecurity.benchmarks_profile_Level_1_-_MySQL_RDBMS",
+        "xccdf_org.cisecurity.benchmarks_profile_Level_1_-_MySQL_RDBMS_on_Linux",
+        "xccdf_org.cisecurity.benchmarks_profile_Level_2_-_MySQL_RDBMS",
+        "xccdf_org.cisecurity.benchmarks_profile_Level_2_-_MySQL_RDBMS_on_Linux"
+      ],
+      "policy_count": 4
+    },
+    {
+      "os": "Xccdf Org.ecurity.s 1.2.0 Cis Palo Alto Firewall 10 Benchmark",
+      "benchmark_id": "xccdf_org.cisecurity.benchmarks_benchmark_1.2.0_CIS_Palo_Alto_Firewall_10_Benchmark",
+      "version": "1.2.0",
+      "scope": "G",
+      "policies": [
+        "xccdf_org.cisecurity.benchmarks_profile_Level_1",
+        "xccdf_org.cisecurity.benchmarks_profile_Level_2"
+      ],
+      "policy_count": 2
+    },
+    {
+      "os": "Xccdf Org.ecurity.s 1.2.0 Cis Postgresql 15 Benchmark",
+      "benchmark_id": "xccdf_org.cisecurity.benchmarks_benchmark_1.2.0_CIS_PostgreSQL_15_Benchmark",
+      "version": "1.2.0",
+      "scope": "G",
+      "policies": [
+        "xccdf_org.cisecurity.benchmarks_profile_Level_1_-_PostgreSQL",
+        "xccdf_org.cisecurity.benchmarks_profile_Level_1_-_PostgreSQL_on_Linux"
+      ],
+      "policy_count": 2
+    },
+    {
+      "os": "Xccdf Org.ecurity.s 1.2.0 Cis Vmware Esxi 5.5 Benchmark",
+      "benchmark_id": "xccdf_org.cisecurity.benchmarks_benchmark_1.2.0_CIS_VMware_ESXi_5.5_Benchmark",
+      "version": "1.2.0",
+      "scope": "G",
+      "policies": [
+        "xccdf_org.cisecurity.benchmarks_profile_Level_1",
+        "xccdf_org.cisecurity.benchmarks_profile_Level_2"
+      ],
+      "policy_count": 2
+    },
+    {
+      "os": "Xccdf Org.ecurity.s 1.2.0 Cis Vmware Esxi 7.0 Benchmark",
+      "benchmark_id": "xccdf_org.cisecurity.benchmarks_benchmark_1.2.0_CIS_VMware_ESXi_7.0_Benchmark",
+      "version": "1.2.0",
+      "scope": "G",
+      "policies": [
+        "xccdf_org.cisecurity.benchmarks_profile_Level_1_L1_-_CorporateEnterprise_Environment_general_use",
+        "xccdf_org.cisecurity.benchmarks_profile_Level_2_L2_-_High_SecuritySensitive_Data_Environment_limited_functionality"
+      ],
+      "policy_count": 2
+    },
+    {
+      "os": "Xccdf Org.ecurity.s 1.2.0 Cis Vmware Esxi 8.0 Benchmark",
+      "benchmark_id": "xccdf_org.cisecurity.benchmarks_benchmark_1.2.0_CIS_VMware_ESXi_8.0_Benchmark",
+      "version": "1.2.0",
+      "scope": "G",
+      "policies": [
+        "xccdf_org.cisecurity.benchmarks_profile_Level_1_L1_-_CorporateEnterprise_Environment_general_use",
+        "xccdf_org.cisecurity.benchmarks_profile_Level_2_L2_-_High_SecuritySensitive_Data_Environment_limited_functionality"
+      ],
+      "policy_count": 2
+    },
+    {
+      "os": "Xccdf Org.ecurity.s 1.3.0 Cis Apache Http Server 2.4 Benchmark",
+      "benchmark_id": "xccdf_org.cisecurity.benchmarks_benchmark_1.3.0_CIS_Apache_HTTP_Server_2.4_Benchmark",
+      "version": "1.3.0",
+      "scope": "G",
+      "policies": [
+        "xccdf_org.cisecurity.benchmarks_profile_Level_1",
+        "xccdf_org.cisecurity.benchmarks_profile_Level_2"
+      ],
+      "policy_count": 2
+    },
+    {
+      "os": "Xccdf Org.ecurity.s 1.3.0 Cis Apple Osx 10.8 Benchmark",
+      "benchmark_id": "xccdf_org.cisecurity.benchmarks_benchmark_1.3.0_CIS_Apple_OSX_10.8_Benchmark",
+      "version": "1.3.0",
+      "scope": "G",
+      "policies": [
+        "xccdf_org.cisecurity.benchmarks_profile_Level_1",
+        "xccdf_org.cisecurity.benchmarks_profile_Level_2"
+      ],
+      "policy_count": 2
+    },
+    {
+      "os": "Xccdf Org.ecurity.s 1.3.0 Cis Apple Osx 10.9 Benchmark",
+      "benchmark_id": "xccdf_org.cisecurity.benchmarks_benchmark_1.3.0_CIS_Apple_OSX_10.9_Benchmark",
+      "version": "1.3.0",
+      "scope": "G",
+      "policies": [
+        "xccdf_org.cisecurity.benchmarks_profile_Level_1",
+        "xccdf_org.cisecurity.benchmarks_profile_Level_2"
+      ],
+      "policy_count": 2
+    },
+    {
+      "os": "Xccdf Org.ecurity.s 1.3.0 Cis Fortigate 7.0.x Benchmark",
+      "benchmark_id": "xccdf_org.cisecurity.benchmarks_benchmark_1.3.0_CIS_Fortigate_7.0.x_Benchmark",
+      "version": "1.3.0",
+      "scope": "G",
+      "policies": [
+        "xccdf_org.cisecurity.benchmarks_profile_Level_1",
+        "xccdf_org.cisecurity.benchmarks_profile_Level_2"
+      ],
+      "policy_count": 2
+    },
+    {
+      "os": "Xccdf Org.ecurity.s 1.3.0 Cis Microsoft Sql Server 2016 Benchmark",
+      "benchmark_id": "xccdf_org.cisecurity.benchmarks_benchmark_1.3.0_CIS_Microsoft_SQL_Server_2016_Benchmark",
+      "version": "1.3.0",
+      "scope": "G",
+      "policies": [
+        "xccdf_org.cisecurity.benchmarks_profile_Level_1_-_AWS_RDS",
+        "xccdf_org.cisecurity.benchmarks_profile_Level_1_-_Database_Engine"
+      ],
+      "policy_count": 2
+    },
+    {
+      "os": "Xccdf Org.ecurity.s 1.3.0 Cis Vmware Esxi 6.7 Benchmark",
+      "benchmark_id": "xccdf_org.cisecurity.benchmarks_benchmark_1.3.0_CIS_VMware_ESXi_6.7_Benchmark",
+      "version": "1.3.0",
+      "scope": "G",
+      "policies": [
+        "xccdf_org.cisecurity.benchmarks_profile_Level_1_L1_-_CorporateEnterprise_Environment_general_use",
+        "xccdf_org.cisecurity.benchmarks_profile_Level_2_L2_-_High_SecuritySensitive_Data_Environment_limited_functionality"
+      ],
+      "policy_count": 2
+    },
+    {
+      "os": "Xccdf Org.ecurity.s 1.4.0 Cis Apple Macos 10.14 Benchmark",
+      "benchmark_id": "xccdf_org.cisecurity.benchmarks_benchmark_1.4.0_CIS_Apple_macOS_10.14_Benchmark",
+      "version": "1.4.0",
+      "scope": "G",
+      "policies": [
+        "xccdf_org.cisecurity.benchmarks_profile_Level_1",
+        "xccdf_org.cisecurity.benchmarks_profile_Level_2"
+      ],
+      "policy_count": 2
+    },
+    {
+      "os": "Xccdf Org.ecurity.s 1.4.2 Cis Hp Ux 11i Benchmark",
+      "benchmark_id": "xccdf_org.cisecurity.benchmarks_benchmark_1.4.2_CIS_HP_UX_11i_Benchmark",
+      "version": "1.4.2",
+      "scope": "G",
+      "policies": [
+        "xccdf_org.cisecurity.benchmarks_profile_Level_1",
+        "xccdf_org.cisecurity.benchmarks_profile_Level_2"
+      ],
+      "policy_count": 2
+    },
+    {
+      "os": "Xccdf Org.ecurity.s 1.5.0 Cis Microsoft Iis 8 Benchmark",
+      "benchmark_id": "xccdf_org.cisecurity.benchmarks_benchmark_1.5.0_CIS_Microsoft_IIS_8_Benchmark",
+      "version": "1.5.0",
+      "scope": "G",
+      "policies": [
+        "xccdf_org.cisecurity.benchmarks_profile_Level_1_-_IIS_8.0",
+        "xccdf_org.cisecurity.benchmarks_profile_Level_1_-_IIS_8.5",
+        "xccdf_org.cisecurity.benchmarks_profile_Level_2_-_IIS_8.0",
+        "xccdf_org.cisecurity.benchmarks_profile_Level_2_-_IIS_8.5"
+      ],
+      "policy_count": 4
+    },
+    {
+      "os": "Xccdf Org.ecurity.s 1.5.0 Cis Microsoft Sql Server 2014 Benchmark",
+      "benchmark_id": "xccdf_org.cisecurity.benchmarks_benchmark_1.5.0_CIS_Microsoft_SQL_Server_2014_Benchmark",
+      "version": "1.5.0",
+      "scope": "G",
+      "policies": [
+        "xccdf_org.cisecurity.benchmarks_profile_Level_1_-_AWS_RDS",
+        "xccdf_org.cisecurity.benchmarks_profile_Level_1_-_Database_Engine"
+      ],
+      "policy_count": 2
+    },
+    {
+      "os": "Xccdf Org.ecurity.s 1.6.0 Cis Microsoft Sql Server 2012 Benchmark",
+      "benchmark_id": "xccdf_org.cisecurity.benchmarks_benchmark_1.6.0_CIS_Microsoft_SQL_Server_2012_Benchmark",
+      "version": "1.6.0",
+      "scope": "G",
+      "policies": [
+        "xccdf_org.cisecurity.benchmarks_profile_Level_1_-_AWS_RDS",
+        "xccdf_org.cisecurity.benchmarks_profile_Level_1_-_Database_Engine"
+      ],
+      "policy_count": 2
+    },
+    {
+      "os": "Xccdf Org.ecurity.s 1.6.0 Cis Microsoft Windows 10 Enterprise Benchmark",
+      "benchmark_id": "xccdf_org.cisecurity.benchmarks_benchmark_1.6.0_CIS_Microsoft_Windows_10_Enterprise_Benchmark",
+      "version": "1.6.0",
+      "scope": "G",
+      "policies": [
+        "xccdf_org.cisecurity.benchmarks_profile_Level_2_L2__BitLocker_BL__Next_Generation_Windows_Security_NG"
+      ],
+      "policy_count": 1
+    },
+    {
+      "os": "Xccdf Org.ecurity.s 1.6.1 Cis Kubernetes Benchmark",
+      "benchmark_id": "xccdf_org.cisecurity.benchmarks_benchmark_1.6.1_CIS_Kubernetes_Benchmark",
+      "version": "1.6.1",
+      "scope": "G",
+      "policies": [
+        "xccdf_org.cisecurity.benchmarks_profile_Level_1_Master_Node",
+        "xccdf_org.cisecurity.benchmarks_profile_Level_1_Worker_Node",
+        "xccdf_org.cisecurity.benchmarks_profile_Level_2_Master_Node",
+        "xccdf_org.cisecurity.benchmarks_profile_Level_2_Worker_Node"
+      ],
+      "policy_count": 4
+    },
+    {
+      "os": "Xccdf Org.ecurity.s 1.7.0 Cis Microsoft Sql Server 2008 R2 Benchmark",
+      "benchmark_id": "xccdf_org.cisecurity.benchmarks_benchmark_1.7.0_CIS_Microsoft_SQL_Server_2008_R2_Benchmark",
+      "version": "1.7.0",
+      "scope": "G",
+      "policies": [
+        "xccdf_org.cisecurity.benchmarks_profile_Level_1_-_Database_Engine"
+      ],
+      "policy_count": 1
+    },
+    {
+      "os": "Xccdf Org.ecurity.s 1.8.0 Cis Microsoft Iis 7 Benchmark",
+      "benchmark_id": "xccdf_org.cisecurity.benchmarks_benchmark_1.8.0_CIS_Microsoft_IIS_7_Benchmark",
+      "version": "1.8.0",
+      "scope": "G",
+      "policies": [
+        "xccdf_org.cisecurity.benchmarks_profile_Level_1_-_IIS_7.0",
+        "xccdf_org.cisecurity.benchmarks_profile_Level_1_-_IIS_7.5",
+        "xccdf_org.cisecurity.benchmarks_profile_Level_2_-_IIS_7.0",
+        "xccdf_org.cisecurity.benchmarks_profile_Level_2_-_IIS_7.5"
+      ],
+      "policy_count": 4
+    },
+    {
+      "os": "Xccdf Org.ecurity.s 2.0.0 Cis Almalinux Os 9 Benchmark",
+      "benchmark_id": "xccdf_org.cisecurity.benchmarks_benchmark_2.0.0_CIS_AlmaLinux_OS_9_Benchmark",
+      "version": "2.0.0",
+      "scope": "G",
+      "policies": [
+        "xccdf_org.cisecurity.benchmarks_profile_Level_1_-_Server",
+        "xccdf_org.cisecurity.benchmarks_profile_Level_1_-_Workstation",
+        "xccdf_org.cisecurity.benchmarks_profile_Level_2_-_Server",
+        "xccdf_org.cisecurity.benchmarks_profile_Level_2_-_Workstation"
+      ],
+      "policy_count": 4
+    },
+    {
+      "os": "Xccdf Org.ecurity.s 2.0.0 Cis Amazon Linux 2 Stig Benchmark",
+      "benchmark_id": "xccdf_org.cisecurity.benchmarks_benchmark_2.0.0_CIS_Amazon_Linux_2_STIG_Benchmark",
+      "version": "2.0.0",
+      "scope": "G",
+      "policies": [
+        "xccdf_org.cisecurity.benchmarks_profile_Level_1_-_Server",
+        "xccdf_org.cisecurity.benchmarks_profile_Level_1_-_Workstation",
+        "xccdf_org.cisecurity.benchmarks_profile_Level_2_-_Server",
+        "xccdf_org.cisecurity.benchmarks_profile_Level_2_-_Workstation",
+        "xccdf_org.cisecurity.benchmarks_profile_STIG"
+      ],
+      "policy_count": 5
+    },
+    {
+      "os": "Xccdf Org.ecurity.s 2.0.0 Cis Cisco Ios 16 Benchmark",
+      "benchmark_id": "xccdf_org.cisecurity.benchmarks_benchmark_2.0.0_CIS_Cisco_IOS_16_Benchmark",
+      "version": "2.0.0",
+      "scope": "G",
+      "policies": [
+        "xccdf_org.cisecurity.benchmarks_profile_Level_1",
+        "xccdf_org.cisecurity.benchmarks_profile_Level_2"
+      ],
+      "policy_count": 2
+    },
+    {
+      "os": "Xccdf Org.ecurity.s 2.0.0 Cis Cisco Ios 17.x Benchmark",
+      "benchmark_id": "xccdf_org.cisecurity.benchmarks_benchmark_2.0.0_CIS_Cisco_IOS_17.x_Benchmark",
+      "version": "2.0.0",
+      "scope": "G",
+      "policies": [
+        "xccdf_org.cisecurity.benchmarks_profile_Level_1",
+        "xccdf_org.cisecurity.benchmarks_profile_Level_2"
+      ],
+      "policy_count": 2
+    },
+    {
+      "os": "Xccdf Org.ecurity.s 2.0.0 Cis Debian Linux 11 Benchmark",
+      "benchmark_id": "xccdf_org.cisecurity.benchmarks_benchmark_2.0.0_CIS_Debian_Linux_11_Benchmark",
+      "version": "2.0.0",
+      "scope": "G",
+      "policies": [
+        "xccdf_org.cisecurity.benchmarks_profile_Level_1_-_Server",
+        "xccdf_org.cisecurity.benchmarks_profile_Level_1_-_Workstation",
+        "xccdf_org.cisecurity.benchmarks_profile_Level_2_-_Server",
+        "xccdf_org.cisecurity.benchmarks_profile_Level_2_-_Workstation"
+      ],
+      "policy_count": 4
+    },
+    {
+      "os": "Xccdf Org.ecurity.s 2.0.0 Cis Juniper Os Benchmark",
+      "benchmark_id": "xccdf_org.cisecurity.benchmarks_benchmark_2.0.0_CIS_Juniper_OS_Benchmark",
+      "version": "2.0.0",
+      "scope": "G",
+      "policies": [
+        "xccdf_org.cisecurity.benchmarks_profile_Level_1",
+        "xccdf_org.cisecurity.benchmarks_profile_Level_2"
+      ],
+      "policy_count": 2
+    },
+    {
+      "os": "Xccdf Org.ecurity.s 2.0.0 Cis Microsoft Edge Benchmark",
+      "benchmark_id": "xccdf_org.cisecurity.benchmarks_benchmark_2.0.0_CIS_Microsoft_Edge_Benchmark",
+      "version": "2.0.0",
+      "scope": "G",
+      "policies": [
+        "xccdf_org.cisecurity.benchmarks_profile_Level_1_L1_-_CorporateEnterprise_Environment_general_use",
+        "xccdf_org.cisecurity.benchmarks_profile_Level_2_L2_-_High_SecuritySensitive_Data_Environment_limited_functionality"
+      ],
+      "policy_count": 2
+    },
+    {
+      "os": "Xccdf Org.ecurity.s 2.0.0 Cis Oracle Linux 6 Benchmark",
+      "benchmark_id": "xccdf_org.cisecurity.benchmarks_benchmark_2.0.0_CIS_Oracle_Linux_6_Benchmark",
+      "version": "2.0.0",
+      "scope": "G",
+      "policies": [
+        "xccdf_org.cisecurity.benchmarks_profile_Level_1_-_Server",
+        "xccdf_org.cisecurity.benchmarks_profile_Level_1_-_Workstation",
+        "xccdf_org.cisecurity.benchmarks_profile_Level_2_-_Server",
+        "xccdf_org.cisecurity.benchmarks_profile_Level_2_-_Workstation"
+      ],
+      "policy_count": 4
+    },
+    {
+      "os": "Xccdf Org.ecurity.s 2.0.0 Cis Oracle Linux 9 Benchmark",
+      "benchmark_id": "xccdf_org.cisecurity.benchmarks_benchmark_2.0.0_CIS_Oracle_Linux_9_Benchmark",
+      "version": "2.0.0",
+      "scope": "G",
+      "policies": [
+        "xccdf_org.cisecurity.benchmarks_profile_Level_1_-_Server",
+        "xccdf_org.cisecurity.benchmarks_profile_Level_1_-_Workstation",
+        "xccdf_org.cisecurity.benchmarks_profile_Level_2_-_Server",
+        "xccdf_org.cisecurity.benchmarks_profile_Level_2_-_Workstation"
+      ],
+      "policy_count": 4
+    },
+    {
+      "os": "Xccdf Org.ecurity.s 2.0.0 Cis Red Hat Enterprise Linux 8 Stig Benchmark",
+      "benchmark_id": "xccdf_org.cisecurity.benchmarks_benchmark_2.0.0_CIS_Red_Hat_Enterprise_Linux_8_STIG_Benchmark",
+      "version": "2.0.0",
+      "scope": "G",
+      "policies": [
+        "xccdf_org.cisecurity.benchmarks_profile_Level_1_-_Server",
+        "xccdf_org.cisecurity.benchmarks_profile_Level_1_-_Workstation",
+        "xccdf_org.cisecurity.benchmarks_profile_Level_2_-_Server",
+        "xccdf_org.cisecurity.benchmarks_profile_Level_2_-_Workstation",
+        "xccdf_org.cisecurity.benchmarks_profile_STIG"
+      ],
+      "policy_count": 5
+    },
+    {
+      "os": "Xccdf Org.ecurity.s 2.0.0 Cis Red Hat Enterprise Linux 9 Benchmark",
+      "benchmark_id": "xccdf_org.cisecurity.benchmarks_benchmark_2.0.0_CIS_Red_Hat_Enterprise_Linux_9_Benchmark",
+      "version": "2.0.0",
+      "scope": "G",
+      "policies": [
+        "xccdf_org.cisecurity.benchmarks_profile_Level_1_-_Server",
+        "xccdf_org.cisecurity.benchmarks_profile_Level_1_-_Workstation",
+        "xccdf_org.cisecurity.benchmarks_profile_Level_2_-_Server",
+        "xccdf_org.cisecurity.benchmarks_profile_Level_2_-_Workstation"
+      ],
+      "policy_count": 4
+    },
+    {
+      "os": "Xccdf Org.ecurity.s 2.0.0 Cis Rocky Linux 8 Benchmark",
+      "benchmark_id": "xccdf_org.cisecurity.benchmarks_benchmark_2.0.0_CIS_Rocky_Linux_8_Benchmark",
+      "version": "2.0.0",
+      "scope": "G",
+      "policies": [
+        "xccdf_org.cisecurity.benchmarks_profile_Level_1_-_Server",
+        "xccdf_org.cisecurity.benchmarks_profile_Level_1_-_Workstation",
+        "xccdf_org.cisecurity.benchmarks_profile_Level_2_-_Server",
+        "xccdf_org.cisecurity.benchmarks_profile_Level_2_-_Workstation"
+      ],
+      "policy_count": 4
+    },
+    {
+      "os": "Xccdf Org.ecurity.s 2.0.0 Cis Rocky Linux 9 Benchmark",
+      "benchmark_id": "xccdf_org.cisecurity.benchmarks_benchmark_2.0.0_CIS_Rocky_Linux_9_Benchmark",
+      "version": "2.0.0",
+      "scope": "G",
+      "policies": [
+        "xccdf_org.cisecurity.benchmarks_profile_Level_1_-_Server",
+        "xccdf_org.cisecurity.benchmarks_profile_Level_1_-_Workstation",
+        "xccdf_org.cisecurity.benchmarks_profile_Level_2_-_Server",
+        "xccdf_org.cisecurity.benchmarks_profile_Level_2_-_Workstation"
+      ],
+      "policy_count": 4
+    },
+    {
+      "os": "Xccdf Org.ecurity.s 2.0.0 Cis Ubuntu Linux 16.04 Lts Benchmark",
+      "benchmark_id": "xccdf_org.cisecurity.benchmarks_benchmark_2.0.0_CIS_Ubuntu_Linux_16.04_LTS_Benchmark",
+      "version": "2.0.0",
+      "scope": "G",
+      "policies": [
+        "xccdf_org.cisecurity.benchmarks_profile_Level_1_-_Server",
+        "xccdf_org.cisecurity.benchmarks_profile_Level_1_-_Workstation",
+        "xccdf_org.cisecurity.benchmarks_profile_Level_2_-_Server",
+        "xccdf_org.cisecurity.benchmarks_profile_Level_2_-_Workstation"
+      ],
+      "policy_count": 4
+    },
+    {
+      "os": "Xccdf Org.ecurity.s 2.0.0 Cis Ubuntu Linux 22.04 Lts Benchmark",
+      "benchmark_id": "xccdf_org.cisecurity.benchmarks_benchmark_2.0.0_CIS_Ubuntu_Linux_22.04_LTS_Benchmark",
+      "version": "2.0.0",
+      "scope": "G",
+      "policies": [
+        "xccdf_org.cisecurity.benchmarks_profile_Level_1_-_Server",
+        "xccdf_org.cisecurity.benchmarks_profile_Level_1_-_Workstation",
+        "xccdf_org.cisecurity.benchmarks_profile_Level_2_-_Server",
+        "xccdf_org.cisecurity.benchmarks_profile_Level_2_-_Workstation"
+      ],
+      "policy_count": 4
+    },
+    {
+      "os": "Xccdf Org.ecurity.s 2.0.0 Cis Macos Safari Benchmark",
+      "benchmark_id": "xccdf_org.cisecurity.benchmarks_benchmark_2.0.0_CIS_macOS_Safari_Benchmark",
+      "version": "2.0.0.0",
+      "scope": "G",
+      "policies": [
+        "xccdf_org.cisecurity.benchmarks_profile_Level_1",
+        "xccdf_org.cisecurity.benchmarks_profile_Level_2"
+      ],
+      "policy_count": 2
+    },
+    {
+      "os": "Xccdf Org.ecurity.s 2.0.1 Cis Fedora 28 Family Linux Benchmark",
+      "benchmark_id": "xccdf_org.cisecurity.benchmarks_benchmark_2.0.1_CIS_Fedora_28_Family_Linux_Benchmark",
+      "version": "2.0.1",
+      "scope": "G",
+      "policies": [
+        "xccdf_org.cisecurity.benchmarks_profile_Level_1_-_Server",
+        "xccdf_org.cisecurity.benchmarks_profile_Level_1_-_Workstation",
+        "xccdf_org.cisecurity.benchmarks_profile_Level_2_-_Server",
+        "xccdf_org.cisecurity.benchmarks_profile_Level_2_-_Workstation"
+      ],
+      "policy_count": 4
+    },
+    {
+      "os": "Xccdf Org.ecurity.s 2.0.1 Cis Oracle Database 9i-10g Benchmark",
+      "benchmark_id": "xccdf_org.cisecurity.benchmarks_benchmark_2.0.1_CIS_Oracle_Database_9i-10g_Benchmark",
+      "version": "2.0.1.5",
+      "scope": "G",
+      "policies": [
+        "xccdf_org.cisecurity.benchmarks_profile_Level-I-DB",
+        "xccdf_org.cisecurity.benchmarks_profile_Level-I-Linux",
+        "xccdf_org.cisecurity.benchmarks_profile_Level-I-Windows",
+        "xccdf_org.cisecurity.benchmarks_profile_Level-II-DB",
+        "xccdf_org.cisecurity.benchmarks_profile_Level-II-Linux",
+        "xccdf_org.cisecurity.benchmarks_profile_Level-II-Linux-Known-Tests",
+        "xccdf_org.cisecurity.benchmarks_profile_Level-II-Windows",
+        "xccdf_org.cisecurity.benchmarks_profile_Level-II-Windows-Known-Tests"
+      ],
+      "policy_count": 8
+    },
+    {
+      "os": "Xccdf Org.ecurity.s 2.0.1 Cis Suse Linux Enterprise 15 Benchmark",
+      "benchmark_id": "xccdf_org.cisecurity.benchmarks_benchmark_2.0.1_CIS_SUSE_Linux_Enterprise_15_Benchmark",
+      "version": "2.0.1",
+      "scope": "G",
+      "policies": [
+        "xccdf_org.cisecurity.benchmarks_profile_Level_1_-_Server",
+        "xccdf_org.cisecurity.benchmarks_profile_Level_1_-_Workstation",
+        "xccdf_org.cisecurity.benchmarks_profile_Level_2_-_Server",
+        "xccdf_org.cisecurity.benchmarks_profile_Level_2_-_Workstation"
+      ],
+      "policy_count": 4
+    },
+    {
+      "os": "Xccdf Org.ecurity.s 2.0.2 Cis Debian Linux 8 Benchmark",
+      "benchmark_id": "xccdf_org.cisecurity.benchmarks_benchmark_2.0.2_CIS_Debian_Linux_8_Benchmark",
+      "version": "2.0.2",
+      "scope": "G",
+      "policies": [
+        "xccdf_org.cisecurity.benchmarks_profile_Level_1_-_Server",
+        "xccdf_org.cisecurity.benchmarks_profile_Level_1_-_Workstation",
+        "xccdf_org.cisecurity.benchmarks_profile_Level_2_-_Server",
+        "xccdf_org.cisecurity.benchmarks_profile_Level_2_-_Workstation"
+      ],
+      "policy_count": 4
+    },
+    {
+      "os": "Xccdf Org.ecurity.s 2.1.0 Cis Amazon Linux Benchmark",
+      "benchmark_id": "xccdf_org.cisecurity.benchmarks_benchmark_2.1.0_CIS_Amazon_Linux_Benchmark",
+      "version": "2.1.0",
+      "scope": "G",
+      "policies": [
+        "xccdf_org.cisecurity.benchmarks_profile_Level_1",
+        "xccdf_org.cisecurity.benchmarks_profile_Level_2"
+      ],
+      "policy_count": 2
+    },
+    {
+      "os": "Xccdf Org.ecurity.s 2.1.0 Cis Nginx Benchmark",
+      "benchmark_id": "xccdf_org.cisecurity.benchmarks_benchmark_2.1.0_CIS_NGINX_Benchmark",
+      "version": "2.1.0",
+      "scope": "G",
+      "policies": [
+        "xccdf_org.cisecurity.benchmarks_profile_Level_1_-_Loadbalancer",
+        "xccdf_org.cisecurity.benchmarks_profile_Level_1_-_Proxy",
+        "xccdf_org.cisecurity.benchmarks_profile_Level_1_-_Webserver",
+        "xccdf_org.cisecurity.benchmarks_profile_Level_2_-_Loadbalancer",
+        "xccdf_org.cisecurity.benchmarks_profile_Level_2_-_Proxy",
+        "xccdf_org.cisecurity.benchmarks_profile_Level_2_-_Webserver"
+      ],
+      "policy_count": 6
+    },
+    {
+      "os": "Xccdf Org.ecurity.s 2.1.0 Cis Suse Linux Enterprise 11 Benchmark",
+      "benchmark_id": "xccdf_org.cisecurity.benchmarks_benchmark_2.1.0_CIS_SUSE_Linux_Enterprise_11_Benchmark",
+      "version": "2.1.0",
+      "scope": "G",
+      "policies": [
+        "xccdf_org.cisecurity.benchmarks_profile_Level_1_-_Server",
+        "xccdf_org.cisecurity.benchmarks_profile_Level_1_-_Workstation",
+        "xccdf_org.cisecurity.benchmarks_profile_Level_2_-_Server",
+        "xccdf_org.cisecurity.benchmarks_profile_Level_2_-_Workstation"
+      ],
+      "policy_count": 4
+    },
+    {
+      "os": "Xccdf Org.ecurity.s 2.1.0 Cis Ubuntu Linux 14.04 Lts Benchmark",
+      "benchmark_id": "xccdf_org.cisecurity.benchmarks_benchmark_2.1.0_CIS_Ubuntu_Linux_14.04_LTS_Benchmark",
+      "version": "2.1.0",
+      "scope": "G",
+      "policies": [
+        "xccdf_org.cisecurity.benchmarks_profile_Level_1_-_Server",
+        "xccdf_org.cisecurity.benchmarks_profile_Level_1_-_Workstation",
+        "xccdf_org.cisecurity.benchmarks_profile_Level_2_-_Server",
+        "xccdf_org.cisecurity.benchmarks_profile_Level_2_-_Workstation"
+      ],
+      "policy_count": 4
+    },
+    {
+      "os": "Xccdf Org.ecurity.s 2.1.0 Cis Ubuntu Linux 18.04 Lts Benchmark",
+      "benchmark_id": "xccdf_org.cisecurity.benchmarks_benchmark_2.1.0_CIS_Ubuntu_Linux_18.04_LTS_Benchmark",
+      "version": "2.1.0",
+      "scope": "G",
+      "policies": [
+        "xccdf_org.cisecurity.benchmarks_profile_Level_1_-_Server",
+        "xccdf_org.cisecurity.benchmarks_profile_Level_1_-_Workstation",
+        "xccdf_org.cisecurity.benchmarks_profile_Level_2_-_Server",
+        "xccdf_org.cisecurity.benchmarks_profile_Level_2_-_Workstation"
+      ],
+      "policy_count": 4
+    },
+    {
+      "os": "Xccdf Org.ecurity.s 2.2.0.1 Cis Red Hat Enterprise Linux 5 Benchmark",
+      "benchmark_id": "xccdf_org.cisecurity.benchmarks_benchmark_2.2.0.1_CIS_Red_Hat_Enterprise_Linux_5_Benchmark",
+      "version": "2.2.0.1",
+      "scope": "G",
+      "policies": [
+        "xccdf_org.cisecurity.benchmarks_profile_Level_1",
+        "xccdf_org.cisecurity.benchmarks_profile_Level_2"
+      ],
+      "policy_count": 2
+    },
+    {
+      "os": "Xccdf Org.ecurity.s 2.2.0 Cis Oracle Database 11g R2 Benchmark",
+      "benchmark_id": "xccdf_org.cisecurity.benchmarks_benchmark_2.2.0_CIS_Oracle_Database_11g_R2_Benchmark",
+      "version": "2.2.0",
+      "scope": "G",
+      "policies": [
+        "xccdf_org.cisecurity.benchmarks_profile_Level_1_-__RDBMS",
+        "xccdf_org.cisecurity.benchmarks_profile_Level_1_-_Linux_Host_OS",
+        "xccdf_org.cisecurity.benchmarks_profile_Level_1_-_Windows_Server_Host_OS"
+      ],
+      "policy_count": 3
+    },
+    {
+      "os": "Xccdf Org.ecurity.s 2.3.0 Cis Microsoft Windows Server 2012 Non-r2 Benchmark",
+      "benchmark_id": "xccdf_org.cisecurity.benchmarks_benchmark_2.3.0_CIS_Microsoft_Windows_Server_2012_non-R2_Benchmark",
+      "version": "2.3.0",
+      "scope": "G",
+      "policies": [
+        "xccdf_org.cisecurity.benchmarks_profile_Level_1_-_Domain_Controller",
+        "xccdf_org.cisecurity.benchmarks_profile_Level_1_-_Member_Server",
+        "xccdf_org.cisecurity.benchmarks_profile_Level_2_-_Domain_Controller",
+        "xccdf_org.cisecurity.benchmarks_profile_Level_2_-_Member_Server",
+        "xccdf_org.cisecurity.benchmarks_profile_Next_Generation_Windows_Security_-_Domain_Controller",
+        "xccdf_org.cisecurity.benchmarks_profile_Next_Generation_Windows_Security_-_Member_Server"
+      ],
+      "policy_count": 6
+    },
+    {
+      "os": "Xccdf Org.ecurity.s 2.4.0 Cis Microsoft Windows 8.1 Workstation Benchmark",
+      "benchmark_id": "xccdf_org.cisecurity.benchmarks_benchmark_2.4.0_CIS_Microsoft_Windows_8.1_Workstation_Benchmark",
+      "version": "2.4.0",
+      "scope": "G",
+      "policies": [
+        "xccdf_org.cisecurity.benchmarks_profile_BitLocker_BL_-_optional_add-on_for_when_BitLocker_is_deployed",
+        "xccdf_org.cisecurity.benchmarks_profile_Level_1_L1_-_CorporateEnterprise_Environment_general_use",
+        "xccdf_org.cisecurity.benchmarks_profile_Level_1_L1__BitLocker_BL",
+        "xccdf_org.cisecurity.benchmarks_profile_Level_1_L1__BitLocker_BL__Next_Generation_Windows_Security_NG",
+        "xccdf_org.cisecurity.benchmarks_profile_Level_1_L1__Next_Generation_Windows_Security_NG",
+        "xccdf_org.cisecurity.benchmarks_profile_Level_2_L2_-_High_SecuritySensitive_Data_Environment_limited_functionality",
+        "xccdf_org.cisecurity.benchmarks_profile_Level_2_L2__BitLocker_BL",
+        "xccdf_org.cisecurity.benchmarks_profile_Level_2_L2__BitLocker_BL__Next_Generation_Windows_Security_NG",
+        "xccdf_org.cisecurity.benchmarks_profile_Level_2_L2__Next_Generation_Windows_Security_NG",
+        "xccdf_org.cisecurity.benchmarks_profile_Next_Generation_Windows_Security_NG_-_optional_add-on_for_use_in_the_newest_hardware_and_configuration_environments"
+      ],
+      "policy_count": 10
+    },
+    {
+      "os": "Xccdf Org.ecurity.s 2.6.0 Cis Microsoft Windows Server 2012 R2 Benchmark",
+      "benchmark_id": "xccdf_org.cisecurity.benchmarks_benchmark_2.6.0_CIS_Microsoft_Windows_Server_2012_R2_Benchmark",
+      "version": "2.6.0",
+      "scope": "G",
+      "policies": [
+        "xccdf_org.cisecurity.benchmarks_profile_Level_1_-_Domain_Controller",
+        "xccdf_org.cisecurity.benchmarks_profile_Level_1_-_Member_Server",
+        "xccdf_org.cisecurity.benchmarks_profile_Level_2_-_Domain_Controller",
+        "xccdf_org.cisecurity.benchmarks_profile_Level_2_-_Member_Server"
+      ],
+      "policy_count": 4
+    },
+    {
+      "os": "Xccdf Org.ecurity.s 3.0.0 Cis Almalinux Os 8 Benchmark",
+      "benchmark_id": "xccdf_org.cisecurity.benchmarks_benchmark_3.0.0_CIS_AlmaLinux_OS_8_Benchmark",
+      "version": "3.0.0",
+      "scope": "G",
+      "policies": [
+        "xccdf_org.cisecurity.benchmarks_profile_Level_1_-_Server",
+        "xccdf_org.cisecurity.benchmarks_profile_Level_1_-_Workstation",
+        "xccdf_org.cisecurity.benchmarks_profile_Level_2_-_Server",
+        "xccdf_org.cisecurity.benchmarks_profile_Level_2_-_Workstation"
+      ],
+      "policy_count": 4
+    },
+    {
+      "os": "Xccdf Org.ecurity.s 3.0.0 Cis Amazon Linux 2 Benchmark",
+      "benchmark_id": "xccdf_org.cisecurity.benchmarks_benchmark_3.0.0_CIS_Amazon_Linux_2_Benchmark",
+      "version": "3.0.0",
+      "scope": "G",
+      "policies": [
+        "xccdf_org.cisecurity.benchmarks_profile_Level_1",
+        "xccdf_org.cisecurity.benchmarks_profile_Level_2"
+      ],
+      "policy_count": 2
+    },
+    {
+      "os": "Xccdf Org.ecurity.s 3.0.0 Cis Apple Macos 10.15 Catalina Benchmark",
+      "benchmark_id": "xccdf_org.cisecurity.benchmarks_benchmark_3.0.0_CIS_Apple_macOS_10.15_Catalina_Benchmark",
+      "version": "3.0.0",
+      "scope": "G",
+      "policies": [
+        "xccdf_org.cisecurity.benchmarks_profile_Level_1",
+        "xccdf_org.cisecurity.benchmarks_profile_Level_2"
+      ],
+      "policy_count": 2
+    },
+    {
+      "os": "Xccdf Org.ecurity.s 3.0.0 Cis Apple Macos 11.0 Big Sur Benchmark",
+      "benchmark_id": "xccdf_org.cisecurity.benchmarks_benchmark_3.0.0_CIS_Apple_macOS_11.0_Big_Sur_Benchmark",
+      "version": "3.0.0",
+      "scope": "G",
+      "policies": [
+        "xccdf_org.cisecurity.benchmarks_profile_Level_1",
+        "xccdf_org.cisecurity.benchmarks_profile_Level_2"
+      ],
+      "policy_count": 2
+    },
+    {
+      "os": "Xccdf Org.ecurity.s 3.0.0 Cis Centos Linux 6 Benchmark",
+      "benchmark_id": "xccdf_org.cisecurity.benchmarks_benchmark_3.0.0_CIS_CentOS_Linux_6_Benchmark",
+      "version": "3.0.0",
+      "scope": "G",
+      "policies": [
+        "xccdf_org.cisecurity.benchmarks_profile_Level_1_-_Server",
+        "xccdf_org.cisecurity.benchmarks_profile_Level_1_-_Workstation",
+        "xccdf_org.cisecurity.benchmarks_profile_Level_2_-_Server",
+        "xccdf_org.cisecurity.benchmarks_profile_Level_2_-_Workstation"
+      ],
+      "policy_count": 4
+    },
+    {
+      "os": "Xccdf Org.ecurity.s 3.0.0 Cis Google Chrome Benchmark",
+      "benchmark_id": "xccdf_org.cisecurity.benchmarks_benchmark_3.0.0_CIS_Google_Chrome_Benchmark",
+      "version": "3.0.0",
+      "scope": "G",
+      "policies": [
+        "xccdf_org.cisecurity.benchmarks_profile_Level_1_L1_-_CorporateEnterprise_Environment_general_use",
+        "xccdf_org.cisecurity.benchmarks_profile_Level_2_L2_-_High_SecuritySensitive_Data_Environment_limited_functionality"
+      ],
+      "policy_count": 2
+    },
+    {
+      "os": "Xccdf Org.ecurity.s 3.0.0 Cis Microsoft Windows Server 2019 Stand-alone",
+      "benchmark_id": "xccdf_org.cisecurity.benchmarks_benchmark_3.0.0_CIS_Microsoft_Windows_Server_2019_Stand-alone",
+      "version": "3.0.0",
+      "scope": "G",
+      "policies": [
+        "xccdf_org.cisecurity.benchmarks_profile_Level_1_-_Member_Server",
+        "xccdf_org.cisecurity.benchmarks_profile_Level_2_-_Member_Server",
+        "xccdf_org.cisecurity.benchmarks_profile_Next_Generation_Windows_Security_-_Member_Server"
+      ],
+      "policy_count": 3
+    },
+    {
+      "os": "Xccdf Org.ecurity.s 3.0.0 Cis Microsoft Windows Server 2022 Stig Benchmark",
+      "benchmark_id": "xccdf_org.cisecurity.benchmarks_benchmark_3.0.0_CIS_Microsoft_Windows_Server_2022_STIG_Benchmark",
+      "version": "3.0.0",
+      "scope": "G",
+      "policies": [
+        "xccdf_org.cisecurity.benchmarks_profile_DC_SEVERITY_CAT_I",
+        "xccdf_org.cisecurity.benchmarks_profile_DC_SEVERITY_CAT_II",
+        "xccdf_org.cisecurity.benchmarks_profile_DC_SEVERITY_CAT_III",
+        "xccdf_org.cisecurity.benchmarks_profile_MS_SEVERITY_CAT_I",
+        "xccdf_org.cisecurity.benchmarks_profile_MS_SEVERITY_CAT_II",
+        "xccdf_org.cisecurity.benchmarks_profile_MS_SEVERITY_CAT_III"
+      ],
+      "policy_count": 6
+    },
+    {
+      "os": "Xccdf Org.ecurity.s 3.0.0 Cis Oracle Database 12c Benchmark",
+      "benchmark_id": "xccdf_org.cisecurity.benchmarks_benchmark_3.0.0_CIS_Oracle_Database_12c_Benchmark",
+      "version": "3.0.0",
+      "scope": "G",
+      "policies": [
+        "xccdf_org.cisecurity.benchmarks_profile_Level_1_-_Linux_Host_OS_using_Traditional_Auditing",
+        "xccdf_org.cisecurity.benchmarks_profile_Level_1_-_Linux_Host_OS_using_Unified_Auditing",
+        "xccdf_org.cisecurity.benchmarks_profile_Level_1_-_RDBMS_using_Traditional_Auditing",
+        "xccdf_org.cisecurity.benchmarks_profile_Level_1_-_RDBMS_using_Unified_Auditing",
+        "xccdf_org.cisecurity.benchmarks_profile_Level_1_-_Windows_Server_Host_OS_using_Traditional_Auditing",
+        "xccdf_org.cisecurity.benchmarks_profile_Level_1_-_Windows_Server_Host_OS_using_Unified_Auditing"
+      ],
+      "policy_count": 6
+    },
+    {
+      "os": "Xccdf Org.ecurity.s 3.0.0 Cis Oracle Linux 8 Benchmark",
+      "benchmark_id": "xccdf_org.cisecurity.benchmarks_benchmark_3.0.0_CIS_Oracle_Linux_8_Benchmark",
+      "version": "3.0.0",
+      "scope": "G",
+      "policies": [
+        "xccdf_org.cisecurity.benchmarks_profile_Level_1_-_Server",
+        "xccdf_org.cisecurity.benchmarks_profile_Level_1_-_Workstation",
+        "xccdf_org.cisecurity.benchmarks_profile_Level_2_-_Server",
+        "xccdf_org.cisecurity.benchmarks_profile_Level_2_-_Workstation"
+      ],
+      "policy_count": 4
+    },
+    {
+      "os": "Xccdf Org.ecurity.s 3.0.0 Cis Red Hat Enterprise Linux 6 Benchmark",
+      "benchmark_id": "xccdf_org.cisecurity.benchmarks_benchmark_3.0.0_CIS_Red_Hat_Enterprise_Linux_6_Benchmark",
+      "version": "3.0.0",
+      "scope": "G",
+      "policies": [
+        "xccdf_org.cisecurity.benchmarks_profile_Level_1_-_Server",
+        "xccdf_org.cisecurity.benchmarks_profile_Level_1_-_Workstation",
+        "xccdf_org.cisecurity.benchmarks_profile_Level_2_-_Server",
+        "xccdf_org.cisecurity.benchmarks_profile_Level_2_-_Workstation"
+      ],
+      "policy_count": 4
+    },
+    {
+      "os": "Xccdf Org.ecurity.s 3.0.0 Cis Ubuntu Linux 20.04 Lts Benchmark",
+      "benchmark_id": "xccdf_org.cisecurity.benchmarks_benchmark_3.0.0_CIS_Ubuntu_Linux_20.04_LTS_Benchmark",
+      "version": "3.0.0",
+      "scope": "G",
+      "policies": [
+        "xccdf_org.cisecurity.benchmarks_profile_Level_1_-_Server",
+        "xccdf_org.cisecurity.benchmarks_profile_Level_1_-_Workstation",
+        "xccdf_org.cisecurity.benchmarks_profile_Level_2_-_Server",
+        "xccdf_org.cisecurity.benchmarks_profile_Level_2_-_Workstation"
+      ],
+      "policy_count": 4,
+      "deprecated": [
+        "1.0.0",
+        "2.0.0"
+      ]
+    },
+    {
+      "os": "Xccdf Org.ecurity.s 3.0.1 Cis Ibm Db2 9 Benchmark",
+      "benchmark_id": "xccdf_org.cisecurity.benchmarks_benchmark_3.0.1_CIS_IBM_DB2_9_Benchmark",
+      "version": "3.0.1.0",
+      "scope": "G",
+      "policies": [
+        "xccdf_org.cisecurity.benchmarks_profile_Level_1_-_Linux_Host_OS_DB2_9",
+        "xccdf_org.cisecurity.benchmarks_profile_Level_1_-_RDBMS_DB2_9",
+        "xccdf_org.cisecurity.benchmarks_profile_Level_1_-_Windows_Host_OS_DB2_9",
+        "xccdf_org.cisecurity.benchmarks_profile_Level_2_-_RDBMS_DB2_9"
+      ],
+      "policy_count": 4
+    },
+    {
+      "os": "Xccdf Org.ecurity.s 3.0.1 Cis Isc Bind Dns Server 9.9 Benchmark",
+      "benchmark_id": "xccdf_org.cisecurity.benchmarks_benchmark_3.0.1_CIS_ISC_BIND_DNS_Server_9.9_Benchmark",
+      "version": "3.0.1",
+      "scope": "G",
+      "policies": [
+        "xccdf_org.cisecurity.benchmarks_profile_Authoritative_Name_Server",
+        "xccdf_org.cisecurity.benchmarks_profile_Caching_Only_Name_Server"
+      ],
+      "policy_count": 2
+    },
+    {
+      "os": "Xccdf Org.ecurity.s 3.0.1 Cis Microsoft Intune For Windows 11 Benchmark",
+      "benchmark_id": "xccdf_org.cisecurity.benchmarks_benchmark_3.0.1_CIS_Microsoft_Intune_for_Windows_11_Benchmark",
+      "version": "3.0.1",
+      "scope": "G",
+      "policies": [
+        "xccdf_org.cisecurity.benchmarks_profile_BitLocker_BL",
+        "xccdf_org.cisecurity.benchmarks_profile_Level_1_L1_-_CorporateEnterprise_Environment_general_use",
+        "xccdf_org.cisecurity.benchmarks_profile_Level_2_L2_-_High_SecuritySensitive_Data_Environment_limited_functionality"
+      ],
+      "policy_count": 3
+    },
+    {
+      "os": "Xccdf Org.ecurity.s 3.0.1 Cis Microsoft Windows 7 Benchmark",
+      "benchmark_id": "xccdf_org.cisecurity.benchmarks_benchmark_3.0.1_CIS_Microsoft_Windows_7_Benchmark",
+      "version": "3.0.1.0",
+      "scope": "G",
+      "policies": [
+        "xccdf_org.cisecutiry.benchmarks_profile_Level_2__BitLocker"
+      ],
+      "policy_count": 1
+    },
+    {
+      "os": "Xccdf Org.ecurity.s 3.1.0.2 Cis Microsoft Windows Server 2003 Benchmark",
+      "benchmark_id": "xccdf_org.cisecurity.benchmarks_benchmark_3.1.0.2_CIS_Microsoft_Windows_Server_2003_Benchmark",
+      "version": "3.1.0.2",
+      "scope": "G",
+      "policies": [
+        "xccdf_org.cisecurity.benchmarks_profile_Level_1_-_Domain_Controller",
+        "xccdf_org.cisecurity.benchmarks_profile_Level_1_-_Member_Server"
+      ],
+      "policy_count": 2
+    },
+    {
+      "os": "Xccdf Org.ecurity.s 3.1.0.2 Cis Microsoft Windows Xp Benchmark",
+      "benchmark_id": "xccdf_org.cisecurity.benchmarks_benchmark_3.1.0.2_CIS_Microsoft_Windows_XP_Benchmark",
+      "version": "3.1.0.2",
+      "scope": "G",
+      "policies": [
+        "xccdf_org.cisecurity.benchmarks_profile_Level_1"
+      ],
+      "policy_count": 1
+    },
+    {
+      "os": "Xccdf Org.ecurity.s 3.1.1 Cis Oracle Linux 7 Benchmark",
+      "benchmark_id": "xccdf_org.cisecurity.benchmarks_benchmark_3.1.1_CIS_Oracle_Linux_7_Benchmark",
+      "version": "3.1.1",
+      "scope": "G",
+      "policies": [
+        "xccdf_org.cisecurity.benchmarks_profile_Level_1_-_Server",
+        "xccdf_org.cisecurity.benchmarks_profile_Level_1_-_Workstation",
+        "xccdf_org.cisecurity.benchmarks_profile_Level_2_-_Server",
+        "xccdf_org.cisecurity.benchmarks_profile_Level_2_-_Workstation"
+      ],
+      "policy_count": 4
+    },
+    {
+      "os": "Xccdf Org.ecurity.s 3.1.2 Cis Centos Linux 7 Benchmark",
+      "benchmark_id": "xccdf_org.cisecurity.benchmarks_benchmark_3.1.2_CIS_CentOS_Linux_7_Benchmark",
+      "version": "3.1.2",
+      "scope": "G",
+      "policies": [
+        "xccdf_org.cisecurity.benchmarks_profile_Level_1_-_Server",
+        "xccdf_org.cisecurity.benchmarks_profile_Level_1_-_Workstation",
+        "xccdf_org.cisecurity.benchmarks_profile_Level_2_-_Server",
+        "xccdf_org.cisecurity.benchmarks_profile_Level_2_-_Workstation"
+      ],
+      "policy_count": 4
+    },
+    {
+      "os": "Xccdf Org.ecurity.s 3.2.0 Cis Microsoft Windows 7 Workstation Benchmark",
+      "benchmark_id": "xccdf_org.cisecurity.benchmarks_benchmark_3.2.0_CIS_Microsoft_Windows_7_Workstation_Benchmark",
+      "version": "3.2.0",
+      "scope": "G",
+      "policies": [
+        "xccdf_org.cisecurity.benchmarks_profile_BitLocker_BL_-_optional_add-on_for_when_BitLocker_is_deployed",
+        "xccdf_org.cisecurity.benchmarks_profile_Level_1_L1_-_CorporateEnterprise_Environment_general_use",
+        "xccdf_org.cisecurity.benchmarks_profile_Level_1_L1__BitLocker_BL",
+        "xccdf_org.cisecurity.benchmarks_profile_Level_1_L1__BitLocker_BL__Next_Generation_Windows_Security_NG",
+        "xccdf_org.cisecurity.benchmarks_profile_Level_1_L1__Next_Generation_Windows_Security_NG",
+        "xccdf_org.cisecurity.benchmarks_profile_Level_2_L2_-_High_SecuritySensitive_Data_Environment_limited_functionality",
+        "xccdf_org.cisecurity.benchmarks_profile_Level_2_L2__BitLocker_BL",
+        "xccdf_org.cisecurity.benchmarks_profile_Level_2_L2__BitLocker_BL__Next_Generation_Windows_Security_NG",
+        "xccdf_org.cisecurity.benchmarks_profile_Level_2_L2__Next_Generation_Windows_Security_NG",
+        "xccdf_org.cisecurity.benchmarks_profile_Next_Generation_Windows_Security_NG_-_optional_add-on_for_use_in_the_newest_hardware_and_configuration_environments"
+      ],
+      "policy_count": 10
+    },
+    {
+      "os": "Xccdf Org.ecurity.s 3.2.0 Cis Microsoft Windows Server 2008 Non-r2 Benchmark",
+      "benchmark_id": "xccdf_org.cisecurity.benchmarks_benchmark_3.2.0_CIS_Microsoft_Windows_Server_2008_non-R2_Benchmark",
+      "version": "3.2.0",
+      "scope": "G",
+      "policies": [
+        "xccdf_org.cisecurity.benchmarks_profile_Level_1_-_Domain_Controller",
+        "xccdf_org.cisecurity.benchmarks_profile_Level_1_-_Member_Server",
+        "xccdf_org.cisecurity.benchmarks_profile_Level_2_-_Domain_Controller",
+        "xccdf_org.cisecurity.benchmarks_profile_Level_2_-_Member_Server",
+        "xccdf_org.cisecurity.benchmarks_profile_Next_Generation_Windows_Security_-_Domain_Controller",
+        "xccdf_org.cisecurity.benchmarks_profile_Next_Generation_Windows_Security_-_Member_Server"
+      ],
+      "policy_count": 6
+    },
+    {
+      "os": "Xccdf Org.ecurity.s 3.2.1 Cis Suse Linux Enterprise 12 Benchmark",
+      "benchmark_id": "xccdf_org.cisecurity.benchmarks_benchmark_3.2.1_CIS_SUSE_Linux_Enterprise_12_Benchmark",
+      "version": "3.2.1",
+      "scope": "G",
+      "policies": [
+        "xccdf_org.cisecurity.benchmarks_profile_Level_1_-_Server",
+        "xccdf_org.cisecurity.benchmarks_profile_Level_1_-_Workstation",
+        "xccdf_org.cisecurity.benchmarks_profile_Level_2_-_Server",
+        "xccdf_org.cisecurity.benchmarks_profile_Level_2_-_Workstation"
+      ],
+      "policy_count": 4
+    },
+    {
+      "os": "Xccdf Org.ecurity.s 3.3.0 Cis Microsoft Windows Server 2008 R2 Benchmark",
+      "benchmark_id": "xccdf_org.cisecurity.benchmarks_benchmark_3.3.0_CIS_Microsoft_Windows_Server_2008_R2_Benchmark",
+      "version": "3.3.0",
+      "scope": "G",
+      "policies": [
+        "xccdf_org.cisecurity.benchmarks_profile_Level_1_-_Domain_Controller",
+        "xccdf_org.cisecurity.benchmarks_profile_Level_1_-_Member_Server",
+        "xccdf_org.cisecurity.benchmarks_profile_Level_2_-_Domain_Controller",
+        "xccdf_org.cisecurity.benchmarks_profile_Level_2_-_Member_Server"
+      ],
+      "policy_count": 4
+    },
+    {
+      "os": "Xccdf Org.ecurity.s 4.0.0 Cis Apple Macos 12.0 Monterey Benchmark",
+      "benchmark_id": "xccdf_org.cisecurity.benchmarks_benchmark_4.0.0_CIS_Apple_macOS_12.0_Monterey_Benchmark",
+      "version": "4.0.0",
+      "scope": "G",
+      "policies": [
+        "xccdf_org.cisecurity.benchmarks_profile_Level_1",
+        "xccdf_org.cisecurity.benchmarks_profile_Level_2"
+      ],
+      "policy_count": 2
+    },
+    {
+      "os": "Xccdf Org.ecurity.s 4.0.0 Cis Cisco Ios 12 Benchmark",
+      "benchmark_id": "xccdf_org.cisecurity.benchmarks_benchmark_4.0.0_CIS_Cisco_IOS_12_Benchmark",
+      "version": "4.0.0.0",
+      "scope": "G",
+      "policies": [
+        "xccdf_org.cisecurity.benchmarks_profile_Level_1",
+        "xccdf_org.cisecurity.benchmarks_profile_Level_2"
+      ],
+      "policy_count": 2
+    },
+    {
+      "os": "Xccdf Org.ecurity.s 4.0.0 Cis Microsoft Intune For Windows 10 Benchmark",
+      "benchmark_id": "xccdf_org.cisecurity.benchmarks_benchmark_4.0.0_CIS_Microsoft_Intune_for_Windows_10_Benchmark",
+      "version": "4.0.0",
+      "scope": "G",
+      "policies": [
+        "xccdf_org.cisecurity.benchmarks_profile_BitLocker_BL",
+        "xccdf_org.cisecurity.benchmarks_profile_Level_1_L1",
+        "xccdf_org.cisecurity.benchmarks_profile_Level_2_L2",
+        "xccdf_org.cisecurity.benchmarks_profile_Next_Generation_Windows_Security_NG"
+      ],
+      "policy_count": 4
+    },
+    {
+      "os": "Xccdf Org.ecurity.s 4.0.0 Cis Microsoft Windows 10 Enterprise Benchmark",
+      "benchmark_id": "xccdf_org.cisecurity.benchmarks_benchmark_4.0.0_CIS_Microsoft_Windows_10_Enterprise_Benchmark",
+      "version": "4.0.0",
+      "scope": "G",
+      "policies": [
+        "xccdf_org.cisecurity.benchmarks_profile_BitLocker_BL",
+        "xccdf_org.cisecurity.benchmarks_profile_Level_1_L1",
+        "xccdf_org.cisecurity.benchmarks_profile_Level_1_L1__BitLocker_BL",
+        "xccdf_org.cisecurity.benchmarks_profile_Level_1_L1__BitLocker_BL__Next_Generation_NG",
+        "xccdf_org.cisecurity.benchmarks_profile_Level_1_L1__Next_Generation_NG",
+        "xccdf_org.cisecurity.benchmarks_profile_Level_2_L2",
+        "xccdf_org.cisecurity.benchmarks_profile_Level_2_L2__BitLocker_BL",
+        "xccdf_org.cisecurity.benchmarks_profile_Level_2_L2__BitLocker_BL__Next_Generation_NG",
+        "xccdf_org.cisecurity.benchmarks_profile_Level_2_L2__Next_Generation_NG",
+        "xccdf_org.cisecurity.benchmarks_profile_Next_Generation_NG"
+      ],
+      "policy_count": 10
+    },
+    {
+      "os": "Xccdf Org.ecurity.s 4.0.0 Cis Microsoft Windows 10 Stand-alone Benchmark",
+      "benchmark_id": "xccdf_org.cisecurity.benchmarks_benchmark_4.0.0_CIS_Microsoft_Windows_10_Stand-alone_Benchmark",
+      "version": "4.0.0",
+      "scope": "G",
+      "policies": [
+        "xccdf_org.cisecurity.benchmarks_profile_BitLocker_BL",
+        "xccdf_org.cisecurity.benchmarks_profile_Level_1_L1",
+        "xccdf_org.cisecurity.benchmarks_profile_Level_1_L1__BitLocker_BL",
+        "xccdf_org.cisecurity.benchmarks_profile_Level_1_L1__BitLocker_BL__Next_Generation_NG",
+        "xccdf_org.cisecurity.benchmarks_profile_Level_1_L1__Next_Generation_NG",
+        "xccdf_org.cisecurity.benchmarks_profile_Level_2_L2",
+        "xccdf_org.cisecurity.benchmarks_profile_Level_2_L2__BitLocker_BL",
+        "xccdf_org.cisecurity.benchmarks_profile_Level_2_L2__BitLocker_BL__Next_Generation_NG",
+        "xccdf_org.cisecurity.benchmarks_profile_Level_2_L2__Next_Generation_NG",
+        "xccdf_org.cisecurity.benchmarks_profile_Next_Generation_NG"
+      ],
+      "policy_count": 10
+    },
+    {
+      "os": "Xccdf Org.ecurity.s 4.0.0 Cis Microsoft Windows 11 Enterprise Benchmark",
+      "benchmark_id": "xccdf_org.cisecurity.benchmarks_benchmark_4.0.0_CIS_Microsoft_Windows_11_Enterprise_Benchmark",
+      "version": "4.0.0",
+      "scope": "G",
+      "policies": [
+        "xccdf_org.cisecurity.benchmarks_profile_BitLocker_BL",
+        "xccdf_org.cisecurity.benchmarks_profile_Level_1_L1",
+        "xccdf_org.cisecurity.benchmarks_profile_Level_1_L1__BitLocker_BL",
+        "xccdf_org.cisecurity.benchmarks_profile_Level_2_L2",
+        "xccdf_org.cisecurity.benchmarks_profile_Level_2_L2__BitLocker_BL"
+      ],
+      "policy_count": 5
+    },
+    {
+      "os": "Xccdf Org.ecurity.s 4.0.0 Cis Microsoft Windows 11 Stand-alone Benchmark",
+      "benchmark_id": "xccdf_org.cisecurity.benchmarks_benchmark_4.0.0_CIS_Microsoft_Windows_11_Stand-alone_Benchmark",
+      "version": "4.0.0",
+      "scope": "G",
+      "policies": [
+        "xccdf_org.cisecurity.benchmarks_profile_BitLocker_BL",
+        "xccdf_org.cisecurity.benchmarks_profile_Level_1_L1",
+        "xccdf_org.cisecurity.benchmarks_profile_Level_1_L1__BitLocker_BL",
+        "xccdf_org.cisecurity.benchmarks_profile_Level_2_L2",
+        "xccdf_org.cisecurity.benchmarks_profile_Level_2_L2__BitLocker_BL"
+      ],
+      "policy_count": 5
+    },
+    {
+      "os": "Xccdf Org.ecurity.s 4.0.0 Cis Microsoft Windows Server 2016 Benchmark",
+      "benchmark_id": "xccdf_org.cisecurity.benchmarks_benchmark_4.0.0_CIS_Microsoft_Windows_Server_2016_Benchmark",
+      "version": "4.0.0",
+      "scope": "G",
+      "policies": [
+        "xccdf_org.cisecurity.benchmarks_profile_Level_1_-_Domain_Controller",
+        "xccdf_org.cisecurity.benchmarks_profile_Level_1_-_Member_Server",
+        "xccdf_org.cisecurity.benchmarks_profile_Level_2_-_Domain_Controller",
+        "xccdf_org.cisecurity.benchmarks_profile_Level_2_-_Member_Server",
+        "xccdf_org.cisecurity.benchmarks_profile_Next_Generation_Windows_Security_-_Domain_Controller",
+        "xccdf_org.cisecurity.benchmarks_profile_Next_Generation_Windows_Security_-_Member_Server"
+      ],
+      "policy_count": 6
+    },
+    {
+      "os": "Xccdf Org.ecurity.s 4.0.0 Cis Microsoft Windows Server 2016 Stig Benchmark",
+      "benchmark_id": "xccdf_org.cisecurity.benchmarks_benchmark_4.0.0_CIS_Microsoft_Windows_Server_2016_STIG_Benchmark",
+      "version": "4.0.0",
+      "scope": "G",
+      "policies": [
+        "xccdf_org.cisecurity.benchmarks_profile_DC_SEVERITY_CAT_I",
+        "xccdf_org.cisecurity.benchmarks_profile_DC_SEVERITY_CAT_II",
+        "xccdf_org.cisecurity.benchmarks_profile_DC_SEVERITY_CAT_III",
+        "xccdf_org.cisecurity.benchmarks_profile_MS_SEVERITY_CAT_I",
+        "xccdf_org.cisecurity.benchmarks_profile_MS_SEVERITY_CAT_II",
+        "xccdf_org.cisecurity.benchmarks_profile_MS_SEVERITY_CAT_III"
+      ],
+      "policy_count": 6
+    },
+    {
+      "os": "Xccdf Org.ecurity.s 4.0.0 Cis Microsoft Windows Server 2019 Benchmark",
+      "benchmark_id": "xccdf_org.cisecurity.benchmarks_benchmark_4.0.0_CIS_Microsoft_Windows_Server_2019_Benchmark",
+      "version": "4.0.0",
+      "scope": "G",
+      "policies": [
+        "xccdf_org.cisecurity.benchmarks_profile_Level_1_-_Domain_Controller",
+        "xccdf_org.cisecurity.benchmarks_profile_Level_1_-_Member_Server",
+        "xccdf_org.cisecurity.benchmarks_profile_Level_2_-_Domain_Controller",
+        "xccdf_org.cisecurity.benchmarks_profile_Level_2_-_Member_Server",
+        "xccdf_org.cisecurity.benchmarks_profile_Next_Generation_Windows_Security_-_Domain_Controller",
+        "xccdf_org.cisecurity.benchmarks_profile_Next_Generation_Windows_Security_-_Member_Server"
+      ],
+      "policy_count": 6
+    },
+    {
+      "os": "Xccdf Org.ecurity.s 4.0.0 Cis Microsoft Windows Server 2019 Stig Benchmark",
+      "benchmark_id": "xccdf_org.cisecurity.benchmarks_benchmark_4.0.0_CIS_Microsoft_Windows_Server_2019_STIG_Benchmark",
+      "version": "4.0.0",
+      "scope": "G",
+      "policies": [
+        "xccdf_org.cisecurity.benchmarks_profile_DC_SEVERITY_CAT_I",
+        "xccdf_org.cisecurity.benchmarks_profile_DC_SEVERITY_CAT_II",
+        "xccdf_org.cisecurity.benchmarks_profile_DC_SEVERITY_CAT_III",
+        "xccdf_org.cisecurity.benchmarks_profile_MS_SEVERITY_CAT_I",
+        "xccdf_org.cisecurity.benchmarks_profile_MS_SEVERITY_CAT_II",
+        "xccdf_org.cisecurity.benchmarks_profile_MS_SEVERITY_CAT_III"
+      ],
+      "policy_count": 6
+    },
+    {
+      "os": "Xccdf Org.ecurity.s 4.0.0 Cis Microsoft Windows Server 2022 Benchmark",
+      "benchmark_id": "xccdf_org.cisecurity.benchmarks_benchmark_4.0.0_CIS_Microsoft_Windows_Server_2022_Benchmark",
+      "version": "4.0.0",
+      "scope": "G",
+      "policies": [
+        "xccdf_org.cisecurity.benchmarks_profile_Level_1_-_Domain_Controller",
+        "xccdf_org.cisecurity.benchmarks_profile_Level_1_-_Member_Server",
+        "xccdf_org.cisecurity.benchmarks_profile_Level_2_-_Domain_Controller",
+        "xccdf_org.cisecurity.benchmarks_profile_Level_2_-_Member_Server",
+        "xccdf_org.cisecurity.benchmarks_profile_Next_Generation_Windows_Security_-_Domain_Controller",
+        "xccdf_org.cisecurity.benchmarks_profile_Next_Generation_Windows_Security_-_Member_Server"
+      ],
+      "policy_count": 6
+    },
+    {
+      "os": "Xccdf Org.ecurity.s 4.0.0 Cis Red Hat Enterprise Linux 7 Benchmark",
+      "benchmark_id": "xccdf_org.cisecurity.benchmarks_benchmark_4.0.0_CIS_Red_Hat_Enterprise_Linux_7_Benchmark",
+      "version": "4.0.0",
+      "scope": "G",
+      "policies": [
+        "xccdf_org.cisecurity.benchmarks_profile_Level_1_-_Server",
+        "xccdf_org.cisecurity.benchmarks_profile_Level_1_-_Workstation",
+        "xccdf_org.cisecurity.benchmarks_profile_Level_2_-_Server",
+        "xccdf_org.cisecurity.benchmarks_profile_Level_2_-_Workstation"
+      ],
+      "policy_count": 4
+    },
+    {
+      "os": "Xccdf Org.ecurity.s 4.0.0 Cis Red Hat Enterprise Linux 8 Benchmark",
+      "benchmark_id": "xccdf_org.cisecurity.benchmarks_benchmark_4.0.0_CIS_Red_Hat_Enterprise_Linux_8_Benchmark",
+      "version": "4.0.0",
+      "scope": "G",
+      "policies": [
+        "xccdf_org.cisecurity.benchmarks_profile_Level_1_-_Server",
+        "xccdf_org.cisecurity.benchmarks_profile_Level_1_-_Workstation",
+        "xccdf_org.cisecurity.benchmarks_profile_Level_2_-_Server",
+        "xccdf_org.cisecurity.benchmarks_profile_Level_2_-_Workstation"
+      ],
+      "policy_count": 4
+    },
+    {
+      "os": "Xccdf Org.ecurity.s 4.1.0 Cis Cisco Firewall Benchmark",
+      "benchmark_id": "xccdf_org.cisecurity.benchmarks_benchmark_4.1.0_CIS_Cisco_Firewall_Benchmark",
+      "version": "4.1.0",
+      "scope": "G",
+      "policies": [
+        "xccdf_org.cisecurity.benchmarks_profile_Level_1_-_Cisco_ASA_8.x",
+        "xccdf_org.cisecurity.benchmarks_profile_Level_1_-_Cisco_ASA_9.x"
+      ],
+      "policy_count": 2
+    },
+    {
+      "os": "Xccdf Org.ecurity.s 4.1.1 Cis Cisco Ios 15 Benchmark",
+      "benchmark_id": "xccdf_org.cisecurity.benchmarks_benchmark_4.1.1_CIS_Cisco_IOS_15_Benchmark",
+      "version": "4.1.1",
+      "scope": "G",
+      "policies": [
+        "xccdf_org.cisecurity.benchmarks_profile_Level_1",
+        "xccdf_org.cisecurity.benchmarks_profile_Level_2"
+      ],
+      "policy_count": 2
+    },
+    {
+      "os": "Xccdf Org.ecurity.s 5.2.0 Cis Oracle Solaris 10 Benchmark",
+      "benchmark_id": "xccdf_org.cisecurity.benchmarks_benchmark_5.2.0_CIS_Oracle_Solaris_10_Benchmark",
+      "version": "5.2.0",
+      "scope": "G",
+      "policies": [
+        "xccdf_org.cisecurity.benchmarks_profile_Level_1",
+        "xccdf_org.cisecurity.benchmarks_profile_Level_2"
+      ],
+      "policy_count": 2
+    }
+  ],
+  "total_policies": 183
+}

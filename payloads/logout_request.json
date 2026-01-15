@@ -1,0 +1,8 @@
+{
+    "description": "Logout request payload - XML format",
+    "xml_payload": "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<LogoutRequest sync-id=\"0\" session-id=\"SESSION_ID_PLACEHOLDER\"/>",
+    "parameters": {
+        "sync-id": "Synchronization ID (usually 0)",
+        "session-id": "Session ID to invalidate"
+    }
+}

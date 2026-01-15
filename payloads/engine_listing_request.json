@@ -1,0 +1,4 @@
+{
+    "description": "Engine listing request payload - XML format",
+    "xml_payload": "<EngineListingRequest session-id='SESSION_ID_PLACEHOLDER'></EngineListingRequest>"
+}

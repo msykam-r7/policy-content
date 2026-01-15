@@ -1,0 +1,66 @@
+{
+  "name": "CIS Apache Tomcat 9 Compliance Scan",
+  "version": 3,
+  "description": "Apache Tomcat 9 Policy Compliance Scan",
+  "auto_engine_selection_enabled": false,
+  "included_scan_targets": {
+    "addresses": ["cis-tomcat9-c.vuln.lax.rapid7.com"],
+    "asset_groups": []
+  },
+  "excluded_scan_targets": {
+    "addresses": [],
+    "asset_groups": []
+  },
+  "engine_id": 3,
+  "scan_template_id": "cis",
+  "risk_factor": 1.0,
+  "schedules": [],
+  "shared_credentials": [],
+  "site_credentials": [
+    {
+      "service": "ssh",
+      "user_name": "user",
+      "password": "notpassword",
+      "name": "SSH User with SUDOSU",
+      "enabled": true,
+      "scope": "S",
+      "description": "SSH credential with sudosu elevation to root",
+      "permission_elevation_password": "notpassword",
+      "permission_elevation_type": "SUDOSU",
+      "permission_elevation_user": "root",
+      "host_restriction": null,
+      "port_restriction": null
+    },
+    {
+      "service": "ssh",
+      "user_name": "root",
+      "password": "notpassword",
+      "name": "SSH Root with SUDO",
+      "enabled": true,
+      "scope": "S",
+      "description": "SSH credential for root with sudo elevation",
+      "permission_elevation_password": null,
+      "permission_elevation_type": "SUDO",
+      "permission_elevation_user": null,
+      "host_restriction": null,
+      "port_restriction": null
+    }
+  ],
+  "web_credentials": [],
+  "tags": [],
+  "alerts": [],
+  "users": [],
+  "organization": {
+    "name": null,
+    "state": null,
+    "address": null,
+    "country": null,
+    "city": null,
+    "url": null,
+    "job_title": null,
+    "zip": null,
+    "primary_contact": null,
+    "telephone": null,
+    "email": null
+  }
+}

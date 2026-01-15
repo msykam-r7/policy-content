@@ -1,0 +1,71 @@
+# Local Development Environment Configuration
+# This file contains environment-specific settings for local development
+
+environment:
+  name: local
+  description: Local development environment
+  debug_mode: true
+
+# Nexpose/Console Configuration
+nexpose:
+  host: 127.0.0.1
+  port: 3780
+  protocol: https
+  ssl_verify: false
+  timeout:
+    default: 30
+    login: 120
+    scan: 3600
+    network: 60
+
+# API Configuration
+api:
+  base_path: /api
+  version: "3"
+  retry:
+    max_attempts: 3
+    interval: 5
+    backoff_multiplier: 2
+
+# Logging Configuration
+logging:
+  level: DEBUG
+  console_level: INFO
+  file_level: DEBUG
+  format: "[%(asctime)s] [%(levelname)s] [%(name)s] %(message)s"
+  date_format: "%Y-%m-%d %H:%M:%S"
+  rotate_size_mb: 10
+  rotate_count: 5
+
+# Test Execution Configuration
+execution:
+  parallel_workers: 2
+  default_timeout: 30
+  include_tags:
+    - smoke
+    - regression
+  exclude_tags:
+    - manual
+    - slow
+    - performance
+
+# Results Configuration
+results:
+  base_dir: results/local
+  reports_dir: results/local/reports
+  logs_dir: results/local/logs
+  screenshots_dir: results/local/screenshots
+  artifacts_dir: results/local/artifacts
+
+# Cleanup Configuration
+cleanup:
+  skip_cleanup: true
+  auto_delete_resources: false
+  preserve_logs_on_failure: true
+
+# Feature Flags
+features:
+  dry_run: false
+  capture_screenshots: false
+  detailed_logging: true
+  performance_monitoring: false

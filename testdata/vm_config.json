@@ -1,0 +1,1481 @@
+{
+    "CIS": {
+        
+        "Amazon-Linux": {
+            "2": {
+                "compliance": {
+                    "server": {
+                        "ip": "10.4.17.76",
+                        "username": "root",
+                        "password": "notpassword",
+                        "permission_elevation_type": "NONE",
+                        "permission_elevation_user": "",
+                        "permission_elevation_password": ""
+                    }
+                },
+                "not-compliance": {
+                    "server": {
+                        "ip": "10.4.23.100",
+                        "username": "ec2-user",
+                        "password": "notpassword"
+                    }
+                }
+            }
+        },
+         "Macos": {
+            "12": {
+                "compliance": {
+                    "server": {
+                        "ip": "10.141.2.245",
+                        "username": "root",
+                        "password": "notpassword",
+                        "permission_elevation_type": "NONE",
+                        "permission_elevation_user": "",
+                        "permission_elevation_password": ""
+                    }
+                },
+                "not-compliance": {
+                    "server": {
+                        "ip": "10.4.23.100",
+                        "username": "ec2-user",
+                        "password": "notpassword"
+                    }
+                }
+            }
+        },
+        "Apache": {
+            "Tomcat": {
+                "6": {
+                    "compliance": {
+                        "server": {
+                            "ip": "10.4.23.201",
+                            "username": "root",
+                            "password": "notpassword"
+                        },
+                        "database": {
+                            "ip": "10.4.23.201",
+                            "username": "root",
+                            "password": "notpassword"
+                        }
+                    },
+                    "not-compliance": {
+                        "server": {
+                            "ip": "10.4.23.201",
+                            "username": "root",
+                            "password": "notpassword"
+                        },
+                        "database": {
+                            "ip": "10.4.23.201",
+                            "username": "root",
+                            "password": "notpassword"
+                        }
+                    }
+                },
+                "7": {
+                    "compliance": {
+                        "server": {
+                            "ip": "10.4.23.202",
+                            "username": "root",
+                            "password": "notpassword"
+                        },
+                        "database": {
+                            "ip": "10.4.23.202",
+                            "username": "root",
+                            "password": "notpassword"
+                        }
+                    },
+                    "not-compliance": {
+                        "server": {
+                            "ip": "10.4.23.202",
+                            "username": "root",
+                            "password": "notpassword"
+                        },
+                        "database": {
+                            "ip": "10.4.23.202",
+                            "username": "root",
+                            "password": "notpassword"
+                        }
+                    }
+                },
+                "8": {
+                    "compliance": {
+                        "server": {
+                            "ip": "10.4.23.203",
+                            "username": "root",
+                            "password": "notpassword"
+                        },
+                        "database": {
+                            "ip": "10.4.23.203",
+                            "username": "root",
+                            "password": "notpassword"
+                        }
+                    },
+                    "not-compliance": {
+                        "server": {
+                            "ip": "10.4.23.203",
+                            "username": "root",
+                            "password": "notpassword"
+                        },
+                        "database": {
+                            "ip": "10.4.23.203",
+                            "username": "root",
+                            "password": "notpassword"
+                        }
+                    }
+                },
+                "9": {
+                    "compliance": {
+                        "server": {
+                            "ip": "10.4.28.56",
+                            "username": "user",
+                            "password": "notpassword",
+                            "permission_elevation_type": "sudosu",
+                            "permission_elevation_user": "root",
+                            "permission_elevation_password": "notpassword"
+                        },
+                        "database": {
+                            "ip": "10.4.28.56",
+                            "username": "root",
+                            "password": "notpassword",
+                             "permission_elevation_type": "NONE"
+                        }
+                    },
+                    "not-compliance": {
+                        "server": {
+                            "ip": "10.4.28.56",
+                            "username": "root",
+                            "password": "notpassword"
+                        },
+                        "database": {
+                            "ip": "10.4.28.56",
+                            "username": "root",
+                            "password": "notpassword"
+                        }
+                    }
+                }
+            }
+        },
+        "CentOS": {
+            "4": {
+                "compliance": {
+                    "server": {
+                        "ip": "10.4.23.110",
+                        "username": "root",
+                        "password": "notpassword"
+                    }
+                },
+                "not-compliance": {
+                    "server": {
+                        "ip": "10.4.23.110",
+                        "username": "root",
+                        "password": "notpassword"
+                    }
+                }
+            },
+            "5": {
+                "compliance": {
+                    "server": {
+                        "ip": "10.4.23.111",
+                        "username": "root",
+                        "password": "notpassword"
+                    }
+                },
+                "not-compliance": {
+                    "server": {
+                        "ip": "10.4.23.111",
+                        "username": "root",
+                        "password": "notpassword"
+                    }
+                }
+            },
+            "6": {
+                "compliance": {
+                    "server": {
+                        "ip": "10.4.23.112",
+                        "username": "root",
+                        "password": "notpassword"
+                    }
+                },
+                "not-compliance": {
+                    "server": {
+                        "ip": "10.4.23.112",
+                        "username": "root",
+                        "password": "notpassword"
+                    }
+                }
+            },
+            "7": {
+                "compliance": {
+                    "server": {
+                        "ip": "10.4.23.113",
+                        "username": "root",
+                        "password": "notpassword"
+                    }
+                },
+                "not-compliance": {
+                    "server": {
+                        "ip": "10.4.23.113",
+                        "username": "root",
+                        "password": "notpassword"
+                    }
+                }
+            },
+            "8": {
+                "compliance": {
+                    "server": {
+                        "ip": "10.4.23.114",
+                        "username": "root",
+                        "password": "notpassword",
+                        "permission_elevation_type": "SUDO",
+                        "permission_elevation_user": "",
+                        "permission_elevation_password": ""
+                    }
+                },
+                "not-compliance": {
+                    "server": {
+                        "ip": "10.4.23.114",
+                        "username": "root",
+                        "password": "notpassword"
+                    }
+                }
+            }
+        },
+        "Check-Point": {
+            "compliance": {
+                "server": {
+                    "ip": "10.4.28.100",
+                    "username": "admin",
+                    "password": "notpassword"
+                }
+            },
+            "not-compliance": {
+                "server": {
+                    "ip": "10.4.28.100",
+                    "username": "admin",
+                    "password": "notpassword"
+                }
+            }
+        },
+        "Cisco": {
+            "Cisco-ASA": {
+                "compliance": {
+                    "server": {
+                        "ip": "10.4.26.100",
+                        "username": "admin",
+                        "password": "notpassword"
+                    }
+                },
+                "not-compliance": {
+                    "server": {
+                        "ip": "10.4.26.100",
+                        "username": "admin",
+                        "password": "notpassword"
+                    }
+                }
+            },
+            "Cisco-IOS": {
+                "compliance": {
+                    "server": {
+                        "ip": "10.4.26.101",
+                        "username": "admin",
+                        "password": "notpassword"
+                    }
+                },
+                "not-compliance": {
+                    "server": {
+                        "ip": "10.4.26.101",
+                        "username": "admin",
+                        "password": "notpassword"
+                    }
+                }
+            },
+            "Cisco-WLC": {
+                "compliance": {
+                    "server": {
+                        "ip": "10.4.26.102",
+                        "username": "admin",
+                        "password": "notpassword"
+                    }
+                },
+                "not-compliance": {
+                    "server": {
+                        "ip": "10.4.26.102",
+                        "username": "admin",
+                        "password": "notpassword"
+                    }
+                }
+            }
+        },
+        "DB2": {
+            "v10": {
+                "compliance": {
+                    "server": {
+                        "ip": "10.4.27.100",
+                        "username": "root",
+                        "password": "notpassword"
+                    },
+                    "database": {
+                        "ip": "10.4.27.100",
+                        "username": "db2inst1",
+                        "password": "notpassword"
+                    }
+                },
+                "not-compliance": {
+                    "server": {
+                        "ip": "10.4.27.100",
+                        "username": "root",
+                        "password": "notpassword"
+                    },
+                    "database": {
+                        "ip": "10.4.27.100",
+                        "username": "db2inst1",
+                        "password": "notpassword"
+                    }
+                }
+            },
+            "v9.7": {
+                "compliance": {
+                    "server": {
+                        "ip": "10.4.27.101",
+                        "username": "root",
+                        "password": "notpassword"
+                    },
+                    "database": {
+                        "ip": "10.4.27.101",
+                        "username": "db2inst1",
+                        "password": "notpassword"
+                    }
+                },
+                "not-compliance": {
+                    "server": {
+                        "ip": "10.4.27.101",
+                        "username": "root",
+                        "password": "notpassword"
+                    },
+                    "database": {
+                        "ip": "10.4.27.101",
+                        "username": "db2inst1",
+                        "password": "notpassword"
+                    }
+                }
+            }
+        },
+        "Debian": {
+            "7": {
+                "compliance": {
+                    "server": {
+                        "ip": "10.4.23.120",
+                        "username": "root",
+                        "password": "notpassword"
+                    }
+                },
+                "not-compliance": {
+                    "server": {
+                        "ip": "10.4.23.120",
+                        "username": "root",
+                        "password": "notpassword"
+                    }
+                }
+            },
+            "8": {
+                "compliance": {
+                    "server": {
+                        "ip": "10.4.23.121",
+                        "username": "root",
+                        "password": "notpassword"
+                    }
+                },
+                "not-compliance": {
+                    "server": {
+                        "ip": "10.4.23.121",
+                        "username": "root",
+                        "password": "notpassword"
+                    }
+                }
+            },
+            "9": {
+                "compliance": {
+                    "server": {
+                        "ip": "10.4.23.122",
+                        "username": "root",
+                        "password": "notpassword"
+                    }
+                },
+                "not-compliance": {
+                    "server": {
+                        "ip": "10.4.23.122",
+                        "username": "root",
+                        "password": "notpassword"
+                    }
+                }
+            },
+            "10": {
+                "compliance": {
+                    "server": {
+                        "ip": "10.4.23.123",
+                        "username": "root",
+                        "password": "notpassword"
+                    }
+                },
+                "not-compliance": {
+                    "server": {
+                        "ip": "10.4.23.123",
+                        "username": "root",
+                        "password": "notpassword"
+                    }
+                }
+            },
+            "11": {
+                "compliance": {
+                    "server": {
+                        "ip": "10.4.23.124",
+                        "username": "root",
+                        "password": "notpassword"
+                    }
+                },
+                "not-compliance": {
+                    "server": {
+                        "ip": "10.4.23.124",
+                        "username": "root",
+                        "password": "notpassword"
+                    }
+                }
+            },
+            "12": {
+                "compliance": {
+                    "server": {
+                        "ip": "10.4.23.125",
+                        "username": "root",
+                        "password": "notpassword",
+                        "permission_elevation_type": "SUDO",
+                        "permission_elevation_user": "",
+                        "permission_elevation_password": ""
+                    }
+                },
+                "not-compliance": {
+                    "server": {
+                        "ip": "10.4.23.125",
+                        "username": "root",
+                        "password": "notpassword"
+                    }
+                }
+            }
+        },
+        "Docker": {
+            "compliance": {
+                "server": {
+                    "ip": "10.4.24.100",
+                    "username": "root",
+                    "password": "notpassword"
+                }
+            },
+            "not-compliance": {
+                "server": {
+                    "ip": "10.4.24.100",
+                    "username": "root",
+                    "password": "notpassword"
+                }
+            }
+        },
+        "ESX": {
+            "compliance": {
+                "server": {
+                    "ip": "10.4.24.101",
+                    "username": "root",
+                    "password": "notpassword"
+                }
+            },
+            "not-compliance": {
+                "server": {
+                    "ip": "10.4.24.101",
+                    "username": "root",
+                    "password": "notpassword"
+                }
+            }
+        },
+        "Fedora": {
+            "compliance": {
+                "server": {
+                    "ip": "10.4.23.103",
+                    "username": "root",
+                    "password": "notpassword"
+                }
+            },
+            "not-compliance": {
+                "server": {
+                    "ip": "10.4.23.103",
+                    "username": "root",
+                    "password": "notpassword"
+                }
+            }
+        },
+        "Google": {
+            "compliance": {
+                "server": {
+                    "ip": "10.4.29.100",
+                    "username": "root",
+                    "password": "notpassword"
+                }
+            },
+            "not-compliance": {
+                "server": {
+                    "ip": "10.4.29.100",
+                    "username": "root",
+                    "password": "notpassword"
+                }
+            }
+        },
+        "ISCBind": {
+            "compliance": {
+                "server": {
+                    "ip": "10.4.29.101",
+                    "username": "named",
+                    "password": "notpassword"
+                }
+            },
+            "not-compliance": {
+                "server": {
+                    "ip": "10.4.29.101",
+                    "username": "named",
+                    "password": "notpassword"
+                }
+            }
+        },
+        "JuniperOS": {
+            "compliance": {
+                "server": {
+                    "ip": "10.4.26.101",
+                    "username": "root",
+                    "password": "notpassword"
+                }
+            },
+            "not-compliance": {
+                "server": {
+                    "ip": "10.4.26.101",
+                    "username": "root",
+                    "password": "notpassword"
+                }
+            }
+        },
+        "Kuber-Kuber": {
+            "compliance": {
+                "server": {
+                    "ip": "10.4.29.103",
+                    "username": "root",
+                    "password": "notpassword"
+                }
+            },
+            "not-compliance": {
+                "server": {
+                    "ip": "10.4.29.103",
+                    "username": "root",
+                    "password": "notpassword"
+                }
+            }
+        },
+        "Microsoft": {
+            "Exchange-Server": {
+                "compliance": {
+                    "server": {
+                        "ip": "10.4.25.110",
+                        "username": "Administrator",
+                        "password": "AdminPass123"
+                    }
+                },
+                "not-compliance": {
+                    "server": {
+                        "ip": "10.4.25.110",
+                        "username": "Administrator",
+                        "password": "AdminPass123"
+                    }
+                }
+            },
+            "IIS": {
+                "compliance": {
+                    "server": {
+                        "ip": "10.4.25.111",
+                        "username": "Administrator",
+                        "password": "AdminPass123"
+                    }
+                },
+                "not-compliance": {
+                    "server": {
+                        "ip": "10.4.25.111",
+                        "username": "Administrator",
+                        "password": "AdminPass123"
+                    }
+                }
+            },
+            "Internet-Explorer": {
+                "compliance": {
+                    "server": {
+                        "ip": "10.4.25.112",
+                        "username": "Administrator",
+                        "password": "AdminPass123"
+                    }
+                },
+                "not-compliance": {
+                    "server": {
+                        "ip": "10.4.25.112",
+                        "username": "Administrator",
+                        "password": "AdminPass123"
+                    }
+                }
+            },
+            "MS-Intune": {
+                "compliance": {
+                    "server": {
+                        "ip": "10.4.25.113",
+                        "username": "Administrator",
+                        "password": "AdminPass123"
+                    }
+                },
+                "not-compliance": {
+                    "server": {
+                        "ip": "10.4.25.113",
+                        "username": "Administrator",
+                        "password": "AdminPass123"
+                    }
+                }
+            },
+            "Office-20": {
+                "compliance": {
+                    "server": {
+                        "ip": "10.4.25.114",
+                        "username": "Administrator",
+                        "password": "AdminPass123"
+                    }
+                },
+                "not-compliance": {
+                    "server": {
+                        "ip": "10.4.25.114",
+                        "username": "Administrator",
+                        "password": "AdminPass123"
+                    }
+                }
+            },
+            "SQL": {
+                "compliance": {
+                    "server": {
+                        "ip": "10.4.25.115",
+                        "username": "Administrator",
+                        "password": "AdminPass123"
+                    },
+                    "database": {
+                        "ip": "10.4.25.115",
+                        "username": "sa",
+                        "password": "SQLAdminPass123"
+                    }
+                },
+                "not-compliance": {
+                    "server": {
+                        "ip": "10.4.25.115",
+                        "username": "Administrator",
+                        "password": "AdminPass123"
+                    },
+                    "database": {
+                        "ip": "10.4.25.115",
+                        "username": "sa",
+                        "password": "SQLAdminPass123"
+                    }
+                }
+            },
+            "Windows-10": {
+                "compliance": {
+                    "server": {
+                        "ip": "10.4.23.218",
+                        "username": "Administrator",
+                        "password": "N0tpassword!"
+                    }
+                },
+                "not-compliance": {
+                    "server": {
+                        "ip": "10.4.25.100",
+                        "username": "Administrator",
+                        "password": "AdminPass123"
+                    }
+                }
+            },
+            "Windows-11": {
+                "compliance": {
+                    "server": {
+                        "ip": "10.4.25.101",
+                        "username": "Administrator",
+                        "password": "AdminPass123"
+                    }
+                },
+                "not-compliance": {
+                    "server": {
+                        "ip": "10.4.25.101",
+                        "username": "Administrator",
+                        "password": "AdminPass123"
+                    }
+                }
+            },
+            "Windows-2008": {
+                "compliance": {
+                    "server": {
+                        "ip": "10.4.25.102",
+                        "username": "Administrator",
+                        "password": "AdminPass123"
+                    }
+                },
+                "not-compliance": {
+                    "server": {
+                        "ip": "10.4.25.102",
+                        "username": "Administrator",
+                        "password": "AdminPass123"
+                    }
+                }
+            },
+            "Windows-2012-R2": {
+                "compliance": {
+                    "server": {
+                        "ip": "10.4.25.103",
+                        "username": "Administrator",
+                        "password": "AdminPass123"
+                    }
+                },
+                "not-compliance": {
+                    "server": {
+                        "ip": "10.4.25.103",
+                        "username": "Administrator",
+                        "password": "AdminPass123"
+                    }
+                }
+            },
+            "Windows-7": {
+                "compliance": {
+                    "server": {
+                        "ip": "10.4.25.104",
+                        "username": "Administrator",
+                        "password": "AdminPass123"
+                    }
+                },
+                "not-compliance": {
+                    "server": {
+                        "ip": "10.4.25.104",
+                        "username": "Administrator",
+                        "password": "AdminPass123"
+                    }
+                }
+            },
+            "Windows-8": {
+                "compliance": {
+                    "server": {
+                        "ip": "10.4.25.105",
+                        "username": "Administrator",
+                        "password": "AdminPass123"
+                    }
+                },
+                "not-compliance": {
+                    "server": {
+                        "ip": "10.4.25.105",
+                        "username": "Administrator",
+                        "password": "AdminPass123"
+                    }
+                }
+            },
+            "Windows-8.1": {
+                "compliance": {
+                    "server": {
+                        "ip": "10.4.25.106",
+                        "username": "Administrator",
+                        "password": "AdminPass123"
+                    }
+                },
+                "not-compliance": {
+                    "server": {
+                        "ip": "10.4.25.106",
+                        "username": "Administrator",
+                        "password": "AdminPass123"
+                    }
+                }
+            },
+            "Windows-Server-2016": {
+                "compliance": {
+                    "server": {
+                        "ip": "10.4.25.107",
+                        "username": "Administrator",
+                        "password": "AdminPass123"
+                    }
+                },
+                "not-compliance": {
+                    "server": {
+                        "ip": "10.4.25.107",
+                        "username": "Administrator",
+                        "password": "AdminPass123"
+                    }
+                }
+            },
+            "Windows-Server-2019": {
+                "compliance": {
+                    "server": {
+                        "ip": "10.4.31.42",
+                        "username": "Administrator",
+                        "password": "N0tpassword!",
+                        "permission_elevation_type": "NONE",
+                        "permission_elevation_user": "",
+                        "permission_elevation_password": ""
+                    }
+                },
+                "not-compliance": {
+                    "server": {
+                        "ip": "10.4.25.108",
+                        "username": "Administrator",
+                        "password": "AdminPass123"
+                    }
+                }
+            },
+            "Windows-Server-2022": {
+                "compliance": {
+                    "server": {
+                        "ip": "10.4.22.231",
+                        "username": "Administrator",
+                        "password": "N0tpassword!"
+                    }
+                },
+                "not-compliance": {
+                    "server": {
+                        "ip": "10.4.25.109",
+                        "username": "Administrator",
+                        "password": "AdminPass123"
+                    }
+                }
+            },
+            "Windows-Server-2025": {
+                "compliance": {
+                    "server": {
+                        "ip": "10.4.25.116",
+                        "username": "Administrator",
+                        "password": "AdminPass123"
+                    }
+                },
+                "not-compliance": {
+                    "server": {
+                        "ip": "10.4.25.116",
+                        "username": "Administrator",
+                        "password": "AdminPass123"
+                    }
+                }
+            },
+            "XP": {
+                "compliance": {
+                    "server": {
+                        "ip": "10.4.25.117",
+                        "username": "Administrator",
+                        "password": "AdminPass123"
+                    }
+                },
+                "not-compliance": {
+                    "server": {
+                        "ip": "10.4.25.117",
+                        "username": "Administrator",
+                        "password": "AdminPass123"
+                    }
+                }
+            }
+        },
+        "MIT-Kerberos": {
+            "compliance": {
+                "server": {
+                    "ip": "10.4.29.102",
+                    "username": "root",
+                    "password": "notpassword"
+                }
+            },
+            "not-compliance": {
+                "server": {
+                    "ip": "10.4.29.102",
+                    "username": "root",
+                    "password": "notpassword"
+                }
+            }
+        },
+        "MongoDB": {
+            "compliance": {
+                "server": {
+                    "ip": "10.4.27.101",
+                    "username": "root",
+                    "password": "notpassword"
+                },
+                "database": {
+                    "ip": "10.4.27.101",
+                    "username": "mongodb",
+                    "password": "notpassword"
+                }
+            },
+            "not-compliance": {
+                "server": {
+                    "ip": "10.4.27.101",
+                    "username": "root",
+                    "password": "notpassword"
+                },
+                "database": {
+                    "ip": "10.4.27.101",
+                    "username": "mongodb",
+                    "password": "notpassword"
+                }
+            }
+        },
+        "Mozilla": {
+            "compliance": {
+                "server": {
+                    "ip": "10.4.29.104",
+                    "username": "root",
+                    "password": "notpassword"
+                }
+            },
+            "not-compliance": {
+                "server": {
+                    "ip": "10.4.29.104",
+                    "username": "root",
+                    "password": "notpassword"
+                }
+            }
+        },
+        "NGINX": {
+            "NGINX": {
+                "compliance": {
+                    "server": {
+                        "ip": "10.4.30.156",
+                        "username": "root",
+                        "password": "notpassword"
+                    }
+                },
+                "not-compliance": {
+                    "server": {
+                        "ip": "10.4.27.102",
+                        "username": "nginx",
+                        "password": "notpassword"
+                    }
+                }
+            }
+        },
+        "Opera": {
+            "compliance": {
+                "server": {
+                    "ip": "10.4.29.105",
+                    "username": "root",
+                    "password": "notpassword"
+                }
+            },
+            "not-compliance": {
+                "server": {
+                    "ip": "10.4.29.105",
+                    "username": "root",
+                    "password": "notpassword"
+                }
+            }
+        },
+        "Oracle": {
+            "19c": {
+                "compliance": {
+                    "server": {
+                        "ip": "10.4.19.83",
+                        "username": "administrator",
+                        "password": "notpassword",
+                        "permission_elevation_type": "NONE",
+                        "permission_elevation_user": "",
+                        "permission_elevation_password": ""
+                    },
+                    "database": {
+                        "ip": "10.4.19.83",
+                        "username": "sys as sysdba",
+                        "password": "notpassword",
+                        "domain" : "orcl"
+                    }
+                },
+                "not-compliance": {
+                    "server": {
+                        "ip": "10.4.19.83",
+                        "username": "administrator",
+                        "password": "notpassword"
+                    },
+                    "database": {
+                        "ip": "10.4.19.83",
+                        "username": "sys as sysdba",
+                        "password": "notpassword"
+                    }
+                }
+            },
+            "Linux": {
+                "compliance": {
+                    "server": {
+                        "ip": "10.4.27.111",
+                        "username": "oracle",
+                        "password": "notpassword"
+                    }
+                },
+                "not-compliance": {
+                    "server": {
+                        "ip": "10.4.27.111",
+                        "username": "oracle",
+                        "password": "notpassword"
+                    }
+                }
+            },
+            "MySQL": {
+                "compliance": {
+                    "server": {
+                        "ip": "10.4.27.112",
+                        "username": "root",
+                        "password": "notpassword"
+                    },
+                    "database": {
+                        "ip": "10.4.27.112",
+                        "username": "oracle",
+                        "password": "notpassword"
+                    }
+                },
+                "not-compliance": {
+                    "server": {
+                        "ip": "10.4.27.112",
+                        "username": "root",
+                        "password": "notpassword"
+                    },
+                    "database": {
+                        "ip": "10.4.27.112",
+                        "username": "oracle",
+                        "password": "notpassword"
+                    }
+                }
+            },
+            "Solaris": {
+                "10": {
+                    "compliance": {
+                        "server": {
+                            "ip": "10.4.27.113",
+                            "username": "root",
+                            "password": "notpassword"
+                        }
+                    },
+                    "not-compliance": {
+                        "server": {
+                            "ip": "10.4.27.113",
+                            "username": "root",
+                            "password": "notpassword"
+                        }
+                    }
+                },
+                "11": {
+                    "compliance": {
+                        "server": {
+                            "ip": "10.4.27.114",
+                            "username": "root",
+                            "password": "notpassword"
+                        }
+                    },
+                    "not-compliance": {
+                        "server": {
+                            "ip": "10.4.27.114",
+                            "username": "root",
+                            "password": "notpassword"
+                        }
+                    }
+                }
+            }
+        },
+        "Palo-Alto": {
+            "compliance": {
+                "server": {
+                    "ip": "10.4.26.102",
+                    "username": "admin",
+                    "password": "notpassword"
+                }
+            },
+            "not-compliance": {
+                "server": {
+                    "ip": "10.4.26.102",
+                    "username": "admin",
+                    "password": "notpassword"
+                }
+            }
+        },
+        "Postgres": {
+            "compliance": {
+                "server": {
+                    "ip": "10.4.27.104",
+                    "username": "root",
+                    "password": "notpassword"
+                },
+                "database": {
+                    "ip": "10.4.27.104",
+                    "username": "postgres",
+                    "password": "notpassword"
+                }
+            },
+            "not-compliance": {
+                "server": {
+                    "ip": "10.4.27.104",
+                    "username": "root",
+                    "password": "notpassword"
+                },
+                "database": {
+                    "ip": "10.4.27.104",
+                    "username": "postgres",
+                    "password": "notpassword"
+                }
+            }
+        },
+        "RHEL": {
+            "4": {
+                "compliance": {
+                    "server": {
+                        "ip": "10.4.31.10",
+                        "username": "user",
+                        "password": "notpassword"
+                    }
+                },
+                "not-compliance": {
+                    "server": {
+                        "ip": "10.4.31.10",
+                        "username": "user",
+                        "password": "notpassword"
+                    }
+                }
+            },
+            "5": {
+                "compliance": {
+                    "server": {
+                        "ip": "10.4.31.11",
+                        "username": "user",
+                        "password": "notpassword"
+                    }
+                },
+                "not-compliance": {
+                    "server": {
+                        "ip": "10.4.31.11",
+                        "username": "user",
+                        "password": "notpassword"
+                    }
+                }
+            },
+            "6": {
+                "compliance": {
+                    "server": {
+                        "ip": "10.4.31.12",
+                        "username": "user",
+                        "password": "notpassword"
+                    }
+                },
+                "not-compliance": {
+                    "server": {
+                        "ip": "10.4.31.12",
+                        "username": "user",
+                        "password": "notpassword"
+                    }
+                }
+            },
+            "7": {
+                "compliance": {
+                    "server": {
+                        "ip": "10.4.31.13",
+                        "username": "user",
+                        "password": "notpassword"
+                    }
+                },
+                "not-compliance": {
+                    "server": {
+                        "ip": "10.4.31.13",
+                        "username": "user",
+                        "password": "notpassword"
+                    }
+                }
+            },
+            "8": {
+                "compliance": {
+                    "server": {
+                        "ip": "10.4.20.235",
+                        "username": "root",
+                        "password": "notpassword",
+                        "permission_elevation_type": "NONE",
+                        "permission_elevation_user": "",
+                        "permission_elevation_password": ""
+                    }
+                },
+                "not-compliance": {
+                    "server": {
+                        "ip": "10.4.23.200",
+                        "username": "root",
+                        "password": "notpassword"
+                    }
+                }
+            },
+            "9": {
+                "compliance": {
+                    "server": {
+                        "ip": "10.4.22.212",
+                        "username": "root",
+                        "password": "notpassword"
+                    }
+                },
+                "not-compliance": {
+                    "server": {
+                        "ip": "10.4.31.83",
+                        "username": "root",
+                        "password": "notpassword"
+                    }
+                }
+            },
+            "rocky-linux-8-c": {
+                "compliance": {
+                    "server": {
+                        "ip": "10.4.32.5",
+                        "username": "root",
+                        "password": "notpassword"
+                    }
+                },
+                "not-compliance": {
+                    "server": {
+                        "ip": "10.4.32.5",
+                        "username": "root",
+                        "password": "notpassword"
+                    }
+                }
+            }
+        },
+        "SUSE": {
+            "SUSE-15": {
+                "compliance": {
+                    "server": {
+                        "ip": "10.4.23.140",
+                        "username": "root",
+                        "password": "notpassword"
+                    }
+                },
+                "not-compliance": {
+                    "server": {
+                        "ip": "10.4.23.140",
+                        "username": "root",
+                        "password": "notpassword"
+                    }
+                }
+            }
+        },
+        "Ubuntu": {
+            "Ubuntu-12": {
+                "compliance": {
+                    "server": {
+                        "ip": "10.4.23.130",
+                        "username": "ubuntu",
+                        "password": "notpassword"
+                    }
+                },
+                "not-compliance": {
+                    "server": {
+                        "ip": "10.4.23.130",
+                        "username": "ubuntu",
+                        "password": "notpassword"
+                    }
+                }
+            },
+            "Ubuntu-14": {
+                "compliance": {
+                    "server": {
+                        "ip": "10.4.23.131",
+                        "username": "ubuntu",
+                        "password": "notpassword"
+                    }
+                },
+                "not-compliance": {
+                    "server": {
+                        "ip": "10.4.23.131",
+                        "username": "ubuntu",
+                        "password": "notpassword"
+                    }
+                }
+            },
+            "Ubuntu-16": {
+                "compliance": {
+                    "server": {
+                        "ip": "10.4.23.132",
+                        "username": "ubuntu",
+                        "password": "notpassword"
+                    }
+                },
+                "not-compliance": {
+                    "server": {
+                        "ip": "10.4.23.132",
+                        "username": "ubuntu",
+                        "password": "notpassword"
+                    }
+                }
+            },
+            "Ubuntu-18": {
+                "compliance": {
+                    "server": {
+                        "ip": "10.4.23.133",
+                        "username": "ubuntu",
+                        "password": "notpassword"
+                    }
+                },
+                "not-compliance": {
+                    "server": {
+                        "ip": "10.4.23.133",
+                        "username": "ubuntu",
+                        "password": "notpassword"
+                    }
+                }
+            },
+            "Ubuntu-22-04": {
+                "compliance": {
+                    "server": {
+                        "ip": "10.4.30.59",
+                        "username": "root",
+                        "password": "notpassword"
+                    }
+                },
+                "not-compliance": {
+                    "server": {
+                        "ip": "10.4.23.134",
+                        "username": "ubuntu",
+                        "password": "notpassword"
+                    }
+                }
+            },
+            "ubuntu-24-04": {
+                "compliance": {
+                    "server": {
+                        "ip": "10.4.86.25",
+                        "username": "root",
+                        "password": "notpassword",
+                        "permission_elevation_type": "NONE",
+                        "permission_elevation_user": "",
+                        "permission_elevation_password": ""
+                    }
+                },
+                "not-compliance": {
+                    "server": {
+                        "ip": "10.4.23.135",
+                        "username": "ubuntu",
+                        "password": "notpassword"
+                    }
+                }
+            },
+            "Ubuntu-20-04": {
+                "compliance": {
+                    "server": {
+                        "ip": "10.4.84.140",
+                        "username": "root",
+                        "password": "notpassword",
+                        "permission_elevation_type": "NONE",
+                        "permission_elevation_user": "",
+                        "permission_elevation_password": ""
+                    }
+                },
+                "not-compliance": {
+                    "server": {
+                        "ip": "10.4.30.245",
+                        "username": "root",
+                        "password": "notpassword"
+                    }
+                }
+            }
+        },
+        "vsphere": {
+            "compliance": {
+                "server": {
+                    "ip": "10.4.24.102",
+                    "username": "administrator@vsphere.local",
+                    "password": "AdminPass123"
+                }
+            },
+            "not-compliance": {
+                "server": {
+                    "ip": "10.4.24.102",
+                    "username": "administrator@vsphere.local",
+                    "password": "AdminPass123"
+                }
+            }
+        }
+    },
+    "DISA": {
+        "Windows-Server-2019": {
+            "compliance": {
+                "server": {
+                    "ip": "10.5.25.100",
+                    "username": "Administrator",
+                    "password": "AdminPass123"
+                }
+            },
+            "not-compliance": {
+                "server": {
+                    "ip": "10.5.25.100",
+                    "username": "Administrator",
+                    "password": "AdminPass123"
+                }
+            }
+        },
+        "RHEL-8": {
+            "compliance": {
+                "server": {
+                    "ip": "10.5.31.2",
+                    "username": "user",
+                    "password": "notpassword"
+                }
+            },
+            "not-compliance": {
+                "server": {
+                    "ip": "10.5.31.2",
+                    "username": "user",
+                    "password": "notpassword"
+                }
+            }
+        }
+    },
+    "FDCC": {
+        "Windows-10": {
+            "compliance": {
+                "server": {
+                    "ip": "10.6.25.100",
+                    "username": "Administrator",
+                    "password": "AdminPass123"
+                }
+            },
+            "not-compliance": {
+                "server": {
+                    "ip": "10.6.25.100",
+                    "username": "Administrator",
+                    "password": "AdminPass123"
+                }
+            }
+        }
+    },
+    "SCAP": {
+        "Ubuntu-20.04": {
+            "compliance": {
+                "server": {
+                    "ip": "10.7.23.105",
+                    "username": "ubuntu",
+                    "password": "notpassword"
+                }
+            },
+            "not-compliance": {
+                "server": {
+                    "ip": "10.7.23.105",
+                    "username": "ubuntu",
+                    "password": "notpassword"
+                }
+            }
+        }
+    },
+    "USGCB": {
+        "Windows-7": {
+            "compliance": {
+                "server": {
+                    "ip": "10.8.25.100",
+                    "username": "Administrator",
+                    "password": "AdminPass123"
+                }
+            },
+            "not-compliance": {
+                "server": {
+                    "ip": "10.8.25.100",
+                    "username": "Administrator",
+                    "password": "AdminPass123"
+                }
+            }
+        }
+    }
+}
