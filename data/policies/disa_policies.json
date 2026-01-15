@@ -1,0 +1,1113 @@
+{
+  "template_id": "disa",
+  "policy_benchmarks": [
+    {
+      "os": "Windows Vista V6r44 Stig",
+      "benchmark_id": "Windows_Vista_V6R44_STIG",
+      "version": "6",
+      "scope": "G",
+      "policies": [
+        "CAT_I_Only",
+        "Disable_Slow_Rules",
+        "MAC-1_Classified",
+        "MAC-1_Public",
+        "MAC-1_Sensitive",
+        "MAC-2_Classified",
+        "MAC-2_Public",
+        "MAC-2_Sensitive",
+        "MAC-3_Classified",
+        "MAC-3_Public",
+        "MAC-3_Sensitive"
+      ],
+      "policy_count": 11
+    },
+    {
+      "os": "Xccdf Mil.disa.stig Aix 6.1 V1r14 Stig",
+      "benchmark_id": "xccdf_mil.disa.stig_benchmark_AIX_6.1_V1R14_STIG",
+      "version": "1",
+      "scope": "G",
+      "policies": [
+        "xccdf_mil.disa.stig.aix61_profile_MAC-1_Classified",
+        "xccdf_mil.disa.stig.aix61_profile_MAC-1_Public",
+        "xccdf_mil.disa.stig.aix61_profile_MAC-1_Sensitive",
+        "xccdf_mil.disa.stig.aix61_profile_MAC-2_Classified",
+        "xccdf_mil.disa.stig.aix61_profile_MAC-2_Public",
+        "xccdf_mil.disa.stig.aix61_profile_MAC-2_Sensitive",
+        "xccdf_mil.disa.stig.aix61_profile_MAC-3_Classified",
+        "xccdf_mil.disa.stig.aix61_profile_MAC-3_Public",
+        "xccdf_mil.disa.stig.aix61_profile_MAC-3_Sensitive"
+      ],
+      "policy_count": 9
+    },
+    {
+      "os": "Xccdf Mil.disa.stig Adobe Acrobat Reader Dc Classic Track V2r1 Stig",
+      "benchmark_id": "xccdf_mil.disa.stig_benchmark_Adobe_Acrobat_Reader_DC_Classic_Track_V2R1_STIG",
+      "version": "2",
+      "scope": "G",
+      "policies": [
+        "xccdf_mil.disa.stig_profile_CAT_I_Only",
+        "xccdf_mil.disa.stig_profile_MAC-1_Classified",
+        "xccdf_mil.disa.stig_profile_MAC-1_Public",
+        "xccdf_mil.disa.stig_profile_MAC-1_Sensitive",
+        "xccdf_mil.disa.stig_profile_MAC-2_Classified",
+        "xccdf_mil.disa.stig_profile_MAC-2_Public",
+        "xccdf_mil.disa.stig_profile_MAC-2_Sensitive",
+        "xccdf_mil.disa.stig_profile_MAC-3_Classified",
+        "xccdf_mil.disa.stig_profile_MAC-3_Public",
+        "xccdf_mil.disa.stig_profile_MAC-3_Sensitive"
+      ],
+      "policy_count": 10
+    },
+    {
+      "os": "Xccdf Mil.disa.stig Adobe Acrobat Reader Dc Continuous Track V1r5 Stig",
+      "benchmark_id": "xccdf_mil.disa.stig_benchmark_Adobe_Acrobat_Reader_DC_Continuous_Track_V1R5_STIG",
+      "version": "1",
+      "scope": "G",
+      "policies": [
+        "xccdf_mil.disa.stig_profile_CAT_I_Only",
+        "xccdf_mil.disa.stig_profile_MAC-1_Classified",
+        "xccdf_mil.disa.stig_profile_MAC-1_Public",
+        "xccdf_mil.disa.stig_profile_MAC-1_Sensitive",
+        "xccdf_mil.disa.stig_profile_MAC-2_Classified",
+        "xccdf_mil.disa.stig_profile_MAC-2_Public",
+        "xccdf_mil.disa.stig_profile_MAC-2_Sensitive",
+        "xccdf_mil.disa.stig_profile_MAC-3_Classified",
+        "xccdf_mil.disa.stig_profile_MAC-3_Public",
+        "xccdf_mil.disa.stig_profile_MAC-3_Sensitive"
+      ],
+      "policy_count": 10
+    },
+    {
+      "os": "Xccdf Mil.disa.stig Apache Server 2-4 Unix Server Stig V2r3",
+      "benchmark_id": "xccdf_mil.disa.stig_benchmark_Apache_Server_2-4_UNIX_Server_STIG_V2R3",
+      "version": "2",
+      "scope": "G",
+      "policies": [
+        "xccdf_mil.disa.stig_profile_MAC-1_Classified",
+        "xccdf_mil.disa.stig_profile_MAC-1_Public",
+        "xccdf_mil.disa.stig_profile_MAC-1_Sensitive",
+        "xccdf_mil.disa.stig_profile_MAC-2_Classified",
+        "xccdf_mil.disa.stig_profile_MAC-2_Public",
+        "xccdf_mil.disa.stig_profile_MAC-2_Sensitive",
+        "xccdf_mil.disa.stig_profile_MAC-3_Classified",
+        "xccdf_mil.disa.stig_profile_MAC-3_Public",
+        "xccdf_mil.disa.stig_profile_MAC-3_Sensitive"
+      ],
+      "policy_count": 9
+    },
+    {
+      "os": "Xccdf Mil.disa.stig Apache Server 2-4 Unix Site Stig V2r2",
+      "benchmark_id": "xccdf_mil.disa.stig_benchmark_Apache_Server_2-4_UNIX_Site_STIG_V2R2",
+      "version": "2",
+      "scope": "G",
+      "policies": [
+        "xccdf_mil.disa.stig_profile_MAC-1_Classified",
+        "xccdf_mil.disa.stig_profile_MAC-1_Public",
+        "xccdf_mil.disa.stig_profile_MAC-1_Sensitive",
+        "xccdf_mil.disa.stig_profile_MAC-2_Classified",
+        "xccdf_mil.disa.stig_profile_MAC-2_Public",
+        "xccdf_mil.disa.stig_profile_MAC-2_Sensitive",
+        "xccdf_mil.disa.stig_profile_MAC-3_Classified",
+        "xccdf_mil.disa.stig_profile_MAC-3_Public",
+        "xccdf_mil.disa.stig_profile_MAC-3_Sensitive"
+      ],
+      "policy_count": 9
+    },
+    {
+      "os": "Xccdf Mil.disa.stig Can Ubuntu 16-04 Lts V2r3 Stig",
+      "benchmark_id": "xccdf_mil.disa.stig_benchmark_CAN_Ubuntu_16-04_LTS_V2R3_STIG",
+      "version": "2",
+      "scope": "G",
+      "policies": [
+        "xccdf_mil.disa.stig_profile_CAT_I_Only",
+        "xccdf_mil.disa.stig_profile_MAC-1_Classified",
+        "xccdf_mil.disa.stig_profile_MAC-1_Public",
+        "xccdf_mil.disa.stig_profile_MAC-1_Sensitive",
+        "xccdf_mil.disa.stig_profile_MAC-2_Classified",
+        "xccdf_mil.disa.stig_profile_MAC-2_Public",
+        "xccdf_mil.disa.stig_profile_MAC-2_Sensitive",
+        "xccdf_mil.disa.stig_profile_MAC-3_Classified",
+        "xccdf_mil.disa.stig_profile_MAC-3_Public",
+        "xccdf_mil.disa.stig_profile_MAC-3_Sensitive"
+      ],
+      "policy_count": 10
+    },
+    {
+      "os": "Xccdf Mil.disa.stig Can Ubuntu 18-04 V2r7 Stig",
+      "benchmark_id": "xccdf_mil.disa.stig_benchmark_CAN_Ubuntu_18-04_V2R7_STIG",
+      "version": "2",
+      "scope": "G",
+      "policies": [
+        "xccdf_mil.disa.stig_profile_CAT_I_Only",
+        "xccdf_mil.disa.stig_profile_MAC-1_Classified",
+        "xccdf_mil.disa.stig_profile_MAC-1_Public",
+        "xccdf_mil.disa.stig_profile_MAC-1_Sensitive",
+        "xccdf_mil.disa.stig_profile_MAC-2_Classified",
+        "xccdf_mil.disa.stig_profile_MAC-2_Public",
+        "xccdf_mil.disa.stig_profile_MAC-2_Sensitive",
+        "xccdf_mil.disa.stig_profile_MAC-3_Classified",
+        "xccdf_mil.disa.stig_profile_MAC-3_Public",
+        "xccdf_mil.disa.stig_profile_MAC-3_Sensitive"
+      ],
+      "policy_count": 10
+    },
+    {
+      "os": "Xccdf Mil.disa.stig Canonical Ubuntu 20-04 Lts V1r3 Stig",
+      "benchmark_id": "xccdf_mil.disa.stig_benchmark_Canonical_Ubuntu_20-04_LTS_V1R3_STIG",
+      "version": "1",
+      "scope": "G",
+      "policies": [
+        "xccdf_mil.disa.stig_profile_CAT_I_Only",
+        "xccdf_mil.disa.stig_profile_MAC-1_Classified",
+        "xccdf_mil.disa.stig_profile_MAC-1_Public",
+        "xccdf_mil.disa.stig_profile_MAC-1_Sensitive",
+        "xccdf_mil.disa.stig_profile_MAC-2_Classified",
+        "xccdf_mil.disa.stig_profile_MAC-2_Public",
+        "xccdf_mil.disa.stig_profile_MAC-2_Sensitive",
+        "xccdf_mil.disa.stig_profile_MAC-3_Classified",
+        "xccdf_mil.disa.stig_profile_MAC-3_Public",
+        "xccdf_mil.disa.stig_profile_MAC-3_Sensitive"
+      ],
+      "policy_count": 10
+    },
+    {
+      "os": "Xccdf Mil.disa.stig Cisco Nx-os Switch L2s Stig V1r1",
+      "benchmark_id": "xccdf_mil.disa.stig_benchmark_Cisco_NX-OS_Switch_L2S_STIG_V1R1",
+      "version": "1",
+      "scope": "G",
+      "policies": [
+        "xccdf_mil.disa.stig_profile_MAC-1_Classified",
+        "xccdf_mil.disa.stig_profile_MAC-1_Public",
+        "xccdf_mil.disa.stig_profile_MAC-1_Sensitive",
+        "xccdf_mil.disa.stig_profile_MAC-2_Classified",
+        "xccdf_mil.disa.stig_profile_MAC-2_Public",
+        "xccdf_mil.disa.stig_profile_MAC-2_Sensitive",
+        "xccdf_mil.disa.stig_profile_MAC-3_Classified",
+        "xccdf_mil.disa.stig_profile_MAC-3_Public",
+        "xccdf_mil.disa.stig_profile_MAC-3_Sensitive"
+      ],
+      "policy_count": 9
+    },
+    {
+      "os": "Xccdf Mil.disa.stig Cisco Nx-os Switch Ndm V2r1 Stig",
+      "benchmark_id": "xccdf_mil.disa.stig_benchmark_Cisco_NX-OS_Switch_NDM_V2R1_STIG",
+      "version": "2",
+      "scope": "G",
+      "policies": [
+        "xccdf_mil.disa.stig_profile_MAC-1_Classified",
+        "xccdf_mil.disa.stig_profile_MAC-1_Public",
+        "xccdf_mil.disa.stig_profile_MAC-1_Sensitive",
+        "xccdf_mil.disa.stig_profile_MAC-2_Classified",
+        "xccdf_mil.disa.stig_profile_MAC-2_Public",
+        "xccdf_mil.disa.stig_profile_MAC-2_Sensitive",
+        "xccdf_mil.disa.stig_profile_MAC-3_Classified",
+        "xccdf_mil.disa.stig_profile_MAC-3_Public",
+        "xccdf_mil.disa.stig_profile_MAC-3_Sensitive"
+      ],
+      "policy_count": 9
+    },
+    {
+      "os": "Xccdf Mil.disa.stig Google Chrome Windows V2r3 Stig",
+      "benchmark_id": "xccdf_mil.disa.stig_benchmark_Google_Chrome_Windows_V2R3_STIG",
+      "version": "2",
+      "scope": "G",
+      "policies": [
+        "xccdf_mil.disa.stig_profile_CAT_I_Only",
+        "xccdf_mil.disa.stig_profile_MAC-1_Classified",
+        "xccdf_mil.disa.stig_profile_MAC-1_Public",
+        "xccdf_mil.disa.stig_profile_MAC-1_Sensitive",
+        "xccdf_mil.disa.stig_profile_MAC-2_Classified",
+        "xccdf_mil.disa.stig_profile_MAC-2_Public",
+        "xccdf_mil.disa.stig_profile_MAC-2_Sensitive",
+        "xccdf_mil.disa.stig_profile_MAC-3_Classified",
+        "xccdf_mil.disa.stig_profile_MAC-3_Public",
+        "xccdf_mil.disa.stig_profile_MAC-3_Sensitive"
+      ],
+      "policy_count": 10
+    },
+    {
+      "os": "Xccdf Mil.disa.stig Ie10 V1r10 Stig",
+      "benchmark_id": "xccdf_mil.disa.stig_benchmark_IE10_V1R10_STIG",
+      "version": "1",
+      "scope": "G",
+      "policies": [
+        "xccdf_mil.disa.stig_profile_CAT_I_Only",
+        "xccdf_mil.disa.stig_profile_MAC-1_Classified",
+        "xccdf_mil.disa.stig_profile_MAC-1_Public",
+        "xccdf_mil.disa.stig_profile_MAC-1_Sensitive",
+        "xccdf_mil.disa.stig_profile_MAC-2_Classified",
+        "xccdf_mil.disa.stig_profile_MAC-2_Public",
+        "xccdf_mil.disa.stig_profile_MAC-2_Sensitive",
+        "xccdf_mil.disa.stig_profile_MAC-3_Classified",
+        "xccdf_mil.disa.stig_profile_MAC-3_Public",
+        "xccdf_mil.disa.stig_profile_MAC-3_Sensitive"
+      ],
+      "policy_count": 10
+    },
+    {
+      "os": "Xccdf Mil.disa.stig Ie 11 V2r2 Stig",
+      "benchmark_id": "xccdf_mil.disa.stig_benchmark_IE_11_V2R2_STIG",
+      "version": "2",
+      "scope": "G",
+      "policies": [
+        "xccdf_mil.disa.stig_profile_CAT_I_Only",
+        "xccdf_mil.disa.stig_profile_MAC-1_Classified",
+        "xccdf_mil.disa.stig_profile_MAC-1_Public",
+        "xccdf_mil.disa.stig_profile_MAC-1_Sensitive",
+        "xccdf_mil.disa.stig_profile_MAC-2_Classified",
+        "xccdf_mil.disa.stig_profile_MAC-2_Public",
+        "xccdf_mil.disa.stig_profile_MAC-2_Sensitive",
+        "xccdf_mil.disa.stig_profile_MAC-3_Classified",
+        "xccdf_mil.disa.stig_profile_MAC-3_Public",
+        "xccdf_mil.disa.stig_profile_MAC-3_Sensitive"
+      ],
+      "policy_count": 10
+    },
+    {
+      "os": "Xccdf Mil.disa.stig Moz Firefox Linux V6r2 Stig",
+      "benchmark_id": "xccdf_mil.disa.stig_benchmark_MOZ_Firefox_Linux_V6R2_STIG",
+      "version": "6",
+      "scope": "G",
+      "policies": [
+        "xccdf_mil.disa.stig_profile_CAT_I_Only",
+        "xccdf_mil.disa.stig_profile_MAC-1_Classified",
+        "xccdf_mil.disa.stig_profile_MAC-1_Public",
+        "xccdf_mil.disa.stig_profile_MAC-1_Sensitive",
+        "xccdf_mil.disa.stig_profile_MAC-2_Classified",
+        "xccdf_mil.disa.stig_profile_MAC-2_Public",
+        "xccdf_mil.disa.stig_profile_MAC-2_Sensitive",
+        "xccdf_mil.disa.stig_profile_MAC-3_Classified",
+        "xccdf_mil.disa.stig_profile_MAC-3_Public",
+        "xccdf_mil.disa.stig_profile_MAC-3_Sensitive"
+      ],
+      "policy_count": 10
+    },
+    {
+      "os": "Xccdf Mil.disa.stig Moz Firefox Rhel V5r2 Stig",
+      "benchmark_id": "xccdf_mil.disa.stig_benchmark_MOZ_Firefox_RHEL_V5R2_STIG",
+      "version": "5",
+      "scope": "G",
+      "policies": [
+        "xccdf_mil.disa.stig_profile_CAT_I_Only",
+        "xccdf_mil.disa.stig_profile_MAC-1_Classified",
+        "xccdf_mil.disa.stig_profile_MAC-1_Public",
+        "xccdf_mil.disa.stig_profile_MAC-1_Sensitive",
+        "xccdf_mil.disa.stig_profile_MAC-2_Classified",
+        "xccdf_mil.disa.stig_profile_MAC-2_Public",
+        "xccdf_mil.disa.stig_profile_MAC-2_Sensitive",
+        "xccdf_mil.disa.stig_profile_MAC-3_Classified",
+        "xccdf_mil.disa.stig_profile_MAC-3_Public",
+        "xccdf_mil.disa.stig_profile_MAC-3_Sensitive"
+      ],
+      "policy_count": 10
+    },
+    {
+      "os": "Xccdf Mil.disa.stig Moz Firefox Windows V6r2 Stig",
+      "benchmark_id": "xccdf_mil.disa.stig_benchmark_MOZ_Firefox_Windows_V6R2_STIG",
+      "version": "6",
+      "scope": "G",
+      "policies": [
+        "xccdf_mil.disa.stig_profile_CAT_I_Only",
+        "xccdf_mil.disa.stig_profile_MAC-1_Classified",
+        "xccdf_mil.disa.stig_profile_MAC-1_Public",
+        "xccdf_mil.disa.stig_profile_MAC-1_Sensitive",
+        "xccdf_mil.disa.stig_profile_MAC-2_Classified",
+        "xccdf_mil.disa.stig_profile_MAC-2_Public",
+        "xccdf_mil.disa.stig_profile_MAC-2_Sensitive",
+        "xccdf_mil.disa.stig_profile_MAC-3_Classified",
+        "xccdf_mil.disa.stig_profile_MAC-3_Public",
+        "xccdf_mil.disa.stig_profile_MAC-3_Sensitive"
+      ],
+      "policy_count": 10
+    },
+    {
+      "os": "Xccdf Mil.disa.stig Ms Dotnet Framework 4-0 V2r1 Stig",
+      "benchmark_id": "xccdf_mil.disa.stig_benchmark_MS_DotNet_Framework_4-0_V2R1_STIG",
+      "version": "2",
+      "scope": "G",
+      "policies": [
+        "xccdf_mil.disa.stig_profile_CAT_I_Only",
+        "xccdf_mil.disa.stig_profile_MAC-1_Classified",
+        "xccdf_mil.disa.stig_profile_MAC-1_Public",
+        "xccdf_mil.disa.stig_profile_MAC-1_Sensitive",
+        "xccdf_mil.disa.stig_profile_MAC-2_Classified",
+        "xccdf_mil.disa.stig_profile_MAC-2_Public",
+        "xccdf_mil.disa.stig_profile_MAC-2_Sensitive",
+        "xccdf_mil.disa.stig_profile_MAC-3_Classified",
+        "xccdf_mil.disa.stig_profile_MAC-3_Public",
+        "xccdf_mil.disa.stig_profile_MAC-3_Sensitive"
+      ],
+      "policy_count": 10
+    },
+    {
+      "os": "Xccdf Mil.disa.stig Ms Dotnet Framework 4 V1r8 Stig",
+      "benchmark_id": "xccdf_mil.disa.stig_benchmark_MS_DotNet_Framework_4_V1R8_STIG",
+      "version": "1",
+      "scope": "G",
+      "policies": [
+        "xccdf_mil.disa.stig_profile_CAT_I_Only",
+        "xccdf_mil.disa.stig_profile_MAC-1_Classified",
+        "xccdf_mil.disa.stig_profile_MAC-1_Public",
+        "xccdf_mil.disa.stig_profile_MAC-1_Sensitive",
+        "xccdf_mil.disa.stig_profile_MAC-2_Classified",
+        "xccdf_mil.disa.stig_profile_MAC-2_Public",
+        "xccdf_mil.disa.stig_profile_MAC-2_Sensitive",
+        "xccdf_mil.disa.stig_profile_MAC-3_Classified",
+        "xccdf_mil.disa.stig_profile_MAC-3_Public",
+        "xccdf_mil.disa.stig_profile_MAC-3_Sensitive"
+      ],
+      "policy_count": 10
+    },
+    {
+      "os": "Xccdf Mil.disa.stig Ms Edge V1r1 Stig",
+      "benchmark_id": "xccdf_mil.disa.stig_benchmark_MS_Edge_V1R1_STIG",
+      "version": "1",
+      "scope": "G",
+      "policies": [
+        "xccdf_mil.disa.stig_profile_CAT_I_Only",
+        "xccdf_mil.disa.stig_profile_MAC-1_Classified",
+        "xccdf_mil.disa.stig_profile_MAC-1_Public",
+        "xccdf_mil.disa.stig_profile_MAC-1_Sensitive",
+        "xccdf_mil.disa.stig_profile_MAC-2_Classified",
+        "xccdf_mil.disa.stig_profile_MAC-2_Public",
+        "xccdf_mil.disa.stig_profile_MAC-2_Sensitive",
+        "xccdf_mil.disa.stig_profile_MAC-3_Classified",
+        "xccdf_mil.disa.stig_profile_MAC-3_Public",
+        "xccdf_mil.disa.stig_profile_MAC-3_Sensitive"
+      ],
+      "policy_count": 10
+    },
+    {
+      "os": "Xccdf Mil.disa.stig Ms Excel 2010 Stig V1r11",
+      "benchmark_id": "xccdf_mil.disa.stig_benchmark_MS_Excel_2010_STIG_V1R11",
+      "version": "1",
+      "scope": "G",
+      "policies": [
+        "xccdf_mil.disa.stig_profile_MAC-1_Classified",
+        "xccdf_mil.disa.stig_profile_MAC-1_Public",
+        "xccdf_mil.disa.stig_profile_MAC-1_Sensitive",
+        "xccdf_mil.disa.stig_profile_MAC-2_Classified",
+        "xccdf_mil.disa.stig_profile_MAC-2_Public",
+        "xccdf_mil.disa.stig_profile_MAC-2_Sensitive",
+        "xccdf_mil.disa.stig_profile_MAC-3_Classified",
+        "xccdf_mil.disa.stig_profile_MAC-3_Public",
+        "xccdf_mil.disa.stig_profile_MAC-3_Sensitive"
+      ],
+      "policy_count": 9
+    },
+    {
+      "os": "Xccdf Mil.disa.stig Ms Iis 8-5 Site Stig V2r4",
+      "benchmark_id": "xccdf_mil.disa.stig_benchmark_MS_IIS_8-5_Site_STIG_V2R4",
+      "version": "2",
+      "scope": "G",
+      "policies": [
+        "xccdf_mil.disa.stig_profile_MAC-1_Classified",
+        "xccdf_mil.disa.stig_profile_MAC-1_Public",
+        "xccdf_mil.disa.stig_profile_MAC-1_Sensitive",
+        "xccdf_mil.disa.stig_profile_MAC-2_Classified",
+        "xccdf_mil.disa.stig_profile_MAC-2_Public",
+        "xccdf_mil.disa.stig_profile_MAC-2_Sensitive",
+        "xccdf_mil.disa.stig_profile_MAC-3_Classified",
+        "xccdf_mil.disa.stig_profile_MAC-3_Public",
+        "xccdf_mil.disa.stig_profile_MAC-3_Sensitive"
+      ],
+      "policy_count": 9
+    },
+    {
+      "os": "Xccdf Mil.disa.stig Ms Iis 85 Server V1r5 Stig",
+      "benchmark_id": "xccdf_mil.disa.stig_benchmark_MS_IIS_85_Server_V1R5_STIG",
+      "version": "1",
+      "scope": "G",
+      "policies": [
+        "xccdf_mil.disa.stig_profile_MAC-1_Classified",
+        "xccdf_mil.disa.stig_profile_MAC-1_Public",
+        "xccdf_mil.disa.stig_profile_MAC-1_Sensitive",
+        "xccdf_mil.disa.stig_profile_MAC-2_Classified",
+        "xccdf_mil.disa.stig_profile_MAC-2_Public",
+        "xccdf_mil.disa.stig_profile_MAC-2_Sensitive",
+        "xccdf_mil.disa.stig_profile_MAC-3_Classified",
+        "xccdf_mil.disa.stig_profile_MAC-3_Public",
+        "xccdf_mil.disa.stig_profile_MAC-3_Sensitive"
+      ],
+      "policy_count": 9
+    },
+    {
+      "os": "Xccdf Mil.disa.stig Ms Windows 10 Stig",
+      "benchmark_id": "xccdf_mil.disa.stig_benchmark_MS_Windows_10_STIG",
+      "version": "3",
+      "scope": "G",
+      "policies": [
+        "xccdf_mil.disa.stig_profile_CAT_I_Only",
+        "xccdf_mil.disa.stig_profile_Disable_Slow_Rules",
+        "xccdf_mil.disa.stig_profile_MAC-1_Classified",
+        "xccdf_mil.disa.stig_profile_MAC-1_Public",
+        "xccdf_mil.disa.stig_profile_MAC-1_Sensitive",
+        "xccdf_mil.disa.stig_profile_MAC-2_Classified",
+        "xccdf_mil.disa.stig_profile_MAC-2_Public",
+        "xccdf_mil.disa.stig_profile_MAC-2_Sensitive",
+        "xccdf_mil.disa.stig_profile_MAC-3_Classified",
+        "xccdf_mil.disa.stig_profile_MAC-3_Public",
+        "xccdf_mil.disa.stig_profile_MAC-3_Sensitive"
+      ],
+      "policy_count": 11
+    },
+    {
+      "os": "Xccdf Mil.disa.stig Ms Windows 11 V1r6 Stig",
+      "benchmark_id": "xccdf_mil.disa.stig_benchmark_MS_Windows_11_V1R6_STIG",
+      "version": "1",
+      "scope": "G",
+      "policies": [
+        "xccdf_mil.disa.stig_profile_MAC-1_Classified",
+        "xccdf_mil.disa.stig_profile_MAC-1_Public",
+        "xccdf_mil.disa.stig_profile_MAC-1_Sensitive",
+        "xccdf_mil.disa.stig_profile_MAC-2_Classified",
+        "xccdf_mil.disa.stig_profile_MAC-2_Public",
+        "xccdf_mil.disa.stig_profile_MAC-2_Sensitive",
+        "xccdf_mil.disa.stig_profile_MAC-3_Classified",
+        "xccdf_mil.disa.stig_profile_MAC-3_Public",
+        "xccdf_mil.disa.stig_profile_MAC-3_Sensitive"
+      ],
+      "policy_count": 9
+    },
+    {
+      "os": "Xccdf Mil.disa.stig Ms Windows 2008 R2 Dc V1r33 Stig",
+      "benchmark_id": "xccdf_mil.disa.stig_benchmark_MS_Windows_2008_R2_DC_V1R33_STIG",
+      "version": "1",
+      "scope": "G",
+      "policies": [
+        "xccdf_mil.disa.stig_profile_CAT_I_Only",
+        "xccdf_mil.disa.stig_profile_Disable_Slow_Rules",
+        "xccdf_mil.disa.stig_profile_MAC-1_Classified",
+        "xccdf_mil.disa.stig_profile_MAC-1_Public",
+        "xccdf_mil.disa.stig_profile_MAC-1_Sensitive",
+        "xccdf_mil.disa.stig_profile_MAC-2_Classified",
+        "xccdf_mil.disa.stig_profile_MAC-2_Public",
+        "xccdf_mil.disa.stig_profile_MAC-2_Sensitive",
+        "xccdf_mil.disa.stig_profile_MAC-3_Classified",
+        "xccdf_mil.disa.stig_profile_MAC-3_Public",
+        "xccdf_mil.disa.stig_profile_MAC-3_Sensitive"
+      ],
+      "policy_count": 11
+    },
+    {
+      "os": "Xccdf Mil.disa.stig Ms Windows 2012 And 2012 R2 Ms V3r7 Stig Scap 1-2",
+      "benchmark_id": "xccdf_mil.disa.stig_benchmark_MS_Windows_2012_and_2012_R2_MS_V3R7_STIG_SCAP_1-2",
+      "version": "3",
+      "scope": "G",
+      "policies": [
+        "xccdf_mil.disa.stig_profile_MAC-1_Classified",
+        "xccdf_mil.disa.stig_profile_MAC-1_Public",
+        "xccdf_mil.disa.stig_profile_MAC-1_Sensitive",
+        "xccdf_mil.disa.stig_profile_MAC-2_Classified",
+        "xccdf_mil.disa.stig_profile_MAC-2_Public",
+        "xccdf_mil.disa.stig_profile_MAC-2_Sensitive",
+        "xccdf_mil.disa.stig_profile_MAC-3_Classified",
+        "xccdf_mil.disa.stig_profile_MAC-3_Public",
+        "xccdf_mil.disa.stig_profile_MAC-3_Sensitive"
+      ],
+      "policy_count": 9
+    },
+    {
+      "os": "Xccdf Mil.disa.stig Ms Windows Defender Av V2r1 Stig",
+      "benchmark_id": "xccdf_mil.disa.stig_benchmark_MS_Windows_Defender_AV_V2R1_STIG",
+      "version": "2",
+      "scope": "G",
+      "policies": [
+        "xccdf_mil.disa.stig_profile_CAT_I_Only",
+        "xccdf_mil.disa.stig_profile_MAC-1_Classified",
+        "xccdf_mil.disa.stig_profile_MAC-1_Public",
+        "xccdf_mil.disa.stig_profile_MAC-1_Sensitive",
+        "xccdf_mil.disa.stig_profile_MAC-2_Classified",
+        "xccdf_mil.disa.stig_profile_MAC-2_Public",
+        "xccdf_mil.disa.stig_profile_MAC-2_Sensitive",
+        "xccdf_mil.disa.stig_profile_MAC-3_Classified",
+        "xccdf_mil.disa.stig_profile_MAC-3_Public",
+        "xccdf_mil.disa.stig_profile_MAC-3_Sensitive"
+      ],
+      "policy_count": 10
+    },
+    {
+      "os": "Xccdf Mil.disa.stig Ms Windows Server 2016 V2r8 Stig Scap 1-2",
+      "benchmark_id": "xccdf_mil.disa.stig_benchmark_MS_Windows_Server_2016_V2R8_STIG_SCAP_1-2",
+      "version": "2",
+      "scope": "G",
+      "policies": [
+        "xccdf_mil.disa.stig_profile_MAC-1_Classified",
+        "xccdf_mil.disa.stig_profile_MAC-1_Public",
+        "xccdf_mil.disa.stig_profile_MAC-1_Sensitive",
+        "xccdf_mil.disa.stig_profile_MAC-2_Classified",
+        "xccdf_mil.disa.stig_profile_MAC-2_Public",
+        "xccdf_mil.disa.stig_profile_MAC-2_Sensitive",
+        "xccdf_mil.disa.stig_profile_MAC-3_Classified",
+        "xccdf_mil.disa.stig_profile_MAC-3_Public",
+        "xccdf_mil.disa.stig_profile_MAC-3_Sensitive"
+      ],
+      "policy_count": 9
+    },
+    {
+      "os": "Xccdf Mil.disa.stig Ms Windows Server 2019 V2r9 Stig Scap 1-2",
+      "benchmark_id": "xccdf_mil.disa.stig_benchmark_MS_Windows_Server_2019_V2R9_STIG_SCAP_1-2",
+      "version": "2",
+      "scope": "G",
+      "policies": [
+        "xccdf_mil.disa.stig_profile_MAC-1_Classified",
+        "xccdf_mil.disa.stig_profile_MAC-1_Public",
+        "xccdf_mil.disa.stig_profile_MAC-1_Sensitive",
+        "xccdf_mil.disa.stig_profile_MAC-2_Classified",
+        "xccdf_mil.disa.stig_profile_MAC-2_Public",
+        "xccdf_mil.disa.stig_profile_MAC-2_Sensitive",
+        "xccdf_mil.disa.stig_profile_MAC-3_Classified",
+        "xccdf_mil.disa.stig_profile_MAC-3_Public",
+        "xccdf_mil.disa.stig_profile_MAC-3_Sensitive"
+      ],
+      "policy_count": 9
+    },
+    {
+      "os": "Xccdf Mil.disa.stig Ms Windows Server 2022 Stig",
+      "benchmark_id": "xccdf_mil.disa.stig_benchmark_MS_Windows_Server_2022_STIG",
+      "version": "2",
+      "scope": "G",
+      "policies": [
+        "xccdf_mil.disa.stig_profile_CAT_I_Only",
+        "xccdf_mil.disa.stig_profile_Disable_Slow_Rules",
+        "xccdf_mil.disa.stig_profile_MAC-1_Classified",
+        "xccdf_mil.disa.stig_profile_MAC-1_Public",
+        "xccdf_mil.disa.stig_profile_MAC-1_Sensitive",
+        "xccdf_mil.disa.stig_profile_MAC-2_Classified",
+        "xccdf_mil.disa.stig_profile_MAC-2_Public",
+        "xccdf_mil.disa.stig_profile_MAC-2_Sensitive",
+        "xccdf_mil.disa.stig_profile_MAC-3_Classified",
+        "xccdf_mil.disa.stig_profile_MAC-3_Public",
+        "xccdf_mil.disa.stig_profile_MAC-3_Sensitive"
+      ],
+      "policy_count": 11
+    },
+    {
+      "os": "Xccdf Mil.disa.stig Mcafee Virusscan88 Local Client V1r4 Stig",
+      "benchmark_id": "xccdf_mil.disa.stig_benchmark_McAfee_VirusScan88_Local_Client_V1R4_STIG",
+      "version": "1",
+      "scope": "G",
+      "policies": [
+        "xccdf_mil.disa.stig_profile_CAT_I_Only",
+        "xccdf_mil.disa.stig_profile_MAC-1_Classified",
+        "xccdf_mil.disa.stig_profile_MAC-1_Public",
+        "xccdf_mil.disa.stig_profile_MAC-1_Sensitive",
+        "xccdf_mil.disa.stig_profile_MAC-2_Classified",
+        "xccdf_mil.disa.stig_profile_MAC-2_Public",
+        "xccdf_mil.disa.stig_profile_MAC-2_Sensitive",
+        "xccdf_mil.disa.stig_profile_MAC-3_Classified",
+        "xccdf_mil.disa.stig_profile_MAC-3_Public",
+        "xccdf_mil.disa.stig_profile_MAC-3_Sensitive"
+      ],
+      "policy_count": 10
+    },
+    {
+      "os": "Xccdf Mil.disa.stig Mcafee Virusscan88 Managed Client",
+      "benchmark_id": "xccdf_mil.disa.stig_benchmark_McAfee_VirusScan88_Managed_Client",
+      "version": "1",
+      "scope": "G",
+      "policies": [
+        "xccdf_mil.disa.stig_profile_CAT_I_Only",
+        "xccdf_mil.disa.stig_profile_MAC-1_Classified",
+        "xccdf_mil.disa.stig_profile_MAC-1_Public",
+        "xccdf_mil.disa.stig_profile_MAC-1_Sensitive",
+        "xccdf_mil.disa.stig_profile_MAC-2_Classified",
+        "xccdf_mil.disa.stig_profile_MAC-2_Public",
+        "xccdf_mil.disa.stig_profile_MAC-2_Sensitive",
+        "xccdf_mil.disa.stig_profile_MAC-3_Classified",
+        "xccdf_mil.disa.stig_profile_MAC-3_Public",
+        "xccdf_mil.disa.stig_profile_MAC-3_Sensitive"
+      ],
+      "policy_count": 10
+    },
+    {
+      "os": "Xccdf Mil.disa.stig Mcafee Virusscan88 Managed Client V1r3 Stig",
+      "benchmark_id": "xccdf_mil.disa.stig_benchmark_McAfee_VirusScan88_Managed_Client_V1R3_STIG",
+      "version": "1",
+      "scope": "G",
+      "policies": [
+        "xccdf_mil.disa.stig_profile_CAT_I_Only",
+        "xccdf_mil.disa.stig_profile_MAC-1_Classified",
+        "xccdf_mil.disa.stig_profile_MAC-1_Public",
+        "xccdf_mil.disa.stig_profile_MAC-1_Sensitive",
+        "xccdf_mil.disa.stig_profile_MAC-2_Classified",
+        "xccdf_mil.disa.stig_profile_MAC-2_Public",
+        "xccdf_mil.disa.stig_profile_MAC-2_Sensitive",
+        "xccdf_mil.disa.stig_profile_MAC-3_Classified",
+        "xccdf_mil.disa.stig_profile_MAC-3_Public",
+        "xccdf_mil.disa.stig_profile_MAC-3_Sensitive"
+      ],
+      "policy_count": 10
+    },
+    {
+      "os": "Xccdf Mil.disa.stig Microsoft Office System 2013",
+      "benchmark_id": "xccdf_mil.disa.stig_benchmark_Microsoft_Office_System_2013",
+      "version": "1",
+      "scope": "G",
+      "policies": [
+        "xccdf_mil.disa.stig_profile_CAT_I_Only",
+        "xccdf_mil.disa.stig_profile_MAC-1_Classified",
+        "xccdf_mil.disa.stig_profile_MAC-1_Public",
+        "xccdf_mil.disa.stig_profile_MAC-1_Sensitive",
+        "xccdf_mil.disa.stig_profile_MAC-2_Classified",
+        "xccdf_mil.disa.stig_profile_MAC-2_Public",
+        "xccdf_mil.disa.stig_profile_MAC-2_Sensitive",
+        "xccdf_mil.disa.stig_profile_MAC-3_Classified",
+        "xccdf_mil.disa.stig_profile_MAC-3_Public",
+        "xccdf_mil.disa.stig_profile_MAC-3_Sensitive"
+      ],
+      "policy_count": 10
+    },
+    {
+      "os": "Xccdf Mil.disa.stig Oracle Linux 7 V2r3 Stig",
+      "benchmark_id": "xccdf_mil.disa.stig_benchmark_Oracle_Linux_7_V2R3_STIG",
+      "version": "2",
+      "scope": "G",
+      "policies": [
+        "xccdf_mil.disa.stig_profile_CAT_I_Only",
+        "xccdf_mil.disa.stig_profile_MAC-1_Classified",
+        "xccdf_mil.disa.stig_profile_MAC-1_Public",
+        "xccdf_mil.disa.stig_profile_MAC-1_Sensitive",
+        "xccdf_mil.disa.stig_profile_MAC-2_Classified",
+        "xccdf_mil.disa.stig_profile_MAC-2_Public",
+        "xccdf_mil.disa.stig_profile_MAC-2_Sensitive",
+        "xccdf_mil.disa.stig_profile_MAC-3_Classified",
+        "xccdf_mil.disa.stig_profile_MAC-3_Public",
+        "xccdf_mil.disa.stig_profile_MAC-3_Sensitive"
+      ],
+      "policy_count": 10
+    },
+    {
+      "os": "Xccdf Mil.disa.stig Oracle Linux 8 V1r2 Stig",
+      "benchmark_id": "xccdf_mil.disa.stig_benchmark_Oracle_Linux_8_V1R2_STIG",
+      "version": "1",
+      "scope": "G",
+      "policies": [
+        "xccdf_mil.disa.stig_profile_CAT_I_Only",
+        "xccdf_mil.disa.stig_profile_MAC-1_Classified",
+        "xccdf_mil.disa.stig_profile_MAC-1_Public",
+        "xccdf_mil.disa.stig_profile_MAC-1_Sensitive",
+        "xccdf_mil.disa.stig_profile_MAC-2_Classified",
+        "xccdf_mil.disa.stig_profile_MAC-2_Public",
+        "xccdf_mil.disa.stig_profile_MAC-2_Sensitive",
+        "xccdf_mil.disa.stig_profile_MAC-3_Classified",
+        "xccdf_mil.disa.stig_profile_MAC-3_Public",
+        "xccdf_mil.disa.stig_profile_MAC-3_Sensitive"
+      ],
+      "policy_count": 10
+    },
+    {
+      "os": "Xccdf Mil.disa.stig Oracle Mysql 8-0 Stig V2r2",
+      "benchmark_id": "xccdf_mil.disa.stig_benchmark_Oracle_MySQL_8-0_STIG_V2R2",
+      "version": "2",
+      "scope": "G",
+      "policies": [
+        "xccdf_mil.disa.stig_profile_MAC-1_Classified",
+        "xccdf_mil.disa.stig_profile_MAC-1_Public",
+        "xccdf_mil.disa.stig_profile_MAC-1_Sensitive",
+        "xccdf_mil.disa.stig_profile_MAC-2_Classified",
+        "xccdf_mil.disa.stig_profile_MAC-2_Public",
+        "xccdf_mil.disa.stig_profile_MAC-2_Sensitive",
+        "xccdf_mil.disa.stig_profile_MAC-3_Classified",
+        "xccdf_mil.disa.stig_profile_MAC-3_Public",
+        "xccdf_mil.disa.stig_profile_MAC-3_Sensitive"
+      ],
+      "policy_count": 9
+    },
+    {
+      "os": "Xccdf Mil.disa.stig Postgresql 9-x Stig V2r1",
+      "benchmark_id": "xccdf_mil.disa.stig_benchmark_PostgreSQL_9-x_STIG_V2R1",
+      "version": "2",
+      "scope": "G",
+      "policies": [
+        "xccdf_mil.disa.stig_profile_MAC-1_Classified",
+        "xccdf_mil.disa.stig_profile_MAC-1_Public",
+        "xccdf_mil.disa.stig_profile_MAC-1_Sensitive",
+        "xccdf_mil.disa.stig_profile_MAC-2_Classified",
+        "xccdf_mil.disa.stig_profile_MAC-2_Public",
+        "xccdf_mil.disa.stig_profile_MAC-2_Sensitive",
+        "xccdf_mil.disa.stig_profile_MAC-3_Classified",
+        "xccdf_mil.disa.stig_profile_MAC-3_Public",
+        "xccdf_mil.disa.stig_profile_MAC-3_Sensitive"
+      ],
+      "policy_count": 9
+    },
+    {
+      "os": "Xccdf Mil.disa.stig Postgresql 9 Stig",
+      "benchmark_id": "xccdf_mil.disa.stig_benchmark_PostgreSQL_9_STIG",
+      "version": "1",
+      "scope": "G",
+      "policies": [
+        "xccdf_mil.disa.stig_profile_MAC-1_Classified",
+        "xccdf_mil.disa.stig_profile_MAC-1_Public",
+        "xccdf_mil.disa.stig_profile_MAC-1_Sensitive",
+        "xccdf_mil.disa.stig_profile_MAC-2_Classified",
+        "xccdf_mil.disa.stig_profile_MAC-2_Public",
+        "xccdf_mil.disa.stig_profile_MAC-2_Sensitive",
+        "xccdf_mil.disa.stig_profile_MAC-3_Classified",
+        "xccdf_mil.disa.stig_profile_MAC-3_Public",
+        "xccdf_mil.disa.stig_profile_MAC-3_Sensitive"
+      ],
+      "policy_count": 9
+    },
+    {
+      "os": "Xccdf Mil.disa.stig Rhel 5 V1r19 Stig",
+      "benchmark_id": "xccdf_mil.disa.stig_benchmark_RHEL_5_V1R19_STIG",
+      "version": "1",
+      "scope": "G",
+      "policies": [
+        "xccdf_mil.disa.stig_profile_CAT_I_Only",
+        "xccdf_mil.disa.stig_profile_MAC-1_Classified",
+        "xccdf_mil.disa.stig_profile_MAC-1_Public",
+        "xccdf_mil.disa.stig_profile_MAC-1_Sensitive",
+        "xccdf_mil.disa.stig_profile_MAC-2_Classified",
+        "xccdf_mil.disa.stig_profile_MAC-2_Public",
+        "xccdf_mil.disa.stig_profile_MAC-2_Sensitive",
+        "xccdf_mil.disa.stig_profile_MAC-3_Classified",
+        "xccdf_mil.disa.stig_profile_MAC-3_Public",
+        "xccdf_mil.disa.stig_profile_MAC-3_Sensitive"
+      ],
+      "policy_count": 10
+    },
+    {
+      "os": "Xccdf Mil.disa.stig Rhel 6 V2r2 Stig",
+      "benchmark_id": "xccdf_mil.disa.stig_benchmark_RHEL_6_V2R2_STIG",
+      "version": "2",
+      "scope": "G",
+      "policies": [
+        "xccdf_mil.disa.stig_profile_CAT_I_Only",
+        "xccdf_mil.disa.stig_profile_MAC-1_Classified",
+        "xccdf_mil.disa.stig_profile_MAC-1_Public",
+        "xccdf_mil.disa.stig_profile_MAC-1_Sensitive",
+        "xccdf_mil.disa.stig_profile_MAC-2_Classified",
+        "xccdf_mil.disa.stig_profile_MAC-2_Public",
+        "xccdf_mil.disa.stig_profile_MAC-2_Sensitive",
+        "xccdf_mil.disa.stig_profile_MAC-3_Classified",
+        "xccdf_mil.disa.stig_profile_MAC-3_Public",
+        "xccdf_mil.disa.stig_profile_MAC-3_Sensitive"
+      ],
+      "policy_count": 10
+    },
+    {
+      "os": "Xccdf Mil.disa.stig Rhel 7 V3r15 Stig",
+      "benchmark_id": "xccdf_mil.disa.stig_benchmark_RHEL_7_V3R15_STIG",
+      "version": "3",
+      "scope": "G",
+      "policies": [
+        "xccdf_mil.disa.stig_profile_CAT_I_Only",
+        "xccdf_mil.disa.stig_profile_MAC-1_Classified",
+        "xccdf_mil.disa.stig_profile_MAC-1_Public",
+        "xccdf_mil.disa.stig_profile_MAC-1_Sensitive",
+        "xccdf_mil.disa.stig_profile_MAC-2_Classified",
+        "xccdf_mil.disa.stig_profile_MAC-2_Public",
+        "xccdf_mil.disa.stig_profile_MAC-2_Sensitive",
+        "xccdf_mil.disa.stig_profile_MAC-3_Classified",
+        "xccdf_mil.disa.stig_profile_MAC-3_Public",
+        "xccdf_mil.disa.stig_profile_MAC-3_Sensitive"
+      ],
+      "policy_count": 10
+    },
+    {
+      "os": "Xccdf Mil.disa.stig Rhel 8 V1r14 Stig",
+      "benchmark_id": "xccdf_mil.disa.stig_benchmark_RHEL_8_V1R14_STIG",
+      "version": "1",
+      "scope": "G",
+      "policies": [
+        "xccdf_mil.disa.stig_profile_MAC-1_Classified",
+        "xccdf_mil.disa.stig_profile_MAC-1_Public",
+        "xccdf_mil.disa.stig_profile_MAC-1_Sensitive",
+        "xccdf_mil.disa.stig_profile_MAC-2_Classified",
+        "xccdf_mil.disa.stig_profile_MAC-2_Public",
+        "xccdf_mil.disa.stig_profile_MAC-2_Sensitive",
+        "xccdf_mil.disa.stig_profile_MAC-3_Classified",
+        "xccdf_mil.disa.stig_profile_MAC-3_Public",
+        "xccdf_mil.disa.stig_profile_MAC-3_Sensitive"
+      ],
+      "policy_count": 9
+    },
+    {
+      "os": "Xccdf Mil.disa.stig Rhel 9 Stig V1r3",
+      "benchmark_id": "xccdf_mil.disa.stig_benchmark_RHEL_9_STIG_V1R3",
+      "version": "1",
+      "scope": "G",
+      "policies": [
+        "xccdf_mil.disa.stig_profile_MAC-1_Classified",
+        "xccdf_mil.disa.stig_profile_MAC-1_Public",
+        "xccdf_mil.disa.stig_profile_MAC-1_Sensitive",
+        "xccdf_mil.disa.stig_profile_MAC-2_Classified",
+        "xccdf_mil.disa.stig_profile_MAC-2_Public",
+        "xccdf_mil.disa.stig_profile_MAC-2_Sensitive",
+        "xccdf_mil.disa.stig_profile_MAC-3_Classified",
+        "xccdf_mil.disa.stig_profile_MAC-3_Public",
+        "xccdf_mil.disa.stig_profile_MAC-3_Sensitive"
+      ],
+      "policy_count": 9
+    },
+    {
+      "os": "Xccdf Mil.disa.stig Sles 12 V2r7 Stig",
+      "benchmark_id": "xccdf_mil.disa.stig_benchmark_SLES_12_V2R7_STIG",
+      "version": "2",
+      "scope": "G",
+      "policies": [
+        "xccdf_mil.disa.stig_profile_CAT_I_Only",
+        "xccdf_mil.disa.stig_profile_MAC-1_Classified",
+        "xccdf_mil.disa.stig_profile_MAC-1_Public",
+        "xccdf_mil.disa.stig_profile_MAC-1_Sensitive",
+        "xccdf_mil.disa.stig_profile_MAC-2_Classified",
+        "xccdf_mil.disa.stig_profile_MAC-2_Public",
+        "xccdf_mil.disa.stig_profile_MAC-2_Sensitive",
+        "xccdf_mil.disa.stig_profile_MAC-3_Classified",
+        "xccdf_mil.disa.stig_profile_MAC-3_Public",
+        "xccdf_mil.disa.stig_profile_MAC-3_Sensitive"
+      ],
+      "policy_count": 10
+    },
+    {
+      "os": "Xccdf Mil.disa.stig Sles 15 V1r1 Stig",
+      "benchmark_id": "xccdf_mil.disa.stig_benchmark_SLES_15_V1R1_STIG",
+      "version": "1",
+      "scope": "G",
+      "policies": [
+        "xccdf_mil.disa.stig_profile_CAT_I_Only",
+        "xccdf_mil.disa.stig_profile_MAC-1_Classified",
+        "xccdf_mil.disa.stig_profile_MAC-1_Public",
+        "xccdf_mil.disa.stig_profile_MAC-1_Sensitive",
+        "xccdf_mil.disa.stig_profile_MAC-2_Classified",
+        "xccdf_mil.disa.stig_profile_MAC-2_Public",
+        "xccdf_mil.disa.stig_profile_MAC-2_Sensitive",
+        "xccdf_mil.disa.stig_profile_MAC-3_Classified",
+        "xccdf_mil.disa.stig_profile_MAC-3_Public",
+        "xccdf_mil.disa.stig_profile_MAC-3_Sensitive"
+      ],
+      "policy_count": 10
+    },
+    {
+      "os": "Xccdf Mil.disa.stig Solaris 11 Sparc V2r2 Stig",
+      "benchmark_id": "xccdf_mil.disa.stig_benchmark_Solaris_11_SPARC_V2R2_STIG",
+      "version": "2",
+      "scope": "G",
+      "policies": [
+        "xccdf_mil.disa.stig_profile_CAT_I_Only",
+        "xccdf_mil.disa.stig_profile_MAC-1_Classified",
+        "xccdf_mil.disa.stig_profile_MAC-1_Public",
+        "xccdf_mil.disa.stig_profile_MAC-1_Sensitive",
+        "xccdf_mil.disa.stig_profile_MAC-2_Classified",
+        "xccdf_mil.disa.stig_profile_MAC-2_Public",
+        "xccdf_mil.disa.stig_profile_MAC-2_Sensitive",
+        "xccdf_mil.disa.stig_profile_MAC-3_Classified",
+        "xccdf_mil.disa.stig_profile_MAC-3_Public",
+        "xccdf_mil.disa.stig_profile_MAC-3_Sensitive"
+      ],
+      "policy_count": 10
+    },
+    {
+      "os": "Xccdf Mil.disa.stig Solaris 11 X86 V2r2 Stig",
+      "benchmark_id": "xccdf_mil.disa.stig_benchmark_Solaris_11_X86_V2R2_STIG",
+      "version": "2",
+      "scope": "G",
+      "policies": [
+        "xccdf_mil.disa.stig_profile_CAT_I_Only",
+        "xccdf_mil.disa.stig_profile_MAC-1_Classified",
+        "xccdf_mil.disa.stig_profile_MAC-1_Public",
+        "xccdf_mil.disa.stig_profile_MAC-1_Sensitive",
+        "xccdf_mil.disa.stig_profile_MAC-2_Classified",
+        "xccdf_mil.disa.stig_profile_MAC-2_Public",
+        "xccdf_mil.disa.stig_profile_MAC-2_Sensitive",
+        "xccdf_mil.disa.stig_profile_MAC-3_Classified",
+        "xccdf_mil.disa.stig_profile_MAC-3_Public",
+        "xccdf_mil.disa.stig_profile_MAC-3_Sensitive"
+      ],
+      "policy_count": 10
+    },
+    {
+      "os": "Xccdf Mil.disa.stig U Oracle Database 11g Instance Stig",
+      "benchmark_id": "xccdf_mil.disa.stig_benchmark_U_Oracle_Database_11g_Instance_STIG",
+      "version": "8",
+      "scope": "G",
+      "policies": [
+        "xccdf_mil.disa.stig_profile_CAT_I_Only",
+        "xccdf_mil.disa.stig_profile_MAC-1_Classified",
+        "xccdf_mil.disa.stig_profile_MAC-1_Public",
+        "xccdf_mil.disa.stig_profile_MAC-1_Sensitive",
+        "xccdf_mil.disa.stig_profile_MAC-2_Classified",
+        "xccdf_mil.disa.stig_profile_MAC-2_Public",
+        "xccdf_mil.disa.stig_profile_MAC-2_Sensitive",
+        "xccdf_mil.disa.stig_profile_MAC-3_Classified",
+        "xccdf_mil.disa.stig_profile_MAC-3_Public",
+        "xccdf_mil.disa.stig_profile_MAC-3_Sensitive"
+      ],
+      "policy_count": 10
+    },
+    {
+      "os": "Xccdf Mil.disa.stig Windows 2008 Dc V6r45 Stig",
+      "benchmark_id": "xccdf_mil.disa.stig_benchmark_Windows_2008_DC_V6R45_STIG",
+      "version": "6",
+      "scope": "G",
+      "policies": [
+        "xccdf_mil.disa.stig_profile_CAT_I_Only",
+        "xccdf_mil.disa.stig_profile_Disable_Slow_Rules",
+        "xccdf_mil.disa.stig_profile_MAC-1_Classified",
+        "xccdf_mil.disa.stig_profile_MAC-1_Public",
+        "xccdf_mil.disa.stig_profile_MAC-1_Sensitive",
+        "xccdf_mil.disa.stig_profile_MAC-2_Classified",
+        "xccdf_mil.disa.stig_profile_MAC-2_Public",
+        "xccdf_mil.disa.stig_profile_MAC-2_Sensitive",
+        "xccdf_mil.disa.stig_profile_MAC-3_Classified",
+        "xccdf_mil.disa.stig_profile_MAC-3_Public",
+        "xccdf_mil.disa.stig_profile_MAC-3_Sensitive"
+      ],
+      "policy_count": 11
+    },
+    {
+      "os": "Xccdf Mil.disa.stig Windows 2008 Ms V6r45 Stig",
+      "benchmark_id": "xccdf_mil.disa.stig_benchmark_Windows_2008_MS_V6R45_STIG",
+      "version": "6",
+      "scope": "G",
+      "policies": [
+        "xccdf_mil.disa.stig_profile_CAT_I_Only",
+        "xccdf_mil.disa.stig_profile_Disable_Slow_Rules",
+        "xccdf_mil.disa.stig_profile_MAC-1_Classified",
+        "xccdf_mil.disa.stig_profile_MAC-1_Public",
+        "xccdf_mil.disa.stig_profile_MAC-1_Sensitive",
+        "xccdf_mil.disa.stig_profile_MAC-2_Classified",
+        "xccdf_mil.disa.stig_profile_MAC-2_Public",
+        "xccdf_mil.disa.stig_profile_MAC-2_Sensitive",
+        "xccdf_mil.disa.stig_profile_MAC-3_Classified",
+        "xccdf_mil.disa.stig_profile_MAC-3_Public",
+        "xccdf_mil.disa.stig_profile_MAC-3_Sensitive"
+      ],
+      "policy_count": 11
+    },
+    {
+      "os": "Xccdf Mil.disa.stig Windows 2008 R2 Ms V1r34 Stig",
+      "benchmark_id": "xccdf_mil.disa.stig_benchmark_Windows_2008_R2_MS_V1R34_STIG",
+      "version": "1",
+      "scope": "G",
+      "policies": [
+        "xccdf_mil.disa.stig_profile_CAT_I_Only",
+        "xccdf_mil.disa.stig_profile_Disable_Slow_Rules",
+        "xccdf_mil.disa.stig_profile_MAC-1_Classified",
+        "xccdf_mil.disa.stig_profile_MAC-1_Public",
+        "xccdf_mil.disa.stig_profile_MAC-1_Sensitive",
+        "xccdf_mil.disa.stig_profile_MAC-2_Classified",
+        "xccdf_mil.disa.stig_profile_MAC-2_Public",
+        "xccdf_mil.disa.stig_profile_MAC-2_Sensitive",
+        "xccdf_mil.disa.stig_profile_MAC-3_Classified",
+        "xccdf_mil.disa.stig_profile_MAC-3_Public",
+        "xccdf_mil.disa.stig_profile_MAC-3_Sensitive"
+      ],
+      "policy_count": 11
+    },
+    {
+      "os": "Xccdf Mil.disa.stig Windows 2012 Dc V3r4 Stig",
+      "benchmark_id": "xccdf_mil.disa.stig_benchmark_Windows_2012_DC_V3R4_STIG",
+      "version": "3",
+      "scope": "G",
+      "policies": [
+        "xccdf_mil.disa.stig_profile_CAT_I_Only",
+        "xccdf_mil.disa.stig_profile_Disable_Slow_Rules",
+        "xccdf_mil.disa.stig_profile_MAC-1_Classified",
+        "xccdf_mil.disa.stig_profile_MAC-1_Public",
+        "xccdf_mil.disa.stig_profile_MAC-1_Sensitive",
+        "xccdf_mil.disa.stig_profile_MAC-2_Classified",
+        "xccdf_mil.disa.stig_profile_MAC-2_Public",
+        "xccdf_mil.disa.stig_profile_MAC-2_Sensitive",
+        "xccdf_mil.disa.stig_profile_MAC-3_Classified",
+        "xccdf_mil.disa.stig_profile_MAC-3_Public",
+        "xccdf_mil.disa.stig_profile_MAC-3_Sensitive"
+      ],
+      "policy_count": 11
+    },
+    {
+      "os": "Xccdf Mil.disa.stig Windows 2012 Ms V3r4 Stig",
+      "benchmark_id": "xccdf_mil.disa.stig_benchmark_Windows_2012_MS_V3R4_STIG",
+      "version": "3",
+      "scope": "G",
+      "policies": [
+        "xccdf_mil.disa.stig_profile_MAC-1_Classified"
+      ],
+      "policy_count": 1
+    },
+    {
+      "os": "Xccdf Mil.disa.stig Windows 7 Stig",
+      "benchmark_id": "xccdf_mil.disa.stig_benchmark_Windows_7_STIG",
+      "version": "1",
+      "scope": "G",
+      "policies": [
+        "xccdf_mil.disa.stig_profile_CAT_I_Only",
+        "xccdf_mil.disa.stig_profile_Disable_EMET",
+        "xccdf_mil.disa.stig_profile_Disable_Slow_Rules",
+        "xccdf_mil.disa.stig_profile_MAC-1_Classified",
+        "xccdf_mil.disa.stig_profile_MAC-1_Public",
+        "xccdf_mil.disa.stig_profile_MAC-1_Sensitive",
+        "xccdf_mil.disa.stig_profile_MAC-2_Classified",
+        "xccdf_mil.disa.stig_profile_MAC-2_Public",
+        "xccdf_mil.disa.stig_profile_MAC-2_Sensitive",
+        "xccdf_mil.disa.stig_profile_MAC-3_Classified",
+        "xccdf_mil.disa.stig_profile_MAC-3_Public",
+        "xccdf_mil.disa.stig_profile_MAC-3_Sensitive"
+      ],
+      "policy_count": 12
+    },
+    {
+      "os": "Xccdf Mil.disa.stig Windows 8 V1r22 Stig",
+      "benchmark_id": "xccdf_mil.disa.stig_benchmark_Windows_8_V1R22_STIG",
+      "version": "1",
+      "scope": "G",
+      "policies": [
+        "xccdf_mil.disa.stig_profile_CAT_I_Only",
+        "xccdf_mil.disa.stig_profile_Disable_EMET",
+        "xccdf_mil.disa.stig_profile_Disable_Slow_Rules",
+        "xccdf_mil.disa.stig_profile_MAC-1_Classified",
+        "xccdf_mil.disa.stig_profile_MAC-1_Public",
+        "xccdf_mil.disa.stig_profile_MAC-1_Sensitive",
+        "xccdf_mil.disa.stig_profile_MAC-2_Classified",
+        "xccdf_mil.disa.stig_profile_MAC-2_Public",
+        "xccdf_mil.disa.stig_profile_MAC-2_Sensitive",
+        "xccdf_mil.disa.stig_profile_MAC-3_Classified",
+        "xccdf_mil.disa.stig_profile_MAC-3_Public",
+        "xccdf_mil.disa.stig_profile_MAC-3_Sensitive"
+      ],
+      "policy_count": 12
+    },
+    {
+      "os": "Xccdf Mil.disa.stig Windows Firewall",
+      "benchmark_id": "xccdf_mil.disa.stig_benchmark_Windows_Firewall",
+      "version": "1",
+      "scope": "G",
+      "policies": [
+        "xccdf_mil.disa.stig_profile_CAT_I_Only",
+        "xccdf_mil.disa.stig_profile_MAC-1_Classified",
+        "xccdf_mil.disa.stig_profile_MAC-1_Public",
+        "xccdf_mil.disa.stig_profile_MAC-1_Sensitive",
+        "xccdf_mil.disa.stig_profile_MAC-2_Classified",
+        "xccdf_mil.disa.stig_profile_MAC-2_Public",
+        "xccdf_mil.disa.stig_profile_MAC-2_Sensitive",
+        "xccdf_mil.disa.stig_profile_MAC-3_Classified",
+        "xccdf_mil.disa.stig_profile_MAC-3_Public",
+        "xccdf_mil.disa.stig_profile_MAC-3_Sensitive"
+      ],
+      "policy_count": 10
+    },
+    {
+      "os": "Xccdf Mil.disa.stig Windows Firewall With Advanced Security V2r1 Stig",
+      "benchmark_id": "xccdf_mil.disa.stig_benchmark_Windows_Firewall_with_Advanced_Security_V2R1_STIG",
+      "version": "2",
+      "scope": "G",
+      "policies": [
+        "xccdf_mil.disa.stig_profile_CAT_I_Only",
+        "xccdf_mil.disa.stig_profile_MAC-1_Classified",
+        "xccdf_mil.disa.stig_profile_MAC-1_Public",
+        "xccdf_mil.disa.stig_profile_MAC-1_Sensitive",
+        "xccdf_mil.disa.stig_profile_MAC-2_Classified",
+        "xccdf_mil.disa.stig_profile_MAC-2_Public",
+        "xccdf_mil.disa.stig_profile_MAC-2_Sensitive",
+        "xccdf_mil.disa.stig_profile_MAC-3_Classified",
+        "xccdf_mil.disa.stig_profile_MAC-3_Public",
+        "xccdf_mil.disa.stig_profile_MAC-3_Sensitive"
+      ],
+      "policy_count": 10
+    }
+  ],
+  "total_policies": 59
+}

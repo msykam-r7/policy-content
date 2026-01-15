@@ -1,0 +1,11 @@
+NUMBER,RULE_ID,EXPECTED_RESULT
+1,xccdf_mil.disa.stig_rule_SV-220697r569187_rule,COMPLIANT
+2,xccdf_mil.disa.stig_rule_SV-220698r569187_rule,COMPLIANT
+3,xccdf_mil.disa.stig_rule_SV-220699r569187_rule,COMPLIANT
+4,xccdf_mil.disa.stig_rule_SV-220700r569187_rule,COMPLIANT
+5,xccdf_mil.disa.stig_rule_SV-220701r569187_rule,COMPLIANT
+6,xccdf_mil.disa.stig_rule_SV-220702r569187_rule,COMPLIANT
+7,xccdf_mil.disa.stig_rule_SV-220703r569187_rule,COMPLIANT
+8,xccdf_mil.disa.stig_rule_SV-220704r569187_rule,COMPLIANT
+9,xccdf_mil.disa.stig_rule_SV-220705r569187_rule,COMPLIANT
+10,xccdf_mil.disa.stig_rule_SV-220706r569187_rule,COMPLIANT

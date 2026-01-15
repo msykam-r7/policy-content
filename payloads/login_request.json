@@ -1,0 +1,4 @@
+{
+    "description": "Login request payload - XML format",
+    "xml_payload": "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<LoginRequest sync-id=\"0\" user-id=\"USERNAME_PLACEHOLDER\" password=\"PASSWORD_PLACEHOLDER\"/>"
+}

@@ -1,0 +1,55 @@
+{
+    "note": "Site update request payload with credentials",
+    "id": 9,
+    "name": "CIS Apache Tomcat 9 Benchmark Policy Compliance",
+    "version": 3,
+    "description": "",
+    "auto_engine_selection_enabled": true,
+    "included_scan_targets": {
+        "addresses": ["10.4.23.200"],
+        "asset_groups": []
+    },
+    "excluded_scan_targets": {
+        "addresses": [],
+        "asset_groups": []
+    },
+    "engine_id": 3,
+    "scan_template_id": "cis",
+    "risk_factor": 1.0,
+    "schedules": [],
+    "shared_credentials": [],
+    "site_credentials": [
+        {
+            "id": 7,
+            "service": "ssh",
+            "user_name": "root",
+            "password": null,
+            "name": "SSH Credential",
+            "enabled": true,
+            "scope": "S",
+            "description": null,
+            "permission_elevation_password": null,
+            "permission_elevation_type": "NONE",
+            "permission_elevation_user": null,
+            "host_restriction": null,
+            "port_restriction": null
+        }
+    ],
+    "web_credentials": [],
+    "tags": [],
+    "alerts": [],
+    "users": [],
+    "organization": {
+        "name": null,
+        "state": null,
+        "address": null,
+        "country": null,
+        "city": null,
+        "url": null,
+        "job_title": null,
+        "zip": null,
+        "primary_contact": null,
+        "telephone": null,
+        "email": null
+    }
+}

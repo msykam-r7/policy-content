@@ -1,0 +1,43 @@
+NUMBER,RULE_ID,EXPECTED_RESULT,PROFILE
+1,xccdf_org.cisecurity.benchmarks_rule_1.1_UBTU-22-211015,NOT COMPLIANT,SEVERITY_CAT_I
+2,xccdf_org.cisecurity.benchmarks_rule_1.2_UBTU-22-212010,NOT COMPLIANT,SEVERITY_CAT_I
+3,xccdf_org.cisecurity.benchmarks_rule_1.14_UBTU-22-215030,COMPLIANT,SEVERITY_CAT_I
+4,xccdf_org.cisecurity.benchmarks_rule_1.15_UBTU-22-215035,COMPLIANT,SEVERITY_CAT_I
+5,xccdf_org.cisecurity.benchmarks_rule_1.55_UBTU-22-255010,COMPLIANT,SEVERITY_CAT_I
+6,xccdf_org.cisecurity.benchmarks_rule_1.56_UBTU-22-255015,COMPLIANT,SEVERITY_CAT_I
+7,xccdf_org.cisecurity.benchmarks_rule_1.58_UBTU-22-255025,NOT COMPLIANT,SEVERITY_CAT_I
+8,xccdf_org.cisecurity.benchmarks_rule_1.61_UBTU-22-255040,NOT COMPLIANT,SEVERITY_CAT_I
+9,xccdf_org.cisecurity.benchmarks_rule_1.71_UBTU-22-271030,COMPLIANT,SEVERITY_CAT_I
+10,xccdf_org.cisecurity.benchmarks_rule_1.89_UBTU-22-432015,INFORMATIONAL,SEVERITY_CAT_I
+11,xccdf_org.cisecurity.benchmarks_rule_1.99_UBTU-22-611060,NOT COMPLIANT,SEVERITY_CAT_I
+12,xccdf_org.cisecurity.benchmarks_rule_1.100_UBTU-22-611065,COMPLIANT,SEVERITY_CAT_I
+13,xccdf_org.cisecurity.benchmarks_rule_1.108_UBTU-22-612040,NOT COMPLIANT,SEVERITY_CAT_I
+14,xccdf_org.cisecurity.benchmarks_rule_1.179_UBTU-22-671010,NOT COMPLIANT,SEVERITY_CAT_I
+15,xccdf_org.cisecurity.benchmarks_rule_1.1_UBTU-22-211015,NOT COMPLIANT,SEVERITY_CAT_II
+16,xccdf_org.cisecurity.benchmarks_rule_1.2_UBTU-22-212010,NOT COMPLIANT,SEVERITY_CAT_II
+23,xccdf_org.cisecurity.benchmarks_rule_1.14_UBTU-22-215030,COMPLIANT,SEVERITY_CAT_II
+24,xccdf_org.cisecurity.benchmarks_rule_1.15_UBTU-22-215035,COMPLIANT,SEVERITY_CAT_II
+61,xccdf_org.cisecurity.benchmarks_rule_1.55_UBTU-22-255010,COMPLIANT,SEVERITY_CAT_II
+62,xccdf_org.cisecurity.benchmarks_rule_1.56_UBTU-22-255015,COMPLIANT,SEVERITY_CAT_II
+64,xccdf_org.cisecurity.benchmarks_rule_1.58_UBTU-22-255025,NOT COMPLIANT,SEVERITY_CAT_II
+67,xccdf_org.cisecurity.benchmarks_rule_1.61_UBTU-22-255040,NOT COMPLIANT,SEVERITY_CAT_II
+77,xccdf_org.cisecurity.benchmarks_rule_1.71_UBTU-22-271030,COMPLIANT,SEVERITY_CAT_II
+92,xccdf_org.cisecurity.benchmarks_rule_1.89_UBTU-22-432015,INFORMATIONAL,SEVERITY_CAT_II
+102,xccdf_org.cisecurity.benchmarks_rule_1.99_UBTU-22-611060,NOT COMPLIANT,SEVERITY_CAT_II
+103,xccdf_org.cisecurity.benchmarks_rule_1.100_UBTU-22-611065,COMPLIANT,SEVERITY_CAT_II
+111,xccdf_org.cisecurity.benchmarks_rule_1.108_UBTU-22-612040,NOT COMPLIANT,SEVERITY_CAT_II
+176,xccdf_org.cisecurity.benchmarks_rule_1.179_UBTU-22-671010,NOT COMPLIANT,SEVERITY_CAT_II
+177,xccdf_org.cisecurity.benchmarks_rule_1.1_UBTU-22-211015,NOT COMPLIANT,SEVERITY_CAT_III
+178,xccdf_org.cisecurity.benchmarks_rule_1.2_UBTU-22-212010,NOT COMPLIANT,SEVERITY_CAT_III
+190,xccdf_org.cisecurity.benchmarks_rule_1.14_UBTU-22-215030,COMPLIANT,SEVERITY_CAT_III
+191,xccdf_org.cisecurity.benchmarks_rule_1.15_UBTU-22-215035,COMPLIANT,SEVERITY_CAT_III
+231,xccdf_org.cisecurity.benchmarks_rule_1.55_UBTU-22-255010,COMPLIANT,SEVERITY_CAT_III
+232,xccdf_org.cisecurity.benchmarks_rule_1.56_UBTU-22-255015,COMPLIANT,SEVERITY_CAT_III
+234,xccdf_org.cisecurity.benchmarks_rule_1.58_UBTU-22-255025,NOT COMPLIANT,SEVERITY_CAT_III
+237,xccdf_org.cisecurity.benchmarks_rule_1.61_UBTU-22-255040,NOT COMPLIANT,SEVERITY_CAT_III
+247,xccdf_org.cisecurity.benchmarks_rule_1.71_UBTU-22-271030,COMPLIANT,SEVERITY_CAT_III
+265,xccdf_org.cisecurity.benchmarks_rule_1.89_UBTU-22-432015,INFORMATIONAL,SEVERITY_CAT_III
+275,xccdf_org.cisecurity.benchmarks_rule_1.99_UBTU-22-611060,NOT COMPLIANT,SEVERITY_CAT_III
+276,xccdf_org.cisecurity.benchmarks_rule_1.100_UBTU-22-611065,COMPLIANT,SEVERITY_CAT_III
+284,xccdf_org.cisecurity.benchmarks_rule_1.108_UBTU-22-612040,NOT COMPLIANT,SEVERITY_CAT_III
+355,xccdf_org.cisecurity.benchmarks_rule_1.179_UBTU-22-671010,NOT COMPLIANT,SEVERITY_CAT_III

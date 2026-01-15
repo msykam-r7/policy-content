@@ -1,0 +1,20 @@
+{
+  "session_id": "",
+  "generate_now": "1",
+  "report_config": {
+    "id": "-1",
+    "format": "xccdf-xml",
+    "name": "",
+    "filters": {
+      "site_id": "",
+      "policy_natural_id": ""
+    },
+    "generate": {
+      "after_scan": "0",
+      "schedule": "0"
+    },
+    "delivery": {
+      "store_on_server": "1"
+    }
+  }
+}

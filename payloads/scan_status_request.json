@@ -1,0 +1,4 @@
+{
+    "description": "Monitor scan status request payload - XML format",
+    "xml_payload": "<ScanStatusRequest session-id=\"SESSION_ID_PLACEHOLDER\" scan-id=\"SCAN_ID_PLACEHOLDER\"/>"
+}

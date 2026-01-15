@@ -1,0 +1,8 @@
+{
+    "description": "Get scan template request - GET request with query parameter",
+    "endpoint": "/data/scan-templates/{template_id}",
+    "query_params": {
+        "copy": "true"
+    },
+    "template_id_placeholder": "cis"
+}

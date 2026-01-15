@@ -1,0 +1,4 @@
+{
+    "description": "Get scan statistics/details request payload - XML format",
+    "xml_payload": "<ScanStatisticsRequest session-id=\"SESSION_ID_PLACEHOLDER\" scan-id=\"SCAN_ID_PLACEHOLDER\"/>"
+}

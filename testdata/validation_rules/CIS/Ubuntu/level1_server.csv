@@ -1,0 +1,4 @@
+NUMBER,RULE_ID,EXPECTED_RESULT,DESCRIPTION
+1,xccdf_org.cisecurity.benchmarks_rule_1.1.1.1_Ensure_mounting_of_cramfs_filesystems_is_disabled,COMPLIANT,Ensure mounting of cramfs filesystems is disabled
+2,xccdf_org.cisecurity.benchmarks_rule_1.1.1.2_Ensure_mounting_of_freevxfs_filesystems_is_disabled,COMPLIANT,Ensure mounting of freevxfs filesystems is disabled
+3,xccdf_org.cisecurity.benchmarks_rule_1.1.1.3_Ensure_mounting_of_jffs2_filesystems_is_disabled,COMPLIANT,Ensure mounting of jffs2 filesystems is disabled

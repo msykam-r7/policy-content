@@ -1,0 +1,11 @@
+{
+    "description": "Create and generate report request payload - XML format",
+    "xml_payload": "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<ReportSaveRequest session-id=\"SESSION_ID_PLACEHOLDER\" generate-now=\"1\">\n  <ReportConfig id=\"-1\" format=\"xccdf-xml\" name=\"Robot-Framework-Policy-Report\">\n    <Filters>\n      <filter type=\"site\" id=\"SITE_ID_PLACEHOLDER\">SITE_ID_PLACEHOLDER</filter>\n      <filter type=\"policy-listing\" id=\"POLICY_ID_PLACEHOLDER\">POLICY_ID_PLACEHOLDER</filter>\n    </Filters>\n    <Generate after-scan=\"0\" schedule=\"0\"/>\n    <Delivery>\n      <Storage storeOnServer=\"1\"/>\n    </Delivery>\n  </ReportConfig>\n</ReportSaveRequest>",
+    "parameters": {
+        "session-id": "Session ID from login",
+        "generate-now": "1 to generate immediately",
+        "report_format": "xccdf-xml",
+        "site_id": "Site ID from site creation",
+        "policy_id": "Policy surrogate ID"
+    }
+}
